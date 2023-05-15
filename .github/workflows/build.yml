@@ -27,7 +27,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-
+    needs: test
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -79,3 +79,4 @@ jobs:
           CONTAINER_REGISTRY_URL: "ghcr.io"
           CONTAINER_REGISTRY_USERNAME: ${{ github.repository_owner }}
           CONTAINER_REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+          CONTAINER_BUILD_SHA: ${{ github.sha }}

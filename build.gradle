@@ -59,10 +59,12 @@ tasks.named('asciidoctor') {
 tasks.named("bootBuildImage") {
 	def date = new Date()
 	def formattedDate = date.format('yyyyMMddHHmmss')
+	def sha = System.getenv('CONTAINER_BUILD_SHA') ?: null
 
 	def containerRegistryUrl = System.getenv('CONTAINER_REGISTRY_URL') ?: "ghcr.io"
 	def containerImageName = System.getenv('CONTAINER_IMAGE_NAME') ?: "last-summer-project/project-web"
 	def containerImageNameFull = "${containerRegistryUrl}/${containerImageName}".toLowerCase()
+
 
 	imageName = "${containerImageNameFull}:latest"
 	publish = System.getenv('CI') == "true"
@@ -70,6 +72,8 @@ tasks.named("bootBuildImage") {
 		"${containerImageNameFull}:${project.version}",
 		"${containerImageNameFull}:${formattedDate}"
 	]
+	if (sha != null)
+		tags.add("${containerImageNameFull}:${sha}")
 
 	docker {
 		publishRegistry {
