@@ -73,7 +73,7 @@ tasks.named("bootBuildImage") {
 		"${containerImageNameFull}:${formattedDate}"
 	]
 	if (sha != null)
-		tags.add("${containerImageNameFull}:${sha}")
+		tags += "${containerImageNameFull}:${sha}"
 
 	docker {
 		publishRegistry {
