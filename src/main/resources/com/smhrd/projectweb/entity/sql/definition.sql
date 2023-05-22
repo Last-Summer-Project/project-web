@@ -46,10 +46,10 @@ CREATE TABLE `timelapse`
 
 CREATE TABLE `device`
 (
-    `id`           BIGINT   NOT NULL,
-    `login_id`     BIGINT   NOT NULL,
-    `password`     BIGINT   NOT NULL,
-    `date_created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `last_edited`  DATETIME NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+    `id`           BIGINT       NOT NULL,
+    `login_id`     VARCHAR(255) NOT NULL,
+    `password`     VARCHAR(255) NOT NULL,
+    `date_created` DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `last_edited`  DATETIME     NOT NULL ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT `PK_DEVICE` PRIMARY KEY (`id`)
 );
