@@ -1,4 +1,4 @@
-package kr.or.smhrd.projectweb;
+package com.smhrd.projectweb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

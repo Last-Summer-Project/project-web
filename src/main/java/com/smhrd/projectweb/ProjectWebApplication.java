@@ -1,8 +1,7 @@
-package kr.or.smhrd.projectweb;
+package com.smhrd.projectweb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 public class ProjectWebApplication {
