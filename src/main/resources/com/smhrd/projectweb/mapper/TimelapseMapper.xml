@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.projectweb.mapper.TimelapseMapper">
+
+    <resultMap id="BaseResultMap" type="com.smhrd.projectweb.entity.sql.Timelapse">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="deviceId" column="device_id" jdbcType="BIGINT"/>
+        <result property="startDate" column="start_date" jdbcType="TIMESTAMP"/>
+        <result property="endDate" column="end_date" jdbcType="TIMESTAMP"/>
+        <result property="status" column="status" jdbcType="OTHER"/>
+        <result property="result" column="result" jdbcType="VARCHAR"/>
+        <result property="dateCreated" column="date_created" jdbcType="TIMESTAMP"/>
+        <result property="lastEdited" column="last_edited" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,device_id,start_date,
+        end_date,status,result,
+        date_created,last_edited
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from timelapse
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete
+        from timelapse
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.sql.Timelapse"
+            useGeneratedKeys="true">
+        insert into timelapse
+        ( id, device_id, start_date
+        , end_date, status, result)
+        values ( #{id,jdbcType=BIGINT}, #{deviceId,jdbcType=BIGINT}, #{startDate,jdbcType=TIMESTAMP}
+               , #{endDate,jdbcType=TIMESTAMP}, #{status,jdbcType=OTHER}, #{result,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" keyColumn="id" keyProperty="id"
+            parameterType="com.smhrd.projectweb.entity.sql.Timelapse" useGeneratedKeys="true">
+        insert into timelapse
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="deviceId != null">device_id,</if>
+            <if test="startDate != null">start_date,</if>
+            <if test="endDate != null">end_date,</if>
+            <if test="status != null">status,</if>
+            <if test="result != null">result,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id,jdbcType=BIGINT},</if>
+            <if test="deviceId != null">#{deviceId,jdbcType=BIGINT},</if>
+            <if test="startDate != null">#{startDate,jdbcType=TIMESTAMP},</if>
+            <if test="endDate != null">#{endDate,jdbcType=TIMESTAMP},</if>
+            <if test="status != null">#{status,jdbcType=OTHER},</if>
+            <if test="result != null">#{result,jdbcType=VARCHAR},</if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.smhrd.projectweb.entity.sql.Timelapse">
+        update timelapse
+        <set>
+            <if test="deviceId != null">
+                device_id = #{deviceId,jdbcType=BIGINT},
+            </if>
+            <if test="startDate != null">
+                start_date = #{startDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="endDate != null">
+                end_date = #{endDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=OTHER},
+            </if>
+            <if test="result != null">
+                result = #{result,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.smhrd.projectweb.entity.sql.Timelapse">
+        update timelapse
+        set device_id  = #{deviceId,jdbcType=BIGINT},
+            start_date = #{startDate,jdbcType=TIMESTAMP},
+            end_date   = #{endDate,jdbcType=TIMESTAMP},
+            status     = #{status,jdbcType=OTHER},
+            result     = #{result,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+</mapper>
