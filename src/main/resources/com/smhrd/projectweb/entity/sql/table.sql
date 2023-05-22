@@ -1,4 +1,8 @@
+DROP TABLE IF EXISTS `timelapse`;
+DROP TABLE IF EXISTS `detect`;
 DROP TABLE IF EXISTS `device_log`;
+DROP TABLE IF EXISTS `image`;
+DROP TABLE IF EXISTS `device`;
 
 CREATE TABLE `device_log`
 (
@@ -12,8 +16,6 @@ CREATE TABLE `device_log`
     CONSTRAINT `PK_DEVICE_LOG` PRIMARY KEY (`id`)
 );
 
-DROP TABLE IF EXISTS `image`;
-
 CREATE TABLE `image`
 (
     `id`           BIGINT       NOT NULL AUTO_INCREMENT,
@@ -23,8 +25,6 @@ CREATE TABLE `image`
     CONSTRAINT `PK_IMAGE` PRIMARY KEY (`id`)
 );
 
-DROP TABLE IF EXISTS `detect`;
-
 CREATE TABLE `detect`
 (
     `id`     BIGINT                                    NOT NULL,
@@ -32,8 +32,6 @@ CREATE TABLE `detect`
     `result` VARCHAR(255)                              NULL,
     CONSTRAINT `PK_DETECT` PRIMARY KEY (`id`)
 );
-
-DROP TABLE IF EXISTS `timelapse`;
 
 CREATE TABLE `timelapse`
 (
@@ -47,8 +45,6 @@ CREATE TABLE `timelapse`
     `last_edited`  DATETIME                                  NOT NULL ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT `PK_TIMELAPSE` PRIMARY KEY (`id`)
 );
-
-DROP TABLE IF EXISTS `device`;
 
 CREATE TABLE `device`
 (
