@@ -20,9 +20,10 @@ public class WebSecurityConfig {
 
         http
                 .addFilterBefore(filter, CsrfFilter.class)
-                .authorizeRequests(authorize -> authorize
-                        .anyRequest().permitAll()
-                );
+                .csrf()
+                    .ignoringAntMatchers("/api/**")
+                .and()
+                    .authorizeRequests(authorize -> authorize.anyRequest().permitAll());
         return http.build();
     }
 
