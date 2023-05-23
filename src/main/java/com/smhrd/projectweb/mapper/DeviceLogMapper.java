@@ -2,6 +2,8 @@ package com.smhrd.projectweb.mapper;
 
 import com.smhrd.projectweb.entity.sql.DeviceLog;
 
+import java.util.List;
+
 /**
 */
 public interface DeviceLogMapper {
@@ -17,5 +19,7 @@ public interface DeviceLogMapper {
     int updateByPrimaryKeySelective(DeviceLog entity);
 
     int updateByPrimaryKey(DeviceLog entity);
+
+    List<DeviceLog> selectByDeviceId(Long id);
 
 }
