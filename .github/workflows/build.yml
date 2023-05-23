@@ -27,7 +27,7 @@ jobs:
       - name: init mariadb
         run: |
           sudo apt install mariadb-client
-          mariadb --user=com --password=com01 com < src/main/resources/com/smhrd/projectweb/entity/sql/table.sql
+          mariadb --host=localhost --protocol=tcp --port=3306 --user=com --password=com01 com < src/main/resources/com/smhrd/projectweb/entity/sql/table.sql
           cp src/main/resources/persistence-mariadb-example.properties src/main/resources/persistence-mariadb.properties 
 
       - name: Set up JDK 11
