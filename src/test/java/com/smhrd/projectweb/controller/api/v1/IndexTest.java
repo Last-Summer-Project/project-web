@@ -22,13 +22,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class IndexTest extends RestDocsTestSupport {
 
     @Test
-    @WithMockUser
     void index() throws Exception {
         this.mockMvc.perform(
                 get("/api/v1")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("message").value("Hello, World!"))
+                .andExpect(jsonPath("message").value("안녕, 세계!"))
                 .andDo(restDocs.document(
                         responseFields(
                                 fieldWithPath("message").description("Hello, World!")
