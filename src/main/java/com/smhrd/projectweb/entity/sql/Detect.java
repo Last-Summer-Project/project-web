@@ -1,12 +1,12 @@
 package com.smhrd.projectweb.entity.sql;
 
-import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
+import java.io.Serializable;
+
 /**
- * 
  * @TableName detect
  */
 @Data
@@ -14,17 +14,17 @@ import lombok.ToString;
 @ToString
 public class Detect implements Serializable {
     /**
-     * 
+     *
      */
     private Long id;
 
     /**
-     * 
+     *
      */
     private Status status;
 
     /**
-     * 
+     *
      */
     private String result;
 }

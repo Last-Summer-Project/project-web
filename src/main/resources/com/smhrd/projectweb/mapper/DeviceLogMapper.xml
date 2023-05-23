@@ -80,12 +80,11 @@
     </update>
     <update id="updateByPrimaryKey" parameterType="com.smhrd.projectweb.entity.sql.DeviceLog">
         update device_log
-        set 
-            device_id =  #{deviceId,jdbcType=BIGINT},
-            temperature =  #{temperature,jdbcType=FLOAT},
-            relative_humidity =  #{relativeHumidity,jdbcType=FLOAT},
-            soil_humidity =  #{soilHumidity,jdbcType=FLOAT},
-            image_id =  #{imageId,jdbcType=BIGINT}
-        where   id = #{id,jdbcType=BIGINT}
+        set device_id         = #{deviceId,jdbcType=BIGINT},
+            temperature       = #{temperature,jdbcType=FLOAT},
+            relative_humidity = #{relativeHumidity,jdbcType=FLOAT},
+            soil_humidity     = #{soilHumidity,jdbcType=FLOAT},
+            image_id          = #{imageId,jdbcType=BIGINT}
+        where id = #{id,jdbcType=BIGINT}
     </update>
 </mapper>

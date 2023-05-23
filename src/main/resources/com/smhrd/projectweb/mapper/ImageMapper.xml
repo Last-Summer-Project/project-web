@@ -5,22 +5,23 @@
 <mapper namespace="com.smhrd.projectweb.mapper.ImageMapper">
 
     <resultMap id="BaseResultMap" type="com.smhrd.projectweb.entity.sql.Image">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="name" column="name" jdbcType="VARCHAR"/>
-            <result property="url" column="url" jdbcType="VARCHAR"/>
-            <result property="dateCreated" column="date_created" jdbcType="DATE"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="url" column="url" jdbcType="VARCHAR"/>
+        <result property="dateCreated" column="date_created" jdbcType="DATE"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        id,name,url,
+        id
+        ,name,url,
         date_created
     </sql>
 
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
-        <include refid="Base_Column_List" />
+        <include refid="Base_Column_List"/>
         from image
-        where  id = #{id,jdbcType=BIGINT} 
+        where id = #{id,jdbcType=BIGINT}
     </select>
 
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
@@ -28,35 +29,37 @@
         from image
         where id = #{id,jdbcType=BIGINT}
     </delete>
-    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.sql.Image" useGeneratedKeys="true">
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.sql.Image"
+            useGeneratedKeys="true">
         insert into image
             (id, name, url)
         values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR})
     </insert>
-    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.sql.Image" useGeneratedKeys="true">
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.sql.Image"
+            useGeneratedKeys="true">
         insert into image
         <trim prefix="(" suffix=")" suffixOverrides=",">
-                <if test="id != null">id,</if>
-                <if test="name != null">name,</if>
-                <if test="url != null">url,</if>
+            <if test="id != null">id,</if>
+            <if test="name != null">name,</if>
+            <if test="url != null">url,</if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
-                <if test="id != null">#{id,jdbcType=BIGINT},</if>
-                <if test="name != null">#{name,jdbcType=VARCHAR},</if>
-                <if test="url != null">#{url,jdbcType=VARCHAR},</if>
+            <if test="id != null">#{id,jdbcType=BIGINT},</if>
+            <if test="name != null">#{name,jdbcType=VARCHAR},</if>
+            <if test="url != null">#{url,jdbcType=VARCHAR},</if>
         </trim>
     </insert>
     <update id="updateByPrimaryKeySelective" parameterType="com.smhrd.projectweb.entity.sql.Image">
         update image
         <set>
-                <if test="name != null">
-                    name = #{name,jdbcType=VARCHAR},
-                </if>
-                <if test="url != null">
-                    url = #{url,jdbcType=VARCHAR},
-                </if>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null">
+                url = #{url,jdbcType=VARCHAR},
+            </if>
         </set>
-        where   id = #{id,jdbcType=BIGINT} 
+        where id = #{id,jdbcType=BIGINT}
     </update>
     <update id="updateByPrimaryKey" parameterType="com.smhrd.projectweb.entity.sql.Image">
         update image

@@ -1,13 +1,13 @@
 package com.smhrd.projectweb.entity.sql;
 
-import java.io.Serializable;
-import java.time.LocalDateTime;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
 /**
- * 
  * @TableName device
  */
 @Data
@@ -15,27 +15,27 @@ import lombok.ToString;
 @ToString
 public class Device implements Serializable {
     /**
-     * 
+     *
      */
     private Long id;
 
     /**
-     * 
+     *
      */
     private String loginId;
 
     /**
-     * 
+     *
      */
     private String password;
 
     /**
-     * 
+     *
      */
     private LocalDateTime dateCreated;
 
     /**
-     * 
+     *
      */
     private LocalDateTime lastEdited;
 }

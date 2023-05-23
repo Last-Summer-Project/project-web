@@ -49,14 +49,14 @@
     <update id="updateByPrimaryKeySelective" parameterType="com.smhrd.projectweb.entity.sql.Device">
         update device
         <set>
-                <if test="loginId != null">
-                    login_id = #{loginId,jdbcType=VARCHAR},
-                </if>
-                <if test="password != null">
-                    password = #{password,jdbcType=VARCHAR},
-                </if>
+            <if test="loginId != null">
+                login_id = #{loginId,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                password = #{password,jdbcType=VARCHAR},
+            </if>
         </set>
-        where   id = #{id,jdbcType=BIGINT} 
+        where id = #{id,jdbcType=BIGINT}
     </update>
     <update id="updateByPrimaryKey" parameterType="com.smhrd.projectweb.entity.sql.Device">
         update device
