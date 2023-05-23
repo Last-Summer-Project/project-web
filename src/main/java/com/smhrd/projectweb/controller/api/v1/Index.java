@@ -11,6 +11,6 @@ public class Index {
 
     @GetMapping({"", "/"})
     public IndexResponse index() {
-        return new IndexResponse("Hello, World!");
+        return new IndexResponse("안녕, 세계!");
     }
 }

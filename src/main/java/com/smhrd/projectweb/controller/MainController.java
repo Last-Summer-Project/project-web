@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class MainController {
-    @GetMapping("/")
+    @GetMapping(value = "/", produces = "text/plain;charset=UTF-8")
     public @ResponseBody String index() {
-        return "Hello, World!";
+        return "안녕, 세계!";
     }
 }
