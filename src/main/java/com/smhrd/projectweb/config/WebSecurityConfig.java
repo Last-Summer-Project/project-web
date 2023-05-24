@@ -18,12 +18,10 @@ public class WebSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         CharacterEncodingFilter filter = new CharacterEncodingFilter("UTF-8", true);
 
-        http
-                .addFilterBefore(filter, CsrfFilter.class)
-                .csrf()
-                    .ignoringAntMatchers("/api/**")
-                .and()
-                    .authorizeRequests(authorize -> authorize.anyRequest().permitAll());
+        http.addFilterBefore(filter, CsrfFilter.class);
+        http.cors();
+        http.csrf().ignoringAntMatchers("/api/**");
+        http.authorizeRequests(authorize -> authorize.anyRequest().permitAll());
         return http.build();
     }
 

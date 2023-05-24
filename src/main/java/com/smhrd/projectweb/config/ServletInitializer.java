@@ -13,7 +13,7 @@ public class ServletInitializer extends AbstractAnnotationConfigDispatcherServle
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class<?>[]{RootConfig.class, WebSecurityConfig.class, MethodSecuriyConfig.class};
+        return new Class<?>[]{DataSourceConfig.class, WebSecurityConfig.class, MethodSecuriyConfig.class};
     }
 
     @Override

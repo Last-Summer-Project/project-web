@@ -95,4 +95,13 @@
         where device_id = #{id,jdbcType=BIGINT}
         order by date_created desc
     </select>
+
+    <select id="selectLatestByDeviceId" resultType="com.smhrd.projectweb.entity.sql.DeviceLog">
+        select
+        <include refid="Base_Column_List"/>
+        from device_log
+        where device_id = #{id,jdbcType=BIGINT}
+        order by date_created desc
+        limit 1
+    </select>
 </mapper>

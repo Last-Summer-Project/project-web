@@ -14,7 +14,7 @@ CREATE TABLE `device_log`
     `image_id`          BIGINT   NOT NULL,
     `date_created`      DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT `PK_DEVICE_LOG` PRIMARY KEY (`id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `image`
 (
@@ -23,7 +23,7 @@ CREATE TABLE `image`
     `url`          VARCHAR(255) NOT NULL,
     `date_created` DATE         NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT `PK_IMAGE` PRIMARY KEY (`id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `detect`
 (
@@ -31,7 +31,7 @@ CREATE TABLE `detect`
     `status` ENUM ('not_started','in_progress','done') NOT NULL,
     `result` VARCHAR(255)                              NULL,
     CONSTRAINT `PK_DETECT` PRIMARY KEY (`id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `timelapse`
 (
@@ -44,7 +44,7 @@ CREATE TABLE `timelapse`
     `date_created` DATETIME                                  NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `last_edited`  DATETIME                                  NOT NULL ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT `PK_TIMELAPSE` PRIMARY KEY (`id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `device`
 (
@@ -54,7 +54,7 @@ CREATE TABLE `device`
     `date_created` DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `last_edited`  DATETIME     NOT NULL ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT `PK_DEVICE` PRIMARY KEY (`id`)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE `device_log`
     ADD CONSTRAINT `FK_device_TO_device_log_1` FOREIGN KEY (

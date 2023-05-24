@@ -15,7 +15,7 @@ import org.springframework.core.env.Environment;
 @MapperScan(basePackages = {"com.smhrd.projectweb.mapper"})
 @PropertySource("classpath:persistence-mariadb.properties")
 @RequiredArgsConstructor
-public class RootConfig {
+public class DataSourceConfig {
 
     private final Environment env;
 
