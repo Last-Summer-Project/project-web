@@ -8,11 +8,13 @@ public class ResultWrapper<T> {
     private static final String STATUS_OK = "ok";
     private static final String STATUS_FAIL = "fail";
     private static final String STATUS_ERROR = "error";
+    private String status;
+
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public String message;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public T data;
-    private String status;
+
 
     public ResultWrapper(String status, String message, T data) {
         this.status = status;

@@ -19,4 +19,6 @@ public interface DeviceMapper {
 
     int updateByPrimaryKey(Device entity);
 
+    Device selectByLoginId(String loginId);
+
 }

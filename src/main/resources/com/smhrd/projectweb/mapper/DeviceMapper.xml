@@ -65,4 +65,11 @@
             password =  #{password,jdbcType=VARCHAR}
         where   id = #{id,jdbcType=BIGINT} 
     </update>
+
+    <select id="selectByLoginId" resultType="com.smhrd.projectweb.entity.sql.Device">
+        select
+        <include refid="Base_Column_List"/>
+        from device
+        where login_id = #{loginId,jdbcType=VARCHAR}
+    </select>
 </mapper>

@@ -21,6 +21,7 @@ repositories {
 
 ext {
 	set('snippetsDir', file("build/generated-snippets"))
+	jjwtVersion = "0.11.5"
 }
 
 dependencies {
@@ -48,6 +49,11 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 	testCompileOnly 'org.projectlombok:lombok'
 	testAnnotationProcessor 'org.projectlombok:lombok'
+
+	// Json Web Token
+	implementation "io.jsonwebtoken:jjwt-api:$jjwtVersion"
+	runtimeOnly "io.jsonwebtoken:jjwt-impl:$jjwtVersion"
+	runtimeOnly "io.jsonwebtoken:jjwt-jackson:$jjwtVersion"
 }
 
 tasks.named('test') {
