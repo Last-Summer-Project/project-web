@@ -9,9 +9,9 @@ public interface DetectMapper {
 
     int deleteByPrimaryKey(Long id);
 
-    int insert(Detect entity);
+    Long insert(Detect entity);
 
-    int insertSelective(Detect entity);
+    Long insertSelective(Detect entity);
 
     Detect selectByPrimaryKey(Long id);
 

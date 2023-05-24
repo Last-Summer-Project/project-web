@@ -9,9 +9,9 @@ public interface DeviceMapper {
 
     int deleteByPrimaryKey(Long id);
 
-    int insert(Device entity);
+    Long insert(Device entity);
 
-    int insertSelective(Device entity);
+    Long insertSelective(Device entity);
 
     Device selectByPrimaryKey(Long id);
 

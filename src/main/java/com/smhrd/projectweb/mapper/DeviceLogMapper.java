@@ -11,9 +11,9 @@ public interface DeviceLogMapper {
 
     int deleteByPrimaryKey(Long id);
 
-    int insert(DeviceLog entity);
+    Long insert(DeviceLog entity);
 
-    int insertSelective(DeviceLog entity);
+    Long insertSelective(DeviceLog entity);
 
     DeviceLog selectByPrimaryKey(Long id);
 

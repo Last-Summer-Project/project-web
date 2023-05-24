@@ -9,9 +9,9 @@ public interface TimelapseMapper {
 
     int deleteByPrimaryKey(Long id);
 
-    int insert(Timelapse entity);
+    Long insert(Timelapse entity);
 
-    int insertSelective(Timelapse entity);
+    Long insertSelective(Timelapse entity);
 
     Timelapse selectByPrimaryKey(Long id);
 

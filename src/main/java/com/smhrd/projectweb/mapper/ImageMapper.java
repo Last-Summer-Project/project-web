@@ -8,9 +8,9 @@ public interface ImageMapper {
 
     int deleteByPrimaryKey(Long id);
 
-    int insert(Image entity);
+    Long insert(Image entity);
 
-    int insertSelective(Image entity);
+    Long insertSelective(Image entity);
 
     Image selectByPrimaryKey(Long id);
 
