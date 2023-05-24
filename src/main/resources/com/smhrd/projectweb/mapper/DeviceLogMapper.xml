@@ -45,16 +45,15 @@
     <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.sql.DeviceLog"
             useGeneratedKeys="true">
         insert into device_log
-        ( id, device_id, temperature
+        ( device_id, temperature
         , relative_humidity, soil_humidity, image_id)
-        values ( #{id,jdbcType=BIGINT}, #{deviceId,jdbcType=BIGINT}, #{temperature,jdbcType=FLOAT}
+        values ( #{deviceId,jdbcType=BIGINT}, #{temperature,jdbcType=FLOAT}
                , #{relativeHumidity,jdbcType=FLOAT}, #{soilHumidity,jdbcType=FLOAT}, #{imageId,jdbcType=BIGINT})
     </insert>
     <insert id="insertSelective" keyColumn="id" keyProperty="id"
             parameterType="com.smhrd.projectweb.entity.sql.DeviceLog" useGeneratedKeys="true">
         insert into device_log
         <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="id != null">id,</if>
             <if test="deviceId != null">device_id,</if>
             <if test="temperature != null">temperature,</if>
             <if test="relativeHumidity != null">relative_humidity,</if>
@@ -62,7 +61,6 @@
             <if test="imageId != null">image_id,</if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
-            <if test="id != null">#{id,jdbcType=BIGINT},</if>
             <if test="deviceId != null">#{deviceId,jdbcType=BIGINT},</if>
             <if test="temperature != null">#{temperature,jdbcType=FLOAT},</if>
             <if test="relativeHumidity != null">#{relativeHumidity,jdbcType=FLOAT},</if>
