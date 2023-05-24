@@ -13,7 +13,6 @@ import org.springframework.http.MediaType;
 import org.springframework.jdbc.datasource.init.ScriptUtils;
 
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -55,8 +54,8 @@ public class AuthTest extends RestDocsTestSupport {
                         ),
                         responseFields(
                                 fieldWithPath("status").description("Status of response"),
-                                fieldWithPath("message").description("Message of request"),
-                                fieldWithPath("data").description("JWT Token")
+                                fieldWithPath("message").description("Message of response"),
+                                fieldWithPath("data").description("Json Web Token")
                         )
                 )
         );

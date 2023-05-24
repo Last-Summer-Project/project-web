@@ -31,7 +31,8 @@ public class RestDocsTestSupport {
 
     protected  ApplicationContext context;
 
-    protected SqlSessionFactory sessionFactory;
+    @Autowired
+    protected SqlSessionFactory sqlSessionFactory;
 
     @Autowired
     protected ObjectMapper objectMapper;
