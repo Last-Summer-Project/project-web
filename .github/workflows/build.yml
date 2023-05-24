@@ -28,7 +28,7 @@ jobs:
       - name: init mariadb
         run: |
           sudo apt install mariadb-client
-          mariadb --host=localhost --protocol=tcp --port=${{ job.services.mariadb.ports[3306] }} --user=com --password=com01 com < src/main/resources/com/smhrd/projectweb/entity/sql/table.sql
+          mariadb --host=localhost --protocol=tcp --port=${{ job.services.mariadb.ports[3306] }} --user=com --password=com01 com < src/test/resources/table-template.sql
           sed -i 's/172.30.1.3/localhost/g' src/test/resources/application.properties
           sed -i 's/3307/${{ job.services.mariadb.ports[3306] }}/g' src/test/resources/application.properties
           cp src/test/resources/application.properties src/main/resources/application.properties
