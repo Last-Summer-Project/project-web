@@ -48,4 +48,10 @@ public class DeviceLog implements Serializable {
      *
      */
     private LocalDateTime dateCreated;
+
+
+    private Detect detect;
+    private Image image;
+
+
 }

@@ -5,78 +5,91 @@
 <mapper namespace="com.smhrd.projectweb.mapper.DeviceLogMapper">
 
     <resultMap id="BaseResultMap" type="com.smhrd.projectweb.entity.sql.DeviceLog">
-            <id property="id" column="id" jdbcType="BIGINT"/>
-            <result property="deviceId" column="device_id" jdbcType="BIGINT"/>
-            <result property="temperature" column="temperature" jdbcType="FLOAT"/>
-            <result property="relativeHumidity" column="relative_humidity" jdbcType="FLOAT"/>
-            <result property="soilHumidity" column="soil_humidity" jdbcType="FLOAT"/>
-            <result property="imageId" column="image_id" jdbcType="BIGINT"/>
-            <result property="dateCreated" column="date_created" jdbcType="TIMESTAMP"/>
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="deviceId" column="device_id" jdbcType="BIGINT"/>
+        <result property="temperature" column="temperature" jdbcType="FLOAT"/>
+        <result property="relativeHumidity" column="relative_humidity" jdbcType="FLOAT"/>
+        <result property="soilHumidity" column="soil_humidity" jdbcType="FLOAT"/>
+        <result property="imageId" column="image_id" jdbcType="BIGINT"/>
+        <result property="dateCreated" column="date_created" jdbcType="TIMESTAMP"/>
+        <collection property="image" resultMap="ImageResultMap"/>
+        <collection property="detect" resultMap="com.smhrd.projectweb.mapper.DetectMapper.BaseResultMap"/>
+    </resultMap>
+
+    <resultMap id="ImageResultMap" type="com.smhrd.projectweb.entity.sql.Image">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="url" column="url" jdbcType="VARCHAR"/>
+        <result property="dateCreated" column="image_date_created" jdbcType="DATE"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        id,device_id,temperature,
+        id
+        ,device_id,temperature,
         relative_humidity,soil_humidity,image_id,
         date_created
     </sql>
 
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
-        <include refid="Base_Column_List" />
+        <include refid="Base_Column_List"/>
         from device_log
-        where  id = #{id,jdbcType=BIGINT} 
+        where id = #{id,jdbcType=BIGINT}
     </select>
 
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
-        delete from device_log
-        where  id = #{id,jdbcType=BIGINT} 
+        delete
+        from device_log
+        where id = #{id,jdbcType=BIGINT}
     </delete>
-    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.sql.DeviceLog" useGeneratedKeys="true">
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.sql.DeviceLog"
+            useGeneratedKeys="true">
         insert into device_log
-        ( id,device_id,temperature
-        ,relative_humidity,soil_humidity,image_id)
-        values (#{id,jdbcType=BIGINT},#{deviceId,jdbcType=BIGINT},#{temperature,jdbcType=FLOAT}
-        ,#{relativeHumidity,jdbcType=FLOAT},#{soilHumidity,jdbcType=FLOAT},#{imageId,jdbcType=BIGINT})
+        ( id, device_id, temperature
+        , relative_humidity, soil_humidity, image_id)
+        values ( #{id,jdbcType=BIGINT}, #{deviceId,jdbcType=BIGINT}, #{temperature,jdbcType=FLOAT}
+               , #{relativeHumidity,jdbcType=FLOAT}, #{soilHumidity,jdbcType=FLOAT}, #{imageId,jdbcType=BIGINT})
     </insert>
-    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.sql.DeviceLog" useGeneratedKeys="true">
+    <insert id="insertSelective" keyColumn="id" keyProperty="id"
+            parameterType="com.smhrd.projectweb.entity.sql.DeviceLog" useGeneratedKeys="true">
         insert into device_log
         <trim prefix="(" suffix=")" suffixOverrides=",">
-                <if test="id != null">id,</if>
-                <if test="deviceId != null">device_id,</if>
-                <if test="temperature != null">temperature,</if>
-                <if test="relativeHumidity != null">relative_humidity,</if>
-                <if test="soilHumidity != null">soil_humidity,</if>
-                <if test="imageId != null">image_id,</if>
+            <if test="id != null">id,</if>
+            <if test="deviceId != null">device_id,</if>
+            <if test="temperature != null">temperature,</if>
+            <if test="relativeHumidity != null">relative_humidity,</if>
+            <if test="soilHumidity != null">soil_humidity,</if>
+            <if test="imageId != null">image_id,</if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
-                <if test="id != null">#{id,jdbcType=BIGINT},</if>
-                <if test="deviceId != null">#{deviceId,jdbcType=BIGINT},</if>
-                <if test="temperature != null">#{temperature,jdbcType=FLOAT},</if>
-                <if test="relativeHumidity != null">#{relativeHumidity,jdbcType=FLOAT},</if>
-                <if test="soilHumidity != null">#{soilHumidity,jdbcType=FLOAT},</if>
-                <if test="imageId != null">#{imageId,jdbcType=BIGINT},</if>
+            <if test="id != null">#{id,jdbcType=BIGINT},</if>
+            <if test="deviceId != null">#{deviceId,jdbcType=BIGINT},</if>
+            <if test="temperature != null">#{temperature,jdbcType=FLOAT},</if>
+            <if test="relativeHumidity != null">#{relativeHumidity,jdbcType=FLOAT},</if>
+            <if test="soilHumidity != null">#{soilHumidity,jdbcType=FLOAT},</if>
+            <if test="imageId != null">#{imageId,jdbcType=BIGINT},</if>
         </trim>
     </insert>
     <update id="updateByPrimaryKeySelective" parameterType="com.smhrd.projectweb.entity.sql.DeviceLog">
         update device_log
         <set>
-                <if test="deviceId != null">
-                    device_id = #{deviceId,jdbcType=BIGINT},
-                </if>
-                <if test="temperature != null">
-                    temperature = #{temperature,jdbcType=FLOAT},
-                </if>
-                <if test="relativeHumidity != null">
-                    relative_humidity = #{relativeHumidity,jdbcType=FLOAT},
-                </if>
-                <if test="soilHumidity != null">
-                    soil_humidity = #{soilHumidity,jdbcType=FLOAT},
-                </if>
-                <if test="imageId != null">
-                    image_id = #{imageId,jdbcType=BIGINT},
-                </if>
+            <if test="deviceId != null">
+                device_id = #{deviceId,jdbcType=BIGINT},
+            </if>
+            <if test="temperature != null">
+                temperature = #{temperature,jdbcType=FLOAT},
+            </if>
+            <if test="relativeHumidity != null">
+                relative_humidity = #{relativeHumidity,jdbcType=FLOAT},
+            </if>
+            <if test="soilHumidity != null">
+                soil_humidity = #{soilHumidity,jdbcType=FLOAT},
+            </if>
+            <if test="imageId != null">
+                image_id = #{imageId,jdbcType=BIGINT},
+            </if>
         </set>
-        where   id = #{id,jdbcType=BIGINT} 
+        where id = #{id,jdbcType=BIGINT}
     </update>
     <update id="updateByPrimaryKey" parameterType="com.smhrd.projectweb.entity.sql.DeviceLog">
         update device_log
@@ -88,20 +101,34 @@
         where id = #{id,jdbcType=BIGINT}
     </update>
 
-    <select id="selectByDeviceId" resultType="com.smhrd.projectweb.entity.sql.DeviceLog">
-        select
-        <include refid="Base_Column_List"/>
-        from device_log
+    <sql id="Join_Select_Query">
+        select l.id,
+               l.device_id,
+               l.temperature,
+               l.relative_humidity,
+               l.soil_humidity,
+               l.image_id,
+               l.date_created,
+               i.name,
+               i.url,
+               i.date_created as image_date_created,
+               d.status,
+               d.result
+        from device_log as l
+                 inner join image as i
+                            on l.image_id = i.id
+                 inner join detect d
+                            on l.id = d.id
         where device_id = #{id,jdbcType=BIGINT}
         order by date_created desc
+    </sql>
+
+    <select id="selectByDeviceId" resultType="com.smhrd.projectweb.entity.sql.DeviceLog">
+        <include refid="Join_Select_Query"/>
     </select>
 
     <select id="selectLatestByDeviceId" resultType="com.smhrd.projectweb.entity.sql.DeviceLog">
-        select
-        <include refid="Base_Column_List"/>
-        from device_log
-        where device_id = #{id,jdbcType=BIGINT}
-        order by date_created desc
-        limit 1
+        <include refid="Join_Select_Query"/>
+        LIMIT 1
     </select>
 </mapper>
