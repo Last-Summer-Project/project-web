@@ -1,3 +1,5 @@
-persistence-*.properties
-!persistence-*-example.properties
+*.properties
+!*-example.properties
+!*-test.properties
+
 

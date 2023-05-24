@@ -20,7 +20,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan
+@ComponentScan({"com.smhrd.projectweb"})
 public class SpringWebConfig implements WebMvcConfigurer, ApplicationContextAware {
 
     private static final String UTF_8 = "UTF-8";

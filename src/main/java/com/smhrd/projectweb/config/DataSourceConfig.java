@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -13,21 +14,16 @@ import org.springframework.core.env.Environment;
 
 @Configuration
 @MapperScan(basePackages = {"com.smhrd.projectweb.mapper"})
-@PropertySource("classpath:persistence-mariadb.properties")
+@PropertySource("classpath:/application.properties")
 @RequiredArgsConstructor
 public class DataSourceConfig {
 
     private final Environment env;
 
     @Bean
+    @ConfigurationProperties(prefix = "spring.datasource.hikari")
     public HikariConfig hikariConfig() {
-        HikariConfig hikariConfig = new HikariConfig();
-        hikariConfig.setDriverClassName(env.getProperty("jdbc.driver"));
-        hikariConfig.setJdbcUrl(env.getProperty("jdbc.url"));
-        hikariConfig.setUsername(env.getProperty("jdbc.user"));
-        hikariConfig.setPassword(env.getProperty("jdbc.pass"));
-
-        return hikariConfig;
+        return new HikariConfig();
     }
 
     @Bean

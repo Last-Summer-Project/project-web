@@ -28,7 +28,7 @@ public class DeviceUserService {
 
     public String signup(Device device) {
         Device d = deviceMapper.selectByLoginId(device.getLoginId());
-        if (d != null) {
+        if (d == null) {
             device.setPassword(passwordEncoder.encode(device.getPassword()));
             Long id = deviceMapper.insert(device);
             return jwtProvider.createToken(device.getLoginId(), id);

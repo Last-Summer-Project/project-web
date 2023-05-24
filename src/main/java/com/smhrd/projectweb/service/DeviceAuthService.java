@@ -4,6 +4,7 @@ import com.smhrd.projectweb.entity.request.api.v1.AuthRequest;
 import com.smhrd.projectweb.entity.sql.Device;
 import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class DeviceAuthService {
     private final DeviceUserService deviceUserService;
 
@@ -24,7 +26,7 @@ public class DeviceAuthService {
         String token = deviceUserService.signup(device);
         if (token == null || token.isEmpty()) return ResultWrapper.fail("Failed to sign up");
 
-        return ResultWrapper.ok("Sign up complete", token);
+        return ResultWrapper.ok("Successfully signed up", token);
     }
 
     public ResultWrapper<String> login(AuthRequest authRequest) {

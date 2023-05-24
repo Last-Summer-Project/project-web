@@ -1,6 +1,6 @@
 package com.smhrd.projectweb.controller.api.v1;
 
-import com.smhrd.projectweb.entity.response.api.v1.IndexResponse;
+import com.smhrd.projectweb.shared.ResultWrapper;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Index {
 
     @GetMapping({"", "/"})
-    public IndexResponse index() {
-        return new IndexResponse("안녕, 세계!");
+    public ResultWrapper<Void> index() {
+        return ResultWrapper.ok("안녕, 세계!");
     }
 }
