@@ -1,9 +1,7 @@
 package com.smhrd.projectweb.entity.sql;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.RequiredArgsConstructor;
-import lombok.ToString;
+import lombok.*;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -14,6 +12,7 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode
 @ToString
 @RequiredArgsConstructor
+@AllArgsConstructor
 public class Device implements Serializable {
 
     /**

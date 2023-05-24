@@ -1,5 +1,6 @@
 package com.smhrd.projectweb.service;
 
+import com.smhrd.projectweb.entity.sql.Device;
 import com.smhrd.projectweb.mapper.DeviceMapper;
 import com.smhrd.projectweb.security.JwtProvider;
 import lombok.RequiredArgsConstructor;
@@ -20,9 +21,19 @@ public class DeviceUserService {
     private final JwtProvider jwtProvider;
     private final AuthenticationManager authenticationManager;
 
-    public String authenticate(String loginId, String password) throws AuthenticationException {
+    public String login(String loginId, String password) throws AuthenticationException {
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginId, password));
         return jwtProvider.createToken(loginId, deviceMapper.selectByLoginId(loginId).getId());
+    }
+
+    public String signup(Device device) {
+        Device d = deviceMapper.selectByLoginId(device.getLoginId());
+        if (d != null) {
+            device.setPassword(passwordEncoder.encode(device.getPassword()));
+            Long id = deviceMapper.insert(device);
+            return jwtProvider.createToken(device.getLoginId(), id);
+        }
+        return null;
     }
 
     public Long getTokenDeviceId(HttpServletRequest req) {
