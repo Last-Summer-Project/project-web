@@ -1,8 +1,8 @@
-=== Log via Device Id
+=== Log via Device ID
 
 Retrieve device log based on path parameter
 
-==== Latest
+==== Get latest
 
 ===== HTTP request
 ====== `curl`
@@ -26,7 +26,7 @@ include::{snippets}/log-with-device-id-test/get-latest-log/http-response.adoc[]
 include::{snippets}/log-with-device-id-test/get-latest-log/response-fields.adoc[]
 
 
-==== Latest Detected
+==== Get latest detected
 
 ===== HTTP request
 ====== `curl`
@@ -51,7 +51,7 @@ include::{snippets}/log-with-device-id-test/get-latest-log/path-parameters.adoc[
 include::{snippets}/log-with-device-id-test/get-latest-detected-log/http-response.adoc[]
 include::{snippets}/log-with-device-id-test/get-latest-detected-log/response-fields.adoc[]
 
-==== Recent logs
+==== Get recent logs
 
 Retrieve recent 100 logs
 
