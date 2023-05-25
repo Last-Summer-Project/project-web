@@ -40,7 +40,7 @@ jobs:
                      -e "MINIO_SECRET_KEY=secret-key" \
                      -v /tmp/data:/data \
                      -v /tmp/config:/root/.minio \
-                     minio/minio server /data
+                     quay.io/minio/minio:latest server /data
           wget https://dl.minio.io/client/mc/release/linux-amd64/mc
           chmod +x mc
           ./mc config host add my http://localhost:9000 access-key secret-key

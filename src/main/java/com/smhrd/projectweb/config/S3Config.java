@@ -28,8 +28,11 @@ public class S3Config {
     @Bean
     public AmazonS3 amazonS3() {
         BasicAWSCredentials awsCredentials = new BasicAWSCredentials(accessKey, secretKey);
-        AwsClientBuilder.EndpointConfiguration endpointConfiguration= new AwsClientBuilder.EndpointConfiguration(endpoint, region);
+        AwsClientBuilder.EndpointConfiguration endpointConfiguration = new AwsClientBuilder.EndpointConfiguration(endpoint, region);
         return AmazonS3ClientBuilder.standard()
+                .withPayloadSigningEnabled(true)
+                .withDualstackEnabled(true)
+                .withAccelerateModeEnabled(true)
                 .withEndpointConfiguration(endpointConfiguration)
                 .withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
                 .build();
