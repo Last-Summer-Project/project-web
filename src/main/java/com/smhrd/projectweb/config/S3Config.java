@@ -31,8 +31,7 @@ public class S3Config {
         AwsClientBuilder.EndpointConfiguration endpointConfiguration = new AwsClientBuilder.EndpointConfiguration(endpoint, region);
         return AmazonS3ClientBuilder.standard()
                 .withPayloadSigningEnabled(true)
-                .withDualstackEnabled(true)
-                .withAccelerateModeEnabled(true)
+                .withPathStyleAccessEnabled(true)
                 .withEndpointConfiguration(endpointConfiguration)
                 .withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
                 .build();
