@@ -42,14 +42,14 @@ include::{snippets}/log-with-device-id-test/get-latest-detected-log/http-request
 include::{snippets}/log-with-device-id-test/get-latest-detected-log/request-headers.adoc[]
 
 ====== Path parameters
-include::{snippets}/log-with-device-id-test/get-latest-log/path-parameters.adoc[]
+include::{snippets}/log-with-device-id-test/get-latest-detected-log/path-parameters.adoc[]
 
 
 
 ===== HTTP response
 
-include::{snippets}/log-with-device-id-test/get-latest-detected-log/http-response.adoc[]
-include::{snippets}/log-with-device-id-test/get-latest-detected-log/response-fields.adoc[]
+include::{snippets}/log-with-device-id-test/get-latest-log/http-response.adoc[]
+include::{snippets}/log-with-device-id-test/get-latest-log/response-fields.adoc[]
 
 ==== Get recent logs
 
