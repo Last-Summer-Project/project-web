@@ -19,8 +19,6 @@ import org.springframework.core.env.Environment;
 @RequiredArgsConstructor
 public class DataSourceConfig {
 
-    private final Environment env;
-
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource.hikari")
     public HikariConfig hikariConfig() {

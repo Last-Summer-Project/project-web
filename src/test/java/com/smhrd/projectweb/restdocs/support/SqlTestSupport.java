@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.restdocs;
+package com.smhrd.projectweb.restdocs.support;
 
 import com.smhrd.projectweb.service.device.DeviceUserService;
 import lombok.RequiredArgsConstructor;
@@ -13,13 +13,10 @@ import java.sql.Connection;
 
 @Disabled
 @RequiredArgsConstructor
-public class RestDocsTestSupportWithSql extends RestDocsTestSupport {
+public class SqlTestSupport extends BasicTestSupport {
 
     @Autowired
     protected SqlSessionFactory sqlSessionFactory;
-
-    @Autowired
-    protected DeviceUserService deviceUserService;
 
     @BeforeAll
     public static void setupSql(@Autowired SqlSessionFactory sqlSessionFactory) {

@@ -1,6 +1,6 @@
 package com.smhrd.projectweb.controller.api.v1;
 
-import com.smhrd.projectweb.restdocs.RestDocsTestSupport;
+import com.smhrd.projectweb.restdocs.support.BasicTestSupport;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
@@ -10,7 +10,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(Index.class)
-class IndexTest extends RestDocsTestSupport {
+class IndexTest extends BasicTestSupport {
 
     @Test
     void index() throws Exception {

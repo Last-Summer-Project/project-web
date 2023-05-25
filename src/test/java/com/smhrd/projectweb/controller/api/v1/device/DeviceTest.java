@@ -2,16 +2,13 @@ package com.smhrd.projectweb.controller.api.v1.device;
 
 
 import com.smhrd.projectweb.config.TestSecurityConfig;
-import com.smhrd.projectweb.restdocs.RestDocsTestSupportWithSql;
+import com.smhrd.projectweb.restdocs.support.AuthTestSupport;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.*;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.MediaType;
-import org.springframework.security.authentication.TestingAuthenticationToken;
-import org.springframework.security.core.Authentication;
-
 
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.get;
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
@@ -25,18 +22,7 @@ import static org.springframework.restdocs.request.RequestDocumentation.*;
 @PropertySource("classpath:application.properties")
 @Slf4j
 @Import(TestSecurityConfig.class)
-class DeviceTest extends RestDocsTestSupportWithSql {
-
-    Authentication authentication = new TestingAuthenticationToken("test_user", "pass", "device");
-    String testJwtValue;
-
-
-    private String getJwt() {
-        if (testJwtValue == null) {
-            testJwtValue = deviceUserService.login("test_user", "pass");
-        }
-        return testJwtValue;
-    }
+class DeviceTest extends AuthTestSupport {
 
     @Test
     void getDevice1() throws Exception {

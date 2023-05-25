@@ -1,7 +1,7 @@
 package com.smhrd.projectweb.controller.api.v1.device;
 
 import com.smhrd.projectweb.entity.request.api.v1.AuthRequest;
-import com.smhrd.projectweb.restdocs.RestDocsTestSupportWithSql;
+import com.smhrd.projectweb.restdocs.support.AuthTestSupport;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.*;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -18,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @PropertySource("classpath:application.properties")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @Slf4j
-class AuthTest extends RestDocsTestSupportWithSql {
+class AuthTest extends AuthTestSupport {
 
     @Test
     @Order(1)
