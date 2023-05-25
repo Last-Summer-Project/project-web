@@ -67,3 +67,28 @@ include::{snippets}/log-with-auth-test/get-latest-log/request-headers.adoc[]
 
 include::{snippets}/log-with-auth-test/get-latest-log/http-response.adoc[]
 include::{snippets}/log-with-auth-test/get-latest-log/response-fields.adoc[]
+
+
+==== Post to write log
+
+===== HTTP request
+====== `curl`
+include::{snippets}/log-with-device-id-test/post-write-log/curl-request.adoc[]
+
+====== `httpie`
+include::{snippets}/log-with-device-id-test/post-write-log/httpie-request.adoc[]
+
+====== HTTP
+include::{snippets}/log-with-auth-test/post-write-log/http-request.adoc[]
+
+====== Request headers
+include::{snippets}/log-with-auth-test/post-write-log/request-headers.adoc[]
+
+====== Request fields
+include::{snippets}/log-with-auth-test/post-write-log/request-fields.adoc[]
+
+===== HTTP response
+
+include::{snippets}/log-with-auth-test/post-write-log/http-response.adoc[]
+include::{snippets}/log-with-auth-test/post-write-log/response-fields.adoc[]
+
