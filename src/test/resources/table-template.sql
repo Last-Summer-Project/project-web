@@ -22,7 +22,7 @@ CREATE TABLE `image`
     `id`           BIGINT       NOT NULL AUTO_INCREMENT,
     `name`         VARCHAR(255) NOT NULL,
     `url`          VARCHAR(255) NOT NULL,
-    `date_created` DATE         NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `date_created` DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT `PK_IMAGE` PRIMARY KEY (`id`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

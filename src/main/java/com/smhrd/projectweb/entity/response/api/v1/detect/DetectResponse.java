@@ -11,9 +11,9 @@ import lombok.Data;
 @AllArgsConstructor
 public class DetectResponse {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Status detectStatus;
+    private Status status;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String detectResult;
+    private String result;
 
     public static DetectResponse fromDetect(Detect detect) {
         return new DetectResponse(detect.getStatus(), detect.getResult());

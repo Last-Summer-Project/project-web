@@ -1,5 +1,6 @@
 package com.smhrd.projectweb.config;
 
+import com.smhrd.projectweb.config.mybatis.StatusEnumTypeHandler;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import lombok.RequiredArgsConstructor;
@@ -35,6 +36,7 @@ public class DataSourceConfig {
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
         sqlSessionFactory.setDataSource(hikariDataSource());
+        sqlSessionFactory.setTypeHandlers(new StatusEnumTypeHandler());
         return sqlSessionFactory.getObject();
     }
 }

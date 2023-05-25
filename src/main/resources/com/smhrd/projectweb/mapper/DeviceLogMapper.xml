@@ -17,10 +17,10 @@
     </resultMap>
 
     <resultMap id="ImageResultMap" type="com.smhrd.projectweb.entity.sql.Image">
-        <id property="id" column="id" jdbcType="BIGINT"/>
+        <id property="id" column="image_id" jdbcType="BIGINT"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
         <result property="url" column="url" jdbcType="VARCHAR"/>
-        <result property="dateCreated" column="image_date_created" jdbcType="DATE"/>
+        <result property="dateCreated" column="image_date_created" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <sql id="Base_Column_List">
@@ -100,18 +100,18 @@
     </update>
 
     <sql id="Join_Select_Query">
-        select l.id,
-               l.device_id,
-               l.temperature,
-               l.relative_humidity,
-               l.soil_humidity,
-               l.image_id,
-               l.date_created,
-               i.name,
-               i.url,
+        select l.id AS id,
+               device_id,
+               temperature,
+               relative_humidity,
+               soil_humidity,
+               image_id,
+               l.date_created AS date_created,
+               name,
+               url,
                i.date_created as image_date_created,
-               d.status,
-               d.result
+               status,
+               result
         from device_log as l
                  inner join image as i
                             on l.image_id = i.id
@@ -121,29 +121,29 @@
         order by date_created desc
     </sql>
 
-    <select id="selectByDeviceId" resultType="com.smhrd.projectweb.entity.sql.DeviceLog">
+    <select id="selectByDeviceId" resultMap="BaseResultMap">
         <include refid="Join_Select_Query"/>
         LIMIT 500
     </select>
 
-    <select id="selectLatestByDeviceId" resultType="com.smhrd.projectweb.entity.sql.DeviceLog">
+    <select id="selectLatestByDeviceId" resultMap="BaseResultMap">
         <include refid="Join_Select_Query"/>
         LIMIT 1
     </select>
 
-    <select id="selectLatestDetectedByDeviceId" resultType="com.smhrd.projectweb.entity.sql.DeviceLog">
-        select l.id,
-               l.device_id,
-               l.temperature,
-               l.relative_humidity,
-               l.soil_humidity,
-               l.image_id,
-               l.date_created,
-               i.name,
-               i.url,
+    <select id="selectLatestDetectedByDeviceId" resultMap="BaseResultMap">
+        select l.id AS id,
+               device_id,
+               temperature,
+               relative_humidity,
+               soil_humidity,
+               image_id,
+               l.date_created AS date_created,
+               name,
+               url,
                i.date_created as image_date_created,
-               d.status,
-               d.result
+               status,
+               result
         from device_log as l
                  inner join image as i
                             on l.image_id = i.id
