@@ -2,23 +2,26 @@ package com.smhrd.projectweb.service.log;
 
 import com.smhrd.projectweb.entity.request.api.v1.log.LogWriteRequest;
 import com.smhrd.projectweb.entity.response.api.v1.log.LogResponse;
+import com.smhrd.projectweb.entity.sql.Detect;
 import com.smhrd.projectweb.entity.sql.DeviceLog;
 import com.smhrd.projectweb.mapper.DetectMapper;
 import com.smhrd.projectweb.mapper.DeviceLogMapper;
 import com.smhrd.projectweb.mapper.ImageMapper;
+import com.smhrd.projectweb.service.ImageService;
 import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 public class DeviceLogService {
     private final DeviceLogMapper deviceLogMapper;
-    private final ImageMapper imageMapper;
     private final DetectMapper detectMapper;
+    private final ImageService imageService;
 
     private static final String NO_LOG_FOUND = "No log found";
 
@@ -50,6 +53,21 @@ public class DeviceLogService {
     }
 
     public ResultWrapper<LogResponse> writeLog(Long deviceId, LogWriteRequest request) {
-        return ResultWrapper.fail("Not Implemented");
+        if (!deviceId.equals(request.getDeviceId())) return ResultWrapper.fail("Invalid request");
+
+        String imageName = UUID.randomUUID().toString();
+        Long imageId = imageService.uploadImageFromBase64(imageName, request.getImageBase64());
+        if (imageId == null)  return ResultWrapper.error("Failed to upload image");
+
+        DeviceLog deviceLog = request.toDeviceLog();
+        deviceLog.setImageId(imageId);
+        Long logId = deviceLogMapper.insert(deviceLog);
+        if (logId == null || logId == 0) return ResultWrapper.error("Failed to log data.");
+        Long detectId = detectMapper.insert(new Detect(logId));
+        if (detectId == null || detectId == 0) return ResultWrapper.error("Failed to log detect data.");
+
+        deviceLog = deviceLogMapper.selectByPrimaryKey(logId);
+        if (deviceLog == null) return ResultWrapper.error("Failed to load saved log data");
+        return ResultWrapper.ok(LogResponse.fromDeviceLog(deviceLog));
     }
 }

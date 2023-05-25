@@ -27,4 +27,10 @@ public class Detect implements Serializable {
      *
      */
     private String result;
+
+    public Detect(Long id) {
+       this.id = id;
+       this.status = Status.NOT_STARTED;
+       this.result = null;
+    }
 }

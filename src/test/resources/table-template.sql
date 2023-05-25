@@ -30,7 +30,7 @@ CREATE TABLE `image`
 CREATE TABLE `detect`
 (
     `id`     BIGINT                                    NOT NULL,
-    `status` ENUM ('not_started','in_progress','done') NOT NULL,
+    `status` ENUM ('not_started','in_progress','done') NOT NULL DEFAULT 'not_started',
     `result` VARCHAR(255)                              NULL,
     CONSTRAINT `PK_DETECT` PRIMARY KEY (`id`)
 ) ENGINE = InnoDB
@@ -42,7 +42,7 @@ CREATE TABLE `timelapse`
     `device_id`    BIGINT                                    NOT NULL,
     `start_date`   DATETIME                                  NOT NULL,
     `end_date`     DATETIME                                  NOT NULL,
-    `status`       ENUM ('not_started','in_progress','done') NOT NULL,
+    `status`       ENUM ('not_started','in_progress','done') NOT NULL DEFAULT 'not_started',
     `result`       VARCHAR(255)                              NULL,
     `date_created` DATETIME                                  NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `last_edited`  DATETIME                                  NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

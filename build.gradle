@@ -22,7 +22,8 @@ repositories {
 
 ext {
 	set('snippetsDir', file("build/generated-snippets"))
-	jjwtVersion = "0.11.5"
+	set('springCloudVersion', "2021.0.7")
+	set('jjwtVersion', "0.11.5")
 }
 
 dependencies {
@@ -37,6 +38,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.0'
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+	// org.springframework.cloud:spring-cloud-starter-aws
+	implementation 'io.awspring.cloud:spring-cloud-starter-aws:2.4.4'
+
+
 	implementation 'com.google.code.gson:gson:2.9.1'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
@@ -54,10 +59,18 @@ dependencies {
 	asciidoctorExt 'org.springframework.restdocs:spring-restdocs-asciidoctor'
 	testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
 
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 	// Json Web Token
 	implementation "io.jsonwebtoken:jjwt-api:$jjwtVersion"
 	runtimeOnly "io.jsonwebtoken:jjwt-impl:$jjwtVersion"
 	runtimeOnly "io.jsonwebtoken:jjwt-jackson:$jjwtVersion"
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
 }
 
 tasks.named('test') {
