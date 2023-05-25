@@ -1,0 +1,26 @@
+= Rest Documentation
+:toc: left
+:icons: font
+:source-highlighter: coderay
+:toc-title: 목차
+:toclevels: 3
+:sectlinks:
+:sectnums:
+
+== 개요
+=== 응답형식
+[source,json]
+{
+    "status": "ok"
+    "message": "message",  // Optional
+    "data": {
+        "data": "data"
+    }
+}
+
+== Api
+// Index
+include::./api/index.adoc[]
+
+// Auth
+include::./api/auth.adoc[]

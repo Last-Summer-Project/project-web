@@ -29,6 +29,7 @@ public class DeviceUserDetail  implements UserDetailsService {
                 .accountExpired(false)
                 .accountLocked(false)
                 .credentialsExpired(false)
+                .authorities("device")
                 .disabled(false)
                 .build();
     }

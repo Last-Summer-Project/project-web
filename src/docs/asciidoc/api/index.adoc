@@ -1,0 +1,13 @@
+=== Index
+
+==== HTTP request
+
+include::{snippets}/index-test/index/curl-request.adoc[]
+include::{snippets}/index-test/index/httpie-request.adoc[]
+include::{snippets}/index-test/index/http-request.adoc[]
+
+
+==== HTTP response
+
+include::{snippets}/index-test/index/http-response.adoc[]
+include::{snippets}/index-test/index/response-fields.adoc[]

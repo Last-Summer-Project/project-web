@@ -1,0 +1,42 @@
+=== Auth
+==== Login
+
+===== HTTP request
+
+include::{snippets}/auth-test/login/curl-request.adoc[]
+include::{snippets}/auth-test/login/httpie-request.adoc[]
+include::{snippets}/auth-test/login/http-request.adoc[]
+include::{snippets}/auth-test/login/request-fields.adoc[]
+
+===== HTTP response
+
+include::{snippets}/auth-test/login/http-response.adoc[]
+include::{snippets}/auth-test/login/response-fields.adoc[]
+
+==== Signup (Debug only)
+
+===== HTTP request
+
+include::{snippets}/auth-test/signup/curl-request.adoc[]
+include::{snippets}/auth-test/signup/httpie-request.adoc[]
+include::{snippets}/auth-test/signup/http-request.adoc[]
+include::{snippets}/auth-test/signup/request-fields.adoc[]
+
+===== HTTP response
+
+include::{snippets}/auth-test/signup/http-response.adoc[]
+include::{snippets}/auth-test/signup/response-fields.adoc[]
+
+==== Refresh Json Web Token
+
+===== HTTP request
+
+include::{snippets}/auth-test/refresh/curl-request.adoc[]
+include::{snippets}/auth-test/refresh/httpie-request.adoc[]
+include::{snippets}/auth-test/refresh/http-request.adoc[]
+
+===== HTTP response
+
+include::{snippets}/auth-test/refresh/http-response.adoc[]
+include::{snippets}/auth-test/refresh/response-fields.adoc[]
+
