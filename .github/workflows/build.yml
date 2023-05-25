@@ -59,7 +59,7 @@ jobs:
 
       - name: Test and build
         run: |
-          ./gradlew test
+          ./gradlew test --stacktrace
           ./gradlew build
           ./gradlew asciidoctor
 
