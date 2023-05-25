@@ -48,8 +48,8 @@ include::{snippets}/log-with-device-id-test/get-latest-detected-log/path-paramet
 
 ===== HTTP response
 
-include::{snippets}/log-with-device-id-test/get-latest-log/http-response.adoc[]
-include::{snippets}/log-with-device-id-test/get-latest-log/response-fields.adoc[]
+include::{snippets}/log-with-device-id-test/get-latest-detected-log/http-response.adoc[]
+include::{snippets}/log-with-device-id-test/get-latest-detected-log/response-fields.adoc[]
 
 ==== Get recent logs
 
