@@ -22,12 +22,13 @@ jobs:
         options: --health-cmd="mysqladmin ping" --health-interval=5s --health-timeout=2s --health-retries=3
 
       minio:
-        image: adobe/s3mock:latest
+        image: quay.io/minio/minio:latest
         ports:
           - 9000
         env:
           MINIO_ACCESS_KEY: access-key
           MINIO_SECRET_KEY: secret-key
+        options: server /data --console-address ":9001"
 
     steps:
       - name: Checkout
