@@ -20,26 +20,41 @@ public class DeviceAuthService {
     private Boolean isSignupAllowed;
 
     public ResultWrapper<String> signup(AuthRequest authRequest) {
-        if (isSignupAllowed == null || !isSignupAllowed) return ResultWrapper.error("Signup is not allowed");
+        try {
+            if (isSignupAllowed == null || !isSignupAllowed) return ResultWrapper.error("Signup is not allowed");
 
-        Device device = authRequest.toDevice();
-        String token = deviceUserService.signup(device);
-        if (token == null || token.isEmpty()) return ResultWrapper.fail("Failed to sign up");
+            Device device = authRequest.toDevice();
+            String token = deviceUserService.signup(device);
+            if (token == null || token.isEmpty()) return ResultWrapper.fail(403, "Failed to sign up");
 
-        return ResultWrapper.ok("Successfully signed up", token);
+            return ResultWrapper.ok("Successfully signed up", token);
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            return ResultWrapper.error("Failed to sign up");
+        }
     }
 
     public ResultWrapper<String> login(AuthRequest authRequest) {
-        String token = deviceUserService.login(authRequest.getLoginId(), authRequest.getPassword());
-        if (token == null || token.isEmpty()) return ResultWrapper.fail("Failed to login");
+        try {
+            String token = deviceUserService.login(authRequest.getLoginId(), authRequest.getPassword());
+            if (token == null || token.isEmpty()) return ResultWrapper.fail(403, "Failed to login");
 
-        return ResultWrapper.ok("Successfully logged in", token);
+            return ResultWrapper.ok("Successfully logged in", token);
+        } catch (Exception e) {
+                log.error(e.getMessage());
+                return ResultWrapper.error("Failed to login");
+            }
     }
 
     public ResultWrapper<String> refreshToken(HttpServletRequest request) {
-        String token = deviceUserService.refresh(deviceUserService.getTokenLoginId(request));
-        if (token == null || token.isEmpty()) return ResultWrapper.fail("Failed to refresh token");
+        try {
+            String token = deviceUserService.refresh(deviceUserService.getTokenLoginId(request));
+            if (token == null || token.isEmpty()) return ResultWrapper.fail(403, "Failed to refresh token");
 
-        return ResultWrapper.ok("Successfully refreshed token", token);
+            return ResultWrapper.ok("Successfully refreshed token", token);
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            return ResultWrapper.error("Failed to refresh token");
+        }
     }
 }
