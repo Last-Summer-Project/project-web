@@ -2,8 +2,8 @@ package com.smhrd.projectweb.controller.api.v1;
 
 import com.smhrd.projectweb.entity.request.api.v1.log.LogWriteRequest;
 import com.smhrd.projectweb.entity.response.api.v1.log.LogResponse;
-import com.smhrd.projectweb.service.DeviceLogService;
-import com.smhrd.projectweb.service.DeviceUserService;
+import com.smhrd.projectweb.service.device.DeviceLogService;
+import com.smhrd.projectweb.service.device.DeviceUserService;
 import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

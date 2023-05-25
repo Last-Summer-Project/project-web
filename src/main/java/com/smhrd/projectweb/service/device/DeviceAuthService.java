@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.service;
+package com.smhrd.projectweb.service.device;
 
 import com.smhrd.projectweb.entity.request.api.v1.AuthRequest;
 import com.smhrd.projectweb.entity.sql.Device;

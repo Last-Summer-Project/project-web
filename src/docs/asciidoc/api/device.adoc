@@ -1,0 +1,17 @@
+=== Device
+==== Get Device
+
+===== HTTP request
+====== `curl`
+include::{snippets}/device-test/get-device1/curl-request.adoc[]
+====== `httpie`
+include::{snippets}/device-test/get-device1/httpie-request.adoc[]
+====== HTTP
+include::{snippets}/device-test/get-device1/http-request.adoc[]
+====== Path Parameters
+include::{snippets}/device-test/get-device1/path-parameters.adoc[]
+
+===== HTTP response
+
+include::{snippets}/device-test/get-device1/http-response.adoc[]
+include::{snippets}/device-test/get-device1/response-fields.adoc[]

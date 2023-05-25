@@ -1,13 +1,17 @@
 === Index
-
-==== HTTP request
-
+==== Hello, World!
+===== HTTP request
+====== `curl`
 include::{snippets}/index-test/index/curl-request.adoc[]
+
+====== `httpie`
 include::{snippets}/index-test/index/httpie-request.adoc[]
+
+====== HTTP
 include::{snippets}/index-test/index/http-request.adoc[]
 
 
-==== HTTP response
+===== HTTP response
 
 include::{snippets}/index-test/index/http-response.adoc[]
 include::{snippets}/index-test/index/response-fields.adoc[]

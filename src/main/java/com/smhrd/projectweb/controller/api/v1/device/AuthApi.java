@@ -1,7 +1,7 @@
 package com.smhrd.projectweb.controller.api.v1.device;
 
 import com.smhrd.projectweb.entity.request.api.v1.AuthRequest;
-import com.smhrd.projectweb.service.DeviceAuthService;
+import com.smhrd.projectweb.service.device.DeviceAuthService;
 import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

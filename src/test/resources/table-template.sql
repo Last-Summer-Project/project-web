@@ -45,7 +45,7 @@ CREATE TABLE `timelapse`
     `status`       ENUM ('not_started','in_progress','done') NOT NULL,
     `result`       VARCHAR(255)                              NULL,
     `date_created` DATETIME                                  NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `last_edited`  DATETIME                                  NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+    `last_edited`  DATETIME                                  NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT `PK_TIMELAPSE` PRIMARY KEY (`id`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
@@ -56,7 +56,7 @@ CREATE TABLE `device`
     `login_id`     VARCHAR(255) NOT NULL,
     `password`     VARCHAR(255) NOT NULL,
     `date_created` DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `last_edited`  DATETIME     NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+    `last_edited`  DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT `PK_DEVICE` PRIMARY KEY (`id`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

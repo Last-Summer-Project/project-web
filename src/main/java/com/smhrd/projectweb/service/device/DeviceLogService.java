@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.service;
+package com.smhrd.projectweb.service.device;
 
 import com.smhrd.projectweb.entity.request.api.v1.log.LogWriteRequest;
 import com.smhrd.projectweb.entity.response.api.v1.log.LogResponse;

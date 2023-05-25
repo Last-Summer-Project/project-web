@@ -1,5 +1,6 @@
 package com.smhrd.projectweb.entity.response.api.v1.device;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.smhrd.projectweb.entity.sql.Device;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,11 +14,13 @@ public class DeviceResponse {
     /**
      *
      */
+    @JsonFormat(shape = JsonFormat.Shape.STRING, timezone = "UTC")
     private LocalDateTime dateCreated;
 
     /**
      *
      */
+    @JsonFormat(shape = JsonFormat.Shape.STRING, timezone = "UTC")
     private LocalDateTime lastEdited;
 
     public static DeviceResponse fromDevice(Device device) {

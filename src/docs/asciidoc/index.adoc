@@ -18,9 +18,12 @@
     }
 }
 
-== Api
+== API
 // Index
-include::./api/index.adoc[]
+include::api/index.adoc[]
 
 // Auth
-include::./api/auth.adoc[]
+include::api/auth.adoc[]
+
+// Device
+include::api/device.adoc[]

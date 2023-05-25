@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.service;
+package com.smhrd.projectweb.service.device;
 
 import com.smhrd.projectweb.entity.response.api.v1.device.DeviceResponse;
 import com.smhrd.projectweb.entity.sql.Device;
@@ -19,5 +19,9 @@ public class DeviceService {
             return ResultWrapper.error("No device found");
         }
         return ResultWrapper.ok(DeviceResponse.fromDevice(device));
+    }
+
+    public ResultWrapper<DeviceResponse> update(Long id, Device requestDevice) {
+        return ResultWrapper.fail("Not implemented", DeviceResponse.fromDevice(requestDevice));
     }
 }

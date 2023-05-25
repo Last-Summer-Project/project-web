@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.service;
+package com.smhrd.projectweb.service.device;
 
 import com.smhrd.projectweb.entity.sql.Device;
 import com.smhrd.projectweb.mapper.DeviceMapper;
