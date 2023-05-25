@@ -16,7 +16,7 @@ public class DeviceService {
     public ResultWrapper<DeviceResponse> get(Long id) {
         Device device = deviceMapper.selectByPrimaryKey(id);
         if (device == null) {
-            return ResultWrapper.error("No device found");
+            return ResultWrapper.error(404, "No device found");
         }
         return ResultWrapper.ok(DeviceResponse.fromDevice(device));
     }

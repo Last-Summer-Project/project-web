@@ -12,6 +12,11 @@ include::{snippets}/device-test/get-device1/http-request.adoc[]
 include::{snippets}/device-test/get-device1/path-parameters.adoc[]
 
 ===== HTTP response
-
+====== Ok
 include::{snippets}/device-test/get-device1/http-response.adoc[]
 include::{snippets}/device-test/get-device1/response-fields.adoc[]
+
+====== Invalid Device
+include::{snippets}/device-test/get-invalid-device/http-response.adoc[]
+include::{snippets}/device-test/get-invalid-device/response-fields.adoc[]
+

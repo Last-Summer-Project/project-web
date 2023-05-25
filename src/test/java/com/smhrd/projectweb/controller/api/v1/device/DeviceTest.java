@@ -28,14 +28,22 @@ import static org.springframework.restdocs.request.RequestDocumentation.*;
 class DeviceTest extends RestDocsTestSupportWithSql {
 
     Authentication authentication = new TestingAuthenticationToken("test_user", "pass", "device");
+    String testJwtValue;
+
+
+    private String getJwt() {
+        if (testJwtValue == null) {
+            testJwtValue = deviceUserService.login("test_user", "pass");
+        }
+        return testJwtValue;
+    }
+
     @Test
     void getDevice1() throws Exception {
-        String jwtValue = deviceUserService.login("test_user", "pass");
-
         this.mockMvc.perform(
                         get("/api/v1/device/get/{deviceId}", 1)
                                 .contentType(MediaType.APPLICATION_JSON)
-                                .header("Authorization", String.format("Bearer %s", jwtValue))
+                                .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("status").value("ok"))
@@ -49,6 +57,24 @@ class DeviceTest extends RestDocsTestSupportWithSql {
                                 fieldWithPath("data.id").description("Id of device"),
                                 fieldWithPath("data.dateCreated").description("UTC time of device created"),
                                 fieldWithPath("data.lastEdited").description("UTC time of device last edited")
+                        )
+                ));
+    }
+
+    @Test
+    void getInvalidDevice() throws Exception {
+        this.mockMvc.perform(
+                        get("/api/v1/device/get/5")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .header("Authorization", String.format("Bearer %s", getJwt()))
+                                .with(authentication(authentication)))
+                .andExpect(status().isNotFound())
+                .andExpect(jsonPath("status").value("error"))
+                .andExpect(jsonPath("message").value("No device found"))
+                .andDo(restDocs.document(
+                        responseFields(
+                                fieldWithPath("status").description("Status of response"),
+                                fieldWithPath("message").description("Message of response")
                         )
                 ));
     }

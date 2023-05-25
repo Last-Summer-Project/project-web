@@ -1,5 +1,6 @@
 package com.smhrd.projectweb.shared;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
@@ -15,12 +16,23 @@ public class ResultWrapper<T> {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public T data;
 
+    @JsonIgnore
+    public int httpStatusCode;
+
 
     public ResultWrapper(String status, String message, T data) {
         this.status = status;
         this.message = message;
         this.data = data;
     }
+
+    public ResultWrapper(int httpStatusCode, String status, String message, T data) {
+        this.httpStatusCode = httpStatusCode;
+        this.status = status;
+        this.message = message;
+        this.data = data;
+    }
+
 
     public static <T> ResultWrapper<T> ok() {
         return new ResultWrapper<>(STATUS_OK, null, null);
@@ -39,11 +51,11 @@ public class ResultWrapper<T> {
     }
 
     public static <T> ResultWrapper<T> fail(T data) {
-        return new ResultWrapper<>(STATUS_FAIL, null, data);
+        return new ResultWrapper<>(400, STATUS_FAIL, null, data);
     }
 
     public static <T> ResultWrapper<T> error(T data) {
-        return new ResultWrapper<>(STATUS_ERROR, null, data);
+        return new ResultWrapper<>(500, STATUS_ERROR, null, data);
     }
 
     public static <T> ResultWrapper<T> ok(String message) {
@@ -51,11 +63,19 @@ public class ResultWrapper<T> {
     }
 
     public static <T> ResultWrapper<T> fail(String message) {
-        return new ResultWrapper<>(STATUS_FAIL, message, null);
+        return new ResultWrapper<>(400, STATUS_FAIL, message, null);
     }
 
     public static <T> ResultWrapper<T> error(String message) {
-        return new ResultWrapper<>(STATUS_ERROR, message, null);
+        return new ResultWrapper<>(500, STATUS_ERROR, message, null);
+    }
+
+    public static <T> ResultWrapper<T> fail(int httpStatusCode, String message) {
+        return new ResultWrapper<>(httpStatusCode, STATUS_FAIL, message, null);
+    }
+
+    public static <T> ResultWrapper<T> error(int httpStatusCode, String message) {
+        return new ResultWrapper<>(httpStatusCode, STATUS_ERROR, message, null);
     }
 
     public static <T> ResultWrapper<T> ok(String message, T data) {
@@ -63,14 +83,22 @@ public class ResultWrapper<T> {
     }
 
     public static <T> ResultWrapper<T> fail(String message, T data) {
-        return new ResultWrapper<>(STATUS_FAIL, message, data);
+        return new ResultWrapper<>(400, STATUS_FAIL, message, data);
     }
 
     public static <T> ResultWrapper<T> error(String message, T data) {
-        return new ResultWrapper<>(STATUS_ERROR, message, data);
+        return new ResultWrapper<>(500, STATUS_ERROR, message, data);
     }
 
-    public static <T> ResultWrapper<T> of(String status, String message, T data) {
-        return new ResultWrapper<>(status, message, data);
+    public static <T> ResultWrapper<T> fail(int httpStatusCode, String message, T data) {
+        return new ResultWrapper<>(httpStatusCode, STATUS_FAIL, message, data);
+    }
+
+    public static <T> ResultWrapper<T> error(int httpStatusCode, String message, T data) {
+        return new ResultWrapper<>(httpStatusCode, STATUS_ERROR, message, data);
+    }
+
+    public static <T> ResultWrapper<T> of(int httpStatusCode, String status, String message, T data) {
+        return new ResultWrapper<>(httpStatusCode, status, message, data);
     }
 }
