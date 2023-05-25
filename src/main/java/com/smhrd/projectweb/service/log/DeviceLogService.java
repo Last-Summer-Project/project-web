@@ -6,10 +6,10 @@ import com.smhrd.projectweb.entity.sql.Detect;
 import com.smhrd.projectweb.entity.sql.DeviceLog;
 import com.smhrd.projectweb.mapper.DetectMapper;
 import com.smhrd.projectweb.mapper.DeviceLogMapper;
-import com.smhrd.projectweb.mapper.ImageMapper;
 import com.smhrd.projectweb.service.ImageService;
 import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class DeviceLogService {
     private final DeviceLogMapper deviceLogMapper;
     private final DetectMapper detectMapper;
@@ -61,10 +62,13 @@ public class DeviceLogService {
 
         DeviceLog deviceLog = request.toDeviceLog();
         deviceLog.setImageId(imageId);
-        Long logId = deviceLogMapper.insert(deviceLog);
+        Long logInserted = deviceLogMapper.insert(deviceLog);
+        if (logInserted != 1) return ResultWrapper.error("Failed to log data.");
+        Long logId = deviceLog.getId();
         if (logId == null || logId == 0) return ResultWrapper.error("Failed to log data.");
-        Long detectId = detectMapper.insert(new Detect(logId));
-        if (detectId == null || detectId == 0) return ResultWrapper.error("Failed to log detect data.");
+
+        Long detectInserted = detectMapper.insert(new Detect(logId));
+        if (detectInserted != 1) return ResultWrapper.error("Failed to log detect data.");
 
         deviceLog = deviceLogMapper.selectByPrimaryKey(logId);
         if (deviceLog == null) return ResultWrapper.error("Failed to load saved log data");

@@ -21,6 +21,13 @@ jobs:
           MYSQL_ROOT_PASSWORD: password
         options: --health-cmd="mysqladmin ping" --health-interval=5s --health-timeout=2s --health-retries=3
 
+      s3mock:
+        image: adobe/s3mock:latest
+        ports:
+          - 9090
+        env:
+          initialBuckets: test-bucket
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -31,6 +38,7 @@ jobs:
           mariadb --host=localhost --protocol=tcp --port=${{ job.services.mariadb.ports[3306] }} --user=com --password=com01 com < src/test/resources/table-template.sql
           sed -i 's/172.30.1.3/localhost/g' src/test/resources/application.properties
           sed -i 's/3307/${{ job.services.mariadb.ports[3306] }}/g' src/test/resources/application.properties
+          sed -i 's/9000/${{ job.services.s3mock.ports[9090] }}/g' src/test/resources/application.properties
           cp src/test/resources/application.properties src/main/resources/application.properties
           cat src/main/resources/application.properties
 

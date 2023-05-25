@@ -16,15 +16,17 @@ public class ImageService {
     private final ImageMapper imageMapper;
     private final S3Service s3Service;
 
+    private static final String BASE64SEP = ";base64,";
+
     public Long uploadImageFromBase64(String name, String base64) {
         if (name == null || name.isEmpty() || base64 == null || base64.isEmpty()) return null;
         // Is data url?
         String ext = null;
-        if (base64.startsWith("data:image/") || base64.startsWith("image")) {
+        if (base64.startsWith("data:image/")) {
             // Check it is base64.
-            if (!base64.contains(";base64,")) return null;
-            base64 = base64.split(",", 1)[1];
-            ext = base64.substring(base64.indexOf("data:image/"), base64.indexOf(";base64,"));
+            if (!base64.contains(BASE64SEP)) return null;
+            ext = base64.substring(base64.indexOf("data:image/"), base64.indexOf(BASE64SEP));
+            base64 = base64.substring(base64.indexOf(BASE64SEP) + BASE64SEP.length());
         }
 
         if (ext == null && name.contains(".")) {
@@ -33,12 +35,14 @@ public class ImageService {
             ext = "jpg";
         }
 
-        String key = null;
+        String key;
         try {
             byte[] data = Base64.getDecoder().decode(base64);
             ByteArrayResource bar = new ByteArrayResource(data);
             key = s3Service.putObject(bar, name + "." + ext);
+            log.error(key);
         } catch (Exception e) {
+            e.printStackTrace();
             log.error(e.getMessage());
             return null;
         }

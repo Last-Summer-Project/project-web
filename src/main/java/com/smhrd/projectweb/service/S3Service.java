@@ -1,30 +1,24 @@
 package com.smhrd.projectweb.service;
 
-import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.AWSStaticCredentialsProvider;
-import com.amazonaws.auth.BasicAWSCredentials;
-import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.AmazonS3ClientBuilder;
-import com.amazonaws.util.IOUtils;
+import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.smhrd.projectweb.exception.S3KeyDoesNotExistException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
-import org.springframework.core.io.WritableResource;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@PropertySource("classpath:/application.properties")
 public class S3Service {
-    private ResourceLoader resourceLoader;
-    private AmazonS3 amazonS3;
+    private final ResourceLoader resourceLoader;
+    private final AmazonS3 s3Client;
 
     @Value("${cloud.aws.s3.bucket}")
     private String bucketName;
@@ -43,19 +37,13 @@ public class S3Service {
     }
 
     public String putObject(Resource resource, String key) throws IOException {
-        final WritableResource writableResource = (WritableResource) this.resourceLoader
-                .getResource(String.format("s3://%s/%s", bucketName, key));
-
-        try (OutputStream outputStream = writableResource.getOutputStream()) {
-            IOUtils.copy(resource.getInputStream(), outputStream);
-        }
-
+        s3Client.putObject(bucketName, key, resource.getInputStream(), new ObjectMetadata());
         return key;
     }
 
     public void removeObject(String bucketName, String key) throws S3KeyDoesNotExistException {
-        if (amazonS3.doesObjectExist(bucketName, key)) {
-            amazonS3.deleteObject(bucketName, key);
+        if (s3Client.doesObjectExist(bucketName, key)) {
+            s3Client.deleteObject(bucketName, key);
         } else {
             throw new S3KeyDoesNotExistException(bucketName, key);
         }
