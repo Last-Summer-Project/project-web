@@ -1,0 +1,40 @@
+package com.smhrd.projectweb.controller.api.v1.log;
+
+import com.smhrd.projectweb.entity.request.api.v1.log.LogWriteRequest;
+import com.smhrd.projectweb.entity.response.api.v1.log.LogResponse;
+import com.smhrd.projectweb.service.log.DeviceAuthLogService;
+import com.smhrd.projectweb.shared.ResultWrapper;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+
+@RequestMapping("/api/v1/log")
+@RestController
+@RequiredArgsConstructor
+@Slf4j
+public class LogWithAuthApi {
+    private final DeviceAuthLogService deviceAuthLogService;
+
+    @GetMapping("/latest")
+    public ResultWrapper<LogResponse> getLatestLog(HttpServletRequest request) {
+        return deviceAuthLogService.getLatestByDeviceId(request);
+    }
+
+    @GetMapping("/latest-detected")
+    public ResultWrapper<LogResponse> getLatestDetectedLog(HttpServletRequest request) {
+        return deviceAuthLogService.getLatestDetectedByDeviceId(request);
+    }
+
+    @GetMapping("/recent")
+    public ResultWrapper<List<LogResponse>> getRecent(HttpServletRequest request) {
+        return deviceAuthLogService.getRecentByDeviceId(request);
+    }
+
+    @PostMapping("/write")
+    public ResultWrapper<LogResponse> logWrite(HttpServletRequest request, @RequestBody LogWriteRequest requestBody) {
+        return deviceAuthLogService.writeLog(request, requestBody);
+    }
+}

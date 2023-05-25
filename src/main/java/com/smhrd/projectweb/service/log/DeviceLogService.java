@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.service.device;
+package com.smhrd.projectweb.service.log;
 
 import com.smhrd.projectweb.entity.request.api.v1.log.LogWriteRequest;
 import com.smhrd.projectweb.entity.response.api.v1.log.LogResponse;
@@ -49,7 +49,7 @@ public class DeviceLogService {
         return ResultWrapper.ok(llr);
     }
 
-    public ResultWrapper<Void> writeLog(Long deviceId, LogWriteRequest request) {
+    public ResultWrapper<LogResponse> writeLog(Long deviceId, LogWriteRequest request) {
         return ResultWrapper.fail("Not Implemented");
     }
 }
