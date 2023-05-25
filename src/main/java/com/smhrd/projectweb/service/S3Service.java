@@ -1,7 +1,6 @@
 package com.smhrd.projectweb.service;
 
 import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.smhrd.projectweb.exception.S3KeyDoesNotExistException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,6 +10,8 @@ import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.UUID;
 
 @Service
@@ -37,7 +38,14 @@ public class S3Service {
     }
 
     public String putObject(Resource resource, String key) throws IOException {
-        s3Client.putObject(bucketName, key, resource.getInputStream(), new ObjectMetadata());
+        s3Client.putObject(bucketName, key, resource.getFile());
+        return key;
+    }
+
+    public String putObject(byte[] bytes, String key) throws IOException {
+        Path tempFile = Files.createTempFile(key, "temp-img");
+        Files.write(tempFile, bytes);
+        s3Client.putObject(bucketName, key, tempFile.toFile());
         return key;
     }
 

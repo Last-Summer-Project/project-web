@@ -4,7 +4,6 @@ import com.smhrd.projectweb.entity.sql.Image;
 import com.smhrd.projectweb.mapper.ImageMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.core.io.ByteArrayResource;
 import org.springframework.stereotype.Service;
 
 import java.util.Base64;
@@ -38,8 +37,7 @@ public class ImageService {
         String key;
         try {
             byte[] data = Base64.getDecoder().decode(base64);
-            ByteArrayResource bar = new ByteArrayResource(data);
-            key = s3Service.putObject(bar, name + "." + ext);
+            key = s3Service.putObject(data, name + "." + ext);
             log.error(key);
         } catch (Exception e) {
             e.printStackTrace();
