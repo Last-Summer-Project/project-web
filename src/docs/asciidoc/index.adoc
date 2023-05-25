@@ -1,4 +1,4 @@
-= Rest Documentation
+= Rest API Documentation
 :toc: left
 :icons: font
 :source-highlighter: coderay
@@ -12,11 +12,31 @@
 [source,json]
 {
     "status": "ok"
-    "message": "message",  // Optional
+    "message": "message",
     "data": {
         "data": "data"
     }
 }
+
+|===
+|Path|Type|Description
+
+|`+status+`
+|`+String+`
+|Can be +
+    `ok` - Ok +
+    `fail` - Bad Request +
+    `error` - Internal Server Error
+
+|`+message+`
+|`+String+`
+|Optional, Only returned if it exists.
+
+|`+data+`
+|`+Object+`
+|Optional, Can be anything if it exists.
+
+|===
 
 == API
 // Index
