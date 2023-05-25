@@ -51,7 +51,7 @@ class LogWithDeviceIdTest extends AuthTestSupport {
                         responseFields(
                                 fieldWithPath("status").description("Status of response"),
                                 // Basic
-                                fieldWithPath("data.deviceId").description("Device id of this log"),
+                                fieldWithPath("data.deviceId").description("Device ID of this log"),
                                 fieldWithPath("data.humidity").description("Logged relative humidity"),
                                 fieldWithPath("data.temperature").description("Logged celsius temperature"),
                                 fieldWithPath("data.soilHumidity").description("Logged soil humidity"),
@@ -91,7 +91,7 @@ class LogWithDeviceIdTest extends AuthTestSupport {
                         responseFields(
                                 fieldWithPath("status").description("Status of response"),
                                 // Basic
-                                fieldWithPath("data.deviceId").description("Device id of this log"),
+                                fieldWithPath("data.deviceId").description("Device ID of this log"),
                                 fieldWithPath("data.humidity").description("Logged relative humidity"),
                                 fieldWithPath("data.temperature").description("Logged celsius temperature"),
                                 fieldWithPath("data.soilHumidity").description("Logged soil humidity"),
@@ -131,7 +131,7 @@ class LogWithDeviceIdTest extends AuthTestSupport {
                         responseFields(
                                 fieldWithPath("status").description("Status of response"),
                                 // Basic
-                                fieldWithPath("data[].deviceId").description("Device id of this log"),
+                                fieldWithPath("data[].deviceId").description("Device ID of this log"),
                                 fieldWithPath("data[].humidity").description("Logged relative humidity"),
                                 fieldWithPath("data[].temperature").description("Logged celsius temperature"),
                                 fieldWithPath("data[].soilHumidity").description("Logged soil humidity"),
@@ -174,7 +174,7 @@ class LogWithDeviceIdTest extends AuthTestSupport {
                         deviceIdPathParameterSnippet,
                         authorizationHeaderSnippet,
                         requestFields(
-                                fieldWithPath("deviceId").description("Device id of log. Should be equal to Authorization header."),
+                                fieldWithPath("deviceId").description("Device ID of log. Should be equal to Path Parameter's Device ID."),
                                 fieldWithPath("relativeHumidity").description("Relative humidity of log"),
                                 fieldWithPath("temperature").description("Temperature (celsius) of log"),
                                 fieldWithPath("soilHumidity").description("Soil humidity of log"),

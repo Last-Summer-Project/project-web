@@ -44,7 +44,7 @@ class LogWithAuthTest extends AuthTestSupport {
                         responseFields(
                                 fieldWithPath("status").description("Status of response"),
                                 // Basic
-                                fieldWithPath("data.deviceId").description("Device id of this log"),
+                                fieldWithPath("data.deviceId").description("Device ID of this log. Should be equal to JWT's Device id."),
                                 fieldWithPath("data.humidity").description("Logged relative humidity"),
                                 fieldWithPath("data.temperature").description("Logged celsius temperature"),
                                 fieldWithPath("data.soilHumidity").description("Logged soil humidity"),
@@ -83,7 +83,7 @@ class LogWithAuthTest extends AuthTestSupport {
                         responseFields(
                                 fieldWithPath("status").description("Status of response"),
                                 // Basic
-                                fieldWithPath("data.deviceId").description("Device id of this log"),
+                                fieldWithPath("data.deviceId").description("Device ID of this log"),
                                 fieldWithPath("data.humidity").description("Logged relative humidity"),
                                 fieldWithPath("data.temperature").description("Logged celsius temperature"),
                                 fieldWithPath("data.soilHumidity").description("Logged soil humidity"),
@@ -122,7 +122,7 @@ class LogWithAuthTest extends AuthTestSupport {
                         responseFields(
                                 fieldWithPath("status").description("Status of response"),
                                 // Basic
-                                fieldWithPath("data[].deviceId").description("Device id of this log"),
+                                fieldWithPath("data[].deviceId").description("Device ID of this log."),
                                 fieldWithPath("data[].humidity").description("Logged relative humidity"),
                                 fieldWithPath("data[].temperature").description("Logged celsius temperature"),
                                 fieldWithPath("data[].soilHumidity").description("Logged soil humidity"),
@@ -164,25 +164,25 @@ class LogWithAuthTest extends AuthTestSupport {
                 .andDo(restDocs.document(
                         authorizationHeaderSnippet,
                         requestFields(
-                                fieldWithPath("deviceId").description("Device id of log. Should be equal to Authorization header."),
-                                fieldWithPath("relativeHumidity").description("Relative humidity of log"),
-                                fieldWithPath("temperature").description("Temperature (celsius) of log"),
-                                fieldWithPath("soilHumidity").description("Soil humidity of log"),
-                                fieldWithPath("imageBase64").description("Base64 encoded image data uri of log")
+                                fieldWithPath("deviceId").description("Device ID of log. Should be equal to JWT's Device ID."),
+                                fieldWithPath("relativeHumidity").description("Relative humidity of log."),
+                                fieldWithPath("temperature").description("Temperature (celsius) of log."),
+                                fieldWithPath("soilHumidity").description("Soil humidity of log."),
+                                fieldWithPath("imageBase64").description("Base64 encoded image data uri of log.")
                         ),
                         responseFields(
                                 fieldWithPath("status").description("Status of response"),
                                 // Basic
-                                fieldWithPath("data.deviceId").description("Device id of this log"),
-                                fieldWithPath("data.humidity").description("Logged relative humidity"),
-                                fieldWithPath("data.temperature").description("Logged celsius temperature"),
-                                fieldWithPath("data.soilHumidity").description("Logged soil humidity"),
+                                fieldWithPath("data.deviceId").description("Device id of this log."),
+                                fieldWithPath("data.humidity").description("Logged relative humidity."),
+                                fieldWithPath("data.temperature").description("Logged celsius temperature."),
+                                fieldWithPath("data.soilHumidity").description("Logged soil humidity,"),
                                 // Image
-                                fieldWithPath("data.imageUrl").description("Relative image url of logged image"),
+                                fieldWithPath("data.imageUrl").description("Relative image url of logged image,"),
                                 // Detection
-                                fieldWithPath("data.detection.status").description("Status of detection process. It should be `NOT_STARTED`"),
+                                fieldWithPath("data.detection.status").description("Status of detection process. It should be `NOT_STARTED`,"),
                                 // Timestamp
-                                fieldWithPath("data.timestamp").description("UTC time of log written timestamp")
+                                fieldWithPath("data.timestamp").description("UTC time of log written timestamp.")
                         )
                 ));
     }
