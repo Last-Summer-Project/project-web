@@ -130,4 +130,27 @@
         <include refid="Join_Select_Query"/>
         LIMIT 1
     </select>
+
+    <select id="selectLatestDetectedByDeviceId" resultType="com.smhrd.projectweb.entity.sql.DeviceLog">
+        select l.id,
+               l.device_id,
+               l.temperature,
+               l.relative_humidity,
+               l.soil_humidity,
+               l.image_id,
+               l.date_created,
+               i.name,
+               i.url,
+               i.date_created as image_date_created,
+               d.status,
+               d.result
+        from device_log as l
+                 inner join image as i
+                            on l.image_id = i.id
+                 inner join detect d
+                            on l.id = d.id
+        where l.device_id = #{id,jdbcType=BIGINT} AND d.status = 'done'
+        order by date_created desc
+        limit 1
+    </select>
 </mapper>

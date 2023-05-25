@@ -21,9 +21,14 @@ public class LogApi {
     private final DeviceLogService deviceLogService;
     private final DeviceUserService deviceUserService;
 
-    @GetMapping(value = "/{deviceId}/latest", produces = "application/json;charset=UTF-8")
+    @GetMapping("/{deviceId}/latest")
     public ResultWrapper<LogResponse> getLatestLog(@PathVariable(name = "deviceId") Long deviceId) {
         return deviceLogService.getLatestByDeviceId(deviceId);
+    }
+
+    @GetMapping("/{deviceId}/latest-detected")
+    public ResultWrapper<LogResponse> getLatestDetectedLog(@PathVariable(name = "deviceId") Long deviceId) {
+        return deviceLogService.getLatestDetectedByDeviceId(deviceId);
     }
 
     @GetMapping("/{deviceId}/recent")
