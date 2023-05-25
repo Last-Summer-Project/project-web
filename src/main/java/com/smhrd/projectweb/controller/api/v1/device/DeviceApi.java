@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Slf4j
 @RestController
 @RequestMapping("/api/v1/device")
@@ -15,9 +17,19 @@ import org.springframework.web.bind.annotation.*;
 public class DeviceApi {
     private final DeviceService deviceService;
 
+    @GetMapping("/get")
+    public ResultWrapper<DeviceResponse> get(HttpServletRequest req) {
+        return deviceService.get(req);
+    }
+
     @GetMapping("/get/{id}")
     public ResultWrapper<DeviceResponse> get(@PathVariable(value = "id") Long id) {
         return deviceService.get(id);
+    }
+
+    @PostMapping("/update")
+    public ResultWrapper<DeviceResponse> update(HttpServletRequest req, @RequestBody Device requestDevice) {
+        return deviceService.update(req, requestDevice);
     }
 
     @PostMapping("/update/{id}")

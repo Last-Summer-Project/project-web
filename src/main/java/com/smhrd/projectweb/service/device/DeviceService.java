@@ -7,11 +7,27 @@ import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Service
 @RequiredArgsConstructor
 public class DeviceService {
 
     private final DeviceMapper deviceMapper;
+
+    private final DeviceUserService deviceUserService;
+
+    private Long getDeviceId(HttpServletRequest req) {
+        return deviceUserService.getTokenDeviceId(req);
+    }
+
+    public ResultWrapper<DeviceResponse> get(HttpServletRequest req) {
+        return this.get(getDeviceId(req));
+    }
+
+    public ResultWrapper<DeviceResponse> update(HttpServletRequest req, Device requestDevice) {
+        return this.update(getDeviceId(req), requestDevice);
+    }
 
     public ResultWrapper<DeviceResponse> get(Long id) {
         Device device = deviceMapper.selectByPrimaryKey(id);

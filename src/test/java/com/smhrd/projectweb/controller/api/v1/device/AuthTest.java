@@ -79,6 +79,7 @@ class AuthTest extends AuthTestSupport {
                 .andExpect(jsonPath("status").value("ok"))
                 .andExpect(jsonPath("message").value("Successfully refreshed token"))
                 .andDo(restDocs.document(
+                        authorizationHeaderSnippet,
                         responseFields(fieldWithPath("status").description("Status of response"),
                                 fieldWithPath("message").description("Message of response"),
                                 fieldWithPath("data").description("Json Web Token")

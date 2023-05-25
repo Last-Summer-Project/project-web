@@ -1,0 +1,79 @@
+=== Log via Device Id
+
+Retrieve device log based on path parameter
+
+==== Latest
+
+===== HTTP request
+====== `curl`
+include::{snippets}/log-with-device-id-test/get-latest-log/curl-request.adoc[]
+
+====== `httpie`
+include::{snippets}/log-with-device-id-test/get-latest-log/httpie-request.adoc[]
+
+====== HTTP
+include::{snippets}/log-with-device-id-test/get-latest-log/http-request.adoc[]
+
+====== Request headers
+include::{snippets}/log-with-device-id-test/get-latest-log/request-headers.adoc[]
+
+====== Path parameters
+include::{snippets}/log-with-device-id-test/get-latest-log/path-parameters.adoc[]
+
+===== HTTP response
+
+include::{snippets}/log-with-device-id-test/get-latest-log/http-response.adoc[]
+include::{snippets}/log-with-device-id-test/get-latest-log/response-fields.adoc[]
+
+
+==== Latest Detected
+
+===== HTTP request
+====== `curl`
+include::{snippets}/log-with-device-id-test/get-latest-detected-log/curl-request.adoc[]
+
+====== `httpie`
+include::{snippets}/log-with-device-id-test/get-latest-detected-log/httpie-request.adoc[]
+
+====== HTTP
+include::{snippets}/log-with-device-id-test/get-latest-detected-log/http-request.adoc[]
+
+====== Request headers
+include::{snippets}/log-with-device-id-test/get-latest-detected-log/request-headers.adoc[]
+
+====== Path parameters
+include::{snippets}/log-with-device-id-test/get-latest-log/path-parameters.adoc[]
+
+
+
+===== HTTP response
+
+include::{snippets}/log-with-device-id-test/get-latest-detected-log/http-response.adoc[]
+include::{snippets}/log-with-device-id-test/get-latest-detected-log/response-fields.adoc[]
+
+==== Recent logs
+
+Retrieve recent 100 logs
+
+===== HTTP request
+====== `curl`
+include::{snippets}/log-with-device-id-test/get-recent-logs/curl-request.adoc[]
+
+====== `httpie`
+include::{snippets}/log-with-device-id-test/get-recent-logs/httpie-request.adoc[]
+
+====== HTTP
+include::{snippets}/log-with-device-id-test/get-recent-logs/http-request.adoc[]
+
+====== Request headers
+include::{snippets}/log-with-device-id-test/get-recent-logs/request-headers.adoc[]
+
+====== Path parameters
+include::{snippets}/log-with-device-id-test/get-recent-logs/path-parameters.adoc[]
+
+
+
+===== HTTP response
+
+include::{snippets}/log-with-device-id-test/get-recent-logs/http-response.adoc[]
+include::{snippets}/log-with-device-id-test/get-recent-logs/response-fields.adoc[]

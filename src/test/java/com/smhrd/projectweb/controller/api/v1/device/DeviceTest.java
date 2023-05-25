@@ -9,6 +9,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.MediaType;
+import org.springframework.restdocs.request.PathParametersSnippet;
 
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.get;
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
@@ -24,6 +25,31 @@ import static org.springframework.restdocs.request.RequestDocumentation.*;
 @Import(TestSecurityConfig.class)
 class DeviceTest extends AuthTestSupport {
 
+    PathParametersSnippet deviceIdPathParameterSnippet = pathParameters(
+            parameterWithName("deviceId").description("Device Id to use")
+    );
+
+    @Test
+    void getAuthenticatedDevice() throws Exception {
+        this.mockMvc.perform(
+                        get("/api/v1/device/get", 1)
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .header("Authorization", String.format("Bearer %s", getJwt()))
+                                .with(authentication(authentication)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("status").value("ok"))
+                .andExpect(jsonPath("data.id").value(1))
+                .andDo(restDocs.document(
+                        authorizationHeaderSnippet,
+                        responseFields(
+                                fieldWithPath("status").description("Status of response"),
+                                fieldWithPath("data.id").description("Id of device"),
+                                fieldWithPath("data.dateCreated").description("UTC time of device created"),
+                                fieldWithPath("data.lastEdited").description("UTC time of device last edited")
+                        )
+                ));
+    }
+
     @Test
     void getDevice1() throws Exception {
         this.mockMvc.perform(
@@ -35,9 +61,8 @@ class DeviceTest extends AuthTestSupport {
                 .andExpect(jsonPath("status").value("ok"))
                 .andExpect(jsonPath("data.id").value(1))
                 .andDo(restDocs.document(
-                        pathParameters(
-                                parameterWithName("deviceId").description("Device Id to get")
-                        ),
+                        deviceIdPathParameterSnippet,
+                        authorizationHeaderSnippet,
                         responseFields(
                                 fieldWithPath("status").description("Status of response"),
                                 fieldWithPath("data.id").description("Id of device"),

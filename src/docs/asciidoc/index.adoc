@@ -27,3 +27,9 @@ include::api/auth.adoc[]
 
 // Device
 include::api/device.adoc[]
+
+// Log - Authenticated
+include::api/log/auth.adoc[]
+
+// Log - Device id
+include::api/log/device-id.adoc[]

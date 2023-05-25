@@ -15,6 +15,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Slf4j
 public class LogResponse {
+    private Long deviceId;
+
     private Double humidity;
 
     private Double temperature;
@@ -32,6 +34,7 @@ public class LogResponse {
         Detect d = deviceLog.getDetect();
         Image i = deviceLog.getImage();
         return new LogResponse(
+                deviceLog.getDeviceId(),
                 deviceLog.getRelativeHumidity(),
                 deviceLog.getTemperature(),
                 deviceLog.getSoilHumidity(),

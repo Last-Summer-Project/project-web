@@ -1,5 +1,21 @@
 === Device
-==== Get Device
+==== Get Device via JWT
+
+===== HTTP request
+====== `curl`
+include::{snippets}/device-test/get-authenticated-device/curl-request.adoc[]
+====== `httpie`
+include::{snippets}/device-test/get-authenticated-device/httpie-request.adoc[]
+====== HTTP
+include::{snippets}/device-test/get-authenticated-device/http-request.adoc[]
+
+===== HTTP response
+
+include::{snippets}/device-test/get-authenticated-device/http-response.adoc[]
+include::{snippets}/device-test/get-authenticated-device/response-fields.adoc[]
+
+
+==== Get Device via Device ID
 
 ===== HTTP request
 ====== `curl`
@@ -12,11 +28,11 @@ include::{snippets}/device-test/get-device1/http-request.adoc[]
 include::{snippets}/device-test/get-device1/path-parameters.adoc[]
 
 ===== HTTP response
-====== Ok
+====== Ok (200)
 include::{snippets}/device-test/get-device1/http-response.adoc[]
 include::{snippets}/device-test/get-device1/response-fields.adoc[]
 
-====== Invalid Device
+====== Invalid Device (404)
 include::{snippets}/device-test/get-invalid-device/http-response.adoc[]
 include::{snippets}/device-test/get-invalid-device/response-fields.adoc[]
 
