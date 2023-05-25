@@ -26,9 +26,9 @@ public class LogApi {
         return deviceLogService.getLatestByDeviceId(deviceId);
     }
 
-    @GetMapping("/{deviceId}/all")
-    public ResultWrapper<List<LogResponse>> getAllLog(@PathVariable(name = "deviceId") Long deviceId) {
-        return deviceLogService.getAllByDeviceId(deviceId);
+    @GetMapping("/{deviceId}/recent")
+    public ResultWrapper<List<LogResponse>> getRecent(@PathVariable(name = "deviceId") Long deviceId) {
+        return deviceLogService.getRecentByDeviceId(deviceId);
     }
 
     @PostMapping("/write")

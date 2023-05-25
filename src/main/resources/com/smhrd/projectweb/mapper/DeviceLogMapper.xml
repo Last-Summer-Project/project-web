@@ -123,6 +123,7 @@
 
     <select id="selectByDeviceId" resultType="com.smhrd.projectweb.entity.sql.DeviceLog">
         <include refid="Join_Select_Query"/>
+        LIMIT 500
     </select>
 
     <select id="selectLatestByDeviceId" resultType="com.smhrd.projectweb.entity.sql.DeviceLog">
