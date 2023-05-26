@@ -57,4 +57,14 @@ public class DeviceAuthService {
             return ResultWrapper.error("Failed to refresh token");
         }
     }
+
+    public ResultWrapper<Void> verifyToken(HttpServletRequest request) {
+        try {
+            deviceUserService.getTokenDeviceId(request);
+            deviceUserService.getTokenLoginId(request);
+            return ResultWrapper.ok();
+        } catch (Exception e) {
+            return ResultWrapper.fail(401, "Unauthorized");
+        }
+    }
 }

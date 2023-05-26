@@ -58,3 +58,25 @@ include::{snippets}/auth-test/refresh/request-headers.adoc[]
 include::{snippets}/auth-test/refresh/http-response.adoc[]
 include::{snippets}/auth-test/refresh/response-fields.adoc[]
 
+==== Verify Json Web Token
+
+===== HTTP request
+====== `curl`
+include::{snippets}/auth-test/verify/curl-request.adoc[]
+====== `httpie`
+include::{snippets}/auth-test/verify/httpie-request.adoc[]
+====== HTTP
+include::{snippets}/auth-test/verify/http-request.adoc[]
+===== Request headers
+include::{snippets}/auth-test/verify/request-headers.adoc[]
+
+===== HTTP response
+===== OK (200)
+include::{snippets}/auth-test/verify/http-response.adoc[]
+include::{snippets}/auth-test/verify/response-fields.adoc[]
+
+===== Unauthorized (403)
+include::{snippets}/auth-test/verify-invalid/http-response.adoc[]
+include::{snippets}/auth-test/verify-invalid/response-fields.adoc[]
+
+

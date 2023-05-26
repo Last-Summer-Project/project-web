@@ -30,4 +30,9 @@ public class AuthApi {
     public ResultWrapper<String> refresh(HttpServletRequest request) {
         return deviceAuthService.refreshToken(request);
     }
+
+    @GetMapping("/verify")
+    public ResultWrapper<Void> verify(HttpServletRequest request) {
+        return deviceAuthService.verifyToken(request);
+    }
 }
