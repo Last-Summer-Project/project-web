@@ -16,12 +16,18 @@ class JwtResultWrapperGenerator {
     private final ObjectMapper objectMapper;
     private final HttpServletResponse response;
 
-    public void fail() throws IOException {
-        generate(ResultWrapper.fail(message));
-    }
+    public void generate() throws IOException {
+        if (status >= 400 && status <=499) {
+            generate(ResultWrapper.fail(message));
+            return;
+        }
 
-    public void error() throws IOException {
-        generate(ResultWrapper.error(message));
+        if (status >= 500 && status <=599) {
+            generate(ResultWrapper.error(message));
+            return;
+        }
+
+        generate(ResultWrapper.of(status, "unknown", message, null));
     }
 
     private void generate(ResultWrapper<?> obj) throws IOException {
