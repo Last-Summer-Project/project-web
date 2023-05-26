@@ -2,7 +2,7 @@ package com.smhrd.projectweb.service.device;
 
 import com.smhrd.projectweb.entity.sql.Device;
 import com.smhrd.projectweb.mapper.DeviceMapper;
-import com.smhrd.projectweb.security.JwtProvider;
+import com.smhrd.projectweb.security.jwt.JwtProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

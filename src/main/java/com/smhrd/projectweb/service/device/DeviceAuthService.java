@@ -6,6 +6,7 @@ import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,10 +15,14 @@ import javax.servlet.http.HttpServletRequest;
 @RequiredArgsConstructor
 @Slf4j
 public class DeviceAuthService {
+
     private final DeviceUserService deviceUserService;
+
+    private static final String LOGIN_FAILED = "Failed to login";
 
     @Value("${service.debug.allowSignup}")
     private Boolean isSignupAllowed;
+
 
     public ResultWrapper<String> signup(AuthRequest authRequest) {
         try {
@@ -37,13 +42,14 @@ public class DeviceAuthService {
     public ResultWrapper<String> login(AuthRequest authRequest) {
         try {
             String token = deviceUserService.login(authRequest.getLoginId(), authRequest.getPassword());
-            if (token == null || token.isEmpty()) return ResultWrapper.fail(403, "Failed to login");
+            if (token == null || token.isEmpty()) return ResultWrapper.fail(401, LOGIN_FAILED);
 
             return ResultWrapper.ok("Successfully logged in", token);
+        } catch (BadCredentialsException e) {
+            return ResultWrapper.fail(401, LOGIN_FAILED);
         } catch (Exception e) {
-                log.error(e.getMessage());
-                return ResultWrapper.error("Failed to login");
-            }
+            return ResultWrapper.error(LOGIN_FAILED);
+        }
     }
 
     public ResultWrapper<String> refreshToken(HttpServletRequest request) {

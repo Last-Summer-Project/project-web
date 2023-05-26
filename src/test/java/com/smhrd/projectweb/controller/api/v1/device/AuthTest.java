@@ -70,6 +70,28 @@ class AuthTest extends AuthTestSupport {
                         )
                 ));
     }
+    @Test
+    @Order(2)
+    void loginFailed() throws Exception {
+        AuthRequest input = new AuthRequest("user1", "pass2");
+
+        this.mockMvc.perform(
+                        post("/api/v1/auth/login")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(objectMapper.writeValueAsString(input)))
+                .andExpect(status().isUnauthorized())
+                .andExpect(jsonPath("status").value("fail"))
+                .andExpect(jsonPath("message").value("Failed to login"))
+                .andDo(restDocs.document(
+                        requestFields(
+                                fieldWithPath("loginId").description("Device login id"),
+                                fieldWithPath("password").description("Device login password")),
+                        responseFields(
+                                fieldWithPath("status").description("Status of response"),
+                                fieldWithPath("message").description("Message of response")
+                        )
+                ));
+    }
 
     @Test
     @Order(3)

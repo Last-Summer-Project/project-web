@@ -15,9 +15,13 @@ include::{snippets}/auth-test/login/http-request.adoc[]
 include::{snippets}/auth-test/login/request-fields.adoc[]
 
 ===== HTTP response
-
+====== Ok (200)
 include::{snippets}/auth-test/login/http-response.adoc[]
 include::{snippets}/auth-test/login/response-fields.adoc[]
+====== Unauthorized (401)
+include::{snippets}/auth-test/login-failed/http-response.adoc[]
+include::{snippets}/auth-test/login-failed/response-fields.adoc[]
+
 
 ==== Signup (Debug only)
 
@@ -71,11 +75,11 @@ include::{snippets}/auth-test/verify/http-request.adoc[]
 include::{snippets}/auth-test/verify/request-headers.adoc[]
 
 ===== HTTP response
-===== OK (200)
+====== OK (200)
 include::{snippets}/auth-test/verify/http-response.adoc[]
 include::{snippets}/auth-test/verify/response-fields.adoc[]
 
-===== Unauthorized (403)
+====== Unauthorized (401)
 include::{snippets}/auth-test/verify-invalid/http-response.adoc[]
 include::{snippets}/auth-test/verify-invalid/response-fields.adoc[]
 

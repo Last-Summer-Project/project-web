@@ -24,7 +24,6 @@ public class ResultWrapperJsonControllerAdvice extends AbstractMappingJacksonRes
         try {
             ResultWrapper<?> rw = (ResultWrapper<?>) bodyContainer.getValue();
             int statusCode = rw.getHttpStatusCode();
-            log.error(String.valueOf(statusCode));
             if (statusCode != 0) {
                 HttpServletResponse resp = ((ServletServerHttpResponse) response).getServletResponse();
                 resp.setStatus(statusCode);

@@ -26,10 +26,10 @@ public class DeviceUserDetail  implements UserDetailsService {
         return org.springframework.security.core.userdetails.User
                 .withUsername(username)
                 .password(device.getPassword())
+                .authorities("device")
                 .accountExpired(false)
                 .accountLocked(false)
                 .credentialsExpired(false)
-                .authorities("device")
                 .disabled(false)
                 .build();
     }

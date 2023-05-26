@@ -1,5 +1,6 @@
-package com.smhrd.projectweb.security;
+package com.smhrd.projectweb.security.jwt;
 
+import com.smhrd.projectweb.security.DeviceUserDetail;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
@@ -7,14 +8,12 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.parameters.P;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.crypto.SecretKey;
 import javax.servlet.http.HttpServletRequest;
-import java.util.Base64;
 import java.util.Date;
 
 @Component
@@ -54,7 +53,7 @@ public class JwtProvider {
 
     public Authentication getAuthentication(String token) {
         UserDetails userDetails = deviceUserDetail.loadUserByUsername(getLoginId(token));
-        return new UsernamePasswordAuthenticationToken(userDetails, "");
+        return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
     }
 
     public JwtParser getJwtParser() {
