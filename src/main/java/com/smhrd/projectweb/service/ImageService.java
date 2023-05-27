@@ -51,7 +51,7 @@ public class ImageService {
         img.setName(name);
         img.setUrl(key);
 
-        Long id = imageMapper.insert(img);
-        return id == 0 ? null : id;
+        Long logInserted = imageMapper.insert(img);
+        return logInserted != 1 ? null : img.getId();
     }
 }
