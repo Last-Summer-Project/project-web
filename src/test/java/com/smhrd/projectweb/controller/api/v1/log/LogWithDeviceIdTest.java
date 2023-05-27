@@ -148,12 +148,13 @@ class LogWithDeviceIdTest extends AuthTestSupport {
 
     @Test
     void postWriteLog() throws Exception {
-        LogWriteRequest input = new LogWriteRequest();
-        input.setDeviceId(1L);
-        input.setRelativeHumidity(12.34);
-        input.setTemperature(19.87);
-        input.setSoilHumidity(0.0);
-        input.setImageBase64(base64OnePixelJpeg);
+        LogWriteRequest input = new LogWriteRequest(
+                1L,
+                12.34,
+                19.87,
+                0.0,
+                base64OnePixelJpeg
+        );
 
         this.mockMvc.perform(
                         post("/api/v1/log/{deviceId}/write", 1)

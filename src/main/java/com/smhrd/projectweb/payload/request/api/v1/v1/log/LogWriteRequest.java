@@ -1,14 +1,11 @@
 package com.smhrd.projectweb.payload.request.api.v1.v1.log;
 
 import com.smhrd.projectweb.entity.DeviceLog;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Data
-@Getter
-@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class LogWriteRequest {
     private Long deviceId;
