@@ -1,6 +1,8 @@
 package com.smhrd.projectweb.controller.api.v1.device;
 
-import com.smhrd.projectweb.entity.request.api.v1.AuthRequest;
+import com.smhrd.projectweb.entity.request.api.v1.auth.AuthRequest;
+import com.smhrd.projectweb.entity.request.api.v1.auth.RefreshRequest;
+import com.smhrd.projectweb.entity.response.api.v1.device.DeviceAuthResponse;
 import com.smhrd.projectweb.service.device.DeviceAuthService;
 import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;
@@ -17,17 +19,17 @@ public class AuthApi {
     private final DeviceAuthService deviceAuthService;
 
     @PostMapping("/login")
-    public ResultWrapper<String> login(@RequestBody AuthRequest authRequest) {
+    public ResultWrapper<DeviceAuthResponse> login(@RequestBody AuthRequest authRequest) {
         return deviceAuthService.login(authRequest);
     }
 
     @PostMapping("/signup")
-    public ResultWrapper<String> signup(@RequestBody AuthRequest authRequest) {
+    public ResultWrapper<DeviceAuthResponse> signup(@RequestBody AuthRequest authRequest) {
         return deviceAuthService.signup(authRequest);
     }
 
-    @GetMapping("/refresh")
-    public ResultWrapper<String> refresh(HttpServletRequest request) {
+    @PostMapping("/refresh")
+    public ResultWrapper<DeviceAuthResponse> refresh(@RequestBody RefreshRequest request) {
         return deviceAuthService.refreshToken(request);
     }
 

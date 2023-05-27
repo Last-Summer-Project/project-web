@@ -1,6 +1,8 @@
 package com.smhrd.projectweb.controller.api.v1.device;
 
-import com.smhrd.projectweb.entity.request.api.v1.AuthRequest;
+import com.smhrd.projectweb.entity.request.api.v1.auth.AuthRequest;
+import com.smhrd.projectweb.entity.request.api.v1.auth.RefreshRequest;
+import com.smhrd.projectweb.entity.response.api.v1.device.DeviceAuthResponse;
 import com.smhrd.projectweb.restdocs.support.AuthTestSupport;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.MethodOrderer;
@@ -42,7 +44,8 @@ class AuthTest extends AuthTestSupport {
                         responseFields(
                                 fieldWithPath("status").description("Status of response"),
                                 fieldWithPath("message").description("Message of response"),
-                                fieldWithPath("data").description("Json Web Token")
+                                fieldWithPath("data.access").description("Access Json Web Token"),
+                                fieldWithPath("data.refresh").description("Refresh Json Web Token")
                         )
                 ));
     }
@@ -66,7 +69,8 @@ class AuthTest extends AuthTestSupport {
                         responseFields(
                                 fieldWithPath("status").description("Status of response"),
                                 fieldWithPath("message").description("Message of response"),
-                                fieldWithPath("data").description("Json Web Token")
+                                fieldWithPath("data.access").description("Access Json Web Token"),
+                                fieldWithPath("data.refresh").description("Refresh Json Web Token")
                         )
                 ));
     }
@@ -96,21 +100,25 @@ class AuthTest extends AuthTestSupport {
     @Test
     @Order(3)
     void refresh() throws Exception {
-        String jwtValue = deviceUserService.login("user", "pass");
+        DeviceAuthResponse jwt = deviceUserService.login("user", "pass");
+        RefreshRequest input = new RefreshRequest(jwt.getRefresh());
 
         this.mockMvc.perform(
-                        get("/api/v1/auth/refresh")
+                        post("/api/v1/auth/refresh")
                                 .contentType(MediaType.APPLICATION_JSON)
-                                .header("Authorization", String.format("Bearer %s", jwtValue)))
+                                .content(objectMapper.writeValueAsString(input)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("status").value("ok"))
                 .andExpect(jsonPath("message").value("Successfully refreshed token"))
                 .andDo(restDocs.document(
-                        authorizationHeaderSnippet,
+                        requestFields(
+                                fieldWithPath("refresh").description("Refresh Json Web Token")
+                        ),
                         responseFields(
                                 fieldWithPath("status").description("Status of response"),
                                 fieldWithPath("message").description("Message of response"),
-                                fieldWithPath("data").description("Json Web Token")
+                                fieldWithPath("data.access").description("Refreshed Access Json Web Token"),
+                                fieldWithPath("data.refresh").description("Refreshed Refresh Json Web Token")
                         )
                 ));
     }
@@ -118,7 +126,7 @@ class AuthTest extends AuthTestSupport {
     @Test
     @Order(4)
     void verify() throws Exception {
-        String jwtValue = deviceUserService.login("user", "pass");
+        String jwtValue = deviceUserService.login("user", "pass").getAccess();
 
         this.mockMvc.perform(
                         get("/api/v1/auth/verify")

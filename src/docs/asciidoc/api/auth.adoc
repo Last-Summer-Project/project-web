@@ -54,8 +54,8 @@ include::{snippets}/auth-test/refresh/curl-request.adoc[]
 include::{snippets}/auth-test/refresh/httpie-request.adoc[]
 ====== HTTP
 include::{snippets}/auth-test/refresh/http-request.adoc[]
-===== Request headers
-include::{snippets}/auth-test/refresh/request-headers.adoc[]
+====== Request fields
+include::{snippets}/auth-test/refresh/request-fields.adoc[]
 
 ===== HTTP response
 

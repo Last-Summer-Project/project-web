@@ -50,11 +50,7 @@ public class WebSecurityConfig {
             authorize.antMatchers("/api/v1", "/api/v1/").permitAll();
 
             // Authenticate
-            authorize.antMatchers(
-                    "/api/v1/auth/login",
-                    "/api/v1/auth/signup",
-                    "/api/v1/auth/verify"
-            ).permitAll();
+            authorize.antMatchers("/api/v1/auth/**").permitAll();
 
             // Others
             authorize.anyRequest().authenticated();

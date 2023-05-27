@@ -1,5 +1,6 @@
 package com.smhrd.projectweb.security.jwt;
 
+import com.smhrd.projectweb.entity.response.api.v1.device.DeviceAuthResponse;
 import com.smhrd.projectweb.security.DeviceUserDetail;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
@@ -19,36 +20,49 @@ import java.util.Date;
 @Component
 @RequiredArgsConstructor
 public class JwtProvider {
+    private final DeviceUserDetail deviceUserDetail;
+
     @Value("${security.jwt.token.secret-key-base64}")
     private String base64SecretKey;
 
-    @Value("${security.jwt.token.expire-length-sec}")
-    private Long validityInSeconds;
+    @Value("${security.jwt.token.access-expire-length-sec}")
+    private Long accessValidityInSeconds;
+
+    @Value("${security.jwt.token.refresh-expire-length-hour}")
+    private Long refreshValidityInHours;
 
     private SecretKey secretKey;
-
-    private final DeviceUserDetail deviceUserDetail;
 
     @PostConstruct
     protected void init() {
         this.secretKey = Keys.hmacShaKeyFor(Decoders.BASE64.decode(base64SecretKey));
     }
 
-    public String createToken(String loginId, Long deviceId) {
+    public DeviceAuthResponse createToken(String loginId, Long deviceId) {
+        Claims claims = createClaims(loginId, deviceId);
+        return new DeviceAuthResponse(createAccessToken(claims), createRefreshToken(claims));
+    }
+
+    public Claims createClaims(String loginId, Long deviceId) {
         Claims claims = Jwts.claims();
         claims.setSubject(loginId);
         claims.put("id", deviceId);
+        return claims;
+    }
 
+    private String createAccessToken(Claims claims) {
+        return createToken(claims, this.accessValidityInSeconds * 1000);
+    }
+
+    private String createRefreshToken(Claims claims) {
+        return createToken(claims, this.refreshValidityInHours * 60 * 60 * 1000);
+    }
+
+    public String createToken(Claims claims, Long seconds) {
         Date now = new Date();
-        Date validity = new Date(now.getTime() + this.validityInSeconds * 1000);
+        Date validity = new Date(now.getTime() + seconds);
 
-        return Jwts.builder()
-                .setClaims(claims)
-                .setIssuedAt(now)
-                .setExpiration(validity)
-                .signWith(secretKey)
-                .compact();
-
+        return Jwts.builder().setClaims(claims).setIssuedAt(now).setExpiration(validity).signWith(secretKey).compact();
     }
 
     public Authentication getAuthentication(String token) {
@@ -85,7 +99,7 @@ public class JwtProvider {
             getJwsClaims(token);
             return true;
         } catch (JwtException | IllegalArgumentException e) {
-           return false;
+            return false;
         }
     }
 }

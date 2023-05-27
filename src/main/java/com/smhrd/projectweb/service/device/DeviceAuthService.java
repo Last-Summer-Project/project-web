@@ -1,6 +1,8 @@
 package com.smhrd.projectweb.service.device;
 
-import com.smhrd.projectweb.entity.request.api.v1.AuthRequest;
+import com.smhrd.projectweb.entity.request.api.v1.auth.AuthRequest;
+import com.smhrd.projectweb.entity.request.api.v1.auth.RefreshRequest;
+import com.smhrd.projectweb.entity.response.api.v1.device.DeviceAuthResponse;
 import com.smhrd.projectweb.entity.sql.Device;
 import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;
@@ -24,27 +26,27 @@ public class DeviceAuthService {
     private Boolean isSignupAllowed;
 
 
-    public ResultWrapper<String> signup(AuthRequest authRequest) {
+    public ResultWrapper<DeviceAuthResponse> signup(AuthRequest authRequest) {
         try {
             if (isSignupAllowed == null || !isSignupAllowed) return ResultWrapper.error("Signup is not allowed");
 
             Device device = authRequest.toDevice();
-            String token = deviceUserService.signup(device);
-            if (token == null || token.isEmpty()) return ResultWrapper.fail(403, "Failed to sign up");
+            DeviceAuthResponse response = deviceUserService.signup(device);
+            if (response.isInvalid()) return ResultWrapper.fail(403, "Failed to sign up");
 
-            return ResultWrapper.ok("Successfully signed up", token);
+            return ResultWrapper.ok("Successfully signed up", response);
         } catch (Exception e) {
             log.error(e.getMessage());
             return ResultWrapper.error("Failed to sign up");
         }
     }
 
-    public ResultWrapper<String> login(AuthRequest authRequest) {
+    public ResultWrapper<DeviceAuthResponse> login(AuthRequest authRequest) {
         try {
-            String token = deviceUserService.login(authRequest.getLoginId(), authRequest.getPassword());
-            if (token == null || token.isEmpty()) return ResultWrapper.fail(401, LOGIN_FAILED);
+            DeviceAuthResponse response = deviceUserService.login(authRequest.getLoginId(), authRequest.getPassword());
+            if (response.isInvalid()) return ResultWrapper.fail(401, LOGIN_FAILED);
 
-            return ResultWrapper.ok("Successfully logged in", token);
+            return ResultWrapper.ok("Successfully logged in", response);
         } catch (BadCredentialsException e) {
             return ResultWrapper.fail(401, LOGIN_FAILED);
         } catch (Exception e) {
@@ -52,12 +54,12 @@ public class DeviceAuthService {
         }
     }
 
-    public ResultWrapper<String> refreshToken(HttpServletRequest request) {
+    public ResultWrapper<DeviceAuthResponse> refreshToken(RefreshRequest request) {
         try {
-            String token = deviceUserService.refresh(deviceUserService.getTokenLoginId(request));
-            if (token == null || token.isEmpty()) return ResultWrapper.fail(403, "Failed to refresh token");
+            DeviceAuthResponse response = deviceUserService.refresh(deviceUserService.getTokenLoginId(request.getRefresh()));
+            if (response.isInvalid()) return ResultWrapper.fail(403, "Failed to refresh token");
 
-            return ResultWrapper.ok("Successfully refreshed token", token);
+            return ResultWrapper.ok("Successfully refreshed token", response);
         } catch (Exception e) {
             log.error(e.getMessage());
             return ResultWrapper.error("Failed to refresh token");

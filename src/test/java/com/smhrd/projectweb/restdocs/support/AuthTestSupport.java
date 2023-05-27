@@ -31,7 +31,7 @@ public class AuthTestSupport extends SqlTestSupport {
 
     protected String getJwt() {
         if (testJwtValue == null) {
-            testJwtValue = deviceUserService.login("test_user", "pass");
+            testJwtValue = deviceUserService.login("test_user", "pass").getAccess();
         }
         return testJwtValue;
     }
