@@ -1,7 +1,7 @@
 package com.smhrd.projectweb.service.log;
 
-import com.smhrd.projectweb.payload.request.api.v1.v1.log.LogWriteRequest;
-import com.smhrd.projectweb.payload.response.api.v1.v1.log.LogResponse;
+import com.smhrd.projectweb.payload.request.api.v1.log.LogWriteRequest;
+import com.smhrd.projectweb.payload.response.api.v1.log.LogResponse;
 import com.smhrd.projectweb.entity.Detect;
 import com.smhrd.projectweb.entity.DeviceLog;
 import com.smhrd.projectweb.mapper.DetectMapper;

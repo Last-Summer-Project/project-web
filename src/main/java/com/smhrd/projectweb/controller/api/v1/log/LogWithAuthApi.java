@@ -1,7 +1,7 @@
 package com.smhrd.projectweb.controller.api.v1.log;
 
-import com.smhrd.projectweb.payload.request.api.v1.v1.log.LogWriteRequest;
-import com.smhrd.projectweb.payload.response.api.v1.v1.log.LogResponse;
+import com.smhrd.projectweb.payload.request.api.v1.log.LogWriteRequest;
+import com.smhrd.projectweb.payload.response.api.v1.log.LogResponse;
 import com.smhrd.projectweb.service.log.DeviceLogAuthService;
 import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.payload.response.api.v1.v1;
+package com.smhrd.projectweb.payload.response.api.v1;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,5 +8,5 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class IndexResponse {
-    public String message;
+    private String message;
 }

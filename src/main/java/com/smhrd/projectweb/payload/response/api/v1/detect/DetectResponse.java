@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.payload.response.api.v1.v1.detect;
+package com.smhrd.projectweb.payload.response.api.v1.detect;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;

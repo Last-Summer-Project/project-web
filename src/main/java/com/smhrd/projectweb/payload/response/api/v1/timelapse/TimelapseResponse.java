@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.payload.response.api.v1.v1.timelapse;
+package com.smhrd.projectweb.payload.response.api.v1.timelapse;
 
 
 import lombok.AllArgsConstructor;

@@ -1,7 +1,7 @@
-package com.smhrd.projectweb.payload.response.api.v1.v1.log;
+package com.smhrd.projectweb.payload.response.api.v1.log;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.smhrd.projectweb.payload.response.api.v1.v1.detect.DetectResponse;
+import com.smhrd.projectweb.payload.response.api.v1.detect.DetectResponse;
 import com.smhrd.projectweb.entity.Detect;
 import com.smhrd.projectweb.entity.DeviceLog;
 import com.smhrd.projectweb.entity.Image;
