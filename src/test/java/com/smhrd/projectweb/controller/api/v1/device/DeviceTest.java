@@ -1,12 +1,10 @@
 package com.smhrd.projectweb.controller.api.v1.device;
 
 
-import com.smhrd.projectweb.config.TestSecurityConfig;
 import com.smhrd.projectweb.restdocs.support.AuthTestSupport;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.*;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.MediaType;
 import org.springframework.restdocs.request.PathParametersSnippet;
@@ -22,7 +20,6 @@ import static org.springframework.restdocs.request.RequestDocumentation.*;
 @WebMvcTest(DeviceApi.class)
 @PropertySource("classpath:application.properties")
 @Slf4j
-@Import(TestSecurityConfig.class)
 class DeviceTest extends AuthTestSupport {
 
     PathParametersSnippet deviceIdPathParameterSnippet = pathParameters(

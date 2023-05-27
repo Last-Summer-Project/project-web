@@ -1,11 +1,9 @@
 package com.smhrd.projectweb.restdocs.support;
 
-import com.smhrd.projectweb.config.TestSecurityConfig;
 import com.smhrd.projectweb.service.device.DeviceUserService;
 import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.Disabled;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Import;
 import org.springframework.http.HttpHeaders;
 import org.springframework.restdocs.headers.RequestHeadersSnippet;
 import org.springframework.security.authentication.TestingAuthenticationToken;
@@ -15,7 +13,6 @@ import static org.springframework.restdocs.headers.HeaderDocumentation.headerWit
 import static org.springframework.restdocs.headers.HeaderDocumentation.requestHeaders;
 
 @Disabled
-@Import(TestSecurityConfig.class)
 @RequiredArgsConstructor
 public class AuthTestSupport extends SqlTestSupport {
 

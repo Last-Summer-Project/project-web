@@ -16,6 +16,7 @@ import javax.annotation.PostConstruct;
 import javax.crypto.SecretKey;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
+import java.util.Objects;
 
 @Component
 @RequiredArgsConstructor
@@ -33,6 +34,11 @@ public class JwtProvider {
 
     private SecretKey secretKey;
 
+    private static final String SUBJECT = "some-service";
+    private static final String LOGIN_ID = "login_id";
+    private static final String DEVICE_ID = "device_id";
+
+
     @PostConstruct
     protected void init() {
         this.secretKey = Keys.hmacShaKeyFor(Decoders.BASE64.decode(base64SecretKey));
@@ -45,8 +51,9 @@ public class JwtProvider {
 
     public Claims createClaims(String loginId, Long deviceId) {
         Claims claims = Jwts.claims();
-        claims.setSubject(loginId);
-        claims.put("id", deviceId);
+        claims.setSubject(SUBJECT);
+        claims.put(LOGIN_ID, loginId);
+        claims.put(DEVICE_ID, deviceId);
         return claims;
     }
 
@@ -74,16 +81,20 @@ public class JwtProvider {
         return Jwts.parserBuilder().setSigningKey(secretKey).build();
     }
 
+    public String getSubject(String token) {
+        return getJwsClaims(token).getBody().getSubject();
+    }
+
     public Jws<Claims> getJwsClaims(String token) {
         return getJwtParser().parseClaimsJws(token);
     }
 
     public String getLoginId(String token) {
-        return getJwsClaims(token).getBody().getSubject();
+        return getJwsClaims(token).getBody().get(LOGIN_ID, String.class);
     }
 
     public Long getDeviceId(String token) {
-        return getJwsClaims(token).getBody().get("id", Long.class);
+        return getJwsClaims(token).getBody().get(DEVICE_ID, Long.class);
     }
 
     public String resolveToken(HttpServletRequest req) {
@@ -96,8 +107,7 @@ public class JwtProvider {
 
     public boolean validateToken(String token) {
         try {
-            getJwsClaims(token);
-            return true;
+            return Objects.equals(getSubject(token), SUBJECT);
         } catch (JwtException | IllegalArgumentException e) {
             return false;
         }
