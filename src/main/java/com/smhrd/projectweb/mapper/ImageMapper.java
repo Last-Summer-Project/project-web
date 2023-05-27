@@ -1,9 +1,11 @@
 package com.smhrd.projectweb.mapper;
 
 import com.smhrd.projectweb.entity.sql.Image;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
 */
+@Mapper
 public interface ImageMapper {
 
     int deleteByPrimaryKey(Long id);

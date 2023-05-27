@@ -1,10 +1,12 @@
 package com.smhrd.projectweb.mapper;
 
 import com.smhrd.projectweb.entity.sql.Detect;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
 *
 */
+@Mapper
 public interface DetectMapper {
 
     int deleteByPrimaryKey(Long id);

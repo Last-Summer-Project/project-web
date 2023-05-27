@@ -1,12 +1,14 @@
 package com.smhrd.projectweb.mapper;
 
 import com.smhrd.projectweb.entity.sql.DeviceLog;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
 /**
  *
  */
+@Mapper
 public interface DeviceLogMapper {
 
     int deleteByPrimaryKey(Long id);
