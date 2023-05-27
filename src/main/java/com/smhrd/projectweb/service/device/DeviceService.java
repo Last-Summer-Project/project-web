@@ -38,6 +38,8 @@ public class DeviceService {
     }
 
     public ResultWrapper<DeviceResponse> update(Long id, Device requestDevice) {
-        return ResultWrapper.fail("Not implemented", DeviceResponse.fromDevice(requestDevice));
+        return ResultWrapper.error(
+                String.format("Not implemented. Request returned as response format. Your id was %d", id),
+                DeviceResponse.fromDevice(requestDevice));
     }
 }
