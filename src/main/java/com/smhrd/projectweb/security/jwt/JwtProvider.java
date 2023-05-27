@@ -1,7 +1,7 @@
 package com.smhrd.projectweb.security.jwt;
 
 import com.smhrd.projectweb.payload.response.api.v1.device.DeviceAuthResponse;
-import com.smhrd.projectweb.security.DeviceUserDetail;
+import com.smhrd.projectweb.security.service.UserDetailsServiceImpl;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
@@ -21,7 +21,7 @@ import java.util.Objects;
 @Component
 @RequiredArgsConstructor
 public class JwtProvider {
-    private final DeviceUserDetail deviceUserDetail;
+    private final UserDetailsServiceImpl deviceUserDetail;
 
     @Value("${security.jwt.token.secret-key-base64}")
     private String base64SecretKey;

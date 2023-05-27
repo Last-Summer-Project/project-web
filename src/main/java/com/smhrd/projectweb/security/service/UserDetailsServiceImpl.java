@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.security;
+package com.smhrd.projectweb.security.service;
 
 import com.smhrd.projectweb.entity.Device;
 import com.smhrd.projectweb.mapper.DeviceMapper;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class DeviceUserDetail  implements UserDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final DeviceMapper deviceMapper;
 
@@ -20,17 +20,9 @@ public class DeviceUserDetail  implements UserDetailsService {
         final Device device = deviceMapper.selectByLoginId(username);
 
         if (device == null) {
-            throw new UsernameNotFoundException(String.format("User login id '%s' not found", username));
+            throw new UsernameNotFoundException(String.format("Device login id '%s' not found", username));
         }
 
-        return org.springframework.security.core.userdetails.User
-                .withUsername(username)
-                .password(device.getPassword())
-                .authorities("device")
-                .accountExpired(false)
-                .accountLocked(false)
-                .credentialsExpired(false)
-                .disabled(false)
-                .build();
+        return UserDetailsImpl.build(device);
     }
 }
