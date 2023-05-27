@@ -1,7 +1,7 @@
 package com.smhrd.projectweb.service.device;
 
-import com.smhrd.projectweb.entity.response.api.v1.device.DeviceResponse;
-import com.smhrd.projectweb.entity.sql.Device;
+import com.smhrd.projectweb.payload.response.api.v1.v1.device.DeviceResponse;
+import com.smhrd.projectweb.entity.Device;
 import com.smhrd.projectweb.mapper.DeviceMapper;
 import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;

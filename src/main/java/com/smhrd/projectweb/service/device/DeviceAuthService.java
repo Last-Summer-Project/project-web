@@ -1,9 +1,9 @@
 package com.smhrd.projectweb.service.device;
 
-import com.smhrd.projectweb.entity.request.api.v1.auth.AuthRequest;
-import com.smhrd.projectweb.entity.request.api.v1.auth.RefreshRequest;
-import com.smhrd.projectweb.entity.response.api.v1.device.DeviceAuthResponse;
-import com.smhrd.projectweb.entity.sql.Device;
+import com.smhrd.projectweb.payload.request.api.v1.v1.auth.AuthRequest;
+import com.smhrd.projectweb.payload.request.api.v1.v1.auth.RefreshRequest;
+import com.smhrd.projectweb.payload.response.api.v1.v1.device.DeviceAuthResponse;
+import com.smhrd.projectweb.entity.Device;
 import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

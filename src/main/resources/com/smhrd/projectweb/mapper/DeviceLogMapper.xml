@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.projectweb.mapper.DeviceLogMapper">
 
-    <resultMap id="BaseResultMap" type="com.smhrd.projectweb.entity.sql.DeviceLog">
+    <resultMap id="BaseResultMap" type="com.smhrd.projectweb.entity.DeviceLog">
         <id property="id" column="id" jdbcType="BIGINT"/>
         <result property="deviceId" column="device_id" jdbcType="BIGINT"/>
         <result property="temperature" column="temperature" jdbcType="FLOAT"/>
@@ -16,7 +16,7 @@
         <collection property="detect" resultMap="com.smhrd.projectweb.mapper.DetectMapper.BaseResultMap"/>
     </resultMap>
 
-    <resultMap id="ImageResultMap" type="com.smhrd.projectweb.entity.sql.Image">
+    <resultMap id="ImageResultMap" type="com.smhrd.projectweb.entity.Image">
         <id property="id" column="image_id" jdbcType="BIGINT"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
         <result property="url" column="url" jdbcType="VARCHAR"/>
@@ -42,7 +42,7 @@
         from device_log
         where id = #{id,jdbcType=BIGINT}
     </delete>
-    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.sql.DeviceLog"
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.DeviceLog"
             useGeneratedKeys="true">
         insert into device_log
         ( device_id, temperature
@@ -51,7 +51,7 @@
                , #{relativeHumidity,jdbcType=FLOAT}, #{soilHumidity,jdbcType=FLOAT}, #{imageId,jdbcType=BIGINT})
     </insert>
     <insert id="insertSelective" keyColumn="id" keyProperty="id"
-            parameterType="com.smhrd.projectweb.entity.sql.DeviceLog" useGeneratedKeys="true">
+            parameterType="com.smhrd.projectweb.entity.DeviceLog" useGeneratedKeys="true">
         insert into device_log
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="deviceId != null">device_id,</if>
@@ -68,7 +68,7 @@
             <if test="imageId != null">#{imageId,jdbcType=BIGINT},</if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.smhrd.projectweb.entity.sql.DeviceLog">
+    <update id="updateByPrimaryKeySelective" parameterType="com.smhrd.projectweb.entity.DeviceLog">
         update device_log
         <set>
             <if test="deviceId != null">
@@ -89,7 +89,7 @@
         </set>
         where id = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.smhrd.projectweb.entity.sql.DeviceLog">
+    <update id="updateByPrimaryKey" parameterType="com.smhrd.projectweb.entity.DeviceLog">
         update device_log
         set device_id         = #{deviceId,jdbcType=BIGINT},
             temperature       = #{temperature,jdbcType=FLOAT},

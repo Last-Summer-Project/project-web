@@ -1,6 +1,6 @@
 package com.smhrd.projectweb.service;
 
-import com.smhrd.projectweb.entity.sql.Image;
+import com.smhrd.projectweb.entity.Image;
 import com.smhrd.projectweb.mapper.ImageMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

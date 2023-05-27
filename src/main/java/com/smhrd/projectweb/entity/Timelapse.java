@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.entity.sql;
+package com.smhrd.projectweb.entity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -8,12 +8,12 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * @TableName device_log
+ * @TableName timelapse
  */
 @Data
 @EqualsAndHashCode
 @ToString
-public class DeviceLog implements Serializable {
+public class Timelapse implements Serializable {
     /**
      *
      */
@@ -27,31 +27,30 @@ public class DeviceLog implements Serializable {
     /**
      *
      */
-    private Double temperature;
+    private LocalDateTime startDate;
 
     /**
      *
      */
-    private Double relativeHumidity;
+    private LocalDateTime endDate;
 
     /**
      *
      */
-    private Double soilHumidity;
+    private Status status;
 
     /**
      *
      */
-    private Long imageId;
+    private String result;
 
     /**
      *
      */
     private LocalDateTime dateCreated;
 
-
-    private Detect detect;
-    private Image image;
-
-
+    /**
+     *
+     */
+    private LocalDateTime lastEdited;
 }

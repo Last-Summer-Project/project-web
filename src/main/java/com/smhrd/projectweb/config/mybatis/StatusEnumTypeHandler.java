@@ -1,6 +1,6 @@
 package com.smhrd.projectweb.config.mybatis;
 
-import com.smhrd.projectweb.entity.sql.Status;
+import com.smhrd.projectweb.entity.Status;
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
 

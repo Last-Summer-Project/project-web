@@ -1,6 +1,6 @@
 package com.smhrd.projectweb.security;
 
-import com.smhrd.projectweb.entity.sql.Device;
+import com.smhrd.projectweb.entity.Device;
 import com.smhrd.projectweb.mapper.DeviceMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;

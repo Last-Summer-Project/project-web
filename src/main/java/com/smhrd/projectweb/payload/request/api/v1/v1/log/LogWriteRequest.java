@@ -1,6 +1,6 @@
-package com.smhrd.projectweb.entity.request.api.v1.log;
+package com.smhrd.projectweb.payload.request.api.v1.v1.log;
 
-import com.smhrd.projectweb.entity.sql.DeviceLog;
+import com.smhrd.projectweb.entity.DeviceLog;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;

@@ -4,6 +4,7 @@ package com.smhrd.projectweb.security.jwt;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -32,8 +33,8 @@ class JwtResultWrapperGenerator {
 
     private void generate(ResultWrapper<?> obj) throws IOException {
         response.setStatus(status);
-        String json = objectMapper.writeValueAsString(obj);
         response.setContentType("application/json;charset=UTF-8");
+        String json = objectMapper.writeValueAsString(obj);
         PrintWriter writer = response.getWriter();
         writer.write(json);
         writer.flush();

@@ -1,6 +1,6 @@
 package com.smhrd.projectweb.mapper;
 
-import com.smhrd.projectweb.entity.sql.DeviceLog;
+import com.smhrd.projectweb.entity.DeviceLog;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

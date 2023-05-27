@@ -1,10 +1,10 @@
-package com.smhrd.projectweb.entity.response.api.v1.log;
+package com.smhrd.projectweb.payload.response.api.v1.v1.log;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.smhrd.projectweb.entity.response.api.v1.detect.DetectResponse;
-import com.smhrd.projectweb.entity.sql.Detect;
-import com.smhrd.projectweb.entity.sql.DeviceLog;
-import com.smhrd.projectweb.entity.sql.Image;
+import com.smhrd.projectweb.payload.response.api.v1.v1.detect.DetectResponse;
+import com.smhrd.projectweb.entity.Detect;
+import com.smhrd.projectweb.entity.DeviceLog;
+import com.smhrd.projectweb.entity.Image;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;

@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.projectweb.mapper.TimelapseMapper">
 
-    <resultMap id="BaseResultMap" type="com.smhrd.projectweb.entity.sql.Timelapse">
+    <resultMap id="BaseResultMap" type="com.smhrd.projectweb.entity.Timelapse">
         <id property="id" column="id" jdbcType="BIGINT"/>
         <result property="deviceId" column="device_id" jdbcType="BIGINT"/>
         <result property="startDate" column="start_date" jdbcType="TIMESTAMP"/>
@@ -34,7 +34,7 @@
         from timelapse
         where id = #{id,jdbcType=BIGINT}
     </delete>
-    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.sql.Timelapse"
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.Timelapse"
             useGeneratedKeys="true">
         insert into timelapse
         ( id, device_id, start_date
@@ -43,7 +43,7 @@
                , #{endDate,jdbcType=TIMESTAMP}, #{status,jdbcType=OTHER}, #{result,jdbcType=VARCHAR})
     </insert>
     <insert id="insertSelective" keyColumn="id" keyProperty="id"
-            parameterType="com.smhrd.projectweb.entity.sql.Timelapse" useGeneratedKeys="true">
+            parameterType="com.smhrd.projectweb.entity.Timelapse" useGeneratedKeys="true">
         insert into timelapse
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">id,</if>
@@ -62,7 +62,7 @@
             <if test="result != null">#{result,jdbcType=VARCHAR},</if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.smhrd.projectweb.entity.sql.Timelapse">
+    <update id="updateByPrimaryKeySelective" parameterType="com.smhrd.projectweb.entity.Timelapse">
         update timelapse
         <set>
             <if test="deviceId != null">
@@ -83,7 +83,7 @@
         </set>
         where id = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.smhrd.projectweb.entity.sql.Timelapse">
+    <update id="updateByPrimaryKey" parameterType="com.smhrd.projectweb.entity.Timelapse">
         update timelapse
         set device_id  = #{deviceId,jdbcType=BIGINT},
             start_date = #{startDate,jdbcType=TIMESTAMP},

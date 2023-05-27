@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.entity.sql;
+package com.smhrd.projectweb.entity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

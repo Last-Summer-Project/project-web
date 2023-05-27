@@ -1,6 +1,6 @@
 package com.smhrd.projectweb.mapper;
 
-import com.smhrd.projectweb.entity.sql.Timelapse;
+import com.smhrd.projectweb.entity.Timelapse;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

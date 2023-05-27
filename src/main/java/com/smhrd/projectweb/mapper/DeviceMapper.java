@@ -1,6 +1,6 @@
 package com.smhrd.projectweb.mapper;
 
-import com.smhrd.projectweb.entity.sql.Device;
+import com.smhrd.projectweb.entity.Device;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

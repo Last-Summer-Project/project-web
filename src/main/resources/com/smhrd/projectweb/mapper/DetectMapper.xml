@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.projectweb.mapper.DetectMapper">
 
-    <resultMap id="BaseResultMap" type="com.smhrd.projectweb.entity.sql.Detect">
+    <resultMap id="BaseResultMap" type="com.smhrd.projectweb.entity.Detect">
         <id property="id" column="id" jdbcType="BIGINT"/>
         <result property="status" column="status" jdbcType="OTHER"/>
         <result property="result" column="result" jdbcType="VARCHAR"/>
@@ -28,13 +28,13 @@
         from detect
         where id = #{id,jdbcType=BIGINT}
     </delete>
-    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.sql.Detect"
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.Detect"
             useGeneratedKeys="true">
         insert into detect
             (id, status, result)
         values (#{id,jdbcType=BIGINT}, #{status,jdbcType=OTHER}, #{result,jdbcType=VARCHAR})
     </insert>
-    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.sql.Detect"
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.Detect"
             useGeneratedKeys="true">
         insert into detect
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -48,7 +48,7 @@
             <if test="result != null">#{result,jdbcType=VARCHAR},</if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.smhrd.projectweb.entity.sql.Detect">
+    <update id="updateByPrimaryKeySelective" parameterType="com.smhrd.projectweb.entity.Detect">
         update detect
         <set>
             <if test="status != null">
@@ -60,7 +60,7 @@
         </set>
         where id = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.smhrd.projectweb.entity.sql.Detect">
+    <update id="updateByPrimaryKey" parameterType="com.smhrd.projectweb.entity.Detect">
         update detect
         set status = #{status,jdbcType=OTHER},
             result = #{result,jdbcType=VARCHAR}

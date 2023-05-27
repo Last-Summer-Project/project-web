@@ -1,6 +1,6 @@
-package com.smhrd.projectweb.entity.request.api.v1.auth;
+package com.smhrd.projectweb.payload.request.api.v1.v1.auth;
 
-import com.smhrd.projectweb.entity.sql.Device;
+import com.smhrd.projectweb.entity.Device;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

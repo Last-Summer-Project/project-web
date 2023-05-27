@@ -1,7 +1,7 @@
-package com.smhrd.projectweb.entity.response.api.v1.device;
+package com.smhrd.projectweb.payload.response.api.v1.v1.device;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.smhrd.projectweb.entity.sql.Device;
+import com.smhrd.projectweb.entity.Device;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

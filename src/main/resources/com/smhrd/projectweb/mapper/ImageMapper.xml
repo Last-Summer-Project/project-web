@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.projectweb.mapper.ImageMapper">
 
-    <resultMap id="BaseResultMap" type="com.smhrd.projectweb.entity.sql.Image">
+    <resultMap id="BaseResultMap" type="com.smhrd.projectweb.entity.Image">
         <id property="id" column="id" jdbcType="BIGINT"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
         <result property="url" column="url" jdbcType="VARCHAR"/>
@@ -29,13 +29,13 @@
         from image
         where id = #{id,jdbcType=BIGINT}
     </delete>
-    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.sql.Image"
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.Image"
             useGeneratedKeys="true">
         insert into image
             (id, name, url)
         values (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR})
     </insert>
-    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.sql.Image"
+    <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.smhrd.projectweb.entity.Image"
             useGeneratedKeys="true">
         insert into image
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -49,7 +49,7 @@
             <if test="url != null">#{url,jdbcType=VARCHAR},</if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.smhrd.projectweb.entity.sql.Image">
+    <update id="updateByPrimaryKeySelective" parameterType="com.smhrd.projectweb.entity.Image">
         update image
         <set>
             <if test="name != null">
@@ -61,7 +61,7 @@
         </set>
         where id = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.smhrd.projectweb.entity.sql.Image">
+    <update id="updateByPrimaryKey" parameterType="com.smhrd.projectweb.entity.Image">
         update image
         set name = #{name,jdbcType=VARCHAR},
             url  = #{url,jdbcType=VARCHAR}

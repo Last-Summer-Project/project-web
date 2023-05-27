@@ -1,6 +1,6 @@
 package com.smhrd.projectweb.controller.api.v1.log;
 
-import com.smhrd.projectweb.entity.request.api.v1.log.LogWriteRequest;
+import com.smhrd.projectweb.payload.request.api.v1.v1.log.LogWriteRequest;
 import com.smhrd.projectweb.restdocs.support.AuthTestSupport;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
