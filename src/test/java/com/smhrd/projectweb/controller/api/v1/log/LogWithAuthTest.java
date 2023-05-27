@@ -157,8 +157,8 @@ class LogWithAuthTest extends AuthTestSupport {
                 .andExpect(jsonPath("status").value("ok"))
                 // Basic
                 .andExpect(jsonPath("data.deviceId").value(1))
-                .andExpect(jsonPath("data.humidity").value(12.34D))
-                .andExpect(jsonPath("data.temperature").value(19.87D))
+                .andExpect(jsonPath("data.temperature").value(12.34D))
+                .andExpect(jsonPath("data.humidity").value(19.87D))
                 .andExpect(jsonPath("data.soilHumidity").value(0.0))
                 // Detection
                 .andExpect(jsonPath("data.detection.status").value("NOT_STARTED"))
