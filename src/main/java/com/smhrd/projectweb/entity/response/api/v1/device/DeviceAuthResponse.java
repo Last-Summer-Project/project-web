@@ -10,7 +10,7 @@ public class DeviceAuthResponse {
     private String access;
     private String refresh;
 
-    @JsonIgnore
+    @JsonIgnore // Do not remove! It will convert to json field!
     public boolean isInvalid() {
         return access == null || access.isEmpty() || refresh == null || refresh.isEmpty();
     }

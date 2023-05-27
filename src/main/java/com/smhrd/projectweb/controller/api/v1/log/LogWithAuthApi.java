@@ -2,7 +2,7 @@ package com.smhrd.projectweb.controller.api.v1.log;
 
 import com.smhrd.projectweb.entity.request.api.v1.log.LogWriteRequest;
 import com.smhrd.projectweb.entity.response.api.v1.log.LogResponse;
-import com.smhrd.projectweb.service.log.DeviceAuthLogService;
+import com.smhrd.projectweb.service.log.DeviceLogAuthService;
 import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 public class LogWithAuthApi {
-    private final DeviceAuthLogService deviceAuthLogService;
+    private final DeviceLogAuthService deviceAuthLogService;
 
     @GetMapping("/latest")
     public ResultWrapper<LogResponse> getLatestLog(HttpServletRequest request) {

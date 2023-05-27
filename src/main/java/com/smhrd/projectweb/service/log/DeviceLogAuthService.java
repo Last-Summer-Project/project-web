@@ -12,7 +12,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class DeviceAuthLogService {
+public class DeviceLogAuthService {
     private final DeviceLogService deviceLogService;
     private final DeviceUserService deviceUserService;
 
