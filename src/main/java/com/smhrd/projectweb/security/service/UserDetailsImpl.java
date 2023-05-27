@@ -12,21 +12,39 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
+
+/**
+ * Implements {@link UserDetails} as of Spring-Security requirements.
+ *
+ * @see Device the origin entity
+ */
 @AllArgsConstructor
 @EqualsAndHashCode
 @Getter
 public class UserDetailsImpl implements UserDetails {
     private Long id;
 
-    /** Actually, it's {@see Device#loginId}. */
+    /**
+     * Actually, it's loginId. not username,
+     * @see Device
+     * */
     private String username;
 
     @JsonIgnore
     private String password;
 
+    /**
+     * We don't have actual authorities roles. it just for spring-security requirements.
+     */
     private Collection<? extends GrantedAuthority> authorities;
+
+    /**
+     * Build {@link UserDetailsImpl}
+     *
+     * @param device The device
+     * @return this implements itself.
+     */
     public static UserDetailsImpl build(Device device) {
-        // We don't have real role...
         List<GrantedAuthority> authorities = List.of(
                 new SimpleGrantedAuthority("device")
         );

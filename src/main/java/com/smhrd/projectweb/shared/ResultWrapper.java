@@ -4,6 +4,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
+
+/**
+ * 반환하는 Json 값을 일정한 포멧에 맞게 Wrapping 하기 위해 사용합니다.
+ *
+ * @param <T> Any data type want to return is 'data' field
+ */
 @Data
 public class ResultWrapper<T> {
     private static final String STATUS_OK = "ok";
