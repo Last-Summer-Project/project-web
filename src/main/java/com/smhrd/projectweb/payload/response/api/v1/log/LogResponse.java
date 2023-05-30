@@ -21,8 +21,6 @@ public class LogResponse {
 
     private Double temperature;
 
-    private Double soilHumidity;
-
     private String imageUrl;
 
     private DetectResponse detection;
@@ -37,7 +35,6 @@ public class LogResponse {
                 deviceLog.getDeviceId(),
                 deviceLog.getRelativeHumidity(),
                 deviceLog.getTemperature(),
-                deviceLog.getSoilHumidity(),
                 i.getUrl(),
                 DetectResponse.fromDetect(d),
                 deviceLog.getDateCreated());

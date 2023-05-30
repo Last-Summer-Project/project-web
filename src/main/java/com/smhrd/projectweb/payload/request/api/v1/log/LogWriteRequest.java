@@ -11,7 +11,6 @@ public class LogWriteRequest {
     private Long deviceId;
     private Double temperature;
     private Double relativeHumidity;
-    private Double soilHumidity;
     private String imageBase64;
 
     public DeviceLog toDeviceLog() {
@@ -19,7 +18,6 @@ public class LogWriteRequest {
         dl.setDeviceId(deviceId);
         dl.setTemperature(temperature);
         dl.setRelativeHumidity(relativeHumidity);
-        dl.setSoilHumidity(soilHumidity);
         return dl;
     }
 }

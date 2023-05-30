@@ -10,11 +10,11 @@ INSERT INTO image(id, name, url)
 VALUES (2, 'image2', '/static/image/2.jpg');
 
 -- DEVICE LOG
-INSERT INTO device_log(id, device_id, temperature, relative_humidity, soil_humidity, image_id)
-VALUES (1, 1, 20.09, 30.00, 0, 1);
+INSERT INTO device_log(id, device_id, temperature, relative_humidity, image_id)
+VALUES (1, 1, 20.09, 30.00, 1);
 DO SLEEP(1);
-INSERT INTO device_log(id, device_id, temperature, relative_humidity, soil_humidity, image_id)
-VALUES (2, 1, 21.01, 35.55, 0, 2);
+INSERT INTO device_log(id, device_id, temperature, relative_humidity, image_id)
+VALUES (2, 1, 21.01, 35.55, 2);
 
 -- DETECT
 INSERT INTO detect(id, status, result)

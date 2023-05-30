@@ -37,11 +37,6 @@ public class DeviceLog implements Serializable {
     /**
      *
      */
-    private Double soilHumidity;
-
-    /**
-     *
-     */
     private Long imageId;
 
     /**

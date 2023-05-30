@@ -10,7 +10,6 @@ CREATE TABLE `device_log`
     `device_id`         BIGINT   NOT NULL,
     `temperature`       FLOAT    NOT NULL,
     `relative_humidity` FLOAT    NOT NULL,
-    `soil_humidity`     FLOAT    NOT NULL,
     `image_id`          BIGINT   NOT NULL,
     `date_created`      DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT `PK_DEVICE_LOG` PRIMARY KEY (`id`)

@@ -9,7 +9,6 @@
         <result property="deviceId" column="device_id" jdbcType="BIGINT"/>
         <result property="temperature" column="temperature" jdbcType="FLOAT"/>
         <result property="relativeHumidity" column="relative_humidity" jdbcType="FLOAT"/>
-        <result property="soilHumidity" column="soil_humidity" jdbcType="FLOAT"/>
         <result property="imageId" column="image_id" jdbcType="BIGINT"/>
         <result property="dateCreated" column="date_created" jdbcType="TIMESTAMP"/>
         <collection property="image" resultMap="ImageResultMap"/>
@@ -26,7 +25,7 @@
     <sql id="Base_Column_List">
         id
         ,device_id,temperature,
-        relative_humidity,soil_humidity,image_id,
+        relative_humidity,image_id,
         date_created
     </sql>
 
@@ -46,9 +45,9 @@
             useGeneratedKeys="true">
         insert into device_log
         ( device_id, temperature
-        , relative_humidity, soil_humidity, image_id)
+        , relative_humidity, image_id)
         values ( #{deviceId,jdbcType=BIGINT}, #{temperature,jdbcType=FLOAT}
-               , #{relativeHumidity,jdbcType=FLOAT}, #{soilHumidity,jdbcType=FLOAT}, #{imageId,jdbcType=BIGINT})
+               , #{relativeHumidity,jdbcType=FLOAT}, #{imageId,jdbcType=BIGINT})
     </insert>
     <insert id="insertSelective" keyColumn="id" keyProperty="id"
             parameterType="com.smhrd.projectweb.entity.DeviceLog" useGeneratedKeys="true">
@@ -57,14 +56,12 @@
             <if test="deviceId != null">device_id,</if>
             <if test="temperature != null">temperature,</if>
             <if test="relativeHumidity != null">relative_humidity,</if>
-            <if test="soilHumidity != null">soil_humidity,</if>
             <if test="imageId != null">image_id,</if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="deviceId != null">#{deviceId,jdbcType=BIGINT},</if>
             <if test="temperature != null">#{temperature,jdbcType=FLOAT},</if>
             <if test="relativeHumidity != null">#{relativeHumidity,jdbcType=FLOAT},</if>
-            <if test="soilHumidity != null">#{soilHumidity,jdbcType=FLOAT},</if>
             <if test="imageId != null">#{imageId,jdbcType=BIGINT},</if>
         </trim>
     </insert>
@@ -80,9 +77,6 @@
             <if test="relativeHumidity != null">
                 relative_humidity = #{relativeHumidity,jdbcType=FLOAT},
             </if>
-            <if test="soilHumidity != null">
-                soil_humidity = #{soilHumidity,jdbcType=FLOAT},
-            </if>
             <if test="imageId != null">
                 image_id = #{imageId,jdbcType=BIGINT},
             </if>
@@ -94,17 +88,15 @@
         set device_id         = #{deviceId,jdbcType=BIGINT},
             temperature       = #{temperature,jdbcType=FLOAT},
             relative_humidity = #{relativeHumidity,jdbcType=FLOAT},
-            soil_humidity     = #{soilHumidity,jdbcType=FLOAT},
             image_id          = #{imageId,jdbcType=BIGINT}
         where id = #{id,jdbcType=BIGINT}
     </update>
 
     <sql id="Join_Select_Query">
-        select l.id AS id,
+        select l.id           AS id,
                device_id,
                temperature,
                relative_humidity,
-               soil_humidity,
                image_id,
                l.date_created AS date_created,
                name,
@@ -132,11 +124,10 @@
     </select>
 
     <select id="selectLatestDetectedByDeviceId" resultMap="BaseResultMap">
-        select l.id AS id,
+        select l.id           AS id,
                device_id,
                temperature,
                relative_humidity,
-               soil_humidity,
                image_id,
                l.date_created AS date_created,
                name,
@@ -149,7 +140,8 @@
                             on l.image_id = i.id
                  inner join detect d
                             on l.id = d.id
-        where l.device_id = #{id,jdbcType=BIGINT} AND d.status = 'done'
+        where l.device_id = #{id,jdbcType=BIGINT}
+          AND d.status = 'done'
         order by date_created desc
         limit 1
     </select>
