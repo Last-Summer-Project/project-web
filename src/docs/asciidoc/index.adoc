@@ -53,3 +53,9 @@ include::api/log/auth.adoc[]
 
 // Log - Device id
 include::api/log/device-id.adoc[]
+
+// Timelapse - Authenticated
+include::api/timelapse/auth.adoc[]
+
+// Timelapse - Device id
+include::api/timelapse/device-id.adoc[]
