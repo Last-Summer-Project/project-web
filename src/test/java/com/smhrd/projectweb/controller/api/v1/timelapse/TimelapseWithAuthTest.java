@@ -47,7 +47,7 @@ class TimelapseWithAuthTest extends AuthTestSupport {
                                 fieldWithPath("data.id").description("Id of timelapse request"),
                                 fieldWithPath("data.deviceId").description("Device Id of timelapse request"),
                                 fieldWithPath("data.status").description("Status of timelapse request. Can be `NOT_STARTED`, `IN_PROGRESS`, or `DONE`."),
-                                fieldWithPath("data.result").optional().type(JsonFieldType.STRING).description("Result of timelaspe"),
+                                fieldWithPath("data.result").optional().type(JsonFieldType.STRING).description("Result of timelapse. Can be optional if `status` is not `DONE`"),
                                 fieldWithPath("data.logStartDate").description("UTC time of log start date"),
                                 fieldWithPath("data.logEndDate").description("UTC time of log end date"),
                                 fieldWithPath("data.lastUpdated").description("UTC time of last updated")
@@ -117,7 +117,7 @@ class TimelapseWithAuthTest extends AuthTestSupport {
                                 fieldWithPath("data[].id").description("Id of timelapse request"),
                                 fieldWithPath("data[].deviceId").description("Device Id of timelapse request"),
                                 fieldWithPath("data[].status").description("Status of timelapse request. Can be `NOT_STARTED`, `IN_PROGRESS`, or `DONE`."),
-                                fieldWithPath("data[].result").optional().type(JsonFieldType.STRING).description("Result of timelaspe"),
+                                fieldWithPath("data[].result").optional().type(JsonFieldType.STRING).description("Result of timelapse. Can be optional if `status` is not `DONE`"),
                                 fieldWithPath("data[].logStartDate").description("UTC time of log start date"),
                                 fieldWithPath("data[].logEndDate").description("UTC time of log end date"),
                                 fieldWithPath("data[].lastUpdated").description("UTC time of last updated")

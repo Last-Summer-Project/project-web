@@ -1,0 +1,80 @@
+=== Timelapse via JWT
+
+Retrieve and Request Timelapse based on authorization header.
+
+==== Get latest timelapse
+
+===== HTTP request
+====== `curl`
+include::{snippets}/timelapse-with-device-id-test/get-latest/curl-request.adoc[]
+
+====== `httpie`
+include::{snippets}/timelapse-with-device-id-test/get-latest/httpie-request.adoc[]
+
+====== HTTP
+include::{snippets}/timelapse-with-device-id-test/get-latest/http-request.adoc[]
+
+====== Request headers
+include::{snippets}/timelapse-with-device-id-test/get-latest/request-headers.adoc[]
+
+====== Path parameters
+include::{snippets}/timelapse-with-device-id-test/post-request/path-parameters.adoc[]
+
+
+===== HTTP response
+
+include::{snippets}/timelapse-with-device-id-test/get-latest/http-response.adoc[]
+include::{snippets}/timelapse-with-device-id-test/get-latest/response-fields.adoc[]
+
+
+==== Get all timelapse
+
+===== HTTP request
+====== `curl`
+include::{snippets}/timelapse-with-device-id-test/get-all/curl-request.adoc[]
+
+====== `httpie`
+include::{snippets}/timelapse-with-device-id-test/get-all/httpie-request.adoc[]
+
+====== HTTP
+include::{snippets}/timelapse-with-device-id-test/get-all/http-request.adoc[]
+
+====== Request headers
+include::{snippets}/timelapse-with-device-id-test/get-all/request-headers.adoc[]
+
+====== Path parameters
+include::{snippets}/timelapse-with-device-id-test/post-request/path-parameters.adoc[]
+
+
+===== HTTP response
+
+include::{snippets}/timelapse-with-device-id-test/get-all/http-response.adoc[]
+include::{snippets}/timelapse-with-device-id-test/get-all/response-fields.adoc[]
+
+
+==== Post to write log
+
+===== HTTP request
+====== `curl`
+include::{snippets}/timelapse-with-device-id-test/post-request/curl-request.adoc[]
+
+====== `httpie`
+include::{snippets}/timelapse-with-device-id-test/post-request/httpie-request.adoc[]
+
+====== HTTP
+include::{snippets}/timelapse-with-device-id-test/post-request/http-request.adoc[]
+
+====== Request headers
+include::{snippets}/timelapse-with-device-id-test/post-request/request-headers.adoc[]
+
+====== Path parameters
+include::{snippets}/timelapse-with-device-id-test/post-request/path-parameters.adoc[]
+
+====== Request fields
+include::{snippets}/timelapse-with-device-id-test/post-request/request-fields.adoc[]
+
+===== HTTP response
+
+include::{snippets}/timelapse-with-device-id-test/post-request/http-response.adoc[]
+include::{snippets}/timelapse-with-device-id-test/post-request/response-fields.adoc[]
+
