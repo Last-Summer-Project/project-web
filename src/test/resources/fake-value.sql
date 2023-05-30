@@ -22,3 +22,8 @@ VALUES (1, 'done', '2');
 DO SLEEP(1);
 INSERT INTO detect(id, status, result)
 VALUES (2, 'in_progress', NULL);
+
+-- TIMELAPSE
+INSERT INTO timelapse(id, device_id, start_date, end_date, status)
+VALUES (1, 1, '2023-05-20 00:00:00', '2023-05-30 00:00:00', 'done');
+DO SLEEP(1);

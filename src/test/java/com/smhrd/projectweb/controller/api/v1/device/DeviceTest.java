@@ -18,7 +18,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.restdocs.request.RequestDocumentation.*;
 
 @WebMvcTest(DeviceApi.class)
-@PropertySource("classpath:application.properties")
 @Slf4j
 class DeviceTest extends AuthTestSupport {
 
