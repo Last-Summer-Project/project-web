@@ -28,4 +28,6 @@ public interface TimelapseMapper {
     Timelapse selectLatestByDeviceId(Long id);
 
     Timelapse selectLatestDoneByDeviceId(Long id);
+
+    Timelapse selectLatestNotDoneByDeviceId(Long id);
 }
