@@ -29,7 +29,7 @@ public class DeviceLogService {
     public ResultWrapper<LogResponse> getLatestByDeviceId(Long id) {
         DeviceLog dl = deviceLogMapper.selectLatestByDeviceId(id);
         if (dl == null) {
-            return ResultWrapper.error(404, NO_LOG_FOUND);
+            return ResultWrapper.fail(404, NO_LOG_FOUND);
         }
         return ResultWrapper.ok(LogResponse.fromDeviceLog(dl));
     }
@@ -37,7 +37,7 @@ public class DeviceLogService {
     public ResultWrapper<LogResponse> getLatestDetectedByDeviceId(Long id) {
         DeviceLog dl = deviceLogMapper.selectLatestDetectedByDeviceId(id);
         if (dl == null) {
-            return ResultWrapper.error(404, NO_LOG_FOUND);
+            return ResultWrapper.fail(404, NO_LOG_FOUND);
         }
         return ResultWrapper.ok(LogResponse.fromDeviceLog(dl));
     }
@@ -45,7 +45,7 @@ public class DeviceLogService {
     public ResultWrapper<List<LogResponse>> getRecentByDeviceId(Long id) {
         List<DeviceLog> dll = deviceLogMapper.selectByDeviceId(id);
         if (dll == null || dll.isEmpty()) {
-            return ResultWrapper.error(404, NO_LOG_FOUND);
+            return ResultWrapper.fail(404, NO_LOG_FOUND);
         }
         // List<DeviceLog>를 List<LogResponse>>로 변환
         List<LogResponse> llr = dll.stream().map(LogResponse::fromDeviceLog).collect(Collectors.toList());

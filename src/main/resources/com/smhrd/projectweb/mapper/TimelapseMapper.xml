@@ -92,4 +92,28 @@
             result     = #{result,jdbcType=VARCHAR}
         where id = #{id,jdbcType=BIGINT}
     </update>
+
+    <sql id="selectByDeviceIdBasic">
+        select
+        <include refid="Base_Column_List"/>
+        from timelapse
+        where device_id = #{id,jdbcType=BIGINT}
+        order by date_created desc
+    </sql>
+    <select id="selectByDeviceId" parameterType="java.lang.Long" resultType="com.smhrd.projectweb.entity.Timelapse">
+        <include refid="selectByDeviceIdBasic"/>
+        LIMIT 100
+    </select>
+    <select id="selectLatestByDeviceId" parameterType="java.lang.Long" resultType="com.smhrd.projectweb.entity.Timelapse">
+        <include refid="selectByDeviceIdBasic"/>
+        LIMIT 1
+    </select>
+    <select id="selectLatestDoneByDeviceId" parameterType="java.lang.Long" resultType="com.smhrd.projectweb.entity.Timelapse">
+        select
+        <include refid="Base_Column_List"/>
+        from timelapse
+        where device_id = #{id,jdbcType=BIGINT} and status = 'done'
+        order by date_created desc
+        limit 1
+    </select>
 </mapper>
