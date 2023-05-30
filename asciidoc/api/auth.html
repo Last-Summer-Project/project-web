@@ -531,8 +531,8 @@ Content-Length: 569
   "status" : "ok",
   "message" : "Successfully logged in",
   "data" : {
-    "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg1NDE2ODE2fQ.WElBz8XHChFA3UqS7H-fsFhJMrrfKOeFAwMvPiX_w0QAqLNbkneloE9FSGiZQjVuaYiIK3By62edK5IpigVqWg",
-    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg2Mjc3MjE2fQ.meFJCbvcFbJOISxLr170ZWaKt3xxhx-9Scy-fK7a77gsp5ZSCojRz8QRTwpqDk2AyGAGyIl7yPDkHABDT2XrbA"
+    "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OCwiZXhwIjoxNjg1NDE2ODk4fQ.sELBuQ1-OQjAkNh4yNqKJuuEthKOptSzqahS7J3uPPCuo4ik_egtnGqhP_ZxaVBnWWdxKr9kRfDqhR_55UqK9w",
+    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OCwiZXhwIjoxNjg2Mjc3Mjk4fQ.qPiuOBX0lUwuwNJe_NgJ0VJzUyhdzDl6AwMLpx-N8NS5bKU1xyASSifOkyHbVczrvFZyieu7nB5L8ikucDAq5w"
   }
 }</code></pre>
 </div>
@@ -704,8 +704,8 @@ Content-Length: 569
   "status" : "ok",
   "message" : "Successfully signed up",
   "data" : {
-    "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NTQxMzIxNSwiZXhwIjoxNjg1NDE2ODE1fQ.ZT1A-r2RQRCT1mh-Z0lG-D4ewXQcfyKcf6e0NtRuetdZqqlhTWabWfnUASjjGUqeiWQ7J3g4vysQpcGGQx2qBw",
-    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NTQxMzIxNSwiZXhwIjoxNjg2Mjc3MjE1fQ.iG96A7hF2EQV9YI3L9xZeuLaBV217Qxo5W2loBsw7vYx91qb8QeBukGo-sPLZv9JIklt6O-o4atlmOADZucbFw"
+    "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NTQxMzI5OCwiZXhwIjoxNjg1NDE2ODk4fQ.e2FiiDGRSaPRB9JbO9wW-OzGyaqKiCd5Jl9rOvXZ6DmYAXcozqJqruXdqZa-hkzaFIZGBFvjIiyg-5ISXF0DxA",
+    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NTQxMzI5OCwiZXhwIjoxNjg2Mjc3Mjk4fQ.Mty0VCg4e1RloSSOFuEicZjd8fo79itk46zsr62VyD8FnVfZxMiB9kG3bXDz8LEKq7isSsQh7Ap_v3iGmCXd9A"
   }
 }</code></pre>
 </div>
@@ -759,7 +759,7 @@ Content-Length: 569
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/auth/refresh' -i -X POST \
     -H 'Content-Type: application/json;charset=UTF-8' \
     -d '{
-  "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg2Mjc3MjE2fQ.meFJCbvcFbJOISxLr170ZWaKt3xxhx-9Scy-fK7a77gsp5ZSCojRz8QRTwpqDk2AyGAGyIl7yPDkHABDT2XrbA"
+  "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg2Mjc3Mjk5fQ.GK01rvda0OIdOsqFC4B7Pfgs-CvLV7F95GL7xpo--94oB-W6lr15vbkOku5TpTXZKerQsvhhzNqBzmtL3kQuZQ"
 }'</code></pre>
 </div>
 </div>
@@ -769,7 +769,7 @@ Content-Length: 569
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ echo '{
-  "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg2Mjc3MjE2fQ.meFJCbvcFbJOISxLr170ZWaKt3xxhx-9Scy-fK7a77gsp5ZSCojRz8QRTwpqDk2AyGAGyIl7yPDkHABDT2XrbA"
+  "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg2Mjc3Mjk5fQ.GK01rvda0OIdOsqFC4B7Pfgs-CvLV7F95GL7xpo--94oB-W6lr15vbkOku5TpTXZKerQsvhhzNqBzmtL3kQuZQ"
 }' | http POST 'https://smart-farm.smhrd.com/api/v1/auth/refresh' \
     'Content-Type:application/json;charset=UTF-8'</code></pre>
 </div>
@@ -785,7 +785,7 @@ Content-Length: 246
 Host: smart-farm.smhrd.com
 
 {
-  "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg2Mjc3MjE2fQ.meFJCbvcFbJOISxLr170ZWaKt3xxhx-9Scy-fK7a77gsp5ZSCojRz8QRTwpqDk2AyGAGyIl7yPDkHABDT2XrbA"
+  "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg2Mjc3Mjk5fQ.GK01rvda0OIdOsqFC4B7Pfgs-CvLV7F95GL7xpo--94oB-W6lr15vbkOku5TpTXZKerQsvhhzNqBzmtL3kQuZQ"
 }</code></pre>
 </div>
 </div>
@@ -827,8 +827,8 @@ Content-Length: 575
   "status" : "ok",
   "message" : "Successfully refreshed token",
   "data" : {
-    "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg1NDE2ODE2fQ.WElBz8XHChFA3UqS7H-fsFhJMrrfKOeFAwMvPiX_w0QAqLNbkneloE9FSGiZQjVuaYiIK3By62edK5IpigVqWg",
-    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg2Mjc3MjE2fQ.meFJCbvcFbJOISxLr170ZWaKt3xxhx-9Scy-fK7a77gsp5ZSCojRz8QRTwpqDk2AyGAGyIl7yPDkHABDT2XrbA"
+    "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg1NDE2ODk5fQ.9am8v_Pst1AkxlGFfxgsE17mupK-_TAhzZtbNaUWCxI_ipAaakcVwIvSYkXCP8FGOCdFgd1mXWBxargzo2olNg",
+    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg2Mjc3Mjk5fQ.GK01rvda0OIdOsqFC4B7Pfgs-CvLV7F95GL7xpo--94oB-W6lr15vbkOku5TpTXZKerQsvhhzNqBzmtL3kQuZQ"
   }
 }</code></pre>
 </div>
@@ -881,7 +881,7 @@ Content-Length: 575
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/auth/verify' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg1NDE2ODE2fQ.WElBz8XHChFA3UqS7H-fsFhJMrrfKOeFAwMvPiX_w0QAqLNbkneloE9FSGiZQjVuaYiIK3By62edK5IpigVqWg'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg1NDE2ODk5fQ.9am8v_Pst1AkxlGFfxgsE17mupK-_TAhzZtbNaUWCxI_ipAaakcVwIvSYkXCP8FGOCdFgd1mXWBxargzo2olNg'</code></pre>
 </div>
 </div>
 </div>
@@ -891,7 +891,7 @@ Content-Length: 575
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/auth/verify' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg1NDE2ODE2fQ.WElBz8XHChFA3UqS7H-fsFhJMrrfKOeFAwMvPiX_w0QAqLNbkneloE9FSGiZQjVuaYiIK3By62edK5IpigVqWg'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg1NDE2ODk5fQ.9am8v_Pst1AkxlGFfxgsE17mupK-_TAhzZtbNaUWCxI_ipAaakcVwIvSYkXCP8FGOCdFgd1mXWBxargzo2olNg'</code></pre>
 </div>
 </div>
 </div>
@@ -901,7 +901,7 @@ Content-Length: 575
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /api/v1/auth/verify HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg1NDE2ODE2fQ.WElBz8XHChFA3UqS7H-fsFhJMrrfKOeFAwMvPiX_w0QAqLNbkneloE9FSGiZQjVuaYiIK3By62edK5IpigVqWg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg1NDE2ODk5fQ.9am8v_Pst1AkxlGFfxgsE17mupK-_TAhzZtbNaUWCxI_ipAaakcVwIvSYkXCP8FGOCdFgd1mXWBxargzo2olNg
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -1013,7 +1013,7 @@ Content-Length: 53
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2023-05-30 02:19:21 UTC
+Last updated 2023-05-30 02:20:24 UTC
 </div>
 </div>
 </body>

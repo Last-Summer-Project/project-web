@@ -488,6 +488,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_post_to_write_log_2">2.5.4. Post to write log</a></li>
 </ul>
 </li>
+<li><a href="#_timelapse_via_jwt">2.6. Timelapse via JWT</a>
+<ul class="sectlevel3">
+<li><a href="#_get_latest_timelapse">2.6.1. Get latest timelapse</a></li>
+<li><a href="#_get_all_timelapse">2.6.2. Get all timelapse</a></li>
+<li><a href="#_post_to_write_log_3">2.6.3. Post to write log</a></li>
+</ul>
+</li>
+<li><a href="#_timelapse_via_jwt_2">2.7. Timelapse via JWT</a>
+<ul class="sectlevel3">
+<li><a href="#_get_latest_timelapse_2">2.7.1. Get latest timelapse</a></li>
+<li><a href="#_get_all_timelapse_2">2.7.2. Get all timelapse</a></li>
+<li><a href="#_post_to_write_log_4">2.7.3. Post to write log</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -719,8 +733,8 @@ Content-Length: 569
   &quot;status&quot; : &quot;ok&quot;,
   &quot;message&quot; : &quot;Successfully logged in&quot;,
   &quot;data&quot; : {
-    &quot;access&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg1NDE2ODE2fQ.WElBz8XHChFA3UqS7H-fsFhJMrrfKOeFAwMvPiX_w0QAqLNbkneloE9FSGiZQjVuaYiIK3By62edK5IpigVqWg&quot;,
-    &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg2Mjc3MjE2fQ.meFJCbvcFbJOISxLr170ZWaKt3xxhx-9Scy-fK7a77gsp5ZSCojRz8QRTwpqDk2AyGAGyIl7yPDkHABDT2XrbA&quot;
+    &quot;access&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OCwiZXhwIjoxNjg1NDE2ODk4fQ.sELBuQ1-OQjAkNh4yNqKJuuEthKOptSzqahS7J3uPPCuo4ik_egtnGqhP_ZxaVBnWWdxKr9kRfDqhR_55UqK9w&quot;,
+    &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OCwiZXhwIjoxNjg2Mjc3Mjk4fQ.qPiuOBX0lUwuwNJe_NgJ0VJzUyhdzDl6AwMLpx-N8NS5bKU1xyASSifOkyHbVczrvFZyieu7nB5L8ikucDAq5w&quot;
   }
 }</code></pre>
 </div>
@@ -892,8 +906,8 @@ Content-Length: 569
   &quot;status&quot; : &quot;ok&quot;,
   &quot;message&quot; : &quot;Successfully signed up&quot;,
   &quot;data&quot; : {
-    &quot;access&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NTQxMzIxNSwiZXhwIjoxNjg1NDE2ODE1fQ.ZT1A-r2RQRCT1mh-Z0lG-D4ewXQcfyKcf6e0NtRuetdZqqlhTWabWfnUASjjGUqeiWQ7J3g4vysQpcGGQx2qBw&quot;,
-    &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NTQxMzIxNSwiZXhwIjoxNjg2Mjc3MjE1fQ.iG96A7hF2EQV9YI3L9xZeuLaBV217Qxo5W2loBsw7vYx91qb8QeBukGo-sPLZv9JIklt6O-o4atlmOADZucbFw&quot;
+    &quot;access&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NTQxMzI5OCwiZXhwIjoxNjg1NDE2ODk4fQ.e2FiiDGRSaPRB9JbO9wW-OzGyaqKiCd5Jl9rOvXZ6DmYAXcozqJqruXdqZa-hkzaFIZGBFvjIiyg-5ISXF0DxA&quot;,
+    &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NTQxMzI5OCwiZXhwIjoxNjg2Mjc3Mjk4fQ.Mty0VCg4e1RloSSOFuEicZjd8fo79itk46zsr62VyD8FnVfZxMiB9kG3bXDz8LEKq7isSsQh7Ap_v3iGmCXd9A&quot;
   }
 }</code></pre>
 </div>
@@ -947,7 +961,7 @@ Content-Length: 569
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/auth/refresh' -i -X POST \
     -H 'Content-Type: application/json;charset=UTF-8' \
     -d '{
-  &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg2Mjc3MjE2fQ.meFJCbvcFbJOISxLr170ZWaKt3xxhx-9Scy-fK7a77gsp5ZSCojRz8QRTwpqDk2AyGAGyIl7yPDkHABDT2XrbA&quot;
+  &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg2Mjc3Mjk5fQ.GK01rvda0OIdOsqFC4B7Pfgs-CvLV7F95GL7xpo--94oB-W6lr15vbkOku5TpTXZKerQsvhhzNqBzmtL3kQuZQ&quot;
 }'</code></pre>
 </div>
 </div>
@@ -957,7 +971,7 @@ Content-Length: 569
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ echo '{
-  &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg2Mjc3MjE2fQ.meFJCbvcFbJOISxLr170ZWaKt3xxhx-9Scy-fK7a77gsp5ZSCojRz8QRTwpqDk2AyGAGyIl7yPDkHABDT2XrbA&quot;
+  &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg2Mjc3Mjk5fQ.GK01rvda0OIdOsqFC4B7Pfgs-CvLV7F95GL7xpo--94oB-W6lr15vbkOku5TpTXZKerQsvhhzNqBzmtL3kQuZQ&quot;
 }' | http POST 'https://smart-farm.smhrd.com/api/v1/auth/refresh' \
     'Content-Type:application/json;charset=UTF-8'</code></pre>
 </div>
@@ -973,7 +987,7 @@ Content-Length: 246
 Host: smart-farm.smhrd.com
 
 {
-  &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg2Mjc3MjE2fQ.meFJCbvcFbJOISxLr170ZWaKt3xxhx-9Scy-fK7a77gsp5ZSCojRz8QRTwpqDk2AyGAGyIl7yPDkHABDT2XrbA&quot;
+  &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg2Mjc3Mjk5fQ.GK01rvda0OIdOsqFC4B7Pfgs-CvLV7F95GL7xpo--94oB-W6lr15vbkOku5TpTXZKerQsvhhzNqBzmtL3kQuZQ&quot;
 }</code></pre>
 </div>
 </div>
@@ -1015,8 +1029,8 @@ Content-Length: 575
   &quot;status&quot; : &quot;ok&quot;,
   &quot;message&quot; : &quot;Successfully refreshed token&quot;,
   &quot;data&quot; : {
-    &quot;access&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg1NDE2ODE2fQ.WElBz8XHChFA3UqS7H-fsFhJMrrfKOeFAwMvPiX_w0QAqLNbkneloE9FSGiZQjVuaYiIK3By62edK5IpigVqWg&quot;,
-    &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg2Mjc3MjE2fQ.meFJCbvcFbJOISxLr170ZWaKt3xxhx-9Scy-fK7a77gsp5ZSCojRz8QRTwpqDk2AyGAGyIl7yPDkHABDT2XrbA&quot;
+    &quot;access&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg1NDE2ODk5fQ.9am8v_Pst1AkxlGFfxgsE17mupK-_TAhzZtbNaUWCxI_ipAaakcVwIvSYkXCP8FGOCdFgd1mXWBxargzo2olNg&quot;,
+    &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg2Mjc3Mjk5fQ.GK01rvda0OIdOsqFC4B7Pfgs-CvLV7F95GL7xpo--94oB-W6lr15vbkOku5TpTXZKerQsvhhzNqBzmtL3kQuZQ&quot;
   }
 }</code></pre>
 </div>
@@ -1069,7 +1083,7 @@ Content-Length: 575
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/auth/verify' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg1NDE2ODE2fQ.WElBz8XHChFA3UqS7H-fsFhJMrrfKOeFAwMvPiX_w0QAqLNbkneloE9FSGiZQjVuaYiIK3By62edK5IpigVqWg'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg1NDE2ODk5fQ.9am8v_Pst1AkxlGFfxgsE17mupK-_TAhzZtbNaUWCxI_ipAaakcVwIvSYkXCP8FGOCdFgd1mXWBxargzo2olNg'</code></pre>
 </div>
 </div>
 </div>
@@ -1079,7 +1093,7 @@ Content-Length: 575
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/auth/verify' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg1NDE2ODE2fQ.WElBz8XHChFA3UqS7H-fsFhJMrrfKOeFAwMvPiX_w0QAqLNbkneloE9FSGiZQjVuaYiIK3By62edK5IpigVqWg'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg1NDE2ODk5fQ.9am8v_Pst1AkxlGFfxgsE17mupK-_TAhzZtbNaUWCxI_ipAaakcVwIvSYkXCP8FGOCdFgd1mXWBxargzo2olNg'</code></pre>
 </div>
 </div>
 </div>
@@ -1089,7 +1103,7 @@ Content-Length: 575
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/auth/verify HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzIxNiwiZXhwIjoxNjg1NDE2ODE2fQ.WElBz8XHChFA3UqS7H-fsFhJMrrfKOeFAwMvPiX_w0QAqLNbkneloE9FSGiZQjVuaYiIK3By62edK5IpigVqWg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTQxMzI5OSwiZXhwIjoxNjg1NDE2ODk5fQ.9am8v_Pst1AkxlGFfxgsE17mupK-_TAhzZtbNaUWCxI_ipAaakcVwIvSYkXCP8FGOCdFgd1mXWBxargzo2olNg
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -1209,7 +1223,7 @@ Content-Length: 53
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/device/get' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjIyLCJleHAiOjE2ODU0MTY4MjJ9.r8PgclLY5LJb--hFwFzrr4EM_O85svQousYpa-25wBjjy517_dT7mMJwkY98wIryRdwukKlVzHWNq-CUjbvWhg'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA0LCJleHAiOjE2ODU0MTY5MDR9.VdAnci5hRxdSkeZUjynBo-l9cGFHggItrqCRNo_LYdm6XdwFePjvm2K4ZPnGOeDcAkFR6y_xyd_gxht5L1WfKw'</code></pre>
 </div>
 </div>
 </div>
@@ -1219,7 +1233,7 @@ Content-Length: 53
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/device/get' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjIyLCJleHAiOjE2ODU0MTY4MjJ9.r8PgclLY5LJb--hFwFzrr4EM_O85svQousYpa-25wBjjy517_dT7mMJwkY98wIryRdwukKlVzHWNq-CUjbvWhg'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA0LCJleHAiOjE2ODU0MTY5MDR9.VdAnci5hRxdSkeZUjynBo-l9cGFHggItrqCRNo_LYdm6XdwFePjvm2K4ZPnGOeDcAkFR6y_xyd_gxht5L1WfKw'</code></pre>
 </div>
 </div>
 </div>
@@ -1229,7 +1243,7 @@ Content-Length: 53
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/device/get HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjIyLCJleHAiOjE2ODU0MTY4MjJ9.r8PgclLY5LJb--hFwFzrr4EM_O85svQousYpa-25wBjjy517_dT7mMJwkY98wIryRdwukKlVzHWNq-CUjbvWhg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA0LCJleHAiOjE2ODU0MTY5MDR9.VdAnci5hRxdSkeZUjynBo-l9cGFHggItrqCRNo_LYdm6XdwFePjvm2K4ZPnGOeDcAkFR6y_xyd_gxht5L1WfKw
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -1247,8 +1261,8 @@ Content-Length: 137
   &quot;status&quot; : &quot;ok&quot;,
   &quot;data&quot; : {
     &quot;id&quot; : 1,
-    &quot;dateCreated&quot; : &quot;2023-05-30T02:20:17&quot;,
-    &quot;lastEdited&quot; : &quot;2023-05-30T02:20:17&quot;
+    &quot;dateCreated&quot; : &quot;2023-05-30T02:21:39&quot;,
+    &quot;lastEdited&quot; : &quot;2023-05-30T02:21:39&quot;
   }
 }</code></pre>
 </div>
@@ -1301,7 +1315,7 @@ Content-Length: 137
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/device/get/1' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjIyLCJleHAiOjE2ODU0MTY4MjJ9.r8PgclLY5LJb--hFwFzrr4EM_O85svQousYpa-25wBjjy517_dT7mMJwkY98wIryRdwukKlVzHWNq-CUjbvWhg'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA0LCJleHAiOjE2ODU0MTY5MDR9.VdAnci5hRxdSkeZUjynBo-l9cGFHggItrqCRNo_LYdm6XdwFePjvm2K4ZPnGOeDcAkFR6y_xyd_gxht5L1WfKw'</code></pre>
 </div>
 </div>
 </div>
@@ -1311,7 +1325,7 @@ Content-Length: 137
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/device/get/1' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjIyLCJleHAiOjE2ODU0MTY4MjJ9.r8PgclLY5LJb--hFwFzrr4EM_O85svQousYpa-25wBjjy517_dT7mMJwkY98wIryRdwukKlVzHWNq-CUjbvWhg'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA0LCJleHAiOjE2ODU0MTY5MDR9.VdAnci5hRxdSkeZUjynBo-l9cGFHggItrqCRNo_LYdm6XdwFePjvm2K4ZPnGOeDcAkFR6y_xyd_gxht5L1WfKw'</code></pre>
 </div>
 </div>
 </div>
@@ -1321,7 +1335,7 @@ Content-Length: 137
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/device/get/1 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjIyLCJleHAiOjE2ODU0MTY4MjJ9.r8PgclLY5LJb--hFwFzrr4EM_O85svQousYpa-25wBjjy517_dT7mMJwkY98wIryRdwukKlVzHWNq-CUjbvWhg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA0LCJleHAiOjE2ODU0MTY5MDR9.VdAnci5hRxdSkeZUjynBo-l9cGFHggItrqCRNo_LYdm6XdwFePjvm2K4ZPnGOeDcAkFR6y_xyd_gxht5L1WfKw
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -1363,8 +1377,8 @@ Content-Length: 137
   &quot;status&quot; : &quot;ok&quot;,
   &quot;data&quot; : {
     &quot;id&quot; : 1,
-    &quot;dateCreated&quot; : &quot;2023-05-30T02:20:17&quot;,
-    &quot;lastEdited&quot; : &quot;2023-05-30T02:20:17&quot;
+    &quot;dateCreated&quot; : &quot;2023-05-30T02:21:39&quot;,
+    &quot;lastEdited&quot; : &quot;2023-05-30T02:21:39&quot;
   }
 }</code></pre>
 </div>
@@ -1465,7 +1479,7 @@ Content-Length: 57
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/latest' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjI3LCJleHAiOjE2ODU0MTY4Mjd9.WCo5oHmhXLHqUOprB792jW-Gzjjo4pn-aY2Yff8V-4ryftjqMSvf8TveNB4pyoVkuJhzeezWRxP91Z-2__-i7g'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA5LCJleHAiOjE2ODU0MTY5MDl9.WfqjhBK3gK4Bq2UYlFsYXpzsFYiua4YkwQ4hQLXYOhSI8fMnB9R0uOdv8Ed8kW6q2n41HpUbcOOg1Yvw6o2yjQ'</code></pre>
 </div>
 </div>
 </div>
@@ -1475,7 +1489,7 @@ Content-Length: 57
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/latest' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjI3LCJleHAiOjE2ODU0MTY4Mjd9.WCo5oHmhXLHqUOprB792jW-Gzjjo4pn-aY2Yff8V-4ryftjqMSvf8TveNB4pyoVkuJhzeezWRxP91Z-2__-i7g'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA5LCJleHAiOjE2ODU0MTY5MDl9.WfqjhBK3gK4Bq2UYlFsYXpzsFYiua4YkwQ4hQLXYOhSI8fMnB9R0uOdv8Ed8kW6q2n41HpUbcOOg1Yvw6o2yjQ'</code></pre>
 </div>
 </div>
 </div>
@@ -1485,7 +1499,7 @@ Content-Length: 57
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/latest HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjI3LCJleHAiOjE2ODU0MTY4Mjd9.WCo5oHmhXLHqUOprB792jW-Gzjjo4pn-aY2Yff8V-4ryftjqMSvf8TveNB4pyoVkuJhzeezWRxP91Z-2__-i7g
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA5LCJleHAiOjE2ODU0MTY5MDl9.WfqjhBK3gK4Bq2UYlFsYXpzsFYiua4YkwQ4hQLXYOhSI8fMnB9R0uOdv8Ed8kW6q2n41HpUbcOOg1Yvw6o2yjQ
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -1531,7 +1545,7 @@ Content-Length: 274
     &quot;detection&quot; : {
       &quot;status&quot; : &quot;IN_PROGRESS&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-05-30T02:20:25&quot;
+    &quot;timestamp&quot; : &quot;2023-05-30T02:21:47&quot;
   }
 }</code></pre>
 </div>
@@ -1609,7 +1623,7 @@ Content-Length: 274
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/latest-detected' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjI3LCJleHAiOjE2ODU0MTY4Mjd9.WCo5oHmhXLHqUOprB792jW-Gzjjo4pn-aY2Yff8V-4ryftjqMSvf8TveNB4pyoVkuJhzeezWRxP91Z-2__-i7g'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA5LCJleHAiOjE2ODU0MTY5MDl9.WfqjhBK3gK4Bq2UYlFsYXpzsFYiua4YkwQ4hQLXYOhSI8fMnB9R0uOdv8Ed8kW6q2n41HpUbcOOg1Yvw6o2yjQ'</code></pre>
 </div>
 </div>
 </div>
@@ -1619,7 +1633,7 @@ Content-Length: 274
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/latest-detected' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjI3LCJleHAiOjE2ODU0MTY4Mjd9.WCo5oHmhXLHqUOprB792jW-Gzjjo4pn-aY2Yff8V-4ryftjqMSvf8TveNB4pyoVkuJhzeezWRxP91Z-2__-i7g'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA5LCJleHAiOjE2ODU0MTY5MDl9.WfqjhBK3gK4Bq2UYlFsYXpzsFYiua4YkwQ4hQLXYOhSI8fMnB9R0uOdv8Ed8kW6q2n41HpUbcOOg1Yvw6o2yjQ'</code></pre>
 </div>
 </div>
 </div>
@@ -1629,7 +1643,7 @@ Content-Length: 274
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/latest-detected HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjI3LCJleHAiOjE2ODU0MTY4Mjd9.WCo5oHmhXLHqUOprB792jW-Gzjjo4pn-aY2Yff8V-4ryftjqMSvf8TveNB4pyoVkuJhzeezWRxP91Z-2__-i7g
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA5LCJleHAiOjE2ODU0MTY5MDl9.WfqjhBK3gK4Bq2UYlFsYXpzsFYiua4YkwQ4hQLXYOhSI8fMnB9R0uOdv8Ed8kW6q2n41HpUbcOOg1Yvw6o2yjQ
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -1676,7 +1690,7 @@ Content-Length: 288
       &quot;status&quot; : &quot;DONE&quot;,
       &quot;result&quot; : &quot;2&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-05-30T02:20:24&quot;
+    &quot;timestamp&quot; : &quot;2023-05-30T02:21:46&quot;
   }
 }</code></pre>
 </div>
@@ -1757,7 +1771,7 @@ Content-Length: 288
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/recent' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjI3LCJleHAiOjE2ODU0MTY4Mjd9.WCo5oHmhXLHqUOprB792jW-Gzjjo4pn-aY2Yff8V-4ryftjqMSvf8TveNB4pyoVkuJhzeezWRxP91Z-2__-i7g'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA5LCJleHAiOjE2ODU0MTY5MDl9.WfqjhBK3gK4Bq2UYlFsYXpzsFYiua4YkwQ4hQLXYOhSI8fMnB9R0uOdv8Ed8kW6q2n41HpUbcOOg1Yvw6o2yjQ'</code></pre>
 </div>
 </div>
 </div>
@@ -1767,7 +1781,7 @@ Content-Length: 288
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/recent' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjI3LCJleHAiOjE2ODU0MTY4Mjd9.WCo5oHmhXLHqUOprB792jW-Gzjjo4pn-aY2Yff8V-4ryftjqMSvf8TveNB4pyoVkuJhzeezWRxP91Z-2__-i7g'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA5LCJleHAiOjE2ODU0MTY5MDl9.WfqjhBK3gK4Bq2UYlFsYXpzsFYiua4YkwQ4hQLXYOhSI8fMnB9R0uOdv8Ed8kW6q2n41HpUbcOOg1Yvw6o2yjQ'</code></pre>
 </div>
 </div>
 </div>
@@ -1777,7 +1791,7 @@ Content-Length: 288
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/recent HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjI3LCJleHAiOjE2ODU0MTY4Mjd9.WCo5oHmhXLHqUOprB792jW-Gzjjo4pn-aY2Yff8V-4ryftjqMSvf8TveNB4pyoVkuJhzeezWRxP91Z-2__-i7g
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA5LCJleHAiOjE2ODU0MTY5MDl9.WfqjhBK3gK4Bq2UYlFsYXpzsFYiua4YkwQ4hQLXYOhSI8fMnB9R0uOdv8Ed8kW6q2n41HpUbcOOg1Yvw6o2yjQ
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -1823,7 +1837,7 @@ Content-Length: 534
     &quot;detection&quot; : {
       &quot;status&quot; : &quot;IN_PROGRESS&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-05-30T02:20:25&quot;
+    &quot;timestamp&quot; : &quot;2023-05-30T02:21:47&quot;
   }, {
     &quot;deviceId&quot; : 1,
     &quot;humidity&quot; : 30.0,
@@ -1834,7 +1848,7 @@ Content-Length: 534
       &quot;status&quot; : &quot;DONE&quot;,
       &quot;result&quot; : &quot;2&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-05-30T02:20:24&quot;
+    &quot;timestamp&quot; : &quot;2023-05-30T02:21:46&quot;
   } ]
 }</code></pre>
 </div>
@@ -1912,7 +1926,7 @@ Content-Length: 534
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/write' -i -X POST \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjI3LCJleHAiOjE2ODU0MTY4Mjd9.WCo5oHmhXLHqUOprB792jW-Gzjjo4pn-aY2Yff8V-4ryftjqMSvf8TveNB4pyoVkuJhzeezWRxP91Z-2__-i7g' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA5LCJleHAiOjE2ODU0MTY5MDl9.WfqjhBK3gK4Bq2UYlFsYXpzsFYiua4YkwQ4hQLXYOhSI8fMnB9R0uOdv8Ed8kW6q2n41HpUbcOOg1Yvw6o2yjQ' \
     -d '{
   &quot;deviceId&quot; : 1,
   &quot;temperature&quot; : 12.34,
@@ -1935,7 +1949,7 @@ Content-Length: 534
   &quot;imageBase64&quot; : &quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q==&quot;
 }' | http POST 'https://smart-farm.smhrd.com/api/v1/log/write' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjI3LCJleHAiOjE2ODU0MTY4Mjd9.WCo5oHmhXLHqUOprB792jW-Gzjjo4pn-aY2Yff8V-4ryftjqMSvf8TveNB4pyoVkuJhzeezWRxP91Z-2__-i7g'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA5LCJleHAiOjE2ODU0MTY5MDl9.WfqjhBK3gK4Bq2UYlFsYXpzsFYiua4YkwQ4hQLXYOhSI8fMnB9R0uOdv8Ed8kW6q2n41HpUbcOOg1Yvw6o2yjQ'</code></pre>
 </div>
 </div>
 </div>
@@ -1945,7 +1959,7 @@ Content-Length: 534
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">POST /api/v1/log/write HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjI3LCJleHAiOjE2ODU0MTY4Mjd9.WCo5oHmhXLHqUOprB792jW-Gzjjo4pn-aY2Yff8V-4ryftjqMSvf8TveNB4pyoVkuJhzeezWRxP91Z-2__-i7g
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzA5LCJleHAiOjE2ODU0MTY5MDl9.WfqjhBK3gK4Bq2UYlFsYXpzsFYiua4YkwQ4hQLXYOhSI8fMnB9R0uOdv8Ed8kW6q2n41HpUbcOOg1Yvw6o2yjQ
 Content-Length: 988
 Host: smart-farm.smhrd.com
 
@@ -2044,7 +2058,7 @@ Content-Length: 257
     &quot;detection&quot; : {
       &quot;status&quot; : &quot;NOT_STARTED&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-05-30T02:20:27&quot;
+    &quot;timestamp&quot; : &quot;2023-05-30T02:21:50&quot;
   }
 }</code></pre>
 </div>
@@ -2123,7 +2137,7 @@ Content-Length: 257
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/1/latest' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjMyLCJleHAiOjE2ODU0MTY4MzJ9.DfKzcZHSNUZAAdFnRjYUZr4vc0DCSf3YXX4_HqnVte0-d7Ma3LxLuglfJm6bhVv9PoZ6D2sYPvxkyOuw_0_coA'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzE0LCJleHAiOjE2ODU0MTY5MTR9.A3ooYGtz3C7PthngvOdo40ejyo1y9awFYiXRWOw5ykGwHVwrDkIJJbdGcBpsDuN4C85Z_Ga-pVc7cCDD-uZlZQ'</code></pre>
 </div>
 </div>
 </div>
@@ -2133,7 +2147,7 @@ Content-Length: 257
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/1/latest' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjMyLCJleHAiOjE2ODU0MTY4MzJ9.DfKzcZHSNUZAAdFnRjYUZr4vc0DCSf3YXX4_HqnVte0-d7Ma3LxLuglfJm6bhVv9PoZ6D2sYPvxkyOuw_0_coA'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzE0LCJleHAiOjE2ODU0MTY5MTR9.A3ooYGtz3C7PthngvOdo40ejyo1y9awFYiXRWOw5ykGwHVwrDkIJJbdGcBpsDuN4C85Z_Ga-pVc7cCDD-uZlZQ'</code></pre>
 </div>
 </div>
 </div>
@@ -2143,7 +2157,7 @@ Content-Length: 257
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/1/latest HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjMyLCJleHAiOjE2ODU0MTY4MzJ9.DfKzcZHSNUZAAdFnRjYUZr4vc0DCSf3YXX4_HqnVte0-d7Ma3LxLuglfJm6bhVv9PoZ6D2sYPvxkyOuw_0_coA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzE0LCJleHAiOjE2ODU0MTY5MTR9.A3ooYGtz3C7PthngvOdo40ejyo1y9awFYiXRWOw5ykGwHVwrDkIJJbdGcBpsDuN4C85Z_Ga-pVc7cCDD-uZlZQ
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -2211,7 +2225,7 @@ Content-Length: 274
     &quot;detection&quot; : {
       &quot;status&quot; : &quot;IN_PROGRESS&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-05-30T02:20:30&quot;
+    &quot;timestamp&quot; : &quot;2023-05-30T02:21:52&quot;
   }
 }</code></pre>
 </div>
@@ -2289,7 +2303,7 @@ Content-Length: 274
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/1/latest-detected' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjMyLCJleHAiOjE2ODU0MTY4MzJ9.DfKzcZHSNUZAAdFnRjYUZr4vc0DCSf3YXX4_HqnVte0-d7Ma3LxLuglfJm6bhVv9PoZ6D2sYPvxkyOuw_0_coA'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzE1LCJleHAiOjE2ODU0MTY5MTV9.rhNiVzOxdNjzkjacR63JeKRmiYSm4bxrAfa3GL_30rv5Jh6ZTEpmEMbEoE4936Z5f4io3KblZ5-D_03x5WE2Ow'</code></pre>
 </div>
 </div>
 </div>
@@ -2299,7 +2313,7 @@ Content-Length: 274
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/1/latest-detected' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjMyLCJleHAiOjE2ODU0MTY4MzJ9.DfKzcZHSNUZAAdFnRjYUZr4vc0DCSf3YXX4_HqnVte0-d7Ma3LxLuglfJm6bhVv9PoZ6D2sYPvxkyOuw_0_coA'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzE1LCJleHAiOjE2ODU0MTY5MTV9.rhNiVzOxdNjzkjacR63JeKRmiYSm4bxrAfa3GL_30rv5Jh6ZTEpmEMbEoE4936Z5f4io3KblZ5-D_03x5WE2Ow'</code></pre>
 </div>
 </div>
 </div>
@@ -2309,7 +2323,7 @@ Content-Length: 274
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/1/latest-detected HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjMyLCJleHAiOjE2ODU0MTY4MzJ9.DfKzcZHSNUZAAdFnRjYUZr4vc0DCSf3YXX4_HqnVte0-d7Ma3LxLuglfJm6bhVv9PoZ6D2sYPvxkyOuw_0_coA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzE1LCJleHAiOjE2ODU0MTY5MTV9.rhNiVzOxdNjzkjacR63JeKRmiYSm4bxrAfa3GL_30rv5Jh6ZTEpmEMbEoE4936Z5f4io3KblZ5-D_03x5WE2Ow
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -2378,7 +2392,7 @@ Content-Length: 288
       &quot;status&quot; : &quot;DONE&quot;,
       &quot;result&quot; : &quot;2&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-05-30T02:20:29&quot;
+    &quot;timestamp&quot; : &quot;2023-05-30T02:21:51&quot;
   }
 }</code></pre>
 </div>
@@ -2459,7 +2473,7 @@ Content-Length: 288
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/1/recent' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjMyLCJleHAiOjE2ODU0MTY4MzJ9.DfKzcZHSNUZAAdFnRjYUZr4vc0DCSf3YXX4_HqnVte0-d7Ma3LxLuglfJm6bhVv9PoZ6D2sYPvxkyOuw_0_coA'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzE1LCJleHAiOjE2ODU0MTY5MTV9.rhNiVzOxdNjzkjacR63JeKRmiYSm4bxrAfa3GL_30rv5Jh6ZTEpmEMbEoE4936Z5f4io3KblZ5-D_03x5WE2Ow'</code></pre>
 </div>
 </div>
 </div>
@@ -2469,7 +2483,7 @@ Content-Length: 288
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/1/recent' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjMyLCJleHAiOjE2ODU0MTY4MzJ9.DfKzcZHSNUZAAdFnRjYUZr4vc0DCSf3YXX4_HqnVte0-d7Ma3LxLuglfJm6bhVv9PoZ6D2sYPvxkyOuw_0_coA'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzE1LCJleHAiOjE2ODU0MTY5MTV9.rhNiVzOxdNjzkjacR63JeKRmiYSm4bxrAfa3GL_30rv5Jh6ZTEpmEMbEoE4936Z5f4io3KblZ5-D_03x5WE2Ow'</code></pre>
 </div>
 </div>
 </div>
@@ -2479,7 +2493,7 @@ Content-Length: 288
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/1/recent HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjMyLCJleHAiOjE2ODU0MTY4MzJ9.DfKzcZHSNUZAAdFnRjYUZr4vc0DCSf3YXX4_HqnVte0-d7Ma3LxLuglfJm6bhVv9PoZ6D2sYPvxkyOuw_0_coA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzE1LCJleHAiOjE2ODU0MTY5MTV9.rhNiVzOxdNjzkjacR63JeKRmiYSm4bxrAfa3GL_30rv5Jh6ZTEpmEMbEoE4936Z5f4io3KblZ5-D_03x5WE2Ow
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -2547,7 +2561,7 @@ Content-Length: 534
     &quot;detection&quot; : {
       &quot;status&quot; : &quot;IN_PROGRESS&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-05-30T02:20:30&quot;
+    &quot;timestamp&quot; : &quot;2023-05-30T02:21:52&quot;
   }, {
     &quot;deviceId&quot; : 1,
     &quot;humidity&quot; : 30.0,
@@ -2558,7 +2572,7 @@ Content-Length: 534
       &quot;status&quot; : &quot;DONE&quot;,
       &quot;result&quot; : &quot;2&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-05-30T02:20:29&quot;
+    &quot;timestamp&quot; : &quot;2023-05-30T02:21:51&quot;
   } ]
 }</code></pre>
 </div>
@@ -2636,7 +2650,7 @@ Content-Length: 534
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/1/write' -i -X POST \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjMzLCJleHAiOjE2ODU0MTY4MzN9.vjxSkHqAr0VqIk14Qs3r1TShZ-H0Gyt-9YiSxeMLoAeTYskGETqWa_kDoHcAyx_M8BA8wrR8OFiNsuKm1a4qCQ' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzE1LCJleHAiOjE2ODU0MTY5MTV9.rhNiVzOxdNjzkjacR63JeKRmiYSm4bxrAfa3GL_30rv5Jh6ZTEpmEMbEoE4936Z5f4io3KblZ5-D_03x5WE2Ow' \
     -d '{
   &quot;deviceId&quot; : 1,
   &quot;temperature&quot; : 12.34,
@@ -2659,7 +2673,7 @@ Content-Length: 534
   &quot;imageBase64&quot; : &quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q==&quot;
 }' | http POST 'https://smart-farm.smhrd.com/api/v1/log/1/write' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjMzLCJleHAiOjE2ODU0MTY4MzN9.vjxSkHqAr0VqIk14Qs3r1TShZ-H0Gyt-9YiSxeMLoAeTYskGETqWa_kDoHcAyx_M8BA8wrR8OFiNsuKm1a4qCQ'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzE1LCJleHAiOjE2ODU0MTY5MTV9.rhNiVzOxdNjzkjacR63JeKRmiYSm4bxrAfa3GL_30rv5Jh6ZTEpmEMbEoE4936Z5f4io3KblZ5-D_03x5WE2Ow'</code></pre>
 </div>
 </div>
 </div>
@@ -2669,7 +2683,7 @@ Content-Length: 534
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">POST /api/v1/log/1/write HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMjMzLCJleHAiOjE2ODU0MTY4MzN9.vjxSkHqAr0VqIk14Qs3r1TShZ-H0Gyt-9YiSxeMLoAeTYskGETqWa_kDoHcAyx_M8BA8wrR8OFiNsuKm1a4qCQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzE1LCJleHAiOjE2ODU0MTY5MTV9.rhNiVzOxdNjzkjacR63JeKRmiYSm4bxrAfa3GL_30rv5Jh6ZTEpmEMbEoE4936Z5f4io3KblZ5-D_03x5WE2Ow
 Content-Length: 988
 Host: smart-farm.smhrd.com
 
@@ -2790,7 +2804,7 @@ Content-Length: 257
     &quot;detection&quot; : {
       &quot;status&quot; : &quot;NOT_STARTED&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-05-30T02:20:33&quot;
+    &quot;timestamp&quot; : &quot;2023-05-30T02:21:55&quot;
   }
 }</code></pre>
 </div>
@@ -2854,13 +2868,1015 @@ Content-Length: 257
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_timelapse_via_jwt"><a class="link" href="#_timelapse_via_jwt">2.6. Timelapse via JWT</a></h3>
+<div class="paragraph">
+<p>Retrieve and Request Timelapse based on authorization header.</p>
+</div>
+<div class="sect3">
+<h4 id="_get_latest_timelapse"><a class="link" href="#_get_latest_timelapse">2.6.1. Get latest timelapse</a></h4>
+<div class="sect4">
+<h5 id="_http_request_16"><a class="link" href="#_http_request_16">HTTP request</a></h5>
+<div class="sect5">
+<h6 id="_curl_16"><a class="link" href="#_curl_16"><code>curl</code></a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/timelapse/latest' -i -X GET \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzE5LCJleHAiOjE2ODU0MTY5MTl9.BmiYTmMFytkLDDwOnE5K1395jB1Kz4Lw6Z0uqvg1Yg2JBbgOo30eJZvZIgbH4AVTCrMsQCo4uipvSjQauLRtoA'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_httpie_16"><a class="link" href="#_httpie_16"><code>httpie</code></a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/timelapse/latest' \
+    'Content-Type:application/json;charset=UTF-8' \
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzE5LCJleHAiOjE2ODU0MTY5MTl9.BmiYTmMFytkLDDwOnE5K1395jB1Kz4Lw6Z0uqvg1Yg2JBbgOo30eJZvZIgbH4AVTCrMsQCo4uipvSjQauLRtoA'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_http_16"><a class="link" href="#_http_16">HTTP</a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/timelapse/latest HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzE5LCJleHAiOjE2ODU0MTY5MTl9.BmiYTmMFytkLDDwOnE5K1395jB1Kz4Lw6Z0uqvg1Yg2JBbgOo30eJZvZIgbH4AVTCrMsQCo4uipvSjQauLRtoA
+Host: smart-farm.smhrd.com</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_request_headers_10"><a class="link" href="#_request_headers_10">Request headers</a></h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Json Web Token with 'Bearer'</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_http_response_16"><a class="link" href="#_http_response_16">HTTP response</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 253
+
+{
+  &quot;status&quot; : &quot;ok&quot;,
+  &quot;data&quot; : {
+    &quot;id&quot; : 1,
+    &quot;deviceId&quot; : 1,
+    &quot;status&quot; : &quot;DONE&quot;,
+    &quot;result&quot; : &quot;result.mp4&quot;,
+    &quot;logStartDate&quot; : &quot;2023-05-20T00:00:00&quot;,
+    &quot;logEndDate&quot; : &quot;2023-05-30T00:00:00&quot;,
+    &quot;lastUpdated&quot; : &quot;2023-05-30T02:21:58&quot;
+  }
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Id of timelapse request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.deviceId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device Id of timelapse request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of timelapse request. Can be <code>NOT_STARTED</code>, <code>IN_PROGRESS</code>, or <code>DONE</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.result</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Result of timelapse. Can be optional if <code>status</code> is not <code>DONE</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.logStartDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log start date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.logEndDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log end date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.lastUpdated</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of last updated</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_get_all_timelapse"><a class="link" href="#_get_all_timelapse">2.6.2. Get all timelapse</a></h4>
+<div class="sect4">
+<h5 id="_http_request_17"><a class="link" href="#_http_request_17">HTTP request</a></h5>
+<div class="sect5">
+<h6 id="_curl_17"><a class="link" href="#_curl_17"><code>curl</code></a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/timelapse/all' -i -X GET \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzIwLCJleHAiOjE2ODU0MTY5MjB9.rjONvIpiDjLdleoC9JsuCCh81hzHmKXdjioopMEg-8BYh1dh-p4xxVJVTqwHdl79E4AGNdVBq2ZATfALuepUxA'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_httpie_17"><a class="link" href="#_httpie_17"><code>httpie</code></a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/timelapse/all' \
+    'Content-Type:application/json;charset=UTF-8' \
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzIwLCJleHAiOjE2ODU0MTY5MjB9.rjONvIpiDjLdleoC9JsuCCh81hzHmKXdjioopMEg-8BYh1dh-p4xxVJVTqwHdl79E4AGNdVBq2ZATfALuepUxA'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_http_17"><a class="link" href="#_http_17">HTTP</a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/timelapse/all HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzIwLCJleHAiOjE2ODU0MTY5MjB9.rjONvIpiDjLdleoC9JsuCCh81hzHmKXdjioopMEg-8BYh1dh-p4xxVJVTqwHdl79E4AGNdVBq2ZATfALuepUxA
+Host: smart-farm.smhrd.com</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_request_headers_11"><a class="link" href="#_request_headers_11">Request headers</a></h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Json Web Token with 'Bearer'</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_http_response_17"><a class="link" href="#_http_response_17">HTTP response</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 456
+
+{
+  &quot;status&quot; : &quot;ok&quot;,
+  &quot;data&quot; : [ {
+    &quot;id&quot; : 2,
+    &quot;deviceId&quot; : 1,
+    &quot;status&quot; : &quot;NOT_STARTED&quot;,
+    &quot;logStartDate&quot; : &quot;2022-10-11T12:13:14&quot;,
+    &quot;logEndDate&quot; : &quot;2022-11-12T13:14:15&quot;,
+    &quot;lastUpdated&quot; : &quot;2023-05-30T02:22:00&quot;
+  }, {
+    &quot;id&quot; : 1,
+    &quot;deviceId&quot; : 1,
+    &quot;status&quot; : &quot;DONE&quot;,
+    &quot;result&quot; : &quot;result.mp4&quot;,
+    &quot;logStartDate&quot; : &quot;2023-05-20T00:00:00&quot;,
+    &quot;logEndDate&quot; : &quot;2023-05-30T00:00:00&quot;,
+    &quot;lastUpdated&quot; : &quot;2023-05-30T02:21:58&quot;
+  } ]
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Id of timelapse request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].deviceId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device Id of timelapse request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of timelapse request. Can be <code>NOT_STARTED</code>, <code>IN_PROGRESS</code>, or <code>DONE</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].result</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Result of timelapse. Can be optional if <code>status</code> is not <code>DONE</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].logStartDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log start date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].logEndDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log end date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].lastUpdated</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of last updated</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_post_to_write_log_3"><a class="link" href="#_post_to_write_log_3">2.6.3. Post to write log</a></h4>
+<div class="sect4">
+<h5 id="_http_request_18"><a class="link" href="#_http_request_18">HTTP request</a></h5>
+<div class="sect5">
+<h6 id="_curl_18"><a class="link" href="#_curl_18"><code>curl</code></a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/timelapse/request' -i -X POST \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzIwLCJleHAiOjE2ODU0MTY5MjB9.rjONvIpiDjLdleoC9JsuCCh81hzHmKXdjioopMEg-8BYh1dh-p4xxVJVTqwHdl79E4AGNdVBq2ZATfALuepUxA' \
+    -d '{
+  &quot;deviceId&quot; : 1,
+  &quot;startDate&quot; : &quot;2022-10-11T12:13:14&quot;,
+  &quot;endDate&quot; : &quot;2022-11-12T13:14:15&quot;
+}'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_httpie_18"><a class="link" href="#_httpie_18"><code>httpie</code></a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ echo '{
+  &quot;deviceId&quot; : 1,
+  &quot;startDate&quot; : &quot;2022-10-11T12:13:14&quot;,
+  &quot;endDate&quot; : &quot;2022-11-12T13:14:15&quot;
+}' | http POST 'https://smart-farm.smhrd.com/api/v1/timelapse/request' \
+    'Content-Type:application/json;charset=UTF-8' \
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzIwLCJleHAiOjE2ODU0MTY5MjB9.rjONvIpiDjLdleoC9JsuCCh81hzHmKXdjioopMEg-8BYh1dh-p4xxVJVTqwHdl79E4AGNdVBq2ZATfALuepUxA'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_http_18"><a class="link" href="#_http_18">HTTP</a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">POST /api/v1/timelapse/request HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzIwLCJleHAiOjE2ODU0MTY5MjB9.rjONvIpiDjLdleoC9JsuCCh81hzHmKXdjioopMEg-8BYh1dh-p4xxVJVTqwHdl79E4AGNdVBq2ZATfALuepUxA
+Content-Length: 96
+Host: smart-farm.smhrd.com
+
+{
+  &quot;deviceId&quot; : 1,
+  &quot;startDate&quot; : &quot;2022-10-11T12:13:14&quot;,
+  &quot;endDate&quot; : &quot;2022-11-12T13:14:15&quot;
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_request_headers_12"><a class="link" href="#_request_headers_12">Request headers</a></h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Json Web Token with 'Bearer'</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_request_fields_6"><a class="link" href="#_request_fields_6">Request fields</a></h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deviceId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device Id of timelapse request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>startDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log start date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>endDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log end date</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_http_response_18"><a class="link" href="#_http_response_18">HTTP response</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 214
+
+{
+  &quot;status&quot; : &quot;ok&quot;,
+  &quot;data&quot; : {
+    &quot;id&quot; : 2,
+    &quot;deviceId&quot; : 1,
+    &quot;status&quot; : &quot;NOT_STARTED&quot;,
+    &quot;logStartDate&quot; : &quot;2022-10-11T12:13:14&quot;,
+    &quot;logEndDate&quot; : &quot;2022-11-12T13:14:15&quot;,
+    &quot;lastUpdated&quot; : null
+  }
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Id of timelapse request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.deviceId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device Id of timelapse request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of timelapse request. Can be <code>NOT_STARTED</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.logStartDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log start date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.logEndDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log end date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.lastUpdated</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Null</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of last updated</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_timelapse_via_jwt_2"><a class="link" href="#_timelapse_via_jwt_2">2.7. Timelapse via JWT</a></h3>
+<div class="paragraph">
+<p>Retrieve and Request Timelapse based on authorization header.</p>
+</div>
+<div class="sect3">
+<h4 id="_get_latest_timelapse_2"><a class="link" href="#_get_latest_timelapse_2">2.7.1. Get latest timelapse</a></h4>
+<div class="sect4">
+<h5 id="_http_request_19"><a class="link" href="#_http_request_19">HTTP request</a></h5>
+<div class="sect5">
+<h6 id="_curl_19"><a class="link" href="#_curl_19"><code>curl</code></a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/timelapse/1/latest' -i -X GET \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzI1LCJleHAiOjE2ODU0MTY5MjV9.0ifP_vYHjvOqxQv1j9JzYSJay4azSAL4JsyVKe6YSsiVk_kss6OT12aFdSIWstZciebBxWZYEzIsw1PPJ7Kcyw'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_httpie_19"><a class="link" href="#_httpie_19"><code>httpie</code></a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/timelapse/1/latest' \
+    'Content-Type:application/json;charset=UTF-8' \
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzI1LCJleHAiOjE2ODU0MTY5MjV9.0ifP_vYHjvOqxQv1j9JzYSJay4azSAL4JsyVKe6YSsiVk_kss6OT12aFdSIWstZciebBxWZYEzIsw1PPJ7Kcyw'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_http_19"><a class="link" href="#_http_19">HTTP</a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/timelapse/1/latest HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzI1LCJleHAiOjE2ODU0MTY5MjV9.0ifP_vYHjvOqxQv1j9JzYSJay4azSAL4JsyVKe6YSsiVk_kss6OT12aFdSIWstZciebBxWZYEzIsw1PPJ7Kcyw
+Host: smart-farm.smhrd.com</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_request_headers_13"><a class="link" href="#_request_headers_13">Request headers</a></h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Json Web Token with 'Bearer'</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_path_parameters_6"><a class="link" href="#_path_parameters_6">Path parameters</a></h6>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 6. /api/v1/timelapse/{deviceId}/request</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deviceId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device Id to use</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_http_response_19"><a class="link" href="#_http_response_19">HTTP response</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 253
+
+{
+  &quot;status&quot; : &quot;ok&quot;,
+  &quot;data&quot; : {
+    &quot;id&quot; : 1,
+    &quot;deviceId&quot; : 1,
+    &quot;status&quot; : &quot;DONE&quot;,
+    &quot;result&quot; : &quot;result.mp4&quot;,
+    &quot;logStartDate&quot; : &quot;2023-05-20T00:00:00&quot;,
+    &quot;logEndDate&quot; : &quot;2023-05-30T00:00:00&quot;,
+    &quot;lastUpdated&quot; : &quot;2023-05-30T02:22:03&quot;
+  }
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Id of timelapse request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.deviceId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device Id of timelapse request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of timelapse request. Can be <code>NOT_STARTED</code>, <code>IN_PROGRESS</code>, or <code>DONE</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.result</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Result of timelaspe</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.logStartDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log start date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.logEndDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log end date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.lastUpdated</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of last updated</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_get_all_timelapse_2"><a class="link" href="#_get_all_timelapse_2">2.7.2. Get all timelapse</a></h4>
+<div class="sect4">
+<h5 id="_http_request_20"><a class="link" href="#_http_request_20">HTTP request</a></h5>
+<div class="sect5">
+<h6 id="_curl_20"><a class="link" href="#_curl_20"><code>curl</code></a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/timelapse/1/all' -i -X GET \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzI1LCJleHAiOjE2ODU0MTY5MjV9.0ifP_vYHjvOqxQv1j9JzYSJay4azSAL4JsyVKe6YSsiVk_kss6OT12aFdSIWstZciebBxWZYEzIsw1PPJ7Kcyw'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_httpie_20"><a class="link" href="#_httpie_20"><code>httpie</code></a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/timelapse/1/all' \
+    'Content-Type:application/json;charset=UTF-8' \
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzI1LCJleHAiOjE2ODU0MTY5MjV9.0ifP_vYHjvOqxQv1j9JzYSJay4azSAL4JsyVKe6YSsiVk_kss6OT12aFdSIWstZciebBxWZYEzIsw1PPJ7Kcyw'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_http_20"><a class="link" href="#_http_20">HTTP</a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/timelapse/1/all HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzI1LCJleHAiOjE2ODU0MTY5MjV9.0ifP_vYHjvOqxQv1j9JzYSJay4azSAL4JsyVKe6YSsiVk_kss6OT12aFdSIWstZciebBxWZYEzIsw1PPJ7Kcyw
+Host: smart-farm.smhrd.com</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_request_headers_14"><a class="link" href="#_request_headers_14">Request headers</a></h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Json Web Token with 'Bearer'</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_path_parameters_7"><a class="link" href="#_path_parameters_7">Path parameters</a></h6>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 7. /api/v1/timelapse/{deviceId}/request</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deviceId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device Id to use</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_http_response_20"><a class="link" href="#_http_response_20">HTTP response</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 456
+
+{
+  &quot;status&quot; : &quot;ok&quot;,
+  &quot;data&quot; : [ {
+    &quot;id&quot; : 2,
+    &quot;deviceId&quot; : 1,
+    &quot;status&quot; : &quot;NOT_STARTED&quot;,
+    &quot;logStartDate&quot; : &quot;2022-10-11T12:13:14&quot;,
+    &quot;logEndDate&quot; : &quot;2022-11-12T13:14:15&quot;,
+    &quot;lastUpdated&quot; : &quot;2023-05-30T02:22:05&quot;
+  }, {
+    &quot;id&quot; : 1,
+    &quot;deviceId&quot; : 1,
+    &quot;status&quot; : &quot;DONE&quot;,
+    &quot;result&quot; : &quot;result.mp4&quot;,
+    &quot;logStartDate&quot; : &quot;2023-05-20T00:00:00&quot;,
+    &quot;logEndDate&quot; : &quot;2023-05-30T00:00:00&quot;,
+    &quot;lastUpdated&quot; : &quot;2023-05-30T02:22:03&quot;
+  } ]
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Id of timelapse request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].deviceId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device Id of timelapse request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of timelapse request. Can be <code>NOT_STARTED</code>, <code>IN_PROGRESS</code>, or <code>DONE</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].result</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Result of timelaspe</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].logStartDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log start date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].logEndDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log end date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].lastUpdated</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of last updated</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_post_to_write_log_4"><a class="link" href="#_post_to_write_log_4">2.7.3. Post to write log</a></h4>
+<div class="sect4">
+<h5 id="_http_request_21"><a class="link" href="#_http_request_21">HTTP request</a></h5>
+<div class="sect5">
+<h6 id="_curl_21"><a class="link" href="#_curl_21"><code>curl</code></a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/timelapse/1/request' -i -X POST \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzI1LCJleHAiOjE2ODU0MTY5MjV9.0ifP_vYHjvOqxQv1j9JzYSJay4azSAL4JsyVKe6YSsiVk_kss6OT12aFdSIWstZciebBxWZYEzIsw1PPJ7Kcyw' \
+    -d '{
+  &quot;deviceId&quot; : 1,
+  &quot;startDate&quot; : &quot;2022-10-11T12:13:14&quot;,
+  &quot;endDate&quot; : &quot;2022-11-12T13:14:15&quot;
+}'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_httpie_21"><a class="link" href="#_httpie_21"><code>httpie</code></a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ echo '{
+  &quot;deviceId&quot; : 1,
+  &quot;startDate&quot; : &quot;2022-10-11T12:13:14&quot;,
+  &quot;endDate&quot; : &quot;2022-11-12T13:14:15&quot;
+}' | http POST 'https://smart-farm.smhrd.com/api/v1/timelapse/1/request' \
+    'Content-Type:application/json;charset=UTF-8' \
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzI1LCJleHAiOjE2ODU0MTY5MjV9.0ifP_vYHjvOqxQv1j9JzYSJay4azSAL4JsyVKe6YSsiVk_kss6OT12aFdSIWstZciebBxWZYEzIsw1PPJ7Kcyw'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_http_21"><a class="link" href="#_http_21">HTTP</a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">POST /api/v1/timelapse/1/request HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDEzMzI1LCJleHAiOjE2ODU0MTY5MjV9.0ifP_vYHjvOqxQv1j9JzYSJay4azSAL4JsyVKe6YSsiVk_kss6OT12aFdSIWstZciebBxWZYEzIsw1PPJ7Kcyw
+Content-Length: 96
+Host: smart-farm.smhrd.com
+
+{
+  &quot;deviceId&quot; : 1,
+  &quot;startDate&quot; : &quot;2022-10-11T12:13:14&quot;,
+  &quot;endDate&quot; : &quot;2022-11-12T13:14:15&quot;
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_request_headers_15"><a class="link" href="#_request_headers_15">Request headers</a></h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Json Web Token with 'Bearer'</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_path_parameters_8"><a class="link" href="#_path_parameters_8">Path parameters</a></h6>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 8. /api/v1/timelapse/{deviceId}/request</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deviceId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device Id to use</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_request_fields_7"><a class="link" href="#_request_fields_7">Request fields</a></h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deviceId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device Id of timelapse request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>startDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log start date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>endDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log end date</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_http_response_21"><a class="link" href="#_http_response_21">HTTP response</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 214
+
+{
+  &quot;status&quot; : &quot;ok&quot;,
+  &quot;data&quot; : {
+    &quot;id&quot; : 2,
+    &quot;deviceId&quot; : 1,
+    &quot;status&quot; : &quot;NOT_STARTED&quot;,
+    &quot;logStartDate&quot; : &quot;2022-10-11T12:13:14&quot;,
+    &quot;logEndDate&quot; : &quot;2022-11-12T13:14:15&quot;,
+    &quot;lastUpdated&quot; : null
+  }
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Id of timelapse request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.deviceId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device Id of timelapse request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of timelapse request. Can be <code>NOT_STARTED</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.logStartDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log start date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.logEndDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log end date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.lastUpdated</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Null</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of last updated</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2023-05-30 02:19:21 UTC
+Last updated 2023-05-30 02:20:24 UTC
 </div>
 </div>
 <style>
