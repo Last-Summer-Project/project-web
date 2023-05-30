@@ -455,7 +455,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/latest' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDIzNDMzLCJleHAiOjE2ODU0MjcwMzN9.BbobHliegwZhY_fzfWDC6Htsd_rhkWaQAT4kad-8BgRuYdOhFunB6rPHMCX4Y5cSA7zSsOhJh2dzAsppd3VWfA'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDI0MjUxLCJleHAiOjE2ODU0Mjc4NTF9.Pf_yB1ehVP64RBU70JykkPqAVP8ivNMEx3d4QjtgHtaLy29f9xJRJ3r72oNzAIDd4qdBt0p4pTxvAYUAKCbboQ'</code></pre>
 </div>
 </div>
 </div>
@@ -465,7 +465,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/latest' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDIzNDMzLCJleHAiOjE2ODU0MjcwMzN9.BbobHliegwZhY_fzfWDC6Htsd_rhkWaQAT4kad-8BgRuYdOhFunB6rPHMCX4Y5cSA7zSsOhJh2dzAsppd3VWfA'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDI0MjUxLCJleHAiOjE2ODU0Mjc4NTF9.Pf_yB1ehVP64RBU70JykkPqAVP8ivNMEx3d4QjtgHtaLy29f9xJRJ3r72oNzAIDd4qdBt0p4pTxvAYUAKCbboQ'</code></pre>
 </div>
 </div>
 </div>
@@ -475,7 +475,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /api/v1/log/latest HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDIzNDMzLCJleHAiOjE2ODU0MjcwMzN9.BbobHliegwZhY_fzfWDC6Htsd_rhkWaQAT4kad-8BgRuYdOhFunB6rPHMCX4Y5cSA7zSsOhJh2dzAsppd3VWfA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDI0MjUxLCJleHAiOjE2ODU0Mjc4NTF9.Pf_yB1ehVP64RBU70JykkPqAVP8ivNMEx3d4QjtgHtaLy29f9xJRJ3r72oNzAIDd4qdBt0p4pTxvAYUAKCbboQ
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -508,7 +508,7 @@ Host: smart-farm.smhrd.com</code></pre>
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 274
+Content-Length: 248
 
 {
   "status" : "ok",
@@ -516,12 +516,11 @@ Content-Length: 274
     "deviceId" : 1,
     "humidity" : 35.55,
     "temperature" : 21.01,
-    "soilHumidity" : 0.0,
     "imageUrl" : "/static/image/2.jpg",
     "detection" : {
       "status" : "IN_PROGRESS"
     },
-    "timestamp" : "2023-05-30T05:10:31"
+    "timestamp" : "2023-05-30T05:24:09"
   }
 }</code></pre>
 </div>
@@ -561,11 +560,6 @@ Content-Length: 274
 <td class="tableblock halign-left valign-top"><p class="tableblock">Logged celsius temperature</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.soilHumidity</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Logged soil humidity</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.imageUrl</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Relative image url of logged image</p></td>
@@ -599,7 +593,7 @@ Content-Length: 274
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/latest-detected' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDIzNDMzLCJleHAiOjE2ODU0MjcwMzN9.BbobHliegwZhY_fzfWDC6Htsd_rhkWaQAT4kad-8BgRuYdOhFunB6rPHMCX4Y5cSA7zSsOhJh2dzAsppd3VWfA'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDI0MjUyLCJleHAiOjE2ODU0Mjc4NTJ9.gPdOuIgVzpUwMQESsyVoQJ9zhlAsE6FpEaxg5HZioXM-D2iPE1d01MvP42eRF46g2HLdYAMVS5lJ8k5Rk94T5A'</code></pre>
 </div>
 </div>
 </div>
@@ -609,7 +603,7 @@ Content-Length: 274
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/latest-detected' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDIzNDMzLCJleHAiOjE2ODU0MjcwMzN9.BbobHliegwZhY_fzfWDC6Htsd_rhkWaQAT4kad-8BgRuYdOhFunB6rPHMCX4Y5cSA7zSsOhJh2dzAsppd3VWfA'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDI0MjUyLCJleHAiOjE2ODU0Mjc4NTJ9.gPdOuIgVzpUwMQESsyVoQJ9zhlAsE6FpEaxg5HZioXM-D2iPE1d01MvP42eRF46g2HLdYAMVS5lJ8k5Rk94T5A'</code></pre>
 </div>
 </div>
 </div>
@@ -619,7 +613,7 @@ Content-Length: 274
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /api/v1/log/latest-detected HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDIzNDMzLCJleHAiOjE2ODU0MjcwMzN9.BbobHliegwZhY_fzfWDC6Htsd_rhkWaQAT4kad-8BgRuYdOhFunB6rPHMCX4Y5cSA7zSsOhJh2dzAsppd3VWfA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDI0MjUyLCJleHAiOjE2ODU0Mjc4NTJ9.gPdOuIgVzpUwMQESsyVoQJ9zhlAsE6FpEaxg5HZioXM-D2iPE1d01MvP42eRF46g2HLdYAMVS5lJ8k5Rk94T5A
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -652,7 +646,7 @@ Host: smart-farm.smhrd.com</code></pre>
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 288
+Content-Length: 262
 
 {
   "status" : "ok",
@@ -660,13 +654,12 @@ Content-Length: 288
     "deviceId" : 1,
     "humidity" : 30.0,
     "temperature" : 20.09,
-    "soilHumidity" : 0.0,
     "imageUrl" : "/static/image/1.jpg",
     "detection" : {
       "status" : "DONE",
       "result" : "2"
     },
-    "timestamp" : "2023-05-30T05:10:30"
+    "timestamp" : "2023-05-30T05:24:08"
   }
 }</code></pre>
 </div>
@@ -706,11 +699,6 @@ Content-Length: 288
 <td class="tableblock halign-left valign-top"><p class="tableblock">Logged celsius temperature</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.soilHumidity</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Logged soil humidity</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.imageUrl</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Relative image url of logged image</p></td>
@@ -747,7 +735,7 @@ Content-Length: 288
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/recent' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDIzNDMzLCJleHAiOjE2ODU0MjcwMzN9.BbobHliegwZhY_fzfWDC6Htsd_rhkWaQAT4kad-8BgRuYdOhFunB6rPHMCX4Y5cSA7zSsOhJh2dzAsppd3VWfA'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDI0MjUyLCJleHAiOjE2ODU0Mjc4NTJ9.gPdOuIgVzpUwMQESsyVoQJ9zhlAsE6FpEaxg5HZioXM-D2iPE1d01MvP42eRF46g2HLdYAMVS5lJ8k5Rk94T5A'</code></pre>
 </div>
 </div>
 </div>
@@ -757,7 +745,7 @@ Content-Length: 288
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/recent' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDIzNDMzLCJleHAiOjE2ODU0MjcwMzN9.BbobHliegwZhY_fzfWDC6Htsd_rhkWaQAT4kad-8BgRuYdOhFunB6rPHMCX4Y5cSA7zSsOhJh2dzAsppd3VWfA'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDI0MjUyLCJleHAiOjE2ODU0Mjc4NTJ9.gPdOuIgVzpUwMQESsyVoQJ9zhlAsE6FpEaxg5HZioXM-D2iPE1d01MvP42eRF46g2HLdYAMVS5lJ8k5Rk94T5A'</code></pre>
 </div>
 </div>
 </div>
@@ -767,7 +755,7 @@ Content-Length: 288
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /api/v1/log/recent HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDIzNDMzLCJleHAiOjE2ODU0MjcwMzN9.BbobHliegwZhY_fzfWDC6Htsd_rhkWaQAT4kad-8BgRuYdOhFunB6rPHMCX4Y5cSA7zSsOhJh2dzAsppd3VWfA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDI0MjUyLCJleHAiOjE2ODU0Mjc4NTJ9.gPdOuIgVzpUwMQESsyVoQJ9zhlAsE6FpEaxg5HZioXM-D2iPE1d01MvP42eRF46g2HLdYAMVS5lJ8k5Rk94T5A
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -800,7 +788,7 @@ Host: smart-farm.smhrd.com</code></pre>
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 534
+Content-Length: 482
 
 {
   "status" : "ok",
@@ -808,23 +796,21 @@ Content-Length: 534
     "deviceId" : 1,
     "humidity" : 35.55,
     "temperature" : 21.01,
-    "soilHumidity" : 0.0,
     "imageUrl" : "/static/image/2.jpg",
     "detection" : {
       "status" : "IN_PROGRESS"
     },
-    "timestamp" : "2023-05-30T05:10:31"
+    "timestamp" : "2023-05-30T05:24:09"
   }, {
     "deviceId" : 1,
     "humidity" : 30.0,
     "temperature" : 20.09,
-    "soilHumidity" : 0.0,
     "imageUrl" : "/static/image/1.jpg",
     "detection" : {
       "status" : "DONE",
       "result" : "2"
     },
-    "timestamp" : "2023-05-30T05:10:30"
+    "timestamp" : "2023-05-30T05:24:08"
   } ]
 }</code></pre>
 </div>
@@ -864,11 +850,6 @@ Content-Length: 534
 <td class="tableblock halign-left valign-top"><p class="tableblock">Logged celsius temperature</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].soilHumidity</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Logged soil humidity</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].imageUrl</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Relative image url of logged image</p></td>
@@ -902,12 +883,11 @@ Content-Length: 534
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/write' -i -X POST \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDIzNDM0LCJleHAiOjE2ODU0MjcwMzR9.SPs9hUzctkXbA5t0mCwHCuwZVHveJHxfK_bPKeaGVueb0PfdwmjReIaS-JKc_inL332aKuXF6JF3iWQckGcAFw' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDI0MjUyLCJleHAiOjE2ODU0Mjc4NTJ9.gPdOuIgVzpUwMQESsyVoQJ9zhlAsE6FpEaxg5HZioXM-D2iPE1d01MvP42eRF46g2HLdYAMVS5lJ8k5Rk94T5A' \
     -d '{
   "deviceId" : 1,
   "temperature" : 12.34,
   "relativeHumidity" : 19.87,
-  "soilHumidity" : 0.0,
   "imageBase64" : "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q=="
 }'</code></pre>
 </div>
@@ -921,11 +901,10 @@ Content-Length: 534
   "deviceId" : 1,
   "temperature" : 12.34,
   "relativeHumidity" : 19.87,
-  "soilHumidity" : 0.0,
   "imageBase64" : "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q=="
 }' | http POST 'https://smart-farm.smhrd.com/api/v1/log/write' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDIzNDM0LCJleHAiOjE2ODU0MjcwMzR9.SPs9hUzctkXbA5t0mCwHCuwZVHveJHxfK_bPKeaGVueb0PfdwmjReIaS-JKc_inL332aKuXF6JF3iWQckGcAFw'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDI0MjUyLCJleHAiOjE2ODU0Mjc4NTJ9.gPdOuIgVzpUwMQESsyVoQJ9zhlAsE6FpEaxg5HZioXM-D2iPE1d01MvP42eRF46g2HLdYAMVS5lJ8k5Rk94T5A'</code></pre>
 </div>
 </div>
 </div>
@@ -935,15 +914,14 @@ Content-Length: 534
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /api/v1/log/write HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDIzNDM0LCJleHAiOjE2ODU0MjcwMzR9.SPs9hUzctkXbA5t0mCwHCuwZVHveJHxfK_bPKeaGVueb0PfdwmjReIaS-JKc_inL332aKuXF6JF3iWQckGcAFw
-Content-Length: 988
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NDI0MjUyLCJleHAiOjE2ODU0Mjc4NTJ9.gPdOuIgVzpUwMQESsyVoQJ9zhlAsE6FpEaxg5HZioXM-D2iPE1d01MvP42eRF46g2HLdYAMVS5lJ8k5Rk94T5A
+Content-Length: 964
 Host: smart-farm.smhrd.com
 
 {
   "deviceId" : 1,
   "temperature" : 12.34,
   "relativeHumidity" : 19.87,
-  "soilHumidity" : 0.0,
   "imageBase64" : "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q=="
 }</code></pre>
 </div>
@@ -1002,11 +980,6 @@ Host: smart-farm.smhrd.com
 <td class="tableblock halign-left valign-top"><p class="tableblock">Temperature (celsius) of log.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>soilHumidity</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Soil humidity of log.</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>imageBase64</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Base64 encoded image data uri of log.</p></td>
@@ -1021,7 +994,7 @@ Host: smart-farm.smhrd.com
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 257
+Content-Length: 231
 
 {
   "status" : "ok",
@@ -1029,12 +1002,11 @@ Content-Length: 257
     "deviceId" : 1,
     "humidity" : 19.87,
     "temperature" : 12.34,
-    "soilHumidity" : 0.0,
     "imageUrl" : null,
     "detection" : {
       "status" : "NOT_STARTED"
     },
-    "timestamp" : "2023-05-30T05:10:34"
+    "timestamp" : "2023-05-30T05:24:12"
   }
 }</code></pre>
 </div>
@@ -1074,11 +1046,6 @@ Content-Length: 257
 <td class="tableblock halign-left valign-top"><p class="tableblock">Logged celsius temperature.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.soilHumidity</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Logged soil humidity,</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.imageUrl</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Null</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Relative image url of logged image,</p></td>
@@ -1102,7 +1069,7 @@ Content-Length: 257
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2023-05-30 05:09:20 UTC
+Last updated 2023-05-30 05:22:54 UTC
 </div>
 </div>
 </body>
