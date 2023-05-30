@@ -1,6 +1,6 @@
-=== Timelapse via JWT
+=== Timelapse via Device ID
 
-Retrieve and Request Timelapse based on authorization header.
+Retrieve and Request Timelapse based on path parameters
 
 ==== Get latest timelapse
 
