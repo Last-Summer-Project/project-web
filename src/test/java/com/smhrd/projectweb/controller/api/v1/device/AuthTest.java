@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.MediaType;
 
 import static org.springframework.restdocs.payload.PayloadDocumentation.*;

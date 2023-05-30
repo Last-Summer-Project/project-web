@@ -4,7 +4,6 @@ import com.smhrd.projectweb.payload.request.api.v1.log.LogWriteRequest;
 import com.smhrd.projectweb.restdocs.support.AuthTestSupport;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.MediaType;
 import org.springframework.restdocs.payload.JsonFieldType;
 import org.springframework.restdocs.request.PathParametersSnippet;
