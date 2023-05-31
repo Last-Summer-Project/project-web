@@ -38,7 +38,6 @@ public class ImageService {
         try {
             byte[] data = Base64.getDecoder().decode(base64);
             key = s3Service.putObject(data, name + "." + ext);
-            log.error(key);
         } catch (Exception e) {
             e.printStackTrace();
             log.error(e.getMessage());
