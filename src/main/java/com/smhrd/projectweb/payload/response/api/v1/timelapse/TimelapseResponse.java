@@ -25,13 +25,13 @@ public class TimelapseResponse {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String result;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, timezone = "UTC")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss:SSSZ", timezone = "UTC")
     private LocalDateTime logStartDate;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, timezone = "UTC")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss:SSSZ", timezone = "UTC")
     private LocalDateTime logEndDate;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, timezone = "UTC")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss:SSSZ", timezone = "UTC")
     private LocalDateTime lastUpdated;
 
 

@@ -14,13 +14,13 @@ public class DeviceResponse {
     /**
      *
      */
-    @JsonFormat(shape = JsonFormat.Shape.STRING, timezone = "UTC")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss:SSSZ", timezone = "UTC")
     private LocalDateTime dateCreated;
 
     /**
      *
      */
-    @JsonFormat(shape = JsonFormat.Shape.STRING, timezone = "UTC")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss:SSSZ", timezone = "UTC")
     private LocalDateTime lastEdited;
 
     public static DeviceResponse fromDevice(Device device) {

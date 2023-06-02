@@ -13,9 +13,9 @@ import java.time.LocalDateTime;
 public class TimelapseRequest {
     private Long deviceId;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, timezone = "UTC")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss:SSSZ", timezone = "UTC")
     private LocalDateTime startDate;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, timezone = "UTC")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss:SSSZ", timezone = "UTC")
     private LocalDateTime endDate;
 }
