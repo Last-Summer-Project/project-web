@@ -11,7 +11,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.restdocs.payload.JsonFieldType;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
+import java.time.ZoneOffset;
 
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.get;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.post;
@@ -38,8 +39,8 @@ class TimelapseWithAuthTest extends AuthTestSupport {
                 .andExpect(jsonPath("data.id").value(1))
                 .andExpect(jsonPath("data.deviceId").value(1))
                 .andExpect(jsonPath("data.status").value("DONE"))
-                .andExpect(jsonPath("data.logStartDate").value("2023-05-20T00:00:00"))
-                .andExpect(jsonPath("data.logEndDate").value("2023-05-30T00:00:00"))
+                .andExpect(jsonPath("data.logStartDate").value("2023-05-20T00:00:00.000Z"))
+                .andExpect(jsonPath("data.logEndDate").value("2023-05-30T00:00:00.000Z"))
                 .andDo(restDocs.document(
                         authorizationHeaderSnippet,
                         responseFields(
@@ -58,10 +59,10 @@ class TimelapseWithAuthTest extends AuthTestSupport {
     @Test
     @Order(2)
     void postRequest() throws Exception {
-        TimelapseRequest timelapseRequest = new TimelapseRequest(1L, LocalDateTime.of(
-                2022, 10, 11, 12, 13, 14
-        ), LocalDateTime.of(
-                2022, 11, 12, 13, 14, 15
+        TimelapseRequest timelapseRequest = new TimelapseRequest(1L, OffsetDateTime.of(
+                2022, 10, 11, 12, 13, 14, 0, ZoneOffset.UTC
+        ), OffsetDateTime.of(
+                2022, 11, 12, 13, 14, 15, 0, ZoneOffset.UTC
         ));
 
         this.mockMvc.perform(
@@ -74,8 +75,8 @@ class TimelapseWithAuthTest extends AuthTestSupport {
                 .andExpect(jsonPath("status").value("ok"))
                 .andExpect(jsonPath("data.deviceId").value(1))
                 .andExpect(jsonPath("data.status").value("NOT_STARTED"))
-                .andExpect(jsonPath("data.logStartDate").value("2022-10-11T12:13:14"))
-                .andExpect(jsonPath("data.logEndDate").value("2022-11-12T13:14:15"))
+                .andExpect(jsonPath("data.logStartDate").value("2022-10-11T12:13:14.000Z"))
+                .andExpect(jsonPath("data.logEndDate").value("2022-11-12T13:14:15.000Z"))
                 .andDo(restDocs.document(
                         authorizationHeaderSnippet,
                         requestFields(
@@ -108,8 +109,8 @@ class TimelapseWithAuthTest extends AuthTestSupport {
                 .andExpect(jsonPath("data[1].id").value(1))
                 .andExpect(jsonPath("data[1].deviceId").value(1))
                 .andExpect(jsonPath("data[1].status").value("DONE"))
-                .andExpect(jsonPath("data[1].logStartDate").value("2023-05-20T00:00:00"))
-                .andExpect(jsonPath("data[1].logEndDate").value("2023-05-30T00:00:00"))
+                .andExpect(jsonPath("data[1].logStartDate").value("2023-05-20T00:00:00.000Z"))
+                .andExpect(jsonPath("data[1].logEndDate").value("2023-05-30T00:00:00.000Z"))
                 .andDo(restDocs.document(
                         authorizationHeaderSnippet,
                         responseFields(

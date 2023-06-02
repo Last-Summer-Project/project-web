@@ -5,7 +5,7 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 /**
  * @TableName device_log
@@ -42,7 +42,7 @@ public class DeviceLog implements Serializable {
     /**
      *
      */
-    private LocalDateTime dateCreated;
+    private OffsetDateTime dateCreated;
 
 
     private Detect detect;

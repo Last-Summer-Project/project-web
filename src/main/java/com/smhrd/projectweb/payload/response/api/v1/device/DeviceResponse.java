@@ -5,7 +5,7 @@ import com.smhrd.projectweb.entity.Device;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 @Data
 @AllArgsConstructor
@@ -14,14 +14,14 @@ public class DeviceResponse {
     /**
      *
      */
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss:SSSXXX", timezone = "UTC")
-    private LocalDateTime dateCreated;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX", timezone = "UTC")
+    private OffsetDateTime dateCreated;
 
     /**
      *
      */
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss:SSSXXX", timezone = "UTC")
-    private LocalDateTime lastEdited;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX", timezone = "UTC")
+    private OffsetDateTime lastEdited;
 
     public static DeviceResponse fromDevice(Device device) {
         return new DeviceResponse(device.getId(), device.getDateCreated(), device.getLastEdited());

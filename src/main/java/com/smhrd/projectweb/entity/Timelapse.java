@@ -5,7 +5,7 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 /**
  * @TableName timelapse
@@ -27,12 +27,12 @@ public class Timelapse implements Serializable {
     /**
      *
      */
-    private LocalDateTime startDate;
+    private OffsetDateTime startDate;
 
     /**
      *
      */
-    private LocalDateTime endDate;
+    private OffsetDateTime endDate;
 
     /**
      *
@@ -47,10 +47,10 @@ public class Timelapse implements Serializable {
     /**
      *
      */
-    private LocalDateTime dateCreated;
+    private OffsetDateTime dateCreated;
 
     /**
      *
      */
-    private LocalDateTime lastEdited;
+    private OffsetDateTime lastEdited;
 }

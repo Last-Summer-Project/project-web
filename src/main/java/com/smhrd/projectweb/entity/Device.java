@@ -3,7 +3,7 @@ package com.smhrd.projectweb.entity;
 import lombok.*;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 /**
  * @TableName device
@@ -33,10 +33,10 @@ public class Device implements Serializable {
     /**
      *
      */
-    private LocalDateTime dateCreated;
+    private OffsetDateTime dateCreated;
 
     /**
      *
      */
-    private LocalDateTime lastEdited;
+    private OffsetDateTime lastEdited;
 }
