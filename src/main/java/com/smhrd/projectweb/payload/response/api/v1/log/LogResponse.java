@@ -25,7 +25,7 @@ public class LogResponse {
 
     private DetectResponse detection;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss:SSSZ", timezone = "UTC")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss:SSSXXX", timezone = "UTC")
     private LocalDateTime timestamp;
 
     public static LogResponse fromDeviceLog(DeviceLog deviceLog) {
