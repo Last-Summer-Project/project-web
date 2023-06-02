@@ -455,7 +455,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/timelapse/1/latest' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NjY4MzA5LCJleHAiOjE2ODU2NzE5MDl9.Ht1YJ9a_YFxR9C8EcQJenqP4KN-_boE4nWoiaGDUCnXyT-XsVHOTIgsEWVv0FL_gihrNMK4bbPbKlWr_46w8-w'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg4NjE5LCJleHAiOjE2ODU2OTIyMTl9.wztBQ5a-h_u-oPzkZQdS0zhsTTcv_0MhgdrmDbvhDI_D6ljD5bGg9DWLlp_o_bt8x_APj2t7wdDlqYOs2zTscA'</code></pre>
 </div>
 </div>
 </div>
@@ -465,7 +465,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/timelapse/1/latest' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NjY4MzA5LCJleHAiOjE2ODU2NzE5MDl9.Ht1YJ9a_YFxR9C8EcQJenqP4KN-_boE4nWoiaGDUCnXyT-XsVHOTIgsEWVv0FL_gihrNMK4bbPbKlWr_46w8-w'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg4NjE5LCJleHAiOjE2ODU2OTIyMTl9.wztBQ5a-h_u-oPzkZQdS0zhsTTcv_0MhgdrmDbvhDI_D6ljD5bGg9DWLlp_o_bt8x_APj2t7wdDlqYOs2zTscA'</code></pre>
 </div>
 </div>
 </div>
@@ -475,7 +475,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /api/v1/timelapse/1/latest HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NjY4MzA5LCJleHAiOjE2ODU2NzE5MDl9.Ht1YJ9a_YFxR9C8EcQJenqP4KN-_boE4nWoiaGDUCnXyT-XsVHOTIgsEWVv0FL_gihrNMK4bbPbKlWr_46w8-w
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg4NjE5LCJleHAiOjE2ODU2OTIyMTl9.wztBQ5a-h_u-oPzkZQdS0zhsTTcv_0MhgdrmDbvhDI_D6ljD5bGg9DWLlp_o_bt8x_APj2t7wdDlqYOs2zTscA
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -530,7 +530,7 @@ Host: smart-farm.smhrd.com</code></pre>
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 253
+Content-Length: 268
 
 {
   "status" : "ok",
@@ -539,9 +539,9 @@ Content-Length: 253
     "deviceId" : 1,
     "status" : "DONE",
     "result" : "result.mp4",
-    "logStartDate" : "2023-05-20T00:00:00",
-    "logEndDate" : "2023-05-30T00:00:00",
-    "lastUpdated" : "2023-06-02T01:11:47"
+    "logStartDate" : "2023-05-20T00:00:00.000Z",
+    "logEndDate" : "2023-05-30T00:00:00.000Z",
+    "lastUpdated" : "2023-06-02T06:50:18.000Z"
   }
 }</code></pre>
 </div>
@@ -614,7 +614,7 @@ Content-Length: 253
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/timelapse/1/all' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NjY4MzA5LCJleHAiOjE2ODU2NzE5MDl9.Ht1YJ9a_YFxR9C8EcQJenqP4KN-_boE4nWoiaGDUCnXyT-XsVHOTIgsEWVv0FL_gihrNMK4bbPbKlWr_46w8-w'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg4NjE5LCJleHAiOjE2ODU2OTIyMTl9.wztBQ5a-h_u-oPzkZQdS0zhsTTcv_0MhgdrmDbvhDI_D6ljD5bGg9DWLlp_o_bt8x_APj2t7wdDlqYOs2zTscA'</code></pre>
 </div>
 </div>
 </div>
@@ -624,7 +624,7 @@ Content-Length: 253
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/timelapse/1/all' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NjY4MzA5LCJleHAiOjE2ODU2NzE5MDl9.Ht1YJ9a_YFxR9C8EcQJenqP4KN-_boE4nWoiaGDUCnXyT-XsVHOTIgsEWVv0FL_gihrNMK4bbPbKlWr_46w8-w'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg4NjE5LCJleHAiOjE2ODU2OTIyMTl9.wztBQ5a-h_u-oPzkZQdS0zhsTTcv_0MhgdrmDbvhDI_D6ljD5bGg9DWLlp_o_bt8x_APj2t7wdDlqYOs2zTscA'</code></pre>
 </div>
 </div>
 </div>
@@ -634,7 +634,7 @@ Content-Length: 253
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /api/v1/timelapse/1/all HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NjY4MzA5LCJleHAiOjE2ODU2NzE5MDl9.Ht1YJ9a_YFxR9C8EcQJenqP4KN-_boE4nWoiaGDUCnXyT-XsVHOTIgsEWVv0FL_gihrNMK4bbPbKlWr_46w8-w
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg4NjE5LCJleHAiOjE2ODU2OTIyMTl9.wztBQ5a-h_u-oPzkZQdS0zhsTTcv_0MhgdrmDbvhDI_D6ljD5bGg9DWLlp_o_bt8x_APj2t7wdDlqYOs2zTscA
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -689,7 +689,7 @@ Host: smart-farm.smhrd.com</code></pre>
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 456
+Content-Length: 486
 
 {
   "status" : "ok",
@@ -697,17 +697,17 @@ Content-Length: 456
     "id" : 2,
     "deviceId" : 1,
     "status" : "NOT_STARTED",
-    "logStartDate" : "2022-10-11T12:13:14",
-    "logEndDate" : "2022-11-12T13:14:15",
-    "lastUpdated" : "2023-06-02T01:11:49"
+    "logStartDate" : "2022-10-11T12:13:14.000Z",
+    "logEndDate" : "2022-11-12T13:14:15.000Z",
+    "lastUpdated" : "2023-06-02T06:50:19.000Z"
   }, {
     "id" : 1,
     "deviceId" : 1,
     "status" : "DONE",
     "result" : "result.mp4",
-    "logStartDate" : "2023-05-20T00:00:00",
-    "logEndDate" : "2023-05-30T00:00:00",
-    "lastUpdated" : "2023-06-02T01:11:47"
+    "logStartDate" : "2023-05-20T00:00:00.000Z",
+    "logEndDate" : "2023-05-30T00:00:00.000Z",
+    "lastUpdated" : "2023-06-02T06:50:18.000Z"
   } ]
 }</code></pre>
 </div>
@@ -771,7 +771,7 @@ Content-Length: 456
 </div>
 </div>
 <div class="sect3">
-<h4 id="_post_to_write_log">Post to write log</h4>
+<h4 id="_post_to_request_timelapse_request">Post to request timelapse request</h4>
 <div class="sect4">
 <h5 id="_http_request_3">HTTP request</h5>
 <div class="sect5">
@@ -780,11 +780,11 @@ Content-Length: 456
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/timelapse/1/request' -i -X POST \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NjY4MzA5LCJleHAiOjE2ODU2NzE5MDl9.Ht1YJ9a_YFxR9C8EcQJenqP4KN-_boE4nWoiaGDUCnXyT-XsVHOTIgsEWVv0FL_gihrNMK4bbPbKlWr_46w8-w' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg4NjE5LCJleHAiOjE2ODU2OTIyMTl9.wztBQ5a-h_u-oPzkZQdS0zhsTTcv_0MhgdrmDbvhDI_D6ljD5bGg9DWLlp_o_bt8x_APj2t7wdDlqYOs2zTscA' \
     -d '{
   "deviceId" : 1,
-  "startDate" : "2022-10-11T12:13:14",
-  "endDate" : "2022-11-12T13:14:15"
+  "startDate" : "2022-10-11T12:13:14.000Z",
+  "endDate" : "2022-11-12T13:14:15.000Z"
 }'</code></pre>
 </div>
 </div>
@@ -795,11 +795,11 @@ Content-Length: 456
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ echo '{
   "deviceId" : 1,
-  "startDate" : "2022-10-11T12:13:14",
-  "endDate" : "2022-11-12T13:14:15"
+  "startDate" : "2022-10-11T12:13:14.000Z",
+  "endDate" : "2022-11-12T13:14:15.000Z"
 }' | http POST 'https://smart-farm.smhrd.com/api/v1/timelapse/1/request' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NjY4MzA5LCJleHAiOjE2ODU2NzE5MDl9.Ht1YJ9a_YFxR9C8EcQJenqP4KN-_boE4nWoiaGDUCnXyT-XsVHOTIgsEWVv0FL_gihrNMK4bbPbKlWr_46w8-w'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg4NjE5LCJleHAiOjE2ODU2OTIyMTl9.wztBQ5a-h_u-oPzkZQdS0zhsTTcv_0MhgdrmDbvhDI_D6ljD5bGg9DWLlp_o_bt8x_APj2t7wdDlqYOs2zTscA'</code></pre>
 </div>
 </div>
 </div>
@@ -809,14 +809,14 @@ Content-Length: 456
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /api/v1/timelapse/1/request HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1NjY4MzA5LCJleHAiOjE2ODU2NzE5MDl9.Ht1YJ9a_YFxR9C8EcQJenqP4KN-_boE4nWoiaGDUCnXyT-XsVHOTIgsEWVv0FL_gihrNMK4bbPbKlWr_46w8-w
-Content-Length: 96
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg4NjE5LCJleHAiOjE2ODU2OTIyMTl9.wztBQ5a-h_u-oPzkZQdS0zhsTTcv_0MhgdrmDbvhDI_D6ljD5bGg9DWLlp_o_bt8x_APj2t7wdDlqYOs2zTscA
+Content-Length: 106
 Host: smart-farm.smhrd.com
 
 {
   "deviceId" : 1,
-  "startDate" : "2022-10-11T12:13:14",
-  "endDate" : "2022-11-12T13:14:15"
+  "startDate" : "2022-10-11T12:13:14.000Z",
+  "endDate" : "2022-11-12T13:14:15.000Z"
 }</code></pre>
 </div>
 </div>
@@ -905,7 +905,7 @@ Host: smart-farm.smhrd.com
 <div class="content">
 <pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 214
+Content-Length: 224
 
 {
   "status" : "ok",
@@ -913,8 +913,8 @@ Content-Length: 214
     "id" : 2,
     "deviceId" : 1,
     "status" : "NOT_STARTED",
-    "logStartDate" : "2022-10-11T12:13:14",
-    "logEndDate" : "2022-11-12T13:14:15",
+    "logStartDate" : "2022-10-11T12:13:14.000Z",
+    "logEndDate" : "2022-11-12T13:14:15.000Z",
     "lastUpdated" : null
   }
 }</code></pre>
@@ -978,7 +978,7 @@ Content-Length: 214
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2023-06-02 01:10:28 UTC
+Last updated 2023-06-02 06:48:58 UTC
 </div>
 </div>
 </body>
