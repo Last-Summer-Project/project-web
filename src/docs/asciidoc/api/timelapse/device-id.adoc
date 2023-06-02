@@ -52,7 +52,7 @@ include::{snippets}/timelapse-with-device-id-test/get-all/http-response.adoc[]
 include::{snippets}/timelapse-with-device-id-test/get-all/response-fields.adoc[]
 
 
-==== Post to write log
+==== Post to request timelapse request
 
 ===== HTTP request
 ====== `curl`
