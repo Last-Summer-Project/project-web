@@ -168,6 +168,7 @@
                  inner join detect d
                             on l.id = d.id
         WHERE l.device_id = #{id,jdbcType=BIGINT}
+          AND d.status = 'done'
         ORDER BY date_created
                 DESC
         LIMIT 30

@@ -33,7 +33,7 @@ class LogWithAuthTest extends AuthTestSupport {
                 .andExpect(jsonPath("data.humidity").value(35.55D))
                 .andExpect(jsonPath("data.temperature").value(21.01D))
                 // Image
-                .andExpect(jsonPath("data.imageUrl").value("/static/image/2.jpg"))
+                .andExpect(jsonPath("data.imageUrl").value("/static/image/3.jpg"))
                 // Detection
                 .andExpect(jsonPath("data.detection.status").value("IN_PROGRESS"))
                 .andDo(restDocs.document(
@@ -69,7 +69,7 @@ class LogWithAuthTest extends AuthTestSupport {
                 .andExpect(jsonPath("data.humidity").value(30.0D))
                 .andExpect(jsonPath("data.temperature").value(20.09D))
                 // Image
-                .andExpect(jsonPath("data.imageUrl").value("/static/image/1.jpg"))
+                .andExpect(jsonPath("data.imageUrl").value("/static/image/2.jpg"))
                 // Detection
                 .andExpect(jsonPath("data.detection.status").value("DONE"))
                 .andExpect(jsonPath("data.detection.result").value(2))
@@ -102,14 +102,14 @@ class LogWithAuthTest extends AuthTestSupport {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("status").value("ok"))
                 // Basic
-                .andExpect(jsonPath("data[1].deviceId").value(1))
-                .andExpect(jsonPath("data[1].humidity").value(30.0D))
-                .andExpect(jsonPath("data[1].temperature").value(20.09D))
+                .andExpect(jsonPath("data[2].deviceId").value(1))
+                .andExpect(jsonPath("data[2].humidity").value(30.0D))
+                .andExpect(jsonPath("data[2].temperature").value(20.09D))
                 // Image
-                .andExpect(jsonPath("data[1].imageUrl").value("/static/image/1.jpg"))
+                .andExpect(jsonPath("data[2].imageUrl").value("/static/image/1.jpg"))
                 // Detection
-                .andExpect(jsonPath("data[1].detection.status").value("DONE"))
-                .andExpect(jsonPath("data[1].detection.result").value(2))
+                .andExpect(jsonPath("data[2].detection.status").value("DONE"))
+                .andExpect(jsonPath("data[2].detection.result").value(0))
                 .andDo(restDocs.document(
                         authorizationHeaderSnippet,
                         responseFields(
@@ -146,7 +146,7 @@ class LogWithAuthTest extends AuthTestSupport {
                 .andExpect(jsonPath("data[1].imageUrl").value("/static/image/1.jpg"))
                 // Detection
                 .andExpect(jsonPath("data[1].detection.status").value("DONE"))
-                .andExpect(jsonPath("data[1].detection.result").value(2))
+                .andExpect(jsonPath("data[1].detection.result").value(0))
                 .andDo(restDocs.document(
                         authorizationHeaderSnippet,
                         responseFields(
