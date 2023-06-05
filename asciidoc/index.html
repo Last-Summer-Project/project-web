@@ -476,16 +476,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_get_latest_log">2.4.1. Get latest log</a></li>
 <li><a href="#_get_latest_detected">2.4.2. Get latest detected</a></li>
-<li><a href="#_get_recent_logs">2.4.3. Get recent logs</a></li>
-<li><a href="#_post_to_write_log">2.4.4. Post to write log</a></li>
+<li><a href="#_get_detected_per_day_logs">2.4.3. Get detected per day logs</a></li>
+<li><a href="#_get_recent_logs">2.4.4. Get recent logs</a></li>
+<li><a href="#_post_to_write_log">2.4.5. Post to write log</a></li>
 </ul>
 </li>
 <li><a href="#_log_via_device_id">2.5. Log via Device ID</a>
 <ul class="sectlevel3">
 <li><a href="#_get_latest">2.5.1. Get latest</a></li>
 <li><a href="#_get_latest_detected_2">2.5.2. Get latest detected</a></li>
-<li><a href="#_get_recent_logs_2">2.5.3. Get recent logs</a></li>
-<li><a href="#_post_to_write_log_2">2.5.4. Post to write log</a></li>
+<li><a href="#_get_detected_per_day_logs_2">2.5.3. Get detected per day logs</a></li>
+<li><a href="#_get_recent_logs_2">2.5.4. Get recent logs</a></li>
+<li><a href="#_post_to_write_log_2">2.5.5. Post to write log</a></li>
 </ul>
 </li>
 <li><a href="#_timelapse_via_jwt">2.6. Timelapse via JWT</a>
@@ -733,8 +735,8 @@ Content-Length: 569
   &quot;status&quot; : &quot;ok&quot;,
   &quot;message&quot; : &quot;Successfully logged in&quot;,
   &quot;data&quot; : {
-    &quot;access&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTY4OTMxNywiZXhwIjoxNjg1NjkyOTE3fQ.8GbJW56QzTId9TK3vX0A85Ve3dDETqNIKfPD28NxBfSqmk_hyPzxBhcADHPtK57uj1fe_bb803DQ68vl1YiIgA&quot;,
-    &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTY4OTMxNywiZXhwIjoxNjg2NTUzMzE3fQ.vomQkXjM8-du-GuHdlD-CF4EAPxglWbHQ53_Q2V4b5tSxUmi1svtpo8fJ-sFWbwcUCIG-LqCup1H1gGw3krLtg&quot;
+    &quot;access&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTkzNDI5OCwiZXhwIjoxNjg1OTM3ODk4fQ.25Fxu0yHOc0QBmyJMw-th3SClJ2xw8F9u2yVJYao9dpBT-m2-y2uhrQLpvgbl6yJmjdbdVn3VVMPXsKAs0rfZw&quot;,
+    &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTkzNDI5OCwiZXhwIjoxNjg2Nzk4Mjk4fQ.wjDkQXdyTiZjMFgtm5RmaPDuQpJxq0yR5LeEpGPfUvsC3Jnu_pZ-6R_abgoR9fLxV_5420UnFp5eZZlc7uS4zA&quot;
   }
 }</code></pre>
 </div>
@@ -906,8 +908,8 @@ Content-Length: 569
   &quot;status&quot; : &quot;ok&quot;,
   &quot;message&quot; : &quot;Successfully signed up&quot;,
   &quot;data&quot; : {
-    &quot;access&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NTY4OTMxNywiZXhwIjoxNjg1NjkyOTE3fQ.Yrc3HXbA_VgOoXuZboX3ufR2GlNvFT5N1xBRRK0Bblo-ZHMrw8YXNdYBfmhz2WAWvgKvTcH34IQfjw2HKC9mWw&quot;,
-    &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NTY4OTMxNywiZXhwIjoxNjg2NTUzMzE3fQ.Yt_Ka7lDb7vXg7vu6mpBQKq5lW31lV7fYjeSL7FyjWv5BidqctrKSC257OsEug_WzN7ppGY0sJfp376v7Exi_g&quot;
+    &quot;access&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NTkzNDI5OCwiZXhwIjoxNjg1OTM3ODk4fQ.KHaiybUoEjmy9O-ZC4QY7rMFURymfhFFi486g1W3g9GUXxHi-tp9SRnqZoSg_mL3sU4Umz1czblnzmvl0eeDRw&quot;,
+    &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NTkzNDI5OCwiZXhwIjoxNjg2Nzk4Mjk4fQ.E677tv-2COVOzXCMBDsK2vsV8dtrMLgjMqaXsQIvaSho23_UsJdiV2nxjaAiuCT1OCgqHl2HzwWbiIp3tWlruQ&quot;
   }
 }</code></pre>
 </div>
@@ -961,7 +963,7 @@ Content-Length: 569
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/auth/refresh' -i -X POST \
     -H 'Content-Type: application/json;charset=UTF-8' \
     -d '{
-  &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTY4OTMxNywiZXhwIjoxNjg2NTUzMzE3fQ.vomQkXjM8-du-GuHdlD-CF4EAPxglWbHQ53_Q2V4b5tSxUmi1svtpo8fJ-sFWbwcUCIG-LqCup1H1gGw3krLtg&quot;
+  &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTkzNDI5OSwiZXhwIjoxNjg2Nzk4Mjk5fQ.o384wr9tD0XxYEtUZTGB4uZrlPx8F-WTdFlbOP5t7aZfYBzhoJtu7Tb6rkLFVXq1l81PCFw2nwAdvJRV6UqzQQ&quot;
 }'</code></pre>
 </div>
 </div>
@@ -971,7 +973,7 @@ Content-Length: 569
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ echo '{
-  &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTY4OTMxNywiZXhwIjoxNjg2NTUzMzE3fQ.vomQkXjM8-du-GuHdlD-CF4EAPxglWbHQ53_Q2V4b5tSxUmi1svtpo8fJ-sFWbwcUCIG-LqCup1H1gGw3krLtg&quot;
+  &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTkzNDI5OSwiZXhwIjoxNjg2Nzk4Mjk5fQ.o384wr9tD0XxYEtUZTGB4uZrlPx8F-WTdFlbOP5t7aZfYBzhoJtu7Tb6rkLFVXq1l81PCFw2nwAdvJRV6UqzQQ&quot;
 }' | http POST 'https://smart-farm.smhrd.com/api/v1/auth/refresh' \
     'Content-Type:application/json;charset=UTF-8'</code></pre>
 </div>
@@ -987,7 +989,7 @@ Content-Length: 246
 Host: smart-farm.smhrd.com
 
 {
-  &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTY4OTMxNywiZXhwIjoxNjg2NTUzMzE3fQ.vomQkXjM8-du-GuHdlD-CF4EAPxglWbHQ53_Q2V4b5tSxUmi1svtpo8fJ-sFWbwcUCIG-LqCup1H1gGw3krLtg&quot;
+  &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTkzNDI5OSwiZXhwIjoxNjg2Nzk4Mjk5fQ.o384wr9tD0XxYEtUZTGB4uZrlPx8F-WTdFlbOP5t7aZfYBzhoJtu7Tb6rkLFVXq1l81PCFw2nwAdvJRV6UqzQQ&quot;
 }</code></pre>
 </div>
 </div>
@@ -1029,8 +1031,8 @@ Content-Length: 575
   &quot;status&quot; : &quot;ok&quot;,
   &quot;message&quot; : &quot;Successfully refreshed token&quot;,
   &quot;data&quot; : {
-    &quot;access&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTY4OTMxNywiZXhwIjoxNjg1NjkyOTE3fQ.8GbJW56QzTId9TK3vX0A85Ve3dDETqNIKfPD28NxBfSqmk_hyPzxBhcADHPtK57uj1fe_bb803DQ68vl1YiIgA&quot;,
-    &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTY4OTMxNywiZXhwIjoxNjg2NTUzMzE3fQ.vomQkXjM8-du-GuHdlD-CF4EAPxglWbHQ53_Q2V4b5tSxUmi1svtpo8fJ-sFWbwcUCIG-LqCup1H1gGw3krLtg&quot;
+    &quot;access&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTkzNDI5OSwiZXhwIjoxNjg1OTM3ODk5fQ.2qHISXKE-U-rz6ihOXfnaceEN6MQnteoU79NVOGtiCFHzZ85jXPa7Fx-xavG_cqVRfkBvnZe-xLM34-F9KALUw&quot;,
+    &quot;refresh&quot; : &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTkzNDI5OSwiZXhwIjoxNjg2Nzk4Mjk5fQ.o384wr9tD0XxYEtUZTGB4uZrlPx8F-WTdFlbOP5t7aZfYBzhoJtu7Tb6rkLFVXq1l81PCFw2nwAdvJRV6UqzQQ&quot;
   }
 }</code></pre>
 </div>
@@ -1083,7 +1085,7 @@ Content-Length: 575
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/auth/verify' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTY4OTMxNywiZXhwIjoxNjg1NjkyOTE3fQ.8GbJW56QzTId9TK3vX0A85Ve3dDETqNIKfPD28NxBfSqmk_hyPzxBhcADHPtK57uj1fe_bb803DQ68vl1YiIgA'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTkzNDI5OSwiZXhwIjoxNjg1OTM3ODk5fQ.2qHISXKE-U-rz6ihOXfnaceEN6MQnteoU79NVOGtiCFHzZ85jXPa7Fx-xavG_cqVRfkBvnZe-xLM34-F9KALUw'</code></pre>
 </div>
 </div>
 </div>
@@ -1093,7 +1095,7 @@ Content-Length: 575
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/auth/verify' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTY4OTMxNywiZXhwIjoxNjg1NjkyOTE3fQ.8GbJW56QzTId9TK3vX0A85Ve3dDETqNIKfPD28NxBfSqmk_hyPzxBhcADHPtK57uj1fe_bb803DQ68vl1YiIgA'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTkzNDI5OSwiZXhwIjoxNjg1OTM3ODk5fQ.2qHISXKE-U-rz6ihOXfnaceEN6MQnteoU79NVOGtiCFHzZ85jXPa7Fx-xavG_cqVRfkBvnZe-xLM34-F9KALUw'</code></pre>
 </div>
 </div>
 </div>
@@ -1103,7 +1105,7 @@ Content-Length: 575
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/auth/verify HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTY4OTMxNywiZXhwIjoxNjg1NjkyOTE3fQ.8GbJW56QzTId9TK3vX0A85Ve3dDETqNIKfPD28NxBfSqmk_hyPzxBhcADHPtK57uj1fe_bb803DQ68vl1YiIgA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NTkzNDI5OSwiZXhwIjoxNjg1OTM3ODk5fQ.2qHISXKE-U-rz6ihOXfnaceEN6MQnteoU79NVOGtiCFHzZ85jXPa7Fx-xavG_cqVRfkBvnZe-xLM34-F9KALUw
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -1223,7 +1225,7 @@ Content-Length: 53
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/device/get' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzIzLCJleHAiOjE2ODU2OTI5MjN9.eQfNOJihoTtqZVYa2aJdr0r_Our-Dfm8QCwf4YBkbhAk0qXEEZj2GvfOPzX5-3Tp_cl1EjBuaTj5snEMgtyCgQ'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzAxLCJleHAiOjE2ODU5Mzc5MDF9.IIpV7rSBIwNqJ6gu3smqVfNcPe9-K40MJvbwUQp_1r7ihcwk5VblZYQm4hStIY7lnhcpY9Ijq-RGFWJZsw3XZA'</code></pre>
 </div>
 </div>
 </div>
@@ -1233,7 +1235,7 @@ Content-Length: 53
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/device/get' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzIzLCJleHAiOjE2ODU2OTI5MjN9.eQfNOJihoTtqZVYa2aJdr0r_Our-Dfm8QCwf4YBkbhAk0qXEEZj2GvfOPzX5-3Tp_cl1EjBuaTj5snEMgtyCgQ'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzAxLCJleHAiOjE2ODU5Mzc5MDF9.IIpV7rSBIwNqJ6gu3smqVfNcPe9-K40MJvbwUQp_1r7ihcwk5VblZYQm4hStIY7lnhcpY9Ijq-RGFWJZsw3XZA'</code></pre>
 </div>
 </div>
 </div>
@@ -1243,7 +1245,7 @@ Content-Length: 53
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/device/get HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzIzLCJleHAiOjE2ODU2OTI5MjN9.eQfNOJihoTtqZVYa2aJdr0r_Our-Dfm8QCwf4YBkbhAk0qXEEZj2GvfOPzX5-3Tp_cl1EjBuaTj5snEMgtyCgQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzAxLCJleHAiOjE2ODU5Mzc5MDF9.IIpV7rSBIwNqJ6gu3smqVfNcPe9-K40MJvbwUQp_1r7ihcwk5VblZYQm4hStIY7lnhcpY9Ijq-RGFWJZsw3XZA
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -1261,8 +1263,8 @@ Content-Length: 147
   &quot;status&quot; : &quot;ok&quot;,
   &quot;data&quot; : {
     &quot;id&quot; : 1,
-    &quot;dateCreated&quot; : &quot;2023-06-02T07:01:58.000Z&quot;,
-    &quot;lastEdited&quot; : &quot;2023-06-02T07:01:58.000Z&quot;
+    &quot;dateCreated&quot; : &quot;2023-06-05T03:05:00.000Z&quot;,
+    &quot;lastEdited&quot; : &quot;2023-06-05T03:05:00.000Z&quot;
   }
 }</code></pre>
 </div>
@@ -1315,7 +1317,7 @@ Content-Length: 147
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/device/get/1' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzIzLCJleHAiOjE2ODU2OTI5MjN9.eQfNOJihoTtqZVYa2aJdr0r_Our-Dfm8QCwf4YBkbhAk0qXEEZj2GvfOPzX5-3Tp_cl1EjBuaTj5snEMgtyCgQ'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzAxLCJleHAiOjE2ODU5Mzc5MDF9.IIpV7rSBIwNqJ6gu3smqVfNcPe9-K40MJvbwUQp_1r7ihcwk5VblZYQm4hStIY7lnhcpY9Ijq-RGFWJZsw3XZA'</code></pre>
 </div>
 </div>
 </div>
@@ -1325,7 +1327,7 @@ Content-Length: 147
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/device/get/1' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzIzLCJleHAiOjE2ODU2OTI5MjN9.eQfNOJihoTtqZVYa2aJdr0r_Our-Dfm8QCwf4YBkbhAk0qXEEZj2GvfOPzX5-3Tp_cl1EjBuaTj5snEMgtyCgQ'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzAxLCJleHAiOjE2ODU5Mzc5MDF9.IIpV7rSBIwNqJ6gu3smqVfNcPe9-K40MJvbwUQp_1r7ihcwk5VblZYQm4hStIY7lnhcpY9Ijq-RGFWJZsw3XZA'</code></pre>
 </div>
 </div>
 </div>
@@ -1335,7 +1337,7 @@ Content-Length: 147
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/device/get/1 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzIzLCJleHAiOjE2ODU2OTI5MjN9.eQfNOJihoTtqZVYa2aJdr0r_Our-Dfm8QCwf4YBkbhAk0qXEEZj2GvfOPzX5-3Tp_cl1EjBuaTj5snEMgtyCgQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzAxLCJleHAiOjE2ODU5Mzc5MDF9.IIpV7rSBIwNqJ6gu3smqVfNcPe9-K40MJvbwUQp_1r7ihcwk5VblZYQm4hStIY7lnhcpY9Ijq-RGFWJZsw3XZA
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -1377,8 +1379,8 @@ Content-Length: 147
   &quot;status&quot; : &quot;ok&quot;,
   &quot;data&quot; : {
     &quot;id&quot; : 1,
-    &quot;dateCreated&quot; : &quot;2023-06-02T07:01:58.000Z&quot;,
-    &quot;lastEdited&quot; : &quot;2023-06-02T07:01:58.000Z&quot;
+    &quot;dateCreated&quot; : &quot;2023-06-05T03:05:00.000Z&quot;,
+    &quot;lastEdited&quot; : &quot;2023-06-05T03:05:00.000Z&quot;
   }
 }</code></pre>
 </div>
@@ -1479,7 +1481,7 @@ Content-Length: 57
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/latest' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzI4LCJleHAiOjE2ODU2OTI5Mjh9.BjmdgqPkqYnVvg_nIIoSX32K2M5vvx0fS1yIqnEghqKE1zNOKFyZR1usZMvMpANbYLV4abDGCd0YPMhzTqceHg'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzAzLCJleHAiOjE2ODU5Mzc5MDN9.ND-yjPoGRI7Rm1BV3kcfWKYp6AL7GxmRwgHwvgB0FNgSltqLGmAYa3oqHgUkMGYBPZIH98drk36gTMzCV2buiA'</code></pre>
 </div>
 </div>
 </div>
@@ -1489,7 +1491,7 @@ Content-Length: 57
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/latest' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzI4LCJleHAiOjE2ODU2OTI5Mjh9.BjmdgqPkqYnVvg_nIIoSX32K2M5vvx0fS1yIqnEghqKE1zNOKFyZR1usZMvMpANbYLV4abDGCd0YPMhzTqceHg'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzAzLCJleHAiOjE2ODU5Mzc5MDN9.ND-yjPoGRI7Rm1BV3kcfWKYp6AL7GxmRwgHwvgB0FNgSltqLGmAYa3oqHgUkMGYBPZIH98drk36gTMzCV2buiA'</code></pre>
 </div>
 </div>
 </div>
@@ -1499,7 +1501,7 @@ Content-Length: 57
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/latest HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzI4LCJleHAiOjE2ODU2OTI5Mjh9.BjmdgqPkqYnVvg_nIIoSX32K2M5vvx0fS1yIqnEghqKE1zNOKFyZR1usZMvMpANbYLV4abDGCd0YPMhzTqceHg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzAzLCJleHAiOjE2ODU5Mzc5MDN9.ND-yjPoGRI7Rm1BV3kcfWKYp6AL7GxmRwgHwvgB0FNgSltqLGmAYa3oqHgUkMGYBPZIH98drk36gTMzCV2buiA
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -1544,7 +1546,7 @@ Content-Length: 253
     &quot;detection&quot; : {
       &quot;status&quot; : &quot;IN_PROGRESS&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-06-02T07:02:06.000Z&quot;
+    &quot;timestamp&quot; : &quot;2023-06-05T03:05:02.000Z&quot;
   }
 }</code></pre>
 </div>
@@ -1617,7 +1619,7 @@ Content-Length: 253
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/latest-detected' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzI4LCJleHAiOjE2ODU2OTI5Mjh9.BjmdgqPkqYnVvg_nIIoSX32K2M5vvx0fS1yIqnEghqKE1zNOKFyZR1usZMvMpANbYLV4abDGCd0YPMhzTqceHg'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzAzLCJleHAiOjE2ODU5Mzc5MDN9.ND-yjPoGRI7Rm1BV3kcfWKYp6AL7GxmRwgHwvgB0FNgSltqLGmAYa3oqHgUkMGYBPZIH98drk36gTMzCV2buiA'</code></pre>
 </div>
 </div>
 </div>
@@ -1627,7 +1629,7 @@ Content-Length: 253
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/latest-detected' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzI4LCJleHAiOjE2ODU2OTI5Mjh9.BjmdgqPkqYnVvg_nIIoSX32K2M5vvx0fS1yIqnEghqKE1zNOKFyZR1usZMvMpANbYLV4abDGCd0YPMhzTqceHg'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzAzLCJleHAiOjE2ODU5Mzc5MDN9.ND-yjPoGRI7Rm1BV3kcfWKYp6AL7GxmRwgHwvgB0FNgSltqLGmAYa3oqHgUkMGYBPZIH98drk36gTMzCV2buiA'</code></pre>
 </div>
 </div>
 </div>
@@ -1637,7 +1639,7 @@ Content-Length: 253
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/latest-detected HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzI4LCJleHAiOjE2ODU2OTI5Mjh9.BjmdgqPkqYnVvg_nIIoSX32K2M5vvx0fS1yIqnEghqKE1zNOKFyZR1usZMvMpANbYLV4abDGCd0YPMhzTqceHg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzAzLCJleHAiOjE2ODU5Mzc5MDN9.ND-yjPoGRI7Rm1BV3kcfWKYp6AL7GxmRwgHwvgB0FNgSltqLGmAYa3oqHgUkMGYBPZIH98drk36gTMzCV2buiA
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -1683,7 +1685,7 @@ Content-Length: 267
       &quot;status&quot; : &quot;DONE&quot;,
       &quot;result&quot; : &quot;2&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-06-02T07:02:05.000Z&quot;
+    &quot;timestamp&quot; : &quot;2023-06-04T03:05:02.000Z&quot;
   }
 }</code></pre>
 </div>
@@ -1747,9 +1749,9 @@ Content-Length: 267
 </div>
 </div>
 <div class="sect3">
-<h4 id="_get_recent_logs"><a class="link" href="#_get_recent_logs">2.4.3. Get recent logs</a></h4>
+<h4 id="_get_detected_per_day_logs"><a class="link" href="#_get_detected_per_day_logs">2.4.3. Get detected per day logs</a></h4>
 <div class="paragraph">
-<p>Retrieve recent 100 logs</p>
+<p>Retrieve detected per day logs</p>
 </div>
 <div class="sect4">
 <h5 id="_http_request_10"><a class="link" href="#_http_request_10">HTTP request</a></h5>
@@ -1757,9 +1759,9 @@ Content-Length: 267
 <h6 id="_curl_10"><a class="link" href="#_curl_10"><code>curl</code></a></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/recent' -i -X GET \
+<pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/detected-per-day' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzI4LCJleHAiOjE2ODU2OTI5Mjh9.BjmdgqPkqYnVvg_nIIoSX32K2M5vvx0fS1yIqnEghqKE1zNOKFyZR1usZMvMpANbYLV4abDGCd0YPMhzTqceHg'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzAzLCJleHAiOjE2ODU5Mzc5MDN9.ND-yjPoGRI7Rm1BV3kcfWKYp6AL7GxmRwgHwvgB0FNgSltqLGmAYa3oqHgUkMGYBPZIH98drk36gTMzCV2buiA'</code></pre>
 </div>
 </div>
 </div>
@@ -1767,9 +1769,9 @@ Content-Length: 267
 <h6 id="_httpie_10"><a class="link" href="#_httpie_10"><code>httpie</code></a></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/recent' \
+<pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/detected-per-day' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzI4LCJleHAiOjE2ODU2OTI5Mjh9.BjmdgqPkqYnVvg_nIIoSX32K2M5vvx0fS1yIqnEghqKE1zNOKFyZR1usZMvMpANbYLV4abDGCd0YPMhzTqceHg'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzAzLCJleHAiOjE2ODU5Mzc5MDN9.ND-yjPoGRI7Rm1BV3kcfWKYp6AL7GxmRwgHwvgB0FNgSltqLGmAYa3oqHgUkMGYBPZIH98drk36gTMzCV2buiA'</code></pre>
 </div>
 </div>
 </div>
@@ -1777,9 +1779,9 @@ Content-Length: 267
 <h6 id="_http_10"><a class="link" href="#_http_10">HTTP</a></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/recent HTTP/1.1
+<pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/detected-per-day HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzI4LCJleHAiOjE2ODU2OTI5Mjh9.BjmdgqPkqYnVvg_nIIoSX32K2M5vvx0fS1yIqnEghqKE1zNOKFyZR1usZMvMpANbYLV4abDGCd0YPMhzTqceHg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzAzLCJleHAiOjE2ODU5Mzc5MDN9.ND-yjPoGRI7Rm1BV3kcfWKYp6AL7GxmRwgHwvgB0FNgSltqLGmAYa3oqHgUkMGYBPZIH98drk36gTMzCV2buiA
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -1824,7 +1826,7 @@ Content-Length: 492
     &quot;detection&quot; : {
       &quot;status&quot; : &quot;IN_PROGRESS&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-06-02T07:02:06.000Z&quot;
+    &quot;timestamp&quot; : &quot;2023-06-05T03:05:02.000Z&quot;
   }, {
     &quot;deviceId&quot; : 1,
     &quot;humidity&quot; : 30.0,
@@ -1834,7 +1836,7 @@ Content-Length: 492
       &quot;status&quot; : &quot;DONE&quot;,
       &quot;result&quot; : &quot;2&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-06-02T07:02:05.000Z&quot;
+    &quot;timestamp&quot; : &quot;2023-06-04T03:05:02.000Z&quot;
   } ]
 }</code></pre>
 </div>
@@ -1898,16 +1900,167 @@ Content-Length: 492
 </div>
 </div>
 <div class="sect3">
-<h4 id="_post_to_write_log"><a class="link" href="#_post_to_write_log">2.4.4. Post to write log</a></h4>
+<h4 id="_get_recent_logs"><a class="link" href="#_get_recent_logs">2.4.4. Get recent logs</a></h4>
+<div class="paragraph">
+<p>Retrieve recent 100 logs</p>
+</div>
 <div class="sect4">
 <h5 id="_http_request_11"><a class="link" href="#_http_request_11">HTTP request</a></h5>
 <div class="sect5">
 <h6 id="_curl_11"><a class="link" href="#_curl_11"><code>curl</code></a></h6>
 <div class="listingblock">
 <div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/recent' -i -X GET \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA0LCJleHAiOjE2ODU5Mzc5MDR9.q-M4agplRLm5aSYAgb1nUdsUdIMZWzTEQICnM8bfx4vlZhFfB2tRVgusQmbgviHALu_4R5BIa43tOhL4yBNZGg'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_httpie_11"><a class="link" href="#_httpie_11"><code>httpie</code></a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/recent' \
+    'Content-Type:application/json;charset=UTF-8' \
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA0LCJleHAiOjE2ODU5Mzc5MDR9.q-M4agplRLm5aSYAgb1nUdsUdIMZWzTEQICnM8bfx4vlZhFfB2tRVgusQmbgviHALu_4R5BIa43tOhL4yBNZGg'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_http_11"><a class="link" href="#_http_11">HTTP</a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/recent HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA0LCJleHAiOjE2ODU5Mzc5MDR9.q-M4agplRLm5aSYAgb1nUdsUdIMZWzTEQICnM8bfx4vlZhFfB2tRVgusQmbgviHALu_4R5BIa43tOhL4yBNZGg
+Host: smart-farm.smhrd.com</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_request_headers_5"><a class="link" href="#_request_headers_5">Request headers</a></h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Json Web Token with 'Bearer'</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_http_response_11"><a class="link" href="#_http_response_11">HTTP response</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 492
+
+{
+  &quot;status&quot; : &quot;ok&quot;,
+  &quot;data&quot; : [ {
+    &quot;deviceId&quot; : 1,
+    &quot;humidity&quot; : 35.55,
+    &quot;temperature&quot; : 21.01,
+    &quot;imageUrl&quot; : &quot;/static/image/2.jpg&quot;,
+    &quot;detection&quot; : {
+      &quot;status&quot; : &quot;IN_PROGRESS&quot;
+    },
+    &quot;timestamp&quot; : &quot;2023-06-05T03:05:02.000Z&quot;
+  }, {
+    &quot;deviceId&quot; : 1,
+    &quot;humidity&quot; : 30.0,
+    &quot;temperature&quot; : 20.09,
+    &quot;imageUrl&quot; : &quot;/static/image/1.jpg&quot;,
+    &quot;detection&quot; : {
+      &quot;status&quot; : &quot;DONE&quot;,
+      &quot;result&quot; : &quot;2&quot;
+    },
+    &quot;timestamp&quot; : &quot;2023-06-04T03:05:02.000Z&quot;
+  } ]
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].deviceId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device ID of this log.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].humidity</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logged relative humidity</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].temperature</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logged celsius temperature</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].imageUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Relative image url of logged image</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].detection.status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of detection process. can be <code>NOT_STARTED</code>, <code>IN_PROGRESS</code>, or <code>DONE</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].detection.result</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Detected result. Optional if status is not <code>DONE</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].timestamp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log written timestamp</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_post_to_write_log"><a class="link" href="#_post_to_write_log">2.4.5. Post to write log</a></h4>
+<div class="sect4">
+<h5 id="_http_request_12"><a class="link" href="#_http_request_12">HTTP request</a></h5>
+<div class="sect5">
+<h6 id="_curl_12"><a class="link" href="#_curl_12"><code>curl</code></a></h6>
+<div class="listingblock">
+<div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/write' -i -X POST \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzI4LCJleHAiOjE2ODU2OTI5Mjh9.BjmdgqPkqYnVvg_nIIoSX32K2M5vvx0fS1yIqnEghqKE1zNOKFyZR1usZMvMpANbYLV4abDGCd0YPMhzTqceHg' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA0LCJleHAiOjE2ODU5Mzc5MDR9.q-M4agplRLm5aSYAgb1nUdsUdIMZWzTEQICnM8bfx4vlZhFfB2tRVgusQmbgviHALu_4R5BIa43tOhL4yBNZGg' \
     -d '{
   &quot;deviceId&quot; : 1,
   &quot;temperature&quot; : 12.34,
@@ -1918,7 +2071,7 @@ Content-Length: 492
 </div>
 </div>
 <div class="sect5">
-<h6 id="_httpie_11"><a class="link" href="#_httpie_11"><code>httpie</code></a></h6>
+<h6 id="_httpie_12"><a class="link" href="#_httpie_12"><code>httpie</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ echo '{
@@ -1928,17 +2081,17 @@ Content-Length: 492
   &quot;imageBase64&quot; : &quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q==&quot;
 }' | http POST 'https://smart-farm.smhrd.com/api/v1/log/write' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzI4LCJleHAiOjE2ODU2OTI5Mjh9.BjmdgqPkqYnVvg_nIIoSX32K2M5vvx0fS1yIqnEghqKE1zNOKFyZR1usZMvMpANbYLV4abDGCd0YPMhzTqceHg'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA0LCJleHAiOjE2ODU5Mzc5MDR9.q-M4agplRLm5aSYAgb1nUdsUdIMZWzTEQICnM8bfx4vlZhFfB2tRVgusQmbgviHALu_4R5BIa43tOhL4yBNZGg'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_http_11"><a class="link" href="#_http_11">HTTP</a></h6>
+<h6 id="_http_12"><a class="link" href="#_http_12">HTTP</a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">POST /api/v1/log/write HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzI4LCJleHAiOjE2ODU2OTI5Mjh9.BjmdgqPkqYnVvg_nIIoSX32K2M5vvx0fS1yIqnEghqKE1zNOKFyZR1usZMvMpANbYLV4abDGCd0YPMhzTqceHg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA0LCJleHAiOjE2ODU5Mzc5MDR9.q-M4agplRLm5aSYAgb1nUdsUdIMZWzTEQICnM8bfx4vlZhFfB2tRVgusQmbgviHALu_4R5BIa43tOhL4yBNZGg
 Content-Length: 964
 Host: smart-farm.smhrd.com
 
@@ -1952,7 +2105,7 @@ Host: smart-farm.smhrd.com
 </div>
 </div>
 <div class="sect5">
-<h6 id="_request_headers_5"><a class="link" href="#_request_headers_5">Request headers</a></h6>
+<h6 id="_request_headers_6"><a class="link" href="#_request_headers_6">Request headers</a></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2013,7 +2166,7 @@ Host: smart-farm.smhrd.com
 </div>
 </div>
 <div class="sect4">
-<h5 id="_http_response_11"><a class="link" href="#_http_response_11">HTTP response</a></h5>
+<h5 id="_http_response_12"><a class="link" href="#_http_response_12">HTTP response</a></h5>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
@@ -2030,7 +2183,7 @@ Content-Length: 236
     &quot;detection&quot; : {
       &quot;status&quot; : &quot;NOT_STARTED&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-06-02T07:02:09.000Z&quot;
+    &quot;timestamp&quot; : &quot;2023-06-05T03:05:04.000Z&quot;
   }
 }</code></pre>
 </div>
@@ -2097,40 +2250,40 @@ Content-Length: 236
 <div class="sect3">
 <h4 id="_get_latest"><a class="link" href="#_get_latest">2.5.1. Get latest</a></h4>
 <div class="sect4">
-<h5 id="_http_request_12"><a class="link" href="#_http_request_12">HTTP request</a></h5>
+<h5 id="_http_request_13"><a class="link" href="#_http_request_13">HTTP request</a></h5>
 <div class="sect5">
-<h6 id="_curl_12"><a class="link" href="#_curl_12"><code>curl</code></a></h6>
+<h6 id="_curl_13"><a class="link" href="#_curl_13"><code>curl</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/1/latest' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzM0LCJleHAiOjE2ODU2OTI5MzR9.i5jV1xZwbj4nup06hUII8EyNiWI6kMd2fSrI2PASCD1yERCUQc6AZk-Y1YJj8rqFnJ4HfnUxksnj1oEbENdQsQ'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA2LCJleHAiOjE2ODU5Mzc5MDZ9.06abO2IG2iM5TKLnn9l-jGN_bEeJILlD5HfQoWFfP09YOwGEbUG0_UovCXNB07YigM_RPEDjRYdCxWaJqF9byQ'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_httpie_12"><a class="link" href="#_httpie_12"><code>httpie</code></a></h6>
+<h6 id="_httpie_13"><a class="link" href="#_httpie_13"><code>httpie</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/1/latest' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzM0LCJleHAiOjE2ODU2OTI5MzR9.i5jV1xZwbj4nup06hUII8EyNiWI6kMd2fSrI2PASCD1yERCUQc6AZk-Y1YJj8rqFnJ4HfnUxksnj1oEbENdQsQ'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA2LCJleHAiOjE2ODU5Mzc5MDZ9.06abO2IG2iM5TKLnn9l-jGN_bEeJILlD5HfQoWFfP09YOwGEbUG0_UovCXNB07YigM_RPEDjRYdCxWaJqF9byQ'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_http_12"><a class="link" href="#_http_12">HTTP</a></h6>
+<h6 id="_http_13"><a class="link" href="#_http_13">HTTP</a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/1/latest HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzM0LCJleHAiOjE2ODU2OTI5MzR9.i5jV1xZwbj4nup06hUII8EyNiWI6kMd2fSrI2PASCD1yERCUQc6AZk-Y1YJj8rqFnJ4HfnUxksnj1oEbENdQsQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA2LCJleHAiOjE2ODU5Mzc5MDZ9.06abO2IG2iM5TKLnn9l-jGN_bEeJILlD5HfQoWFfP09YOwGEbUG0_UovCXNB07YigM_RPEDjRYdCxWaJqF9byQ
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_request_headers_6"><a class="link" href="#_request_headers_6">Request headers</a></h6>
+<h6 id="_request_headers_7"><a class="link" href="#_request_headers_7">Request headers</a></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2174,7 +2327,7 @@ Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_http_response_12"><a class="link" href="#_http_response_12">HTTP response</a></h5>
+<h5 id="_http_response_13"><a class="link" href="#_http_response_13">HTTP response</a></h5>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
@@ -2191,7 +2344,7 @@ Content-Length: 253
     &quot;detection&quot; : {
       &quot;status&quot; : &quot;IN_PROGRESS&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-06-02T07:02:12.000Z&quot;
+    &quot;timestamp&quot; : &quot;2023-06-05T03:05:05.000Z&quot;
   }
 }</code></pre>
 </div>
@@ -2257,40 +2410,40 @@ Content-Length: 253
 <div class="sect3">
 <h4 id="_get_latest_detected_2"><a class="link" href="#_get_latest_detected_2">2.5.2. Get latest detected</a></h4>
 <div class="sect4">
-<h5 id="_http_request_13"><a class="link" href="#_http_request_13">HTTP request</a></h5>
+<h5 id="_http_request_14"><a class="link" href="#_http_request_14">HTTP request</a></h5>
 <div class="sect5">
-<h6 id="_curl_13"><a class="link" href="#_curl_13"><code>curl</code></a></h6>
+<h6 id="_curl_14"><a class="link" href="#_curl_14"><code>curl</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/1/latest-detected' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzM0LCJleHAiOjE2ODU2OTI5MzR9.i5jV1xZwbj4nup06hUII8EyNiWI6kMd2fSrI2PASCD1yERCUQc6AZk-Y1YJj8rqFnJ4HfnUxksnj1oEbENdQsQ'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA2LCJleHAiOjE2ODU5Mzc5MDZ9.06abO2IG2iM5TKLnn9l-jGN_bEeJILlD5HfQoWFfP09YOwGEbUG0_UovCXNB07YigM_RPEDjRYdCxWaJqF9byQ'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_httpie_13"><a class="link" href="#_httpie_13"><code>httpie</code></a></h6>
+<h6 id="_httpie_14"><a class="link" href="#_httpie_14"><code>httpie</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/1/latest-detected' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzM0LCJleHAiOjE2ODU2OTI5MzR9.i5jV1xZwbj4nup06hUII8EyNiWI6kMd2fSrI2PASCD1yERCUQc6AZk-Y1YJj8rqFnJ4HfnUxksnj1oEbENdQsQ'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA2LCJleHAiOjE2ODU5Mzc5MDZ9.06abO2IG2iM5TKLnn9l-jGN_bEeJILlD5HfQoWFfP09YOwGEbUG0_UovCXNB07YigM_RPEDjRYdCxWaJqF9byQ'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_http_13"><a class="link" href="#_http_13">HTTP</a></h6>
+<h6 id="_http_14"><a class="link" href="#_http_14">HTTP</a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/1/latest-detected HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzM0LCJleHAiOjE2ODU2OTI5MzR9.i5jV1xZwbj4nup06hUII8EyNiWI6kMd2fSrI2PASCD1yERCUQc6AZk-Y1YJj8rqFnJ4HfnUxksnj1oEbENdQsQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA2LCJleHAiOjE2ODU5Mzc5MDZ9.06abO2IG2iM5TKLnn9l-jGN_bEeJILlD5HfQoWFfP09YOwGEbUG0_UovCXNB07YigM_RPEDjRYdCxWaJqF9byQ
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_request_headers_7"><a class="link" href="#_request_headers_7">Request headers</a></h6>
+<h6 id="_request_headers_8"><a class="link" href="#_request_headers_8">Request headers</a></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2334,7 +2487,7 @@ Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_http_response_13"><a class="link" href="#_http_response_13">HTTP response</a></h5>
+<h5 id="_http_response_14"><a class="link" href="#_http_response_14">HTTP response</a></h5>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
@@ -2352,7 +2505,7 @@ Content-Length: 267
       &quot;status&quot; : &quot;DONE&quot;,
       &quot;result&quot; : &quot;2&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-06-02T07:02:11.000Z&quot;
+    &quot;timestamp&quot; : &quot;2023-06-04T03:05:05.000Z&quot;
   }
 }</code></pre>
 </div>
@@ -2416,45 +2569,45 @@ Content-Length: 267
 </div>
 </div>
 <div class="sect3">
-<h4 id="_get_recent_logs_2"><a class="link" href="#_get_recent_logs_2">2.5.3. Get recent logs</a></h4>
+<h4 id="_get_detected_per_day_logs_2"><a class="link" href="#_get_detected_per_day_logs_2">2.5.3. Get detected per day logs</a></h4>
 <div class="paragraph">
-<p>Retrieve recent 100 logs</p>
+<p>Retrieve detected per day logs</p>
 </div>
 <div class="sect4">
-<h5 id="_http_request_14"><a class="link" href="#_http_request_14">HTTP request</a></h5>
+<h5 id="_http_request_15"><a class="link" href="#_http_request_15">HTTP request</a></h5>
 <div class="sect5">
-<h6 id="_curl_14"><a class="link" href="#_curl_14"><code>curl</code></a></h6>
+<h6 id="_curl_15"><a class="link" href="#_curl_15"><code>curl</code></a></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/1/recent' -i -X GET \
+<pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/1/detected-per-day' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzM0LCJleHAiOjE2ODU2OTI5MzR9.i5jV1xZwbj4nup06hUII8EyNiWI6kMd2fSrI2PASCD1yERCUQc6AZk-Y1YJj8rqFnJ4HfnUxksnj1oEbENdQsQ'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA2LCJleHAiOjE2ODU5Mzc5MDZ9.06abO2IG2iM5TKLnn9l-jGN_bEeJILlD5HfQoWFfP09YOwGEbUG0_UovCXNB07YigM_RPEDjRYdCxWaJqF9byQ'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_httpie_14"><a class="link" href="#_httpie_14"><code>httpie</code></a></h6>
+<h6 id="_httpie_15"><a class="link" href="#_httpie_15"><code>httpie</code></a></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/1/recent' \
+<pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/1/detected-per-day' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzM0LCJleHAiOjE2ODU2OTI5MzR9.i5jV1xZwbj4nup06hUII8EyNiWI6kMd2fSrI2PASCD1yERCUQc6AZk-Y1YJj8rqFnJ4HfnUxksnj1oEbENdQsQ'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA2LCJleHAiOjE2ODU5Mzc5MDZ9.06abO2IG2iM5TKLnn9l-jGN_bEeJILlD5HfQoWFfP09YOwGEbUG0_UovCXNB07YigM_RPEDjRYdCxWaJqF9byQ'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_http_14"><a class="link" href="#_http_14">HTTP</a></h6>
+<h6 id="_http_15"><a class="link" href="#_http_15">HTTP</a></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/1/recent HTTP/1.1
+<pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/1/detected-per-day HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzM0LCJleHAiOjE2ODU2OTI5MzR9.i5jV1xZwbj4nup06hUII8EyNiWI6kMd2fSrI2PASCD1yERCUQc6AZk-Y1YJj8rqFnJ4HfnUxksnj1oEbENdQsQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA2LCJleHAiOjE2ODU5Mzc5MDZ9.06abO2IG2iM5TKLnn9l-jGN_bEeJILlD5HfQoWFfP09YOwGEbUG0_UovCXNB07YigM_RPEDjRYdCxWaJqF9byQ
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_request_headers_8"><a class="link" href="#_request_headers_8">Request headers</a></h6>
+<h6 id="_request_headers_9"><a class="link" href="#_request_headers_9">Request headers</a></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2477,7 +2630,7 @@ Host: smart-farm.smhrd.com</code></pre>
 <div class="sect5">
 <h6 id="_path_parameters_4"><a class="link" href="#_path_parameters_4">Path parameters</a></h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 4. /api/v1/log/{deviceId}/recent</caption>
+<caption class="title">Table 4. /api/v1/log/{deviceId}/detected-per-day</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2498,7 +2651,7 @@ Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_http_response_14"><a class="link" href="#_http_response_14">HTTP response</a></h5>
+<h5 id="_http_response_15"><a class="link" href="#_http_response_15">HTTP response</a></h5>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
@@ -2515,7 +2668,7 @@ Content-Length: 492
     &quot;detection&quot; : {
       &quot;status&quot; : &quot;IN_PROGRESS&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-06-02T07:02:12.000Z&quot;
+    &quot;timestamp&quot; : &quot;2023-06-05T03:05:05.000Z&quot;
   }, {
     &quot;deviceId&quot; : 1,
     &quot;humidity&quot; : 30.0,
@@ -2525,7 +2678,7 @@ Content-Length: 492
       &quot;status&quot; : &quot;DONE&quot;,
       &quot;result&quot; : &quot;2&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-06-02T07:02:11.000Z&quot;
+    &quot;timestamp&quot; : &quot;2023-06-04T03:05:05.000Z&quot;
   } ]
 }</code></pre>
 </div>
@@ -2589,61 +2742,45 @@ Content-Length: 492
 </div>
 </div>
 <div class="sect3">
-<h4 id="_post_to_write_log_2"><a class="link" href="#_post_to_write_log_2">2.5.4. Post to write log</a></h4>
+<h4 id="_get_recent_logs_2"><a class="link" href="#_get_recent_logs_2">2.5.4. Get recent logs</a></h4>
+<div class="paragraph">
+<p>Retrieve recent 100 logs</p>
+</div>
 <div class="sect4">
-<h5 id="_http_request_15"><a class="link" href="#_http_request_15">HTTP request</a></h5>
+<h5 id="_http_request_16"><a class="link" href="#_http_request_16">HTTP request</a></h5>
 <div class="sect5">
-<h6 id="_curl_15"><a class="link" href="#_curl_15"><code>curl</code></a></h6>
+<h6 id="_curl_16"><a class="link" href="#_curl_16"><code>curl</code></a></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/1/write' -i -X POST \
+<pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/1/recent' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzM0LCJleHAiOjE2ODU2OTI5MzR9.i5jV1xZwbj4nup06hUII8EyNiWI6kMd2fSrI2PASCD1yERCUQc6AZk-Y1YJj8rqFnJ4HfnUxksnj1oEbENdQsQ' \
-    -d '{
-  &quot;deviceId&quot; : 1,
-  &quot;temperature&quot; : 12.34,
-  &quot;relativeHumidity&quot; : 19.87,
-  &quot;imageBase64&quot; : &quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q==&quot;
-}'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA2LCJleHAiOjE2ODU5Mzc5MDZ9.06abO2IG2iM5TKLnn9l-jGN_bEeJILlD5HfQoWFfP09YOwGEbUG0_UovCXNB07YigM_RPEDjRYdCxWaJqF9byQ'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_httpie_15"><a class="link" href="#_httpie_15"><code>httpie</code></a></h6>
+<h6 id="_httpie_16"><a class="link" href="#_httpie_16"><code>httpie</code></a></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ echo '{
-  &quot;deviceId&quot; : 1,
-  &quot;temperature&quot; : 12.34,
-  &quot;relativeHumidity&quot; : 19.87,
-  &quot;imageBase64&quot; : &quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q==&quot;
-}' | http POST 'https://smart-farm.smhrd.com/api/v1/log/1/write' \
+<pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/log/1/recent' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzM0LCJleHAiOjE2ODU2OTI5MzR9.i5jV1xZwbj4nup06hUII8EyNiWI6kMd2fSrI2PASCD1yERCUQc6AZk-Y1YJj8rqFnJ4HfnUxksnj1oEbENdQsQ'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA2LCJleHAiOjE2ODU5Mzc5MDZ9.06abO2IG2iM5TKLnn9l-jGN_bEeJILlD5HfQoWFfP09YOwGEbUG0_UovCXNB07YigM_RPEDjRYdCxWaJqF9byQ'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_http_15"><a class="link" href="#_http_15">HTTP</a></h6>
+<h6 id="_http_16"><a class="link" href="#_http_16">HTTP</a></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight nowrap"><code data-lang="http">POST /api/v1/log/1/write HTTP/1.1
+<pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/log/1/recent HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzM0LCJleHAiOjE2ODU2OTI5MzR9.i5jV1xZwbj4nup06hUII8EyNiWI6kMd2fSrI2PASCD1yERCUQc6AZk-Y1YJj8rqFnJ4HfnUxksnj1oEbENdQsQ
-Content-Length: 964
-Host: smart-farm.smhrd.com
-
-{
-  &quot;deviceId&quot; : 1,
-  &quot;temperature&quot; : 12.34,
-  &quot;relativeHumidity&quot; : 19.87,
-  &quot;imageBase64&quot; : &quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q==&quot;
-}</code></pre>
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA2LCJleHAiOjE2ODU5Mzc5MDZ9.06abO2IG2iM5TKLnn9l-jGN_bEeJILlD5HfQoWFfP09YOwGEbUG0_UovCXNB07YigM_RPEDjRYdCxWaJqF9byQ
+Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_request_headers_9"><a class="link" href="#_request_headers_9">Request headers</a></h6>
+<h6 id="_request_headers_10"><a class="link" href="#_request_headers_10">Request headers</a></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2666,7 +2803,196 @@ Host: smart-farm.smhrd.com
 <div class="sect5">
 <h6 id="_path_parameters_5"><a class="link" href="#_path_parameters_5">Path parameters</a></h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 5. /api/v1/log/{deviceId}/write</caption>
+<caption class="title">Table 5. /api/v1/log/{deviceId}/recent</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deviceId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device Id to use</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_http_response_16"><a class="link" href="#_http_response_16">HTTP response</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 492
+
+{
+  &quot;status&quot; : &quot;ok&quot;,
+  &quot;data&quot; : [ {
+    &quot;deviceId&quot; : 1,
+    &quot;humidity&quot; : 35.55,
+    &quot;temperature&quot; : 21.01,
+    &quot;imageUrl&quot; : &quot;/static/image/2.jpg&quot;,
+    &quot;detection&quot; : {
+      &quot;status&quot; : &quot;IN_PROGRESS&quot;
+    },
+    &quot;timestamp&quot; : &quot;2023-06-05T03:05:05.000Z&quot;
+  }, {
+    &quot;deviceId&quot; : 1,
+    &quot;humidity&quot; : 30.0,
+    &quot;temperature&quot; : 20.09,
+    &quot;imageUrl&quot; : &quot;/static/image/1.jpg&quot;,
+    &quot;detection&quot; : {
+      &quot;status&quot; : &quot;DONE&quot;,
+      &quot;result&quot; : &quot;2&quot;
+    },
+    &quot;timestamp&quot; : &quot;2023-06-04T03:05:05.000Z&quot;
+  } ]
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].deviceId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device ID of this log</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].humidity</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logged relative humidity</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].temperature</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logged celsius temperature</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].imageUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Relative image url of logged image</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].detection.status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status of detection process. can be <code>NOT_STARTED</code>, <code>IN_PROGRESS</code>, or <code>DONE</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].detection.result</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Detected result. Optional if status is not <code>DONE</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].timestamp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UTC time of log written timestamp</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_post_to_write_log_2"><a class="link" href="#_post_to_write_log_2">2.5.5. Post to write log</a></h4>
+<div class="sect4">
+<h5 id="_http_request_17"><a class="link" href="#_http_request_17">HTTP request</a></h5>
+<div class="sect5">
+<h6 id="_curl_17"><a class="link" href="#_curl_17"><code>curl</code></a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/log/1/write' -i -X POST \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA3LCJleHAiOjE2ODU5Mzc5MDd9.KN4jtSDB3qIU1cHPpiSN-0d9v9_G2T1WwmL12VhgnAUB6IdKWchyDLCGaEuzT874-65g3kN994ScxHYt7iuV4w' \
+    -d '{
+  &quot;deviceId&quot; : 1,
+  &quot;temperature&quot; : 12.34,
+  &quot;relativeHumidity&quot; : 19.87,
+  &quot;imageBase64&quot; : &quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q==&quot;
+}'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_httpie_17"><a class="link" href="#_httpie_17"><code>httpie</code></a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ echo '{
+  &quot;deviceId&quot; : 1,
+  &quot;temperature&quot; : 12.34,
+  &quot;relativeHumidity&quot; : 19.87,
+  &quot;imageBase64&quot; : &quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q==&quot;
+}' | http POST 'https://smart-farm.smhrd.com/api/v1/log/1/write' \
+    'Content-Type:application/json;charset=UTF-8' \
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA3LCJleHAiOjE2ODU5Mzc5MDd9.KN4jtSDB3qIU1cHPpiSN-0d9v9_G2T1WwmL12VhgnAUB6IdKWchyDLCGaEuzT874-65g3kN994ScxHYt7iuV4w'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_http_17"><a class="link" href="#_http_17">HTTP</a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="http">POST /api/v1/log/1/write HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA3LCJleHAiOjE2ODU5Mzc5MDd9.KN4jtSDB3qIU1cHPpiSN-0d9v9_G2T1WwmL12VhgnAUB6IdKWchyDLCGaEuzT874-65g3kN994ScxHYt7iuV4w
+Content-Length: 964
+Host: smart-farm.smhrd.com
+
+{
+  &quot;deviceId&quot; : 1,
+  &quot;temperature&quot; : 12.34,
+  &quot;relativeHumidity&quot; : 19.87,
+  &quot;imageBase64&quot; : &quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q==&quot;
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_request_headers_11"><a class="link" href="#_request_headers_11">Request headers</a></h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Json Web Token with 'Bearer'</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_path_parameters_6"><a class="link" href="#_path_parameters_6">Path parameters</a></h6>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 6. /api/v1/log/{deviceId}/write</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2726,7 +3052,7 @@ Host: smart-farm.smhrd.com
 </div>
 </div>
 <div class="sect4">
-<h5 id="_http_response_15"><a class="link" href="#_http_response_15">HTTP response</a></h5>
+<h5 id="_http_response_17"><a class="link" href="#_http_response_17">HTTP response</a></h5>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
@@ -2743,7 +3069,7 @@ Content-Length: 236
     &quot;detection&quot; : {
       &quot;status&quot; : &quot;NOT_STARTED&quot;
     },
-    &quot;timestamp&quot; : &quot;2023-06-02T07:02:14.000Z&quot;
+    &quot;timestamp&quot; : &quot;2023-06-05T03:05:07.000Z&quot;
   }
 }</code></pre>
 </div>
@@ -2810,40 +3136,40 @@ Content-Length: 236
 <div class="sect3">
 <h4 id="_get_latest_timelapse"><a class="link" href="#_get_latest_timelapse">2.6.1. Get latest timelapse</a></h4>
 <div class="sect4">
-<h5 id="_http_request_16"><a class="link" href="#_http_request_16">HTTP request</a></h5>
+<h5 id="_http_request_18"><a class="link" href="#_http_request_18">HTTP request</a></h5>
 <div class="sect5">
-<h6 id="_curl_16"><a class="link" href="#_curl_16"><code>curl</code></a></h6>
+<h6 id="_curl_18"><a class="link" href="#_curl_18"><code>curl</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/timelapse/latest' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQwLCJleHAiOjE2ODU2OTI5NDB9.E_YHzS1mg0BmqXhqr5_lnZp5Kfsnnat3ZaHMetYm-2qMP3u5aKjuzBPZeTmvZmCWfhHD4lYQzve0WV9QnsYaJw'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA5LCJleHAiOjE2ODU5Mzc5MDl9.xs3a4lwsgr0PsTgQdq-dpkgcRLoGEHsYAkL_LhcVWoasqPlEapkVyTVGF0MiHmT0ihenj9ZQoGvKKm06a1zjDg'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_httpie_16"><a class="link" href="#_httpie_16"><code>httpie</code></a></h6>
+<h6 id="_httpie_18"><a class="link" href="#_httpie_18"><code>httpie</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/timelapse/latest' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQwLCJleHAiOjE2ODU2OTI5NDB9.E_YHzS1mg0BmqXhqr5_lnZp5Kfsnnat3ZaHMetYm-2qMP3u5aKjuzBPZeTmvZmCWfhHD4lYQzve0WV9QnsYaJw'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA5LCJleHAiOjE2ODU5Mzc5MDl9.xs3a4lwsgr0PsTgQdq-dpkgcRLoGEHsYAkL_LhcVWoasqPlEapkVyTVGF0MiHmT0ihenj9ZQoGvKKm06a1zjDg'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_http_16"><a class="link" href="#_http_16">HTTP</a></h6>
+<h6 id="_http_18"><a class="link" href="#_http_18">HTTP</a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/timelapse/latest HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQwLCJleHAiOjE2ODU2OTI5NDB9.E_YHzS1mg0BmqXhqr5_lnZp5Kfsnnat3ZaHMetYm-2qMP3u5aKjuzBPZeTmvZmCWfhHD4lYQzve0WV9QnsYaJw
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA5LCJleHAiOjE2ODU5Mzc5MDl9.xs3a4lwsgr0PsTgQdq-dpkgcRLoGEHsYAkL_LhcVWoasqPlEapkVyTVGF0MiHmT0ihenj9ZQoGvKKm06a1zjDg
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_request_headers_10"><a class="link" href="#_request_headers_10">Request headers</a></h6>
+<h6 id="_request_headers_12"><a class="link" href="#_request_headers_12">Request headers</a></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2865,7 +3191,7 @@ Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_http_response_16"><a class="link" href="#_http_response_16">HTTP response</a></h5>
+<h5 id="_http_response_18"><a class="link" href="#_http_response_18">HTTP response</a></h5>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
@@ -2881,7 +3207,7 @@ Content-Length: 268
     &quot;result&quot; : &quot;result.mp4&quot;,
     &quot;logStartDate&quot; : &quot;2023-05-20T00:00:00.000Z&quot;,
     &quot;logEndDate&quot; : &quot;2023-05-30T00:00:00.000Z&quot;,
-    &quot;lastUpdated&quot; : &quot;2023-06-02T07:02:18.000Z&quot;
+    &quot;lastUpdated&quot; : &quot;2023-06-05T03:04:07.000Z&quot;
   }
 }</code></pre>
 </div>
@@ -2947,40 +3273,40 @@ Content-Length: 268
 <div class="sect3">
 <h4 id="_get_all_timelapse"><a class="link" href="#_get_all_timelapse">2.6.2. Get all timelapse</a></h4>
 <div class="sect4">
-<h5 id="_http_request_17"><a class="link" href="#_http_request_17">HTTP request</a></h5>
+<h5 id="_http_request_19"><a class="link" href="#_http_request_19">HTTP request</a></h5>
 <div class="sect5">
-<h6 id="_curl_17"><a class="link" href="#_curl_17"><code>curl</code></a></h6>
+<h6 id="_curl_19"><a class="link" href="#_curl_19"><code>curl</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/timelapse/all' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQwLCJleHAiOjE2ODU2OTI5NDB9.E_YHzS1mg0BmqXhqr5_lnZp5Kfsnnat3ZaHMetYm-2qMP3u5aKjuzBPZeTmvZmCWfhHD4lYQzve0WV9QnsYaJw'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA5LCJleHAiOjE2ODU5Mzc5MDl9.xs3a4lwsgr0PsTgQdq-dpkgcRLoGEHsYAkL_LhcVWoasqPlEapkVyTVGF0MiHmT0ihenj9ZQoGvKKm06a1zjDg'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_httpie_17"><a class="link" href="#_httpie_17"><code>httpie</code></a></h6>
+<h6 id="_httpie_19"><a class="link" href="#_httpie_19"><code>httpie</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/timelapse/all' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQwLCJleHAiOjE2ODU2OTI5NDB9.E_YHzS1mg0BmqXhqr5_lnZp5Kfsnnat3ZaHMetYm-2qMP3u5aKjuzBPZeTmvZmCWfhHD4lYQzve0WV9QnsYaJw'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA5LCJleHAiOjE2ODU5Mzc5MDl9.xs3a4lwsgr0PsTgQdq-dpkgcRLoGEHsYAkL_LhcVWoasqPlEapkVyTVGF0MiHmT0ihenj9ZQoGvKKm06a1zjDg'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_http_17"><a class="link" href="#_http_17">HTTP</a></h6>
+<h6 id="_http_19"><a class="link" href="#_http_19">HTTP</a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/timelapse/all HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQwLCJleHAiOjE2ODU2OTI5NDB9.E_YHzS1mg0BmqXhqr5_lnZp5Kfsnnat3ZaHMetYm-2qMP3u5aKjuzBPZeTmvZmCWfhHD4lYQzve0WV9QnsYaJw
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA5LCJleHAiOjE2ODU5Mzc5MDl9.xs3a4lwsgr0PsTgQdq-dpkgcRLoGEHsYAkL_LhcVWoasqPlEapkVyTVGF0MiHmT0ihenj9ZQoGvKKm06a1zjDg
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_request_headers_11"><a class="link" href="#_request_headers_11">Request headers</a></h6>
+<h6 id="_request_headers_13"><a class="link" href="#_request_headers_13">Request headers</a></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -3002,7 +3328,7 @@ Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_http_response_17"><a class="link" href="#_http_response_17">HTTP response</a></h5>
+<h5 id="_http_response_19"><a class="link" href="#_http_response_19">HTTP response</a></h5>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
@@ -3017,7 +3343,7 @@ Content-Length: 486
     &quot;status&quot; : &quot;NOT_STARTED&quot;,
     &quot;logStartDate&quot; : &quot;2022-10-11T12:13:14.000Z&quot;,
     &quot;logEndDate&quot; : &quot;2022-11-12T13:14:15.000Z&quot;,
-    &quot;lastUpdated&quot; : &quot;2023-06-02T07:02:20.000Z&quot;
+    &quot;lastUpdated&quot; : &quot;2023-06-05T03:05:09.000Z&quot;
   }, {
     &quot;id&quot; : 1,
     &quot;deviceId&quot; : 1,
@@ -3025,7 +3351,7 @@ Content-Length: 486
     &quot;result&quot; : &quot;result.mp4&quot;,
     &quot;logStartDate&quot; : &quot;2023-05-20T00:00:00.000Z&quot;,
     &quot;logEndDate&quot; : &quot;2023-05-30T00:00:00.000Z&quot;,
-    &quot;lastUpdated&quot; : &quot;2023-06-02T07:02:18.000Z&quot;
+    &quot;lastUpdated&quot; : &quot;2023-06-05T03:04:07.000Z&quot;
   } ]
 }</code></pre>
 </div>
@@ -3091,14 +3417,14 @@ Content-Length: 486
 <div class="sect3">
 <h4 id="_post_to_request_timelapse"><a class="link" href="#_post_to_request_timelapse">2.6.3. Post to request timelapse</a></h4>
 <div class="sect4">
-<h5 id="_http_request_18"><a class="link" href="#_http_request_18">HTTP request</a></h5>
+<h5 id="_http_request_20"><a class="link" href="#_http_request_20">HTTP request</a></h5>
 <div class="sect5">
-<h6 id="_curl_18"><a class="link" href="#_curl_18"><code>curl</code></a></h6>
+<h6 id="_curl_20"><a class="link" href="#_curl_20"><code>curl</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/timelapse/request' -i -X POST \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQwLCJleHAiOjE2ODU2OTI5NDB9.E_YHzS1mg0BmqXhqr5_lnZp5Kfsnnat3ZaHMetYm-2qMP3u5aKjuzBPZeTmvZmCWfhHD4lYQzve0WV9QnsYaJw' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA5LCJleHAiOjE2ODU5Mzc5MDl9.xs3a4lwsgr0PsTgQdq-dpkgcRLoGEHsYAkL_LhcVWoasqPlEapkVyTVGF0MiHmT0ihenj9ZQoGvKKm06a1zjDg' \
     -d '{
   &quot;deviceId&quot; : 1,
   &quot;startDate&quot; : &quot;2022-10-11T12:13:14.000Z&quot;,
@@ -3108,7 +3434,7 @@ Content-Length: 486
 </div>
 </div>
 <div class="sect5">
-<h6 id="_httpie_18"><a class="link" href="#_httpie_18"><code>httpie</code></a></h6>
+<h6 id="_httpie_20"><a class="link" href="#_httpie_20"><code>httpie</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ echo '{
@@ -3117,17 +3443,17 @@ Content-Length: 486
   &quot;endDate&quot; : &quot;2022-11-12T13:14:15.000Z&quot;
 }' | http POST 'https://smart-farm.smhrd.com/api/v1/timelapse/request' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQwLCJleHAiOjE2ODU2OTI5NDB9.E_YHzS1mg0BmqXhqr5_lnZp5Kfsnnat3ZaHMetYm-2qMP3u5aKjuzBPZeTmvZmCWfhHD4lYQzve0WV9QnsYaJw'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA5LCJleHAiOjE2ODU5Mzc5MDl9.xs3a4lwsgr0PsTgQdq-dpkgcRLoGEHsYAkL_LhcVWoasqPlEapkVyTVGF0MiHmT0ihenj9ZQoGvKKm06a1zjDg'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_http_18"><a class="link" href="#_http_18">HTTP</a></h6>
+<h6 id="_http_20"><a class="link" href="#_http_20">HTTP</a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">POST /api/v1/timelapse/request HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQwLCJleHAiOjE2ODU2OTI5NDB9.E_YHzS1mg0BmqXhqr5_lnZp5Kfsnnat3ZaHMetYm-2qMP3u5aKjuzBPZeTmvZmCWfhHD4lYQzve0WV9QnsYaJw
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzA5LCJleHAiOjE2ODU5Mzc5MDl9.xs3a4lwsgr0PsTgQdq-dpkgcRLoGEHsYAkL_LhcVWoasqPlEapkVyTVGF0MiHmT0ihenj9ZQoGvKKm06a1zjDg
 Content-Length: 106
 Host: smart-farm.smhrd.com
 
@@ -3140,7 +3466,7 @@ Host: smart-farm.smhrd.com
 </div>
 </div>
 <div class="sect5">
-<h6 id="_request_headers_12"><a class="link" href="#_request_headers_12">Request headers</a></h6>
+<h6 id="_request_headers_14"><a class="link" href="#_request_headers_14">Request headers</a></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -3196,7 +3522,7 @@ Host: smart-farm.smhrd.com
 </div>
 </div>
 <div class="sect4">
-<h5 id="_http_response_18"><a class="link" href="#_http_response_18">HTTP response</a></h5>
+<h5 id="_http_response_20"><a class="link" href="#_http_response_20">HTTP response</a></h5>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
@@ -3278,40 +3604,40 @@ Content-Length: 224
 <div class="sect3">
 <h4 id="_get_latest_timelapse_2"><a class="link" href="#_get_latest_timelapse_2">2.7.1. Get latest timelapse</a></h4>
 <div class="sect4">
-<h5 id="_http_request_19"><a class="link" href="#_http_request_19">HTTP request</a></h5>
+<h5 id="_http_request_21"><a class="link" href="#_http_request_21">HTTP request</a></h5>
 <div class="sect5">
-<h6 id="_curl_19"><a class="link" href="#_curl_19"><code>curl</code></a></h6>
+<h6 id="_curl_21"><a class="link" href="#_curl_21"><code>curl</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/timelapse/1/latest' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQ1LCJleHAiOjE2ODU2OTI5NDV9.__nTOqRCdCGZy8GHbJVsF7qAwvfrHuT9cLemZkBCDV001N3THZB64EFBCVSBMNizk6hNc7VOmJDVleWer-3QJQ'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzExLCJleHAiOjE2ODU5Mzc5MTF9.nq9ZHZ05vsLg4pwAyS43rYDyJm6_4e6sxA6p7u88EyoTFrK0m3PONgirPGjX3ZxTmkRxDNHyShSL-0FM5OUvow'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_httpie_19"><a class="link" href="#_httpie_19"><code>httpie</code></a></h6>
+<h6 id="_httpie_21"><a class="link" href="#_httpie_21"><code>httpie</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/timelapse/1/latest' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQ1LCJleHAiOjE2ODU2OTI5NDV9.__nTOqRCdCGZy8GHbJVsF7qAwvfrHuT9cLemZkBCDV001N3THZB64EFBCVSBMNizk6hNc7VOmJDVleWer-3QJQ'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzExLCJleHAiOjE2ODU5Mzc5MTF9.nq9ZHZ05vsLg4pwAyS43rYDyJm6_4e6sxA6p7u88EyoTFrK0m3PONgirPGjX3ZxTmkRxDNHyShSL-0FM5OUvow'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_http_19"><a class="link" href="#_http_19">HTTP</a></h6>
+<h6 id="_http_21"><a class="link" href="#_http_21">HTTP</a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/timelapse/1/latest HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQ1LCJleHAiOjE2ODU2OTI5NDV9.__nTOqRCdCGZy8GHbJVsF7qAwvfrHuT9cLemZkBCDV001N3THZB64EFBCVSBMNizk6hNc7VOmJDVleWer-3QJQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzExLCJleHAiOjE2ODU5Mzc5MTF9.nq9ZHZ05vsLg4pwAyS43rYDyJm6_4e6sxA6p7u88EyoTFrK0m3PONgirPGjX3ZxTmkRxDNHyShSL-0FM5OUvow
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_request_headers_13"><a class="link" href="#_request_headers_13">Request headers</a></h6>
+<h6 id="_request_headers_15"><a class="link" href="#_request_headers_15">Request headers</a></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -3332,9 +3658,9 @@ Host: smart-farm.smhrd.com</code></pre>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_path_parameters_6"><a class="link" href="#_path_parameters_6">Path parameters</a></h6>
+<h6 id="_path_parameters_7"><a class="link" href="#_path_parameters_7">Path parameters</a></h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 6. /api/v1/timelapse/{deviceId}/request</caption>
+<caption class="title">Table 7. /api/v1/timelapse/{deviceId}/request</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3355,7 +3681,7 @@ Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_http_response_19"><a class="link" href="#_http_response_19">HTTP response</a></h5>
+<h5 id="_http_response_21"><a class="link" href="#_http_response_21">HTTP response</a></h5>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
@@ -3371,7 +3697,7 @@ Content-Length: 268
     &quot;result&quot; : &quot;result.mp4&quot;,
     &quot;logStartDate&quot; : &quot;2023-05-20T00:00:00.000Z&quot;,
     &quot;logEndDate&quot; : &quot;2023-05-30T00:00:00.000Z&quot;,
-    &quot;lastUpdated&quot; : &quot;2023-06-02T07:02:24.000Z&quot;
+    &quot;lastUpdated&quot; : &quot;2023-06-05T03:04:10.000Z&quot;
   }
 }</code></pre>
 </div>
@@ -3437,40 +3763,40 @@ Content-Length: 268
 <div class="sect3">
 <h4 id="_get_all_timelapse_2"><a class="link" href="#_get_all_timelapse_2">2.7.2. Get all timelapse</a></h4>
 <div class="sect4">
-<h5 id="_http_request_20"><a class="link" href="#_http_request_20">HTTP request</a></h5>
+<h5 id="_http_request_22"><a class="link" href="#_http_request_22">HTTP request</a></h5>
 <div class="sect5">
-<h6 id="_curl_20"><a class="link" href="#_curl_20"><code>curl</code></a></h6>
+<h6 id="_curl_22"><a class="link" href="#_curl_22"><code>curl</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/timelapse/1/all' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQ1LCJleHAiOjE2ODU2OTI5NDV9.__nTOqRCdCGZy8GHbJVsF7qAwvfrHuT9cLemZkBCDV001N3THZB64EFBCVSBMNizk6hNc7VOmJDVleWer-3QJQ'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzExLCJleHAiOjE2ODU5Mzc5MTF9.nq9ZHZ05vsLg4pwAyS43rYDyJm6_4e6sxA6p7u88EyoTFrK0m3PONgirPGjX3ZxTmkRxDNHyShSL-0FM5OUvow'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_httpie_20"><a class="link" href="#_httpie_20"><code>httpie</code></a></h6>
+<h6 id="_httpie_22"><a class="link" href="#_httpie_22"><code>httpie</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/timelapse/1/all' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQ1LCJleHAiOjE2ODU2OTI5NDV9.__nTOqRCdCGZy8GHbJVsF7qAwvfrHuT9cLemZkBCDV001N3THZB64EFBCVSBMNizk6hNc7VOmJDVleWer-3QJQ'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzExLCJleHAiOjE2ODU5Mzc5MTF9.nq9ZHZ05vsLg4pwAyS43rYDyJm6_4e6sxA6p7u88EyoTFrK0m3PONgirPGjX3ZxTmkRxDNHyShSL-0FM5OUvow'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_http_20"><a class="link" href="#_http_20">HTTP</a></h6>
+<h6 id="_http_22"><a class="link" href="#_http_22">HTTP</a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">GET /api/v1/timelapse/1/all HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQ1LCJleHAiOjE2ODU2OTI5NDV9.__nTOqRCdCGZy8GHbJVsF7qAwvfrHuT9cLemZkBCDV001N3THZB64EFBCVSBMNizk6hNc7VOmJDVleWer-3QJQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzExLCJleHAiOjE2ODU5Mzc5MTF9.nq9ZHZ05vsLg4pwAyS43rYDyJm6_4e6sxA6p7u88EyoTFrK0m3PONgirPGjX3ZxTmkRxDNHyShSL-0FM5OUvow
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_request_headers_14"><a class="link" href="#_request_headers_14">Request headers</a></h6>
+<h6 id="_request_headers_16"><a class="link" href="#_request_headers_16">Request headers</a></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -3491,9 +3817,9 @@ Host: smart-farm.smhrd.com</code></pre>
 </table>
 </div>
 <div class="sect5">
-<h6 id="_path_parameters_7"><a class="link" href="#_path_parameters_7">Path parameters</a></h6>
+<h6 id="_path_parameters_8"><a class="link" href="#_path_parameters_8">Path parameters</a></h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 7. /api/v1/timelapse/{deviceId}/request</caption>
+<caption class="title">Table 8. /api/v1/timelapse/{deviceId}/request</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3514,7 +3840,7 @@ Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_http_response_20"><a class="link" href="#_http_response_20">HTTP response</a></h5>
+<h5 id="_http_response_22"><a class="link" href="#_http_response_22">HTTP response</a></h5>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
@@ -3529,7 +3855,7 @@ Content-Length: 486
     &quot;status&quot; : &quot;NOT_STARTED&quot;,
     &quot;logStartDate&quot; : &quot;2022-10-11T12:13:14.000Z&quot;,
     &quot;logEndDate&quot; : &quot;2022-11-12T13:14:15.000Z&quot;,
-    &quot;lastUpdated&quot; : &quot;2023-06-02T07:02:25.000Z&quot;
+    &quot;lastUpdated&quot; : &quot;2023-06-05T03:05:11.000Z&quot;
   }, {
     &quot;id&quot; : 1,
     &quot;deviceId&quot; : 1,
@@ -3537,7 +3863,7 @@ Content-Length: 486
     &quot;result&quot; : &quot;result.mp4&quot;,
     &quot;logStartDate&quot; : &quot;2023-05-20T00:00:00.000Z&quot;,
     &quot;logEndDate&quot; : &quot;2023-05-30T00:00:00.000Z&quot;,
-    &quot;lastUpdated&quot; : &quot;2023-06-02T07:02:24.000Z&quot;
+    &quot;lastUpdated&quot; : &quot;2023-06-05T03:04:10.000Z&quot;
   } ]
 }</code></pre>
 </div>
@@ -3603,14 +3929,14 @@ Content-Length: 486
 <div class="sect3">
 <h4 id="_post_to_request_timelapse_2"><a class="link" href="#_post_to_request_timelapse_2">2.7.3. Post to request timelapse</a></h4>
 <div class="sect4">
-<h5 id="_http_request_21"><a class="link" href="#_http_request_21">HTTP request</a></h5>
+<h5 id="_http_request_23"><a class="link" href="#_http_request_23">HTTP request</a></h5>
 <div class="sect5">
-<h6 id="_curl_21"><a class="link" href="#_curl_21"><code>curl</code></a></h6>
+<h6 id="_curl_23"><a class="link" href="#_curl_23"><code>curl</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/timelapse/1/request' -i -X POST \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQ1LCJleHAiOjE2ODU2OTI5NDV9.__nTOqRCdCGZy8GHbJVsF7qAwvfrHuT9cLemZkBCDV001N3THZB64EFBCVSBMNizk6hNc7VOmJDVleWer-3QJQ' \
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzExLCJleHAiOjE2ODU5Mzc5MTF9.nq9ZHZ05vsLg4pwAyS43rYDyJm6_4e6sxA6p7u88EyoTFrK0m3PONgirPGjX3ZxTmkRxDNHyShSL-0FM5OUvow' \
     -d '{
   &quot;deviceId&quot; : 1,
   &quot;startDate&quot; : &quot;2022-10-11T12:13:14.000Z&quot;,
@@ -3620,7 +3946,7 @@ Content-Length: 486
 </div>
 </div>
 <div class="sect5">
-<h6 id="_httpie_21"><a class="link" href="#_httpie_21"><code>httpie</code></a></h6>
+<h6 id="_httpie_23"><a class="link" href="#_httpie_23"><code>httpie</code></a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="bash">$ echo '{
@@ -3629,17 +3955,17 @@ Content-Length: 486
   &quot;endDate&quot; : &quot;2022-11-12T13:14:15.000Z&quot;
 }' | http POST 'https://smart-farm.smhrd.com/api/v1/timelapse/1/request' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQ1LCJleHAiOjE2ODU2OTI5NDV9.__nTOqRCdCGZy8GHbJVsF7qAwvfrHuT9cLemZkBCDV001N3THZB64EFBCVSBMNizk6hNc7VOmJDVleWer-3QJQ'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzExLCJleHAiOjE2ODU5Mzc5MTF9.nq9ZHZ05vsLg4pwAyS43rYDyJm6_4e6sxA6p7u88EyoTFrK0m3PONgirPGjX3ZxTmkRxDNHyShSL-0FM5OUvow'</code></pre>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_http_21"><a class="link" href="#_http_21">HTTP</a></h6>
+<h6 id="_http_23"><a class="link" href="#_http_23">HTTP</a></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">POST /api/v1/timelapse/1/request HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1Njg5MzQ1LCJleHAiOjE2ODU2OTI5NDV9.__nTOqRCdCGZy8GHbJVsF7qAwvfrHuT9cLemZkBCDV001N3THZB64EFBCVSBMNizk6hNc7VOmJDVleWer-3QJQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg1OTM0MzExLCJleHAiOjE2ODU5Mzc5MTF9.nq9ZHZ05vsLg4pwAyS43rYDyJm6_4e6sxA6p7u88EyoTFrK0m3PONgirPGjX3ZxTmkRxDNHyShSL-0FM5OUvow
 Content-Length: 106
 Host: smart-farm.smhrd.com
 
@@ -3652,7 +3978,7 @@ Host: smart-farm.smhrd.com
 </div>
 </div>
 <div class="sect5">
-<h6 id="_request_headers_15"><a class="link" href="#_request_headers_15">Request headers</a></h6>
+<h6 id="_request_headers_17"><a class="link" href="#_request_headers_17">Request headers</a></h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -3673,9 +3999,9 @@ Host: smart-farm.smhrd.com
 </table>
 </div>
 <div class="sect5">
-<h6 id="_path_parameters_8"><a class="link" href="#_path_parameters_8">Path parameters</a></h6>
+<h6 id="_path_parameters_9"><a class="link" href="#_path_parameters_9">Path parameters</a></h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 8. /api/v1/timelapse/{deviceId}/request</caption>
+<caption class="title">Table 9. /api/v1/timelapse/{deviceId}/request</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3730,7 +4056,7 @@ Host: smart-farm.smhrd.com
 </div>
 </div>
 <div class="sect4">
-<h5 id="_http_response_21"><a class="link" href="#_http_response_21">HTTP response</a></h5>
+<h5 id="_http_response_23"><a class="link" href="#_http_response_23">HTTP response</a></h5>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight nowrap"><code data-lang="http">HTTP/1.1 200 OK
@@ -3810,7 +4136,7 @@ Content-Length: 224
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2023-06-02 07:00:46 UTC
+Last updated 2023-06-05 03:03:51 UTC
 </div>
 </div>
 <style>
