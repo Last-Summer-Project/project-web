@@ -145,4 +145,31 @@
         order by date_created desc
         limit 1
     </select>
+    <select id="selectDetectedByDeviceIdPerDay" resultMap="BaseResultMap">
+        SELECT l.id           AS id,
+               device_id,
+               temperature,
+               relative_humidity,
+               image_id,
+               l.date_created AS date_created,
+               name,
+               url,
+               i.date_created AS image_date_created,
+               status,
+               result
+        FROM (SELECT DATE(date_created) AS date, MIN(date_created) AS min_timestamp
+              FROM device_log
+              WHERE device_id = #{id,jdbcType=BIGINT}
+              GROUP BY DATE(date_created)) as il
+                 inner join device_log as l
+                     on il.min_timestamp = l.date_created
+                 inner join image as i
+                            on l.image_id = i.id
+                 inner join detect d
+                            on l.id = d.id
+        WHERE l.device_id = #{id,jdbcType=BIGINT}
+        ORDER BY date_created
+                DESC
+        LIMIT 30
+    </select>
 </mapper>

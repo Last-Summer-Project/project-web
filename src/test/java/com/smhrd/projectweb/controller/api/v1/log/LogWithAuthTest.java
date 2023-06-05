@@ -130,6 +130,43 @@ class LogWithAuthTest extends AuthTestSupport {
     }
 
     @Test
+    void getDetectedPerDayLogs() throws Exception {
+        this.mockMvc.perform(
+                        get("/api/v1/log/detected-per-day")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .header("Authorization", String.format("Bearer %s", getJwt()))
+                                .with(authentication(authentication)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("status").value("ok"))
+                // Basic
+                .andExpect(jsonPath("data[1].deviceId").value(1))
+                .andExpect(jsonPath("data[1].humidity").value(30.0D))
+                .andExpect(jsonPath("data[1].temperature").value(20.09D))
+                // Image
+                .andExpect(jsonPath("data[1].imageUrl").value("/static/image/1.jpg"))
+                // Detection
+                .andExpect(jsonPath("data[1].detection.status").value("DONE"))
+                .andExpect(jsonPath("data[1].detection.result").value(2))
+                .andDo(restDocs.document(
+                        authorizationHeaderSnippet,
+                        responseFields(
+                                fieldWithPath("status").description("Status of response"),
+                                // Basic
+                                fieldWithPath("data[].deviceId").description("Device ID of this log."),
+                                fieldWithPath("data[].humidity").description("Logged relative humidity"),
+                                fieldWithPath("data[].temperature").description("Logged celsius temperature"),
+                                // Image
+                                fieldWithPath("data[].imageUrl").description("Relative image url of logged image"),
+                                // Detection
+                                fieldWithPath("data[].detection.status").description("Status of detection process. can be `NOT_STARTED`, `IN_PROGRESS`, or `DONE`"),
+                                fieldWithPath("data[].detection.result").type(JsonFieldType.STRING).optional().description("Detected result. Optional if status is not `DONE`"),
+                                // Timestamp
+                                fieldWithPath("data[].timestamp").description("UTC time of log written timestamp")
+                        )
+                ));
+    }
+
+    @Test
     void postWriteLog() throws Exception {
         LogWriteRequest input = new LogWriteRequest(
                 1L,

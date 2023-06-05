@@ -28,6 +28,11 @@ public class LogWithAuthApi {
         return deviceAuthLogService.getLatestDetectedByDeviceId(request);
     }
 
+    @GetMapping("/detected-per-day")
+    public ResultWrapper<List<LogResponse>> getDetectedPerDay(HttpServletRequest request) {
+        return deviceAuthLogService.getDetectedByDeviceIdPerDay(request);
+    }
+
     @GetMapping("/recent")
     public ResultWrapper<List<LogResponse>> getRecent(HttpServletRequest request) {
         return deviceAuthLogService.getRecentByDeviceId(request);

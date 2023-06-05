@@ -45,6 +45,30 @@ include::{snippets}/log-with-auth-test/get-latest-detected-log/request-headers.a
 include::{snippets}/log-with-auth-test/get-latest-detected-log/http-response.adoc[]
 include::{snippets}/log-with-auth-test/get-latest-detected-log/response-fields.adoc[]
 
+==== Get detected per day logs
+
+Retrieve detected per day logs
+
+===== HTTP request
+====== `curl`
+include::{snippets}/log-with-auth-test/get-detected-per-day-logs/curl-request.adoc[]
+
+====== `httpie`
+include::{snippets}/log-with-auth-test/get-detected-per-day-logs/httpie-request.adoc[]
+
+====== HTTP
+include::{snippets}/log-with-auth-test/get-detected-per-day-logs/http-request.adoc[]
+
+====== Request headers
+include::{snippets}/log-with-auth-test/get-detected-per-day-logs/request-headers.adoc[]
+
+
+===== HTTP response
+
+include::{snippets}/log-with-auth-test/get-detected-per-day-logs/http-response.adoc[]
+include::{snippets}/log-with-auth-test/get-detected-per-day-logs/response-fields.adoc[]
+
+
 ==== Get recent logs
 
 Retrieve recent 100 logs

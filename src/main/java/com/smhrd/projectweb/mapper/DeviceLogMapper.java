@@ -28,4 +28,6 @@ public interface DeviceLogMapper {
     DeviceLog selectLatestByDeviceId(Long id);
 
     DeviceLog selectLatestDetectedByDeviceId(Long id);
+
+    List<DeviceLog> selectDetectedByDeviceIdPerDay(Long id);
 }

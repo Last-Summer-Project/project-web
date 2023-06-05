@@ -28,6 +28,10 @@ public class DeviceLogAuthService {
         return deviceLogService.getLatestDetectedByDeviceId(getDeviceId(req));
     }
 
+    public ResultWrapper<List<LogResponse>> getDetectedByDeviceIdPerDay(HttpServletRequest req) {
+        return deviceLogService.getDetectedByDeviceIdPerDay(getDeviceId(req));
+    }
+
     public ResultWrapper<List<LogResponse>> getRecentByDeviceId(HttpServletRequest req) {
         return deviceLogService.getRecentByDeviceId(getDeviceId(req));
     }

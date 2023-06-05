@@ -27,6 +27,13 @@ public class LogWithDeviceIdApi {
         return deviceLogService.getLatestDetectedByDeviceId(deviceId);
     }
 
+
+    @GetMapping("/detected-per-day")
+    public ResultWrapper<List<LogResponse>> getDetectedPerDay(@PathVariable(name = "deviceId") Long deviceId) {
+        return deviceLogService.getDetectedByDeviceIdPerDay(deviceId);
+    }
+
+
     @GetMapping("/recent")
     public ResultWrapper<List<LogResponse>> getRecent(@PathVariable(name = "deviceId") Long deviceId) {
         return deviceLogService.getRecentByDeviceId(deviceId);
