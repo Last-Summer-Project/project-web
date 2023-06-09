@@ -30,7 +30,7 @@ class TimelapseWithAuthTest extends AuthTestSupport {
     @Order(1)
     void getLatest() throws Exception {
         this.mockMvc.perform(
-                        get("/api/v1/timelapse/latest")
+                        get("/timelapse/latest")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))
@@ -66,7 +66,7 @@ class TimelapseWithAuthTest extends AuthTestSupport {
         ));
 
         this.mockMvc.perform(
-                        post("/api/v1/timelapse/request")
+                        post("/timelapse/request")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .content(objectMapper.writeValueAsString(timelapseRequest))
@@ -100,7 +100,7 @@ class TimelapseWithAuthTest extends AuthTestSupport {
     @Order(3)
     void getAll() throws Exception {
         this.mockMvc.perform(
-                        get("/api/v1/timelapse/all")
+                        get("/timelapse/all")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))

@@ -22,7 +22,7 @@ class LogWithAuthTest extends AuthTestSupport {
     @Test
     void getLatestLog() throws Exception {
         this.mockMvc.perform(
-                        get("/api/v1/log/latest")
+                        get("/log/latest")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))
@@ -58,7 +58,7 @@ class LogWithAuthTest extends AuthTestSupport {
     @Test
     void getLatestDetectedLog() throws Exception {
         this.mockMvc.perform(
-                        get("/api/v1/log/latest-detected")
+                        get("/log/latest-detected")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))
@@ -95,7 +95,7 @@ class LogWithAuthTest extends AuthTestSupport {
     @Test
     void getRecentLogs() throws Exception {
         this.mockMvc.perform(
-                        get("/api/v1/log/recent")
+                        get("/log/recent")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))
@@ -132,7 +132,7 @@ class LogWithAuthTest extends AuthTestSupport {
     @Test
     void getDetectedPerDayLogs() throws Exception {
         this.mockMvc.perform(
-                        get("/api/v1/log/detected-per-day")
+                        get("/log/detected-per-day")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))
@@ -176,7 +176,7 @@ class LogWithAuthTest extends AuthTestSupport {
         );
 
         this.mockMvc.perform(
-                        post("/api/v1/log/write")
+                        post("/log/write")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .content(objectMapper.writeValueAsString(input))

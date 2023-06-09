@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/v1/device")
+@RequestMapping("/device")
 @RequiredArgsConstructor
 public class DeviceApi {
     private final DeviceService deviceService;

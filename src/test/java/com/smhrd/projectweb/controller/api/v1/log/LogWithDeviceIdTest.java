@@ -29,7 +29,7 @@ class LogWithDeviceIdTest extends AuthTestSupport {
     @Test
     void getLatestLog() throws Exception {
         this.mockMvc.perform(
-                        get("/api/v1/log/{deviceId}/latest", 1)
+                        get("/log/{deviceId}/latest", 1)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))
@@ -66,7 +66,7 @@ class LogWithDeviceIdTest extends AuthTestSupport {
     @Test
     void getLatestDetectedLog() throws Exception {
         this.mockMvc.perform(
-                        get("/api/v1/log/{deviceId}/latest-detected", 1)
+                        get("/log/{deviceId}/latest-detected", 1)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))
@@ -104,7 +104,7 @@ class LogWithDeviceIdTest extends AuthTestSupport {
     @Test
     void getRecentLogs() throws Exception {
         this.mockMvc.perform(
-                        get("/api/v1/log/{deviceId}/recent", 1)
+                        get("/log/{deviceId}/recent", 1)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))
@@ -142,7 +142,7 @@ class LogWithDeviceIdTest extends AuthTestSupport {
     @Test
     void getDetectedPerDayLogs() throws Exception {
         this.mockMvc.perform(
-                        get("/api/v1/log/{deviceId}/detected-per-day", 1)
+                        get("/log/{deviceId}/detected-per-day", 1)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))
@@ -187,7 +187,7 @@ class LogWithDeviceIdTest extends AuthTestSupport {
         );
 
         this.mockMvc.perform(
-                        post("/api/v1/log/{deviceId}/write", 1)
+                        post("/log/{deviceId}/write", 1)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .content(objectMapper.writeValueAsString(input))

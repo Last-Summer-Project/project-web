@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/api/v1/timelapse/{deviceId}")
+@RequestMapping("/timelapse/{deviceId}")
 @RestController
 @RequiredArgsConstructor
 @Slf4j

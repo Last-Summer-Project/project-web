@@ -28,7 +28,7 @@ class DeviceTest extends AuthTestSupport {
     @Test
     void getAuthenticatedDevice() throws Exception {
         this.mockMvc.perform(
-                        get("/api/v1/device/get", 1)
+                        get("/device/get", 1)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))
@@ -49,7 +49,7 @@ class DeviceTest extends AuthTestSupport {
     @Test
     void getDevice1() throws Exception {
         this.mockMvc.perform(
-                        get("/api/v1/device/get/{deviceId}", 1)
+                        get("/device/get/{deviceId}", 1)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))
@@ -71,7 +71,7 @@ class DeviceTest extends AuthTestSupport {
     @Test
     void getInvalidDevice() throws Exception {
         this.mockMvc.perform(
-                        get("/api/v1/device/get/-1")
+                        get("/device/get/-1")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))

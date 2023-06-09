@@ -29,7 +29,7 @@ class AuthTest extends AuthTestSupport {
         AuthRequest input = new AuthRequest("user", "pass");
 
         this.mockMvc.perform(
-                        post("/api/v1/auth/signup")
+                        post("/auth/signup")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(objectMapper.writeValueAsString(input)))
                 .andExpect(status().isOk())
@@ -54,7 +54,7 @@ class AuthTest extends AuthTestSupport {
         AuthRequest input = new AuthRequest("user", "pass");
 
         this.mockMvc.perform(
-                        post("/api/v1/auth/login")
+                        post("/auth/login")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(objectMapper.writeValueAsString(input)))
                 .andExpect(status().isOk())
@@ -78,7 +78,7 @@ class AuthTest extends AuthTestSupport {
         AuthRequest input = new AuthRequest("user1", "pass2");
 
         this.mockMvc.perform(
-                        post("/api/v1/auth/login")
+                        post("/auth/login")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(objectMapper.writeValueAsString(input)))
                 .andExpect(status().isUnauthorized())
@@ -102,7 +102,7 @@ class AuthTest extends AuthTestSupport {
         RefreshRequest input = new RefreshRequest(jwt.getRefresh());
 
         this.mockMvc.perform(
-                        post("/api/v1/auth/refresh")
+                        post("/auth/refresh")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(objectMapper.writeValueAsString(input)))
                 .andExpect(status().isOk())
@@ -127,7 +127,7 @@ class AuthTest extends AuthTestSupport {
         String jwtValue = deviceUserService.login("user", "pass").getAccess();
 
         this.mockMvc.perform(
-                        get("/api/v1/auth/verify")
+                        get("/auth/verify")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", jwtValue)))
                 .andExpect(status().isOk())
@@ -147,7 +147,7 @@ class AuthTest extends AuthTestSupport {
         String jwtValue = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWQiOjIsImlhdCI6MTY4NTAyMzIwNywiZXhwIjoxNjg1MDI2ODA3fQ.9pmOyK4BCb2kk2SzfcIQphcBDNBxN4L4C1AqrPRgqMMDsjZUyTfF7GZcXbfBHqulCgAwp2J41zz7iNu1ZD6p8Q";
 
         this.mockMvc.perform(
-                        get("/api/v1/auth/verify")
+                        get("/auth/verify")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", jwtValue)))
                 .andExpect(status().isUnauthorized())

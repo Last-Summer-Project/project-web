@@ -17,7 +17,7 @@ class IndexTest extends BasicTestSupport {
     @Test
     void index() throws Exception {
         this.mockMvc.perform(
-                        get("/api/v1")
+                        get("/")
                                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("message").value("안녕, 세계!"))

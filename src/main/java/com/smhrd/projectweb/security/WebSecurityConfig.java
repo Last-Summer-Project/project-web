@@ -48,10 +48,10 @@ public class WebSecurityConfig {
 
         http.authorizeRequests(authorize -> {
             // Api Index
-            authorize.antMatchers("/api/v1", "/api/v1/").permitAll();
+            authorize.antMatchers("/", "/").permitAll();
 
             // Authenticate
-            authorize.antMatchers("/api/v1/auth/**").permitAll();
+            authorize.antMatchers("/auth/**").permitAll();
 
             // Others
             authorize.anyRequest().authenticated();
