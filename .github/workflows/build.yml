@@ -75,6 +75,12 @@ jobs:
           name: docs-artifact
           path: build/docs
 
+      - name: Upload api-spec artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: api-spec-artifact
+          path: build/api-spec
+
   docker:
     name: Docker image
     runs-on: ubuntu-latest
@@ -121,6 +127,13 @@ jobs:
         with:
           name: docs-artifact
           path: docs
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: api-spec-artifact
+          path: docs/api-spec
+
+      - run: cp .github/swagger-index.html docs/api-spec/index.html
 
       - name: Deploy docs
         uses: JamesIves/github-pages-deploy-action@v4

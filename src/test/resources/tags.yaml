@@ -1,1 +1,5 @@
-log-with-auth-test: Log with JWT
+default: Index
+auth: Auth (JWT)
+device: Device
+log: Device Log
+timelapse: Timelapse

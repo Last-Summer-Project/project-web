@@ -127,7 +127,7 @@ tasks.named("bootBuildImage") {
 }
 
 openapi3 {
-    server = 'https://lsp.won-jung.kim'
+    server = 'https://lsp.won-jung.kim/api/v1'
     title = 'API'
     description = 'REST API Documentation'
     version = "${project.version}"
