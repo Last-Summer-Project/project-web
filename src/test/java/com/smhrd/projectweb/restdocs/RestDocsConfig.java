@@ -1,5 +1,6 @@
 package com.smhrd.projectweb.restdocs;
 
+import com.epages.restdocs.apispec.MockMvcRestDocumentationWrapper;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.restdocs.mockmvc.MockMvcRestDocumentation;
@@ -10,7 +11,7 @@ import static org.springframework.restdocs.snippet.Attributes.Attribute;
 public class RestDocsConfig {
     @Bean
     public RestDocumentationResultHandler write() {
-        return MockMvcRestDocumentation.document(
+        return MockMvcRestDocumentationWrapper.document(
                 "{class-name}/{method-name}",
                 Preprocessors.preprocessRequest(Preprocessors.prettyPrint()),
                 Preprocessors.preprocessResponse(Preprocessors.prettyPrint())

@@ -25,6 +25,7 @@ class LogWithDeviceIdTest extends AuthTestSupport {
     PathParametersSnippet deviceIdPathParameterSnippet = pathParameters(
             parameterWithName("deviceId").description("Device Id to use")
     );
+
     @Test
     void getLatestLog() throws Exception {
         this.mockMvc.perform(
