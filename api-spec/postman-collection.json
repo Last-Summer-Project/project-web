@@ -87,7 +87,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"Successfully logged in\",\n  \"data\" : {\n    \"access\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODg3NSwiZXhwIjoxNjg2MzMyNDc1fQ.m7Av39jyfUy_f8pWt3PHXGIeLu_XnAyXCOjGA4Vn5oywnA1kggPAXI7FHE4PJiSPyH9IK-cNpvlsfrZutaozCQ\",\n    \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODg3NSwiZXhwIjoxNjg3MTkyODc1fQ.M7vuVbD-LkHr0eLBSg8IV44JOWqYKRG78A2fBYP8yDX_dd8IkERtyInNcFB8wPqVD0y02P-ZmOOWoLZxj8W5Eg\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"Successfully logged in\",\n  \"data\" : {\n    \"access\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMzMDAzOCwiZXhwIjoxNjg2MzMzNjM4fQ.obeggpubl_mkBo4rXfTfMQEGuU8MTOuaH_DZYTq6nmi49Zfnzj7yXlkpMz5fU1j3R285SSbpcfFl0xizWweiCA\",\n    \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMzMDAzOCwiZXhwIjoxNjg3MTk0MDM4fQ.9rbfzeLSLIRug3Fw_RV9fx9F2pWnFYeiQvyvWL4eTa3z9roPOg4lUxEbne7LoQDHytf23A07M9oitOtnT5ZGwg\"\n  }\n}",
       "code" : 200
     }, {
       "id" : "auth-test/login-failed",
@@ -138,7 +138,7 @@
       } ],
       "body" : {
         "mode" : "raw",
-        "raw" : "{\n  \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODg3NiwiZXhwIjoxNjg3MTkyODc2fQ.fnO91BmTzEPF8c67B1aZiXYyqdGEU6f3nyPHyClM4yAz46n0K0P7BPWTRQ1I1c0LG5gppiZwpaJ33oYReFnVOg\"\n}",
+        "raw" : "{\n  \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMzMDAzOSwiZXhwIjoxNjg3MTk0MDM5fQ.jT5WlEfWp4HpWmGHkdVIqI7cPRDLiz4iG7aILdqHJJ1Lj1BMQagNX7MIpxmFoCgugRZdWc_8Vg_NuOxA6kZ-VA\"\n}",
         "urlencoded" : [ ]
       }
     },
@@ -159,7 +159,7 @@
         } ],
         "body" : {
           "mode" : "raw",
-          "raw" : "{\n  \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODg3NiwiZXhwIjoxNjg3MTkyODc2fQ.fnO91BmTzEPF8c67B1aZiXYyqdGEU6f3nyPHyClM4yAz46n0K0P7BPWTRQ1I1c0LG5gppiZwpaJ33oYReFnVOg\"\n}",
+          "raw" : "{\n  \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMzMDAzOSwiZXhwIjoxNjg3MTk0MDM5fQ.jT5WlEfWp4HpWmGHkdVIqI7cPRDLiz4iG7aILdqHJJ1Lj1BMQagNX7MIpxmFoCgugRZdWc_8Vg_NuOxA6kZ-VA\"\n}",
           "urlencoded" : [ ]
         }
       },
@@ -169,7 +169,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"Successfully refreshed token\",\n  \"data\" : {\n    \"access\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODg3NiwiZXhwIjoxNjg2MzMyNDc2fQ.OXIAuaMzho7lcYIULkx6a7KEAuBe9MStlQl7w3f7dVhITV_xHJRUglhApAf4qOfrt9Hj8_ohnTcdsCppS75i_A\",\n    \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODg3NiwiZXhwIjoxNjg3MTkyODc2fQ.fnO91BmTzEPF8c67B1aZiXYyqdGEU6f3nyPHyClM4yAz46n0K0P7BPWTRQ1I1c0LG5gppiZwpaJ33oYReFnVOg\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"Successfully refreshed token\",\n  \"data\" : {\n    \"access\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMzMDAzOSwiZXhwIjoxNjg2MzMzNjM5fQ.ekjoHIeDvovfnQjRbZC7-6thPiGFkZC02LidNZvkRw0xJclnOafRYqk4g6I216VtQljLj5uwDdHXEBee7GobPQ\",\n    \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMzMDAzOSwiZXhwIjoxNjg3MTk0MDM5fQ.jT5WlEfWp4HpWmGHkdVIqI7cPRDLiz4iG7aILdqHJJ1Lj1BMQagNX7MIpxmFoCgugRZdWc_8Vg_NuOxA6kZ-VA\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -222,7 +222,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"Successfully signed up\",\n  \"data\" : {\n    \"access\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjMyODg3NSwiZXhwIjoxNjg2MzMyNDc1fQ.S5veMcTOB3RSbL7nAZ1PQ9S8JwnQpAbyplW3M4E4PreLfDg8tNRRO5mmnA5ndq9XbdfI7BRtA8_H41b0GJuq4A\",\n    \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjMyODg3NSwiZXhwIjoxNjg3MTkyODc1fQ.gdbfdXovEqzqyrvcRWgYVH4kblM5uSo1J8lrFUyPBez5l_qCd9yvSNXOBoQKu5nOo1qCcsoJkATQggA1-JG60g\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"Successfully signed up\",\n  \"data\" : {\n    \"access\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjMzMDAzOCwiZXhwIjoxNjg2MzMzNjM4fQ.EpaweYdKzk_N9U0t_HUWA2GQgM9hIC3cznkLLpBs-s8jPoKCd85hWmvZP0GMViRxnlqdWZnLxMINXk3SAtAgPQ\",\n    \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjMzMDAzOCwiZXhwIjoxNjg3MTk0MDM4fQ.0jKEZocWSjaeTxXC2Qqq9V2NENJLl4UBYCa8YaBHXRwsVUAQvLCKLAMPKaNUsFWZZZxkGKygKvBj8jQoUW6VYg\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -307,7 +307,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"dateCreated\" : \"2023-06-09T16:41:16.000Z\",\n    \"lastEdited\" : \"2023-06-09T16:41:16.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"dateCreated\" : \"2023-06-09T17:00:40.000Z\",\n    \"lastEdited\" : \"2023-06-09T17:00:40.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -373,7 +373,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"dateCreated\" : \"2023-06-09T16:41:16.000Z\",\n    \"lastEdited\" : \"2023-06-09T16:41:16.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"dateCreated\" : \"2023-06-09T17:00:40.000Z\",\n    \"lastEdited\" : \"2023-06-09T17:00:40.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -406,7 +406,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T16:41:19.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-07T16:41:19.000Z\"\n  } ]\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T17:00:42.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-07T17:00:42.000Z\"\n  } ]\n}",
       "code" : 200
     } ]
   }, {
@@ -439,7 +439,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-09T16:41:19.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-09T17:00:42.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -472,7 +472,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T16:41:19.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T17:00:42.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -505,7 +505,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-09T16:41:19.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T16:41:19.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-07T16:41:19.000Z\"\n  } ]\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-09T17:00:42.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T17:00:42.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-07T17:00:42.000Z\"\n  } ]\n}",
       "code" : 200
     } ]
   }, {
@@ -558,7 +558,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 19.87,\n    \"temperature\" : 12.34,\n    \"imageUrl\" : null,\n    \"detection\" : {\n      \"status\" : \"NOT_STARTED\"\n    },\n    \"timestamp\" : \"2023-06-09T16:41:21.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 19.87,\n    \"temperature\" : 12.34,\n    \"imageUrl\" : null,\n    \"detection\" : {\n      \"status\" : \"NOT_STARTED\"\n    },\n    \"timestamp\" : \"2023-06-09T17:00:45.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -591,7 +591,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T16:41:21.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-07T16:41:21.000Z\"\n  } ]\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T17:00:46.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-07T17:00:46.000Z\"\n  } ]\n}",
       "code" : 200
     } ]
   }, {
@@ -624,7 +624,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-09T16:41:21.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-09T17:00:46.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -657,7 +657,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T16:41:21.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T17:00:46.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -690,7 +690,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-09T16:41:21.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T16:41:21.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-07T16:41:21.000Z\"\n  } ]\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-09T17:00:46.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T17:00:46.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-07T17:00:46.000Z\"\n  } ]\n}",
       "code" : 200
     } ]
   }, {
@@ -743,7 +743,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 19.87,\n    \"temperature\" : 12.34,\n    \"imageUrl\" : null,\n    \"detection\" : {\n      \"status\" : \"NOT_STARTED\"\n    },\n    \"timestamp\" : \"2023-06-09T16:41:23.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 19.87,\n    \"temperature\" : 12.34,\n    \"imageUrl\" : null,\n    \"detection\" : {\n      \"status\" : \"NOT_STARTED\"\n    },\n    \"timestamp\" : \"2023-06-09T17:00:47.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -776,7 +776,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"id\" : 2,\n    \"deviceId\" : 1,\n    \"status\" : \"NOT_STARTED\",\n    \"logStartDate\" : \"2022-10-11T12:13:14.000Z\",\n    \"logEndDate\" : \"2022-11-12T13:14:15.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:41:25.000Z\"\n  }, {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:40:24.000Z\"\n  } ]\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"id\" : 2,\n    \"deviceId\" : 1,\n    \"status\" : \"NOT_STARTED\",\n    \"logStartDate\" : \"2022-10-11T12:13:14.000Z\",\n    \"logEndDate\" : \"2022-11-12T13:14:15.000Z\",\n    \"lastUpdated\" : \"2023-06-09T17:00:50.000Z\"\n  }, {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:59:48.000Z\"\n  } ]\n}",
       "code" : 200
     } ]
   }, {
@@ -809,7 +809,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:40:24.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:59:48.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -895,7 +895,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"id\" : 2,\n    \"deviceId\" : 1,\n    \"status\" : \"NOT_STARTED\",\n    \"logStartDate\" : \"2022-10-11T12:13:14.000Z\",\n    \"logEndDate\" : \"2022-11-12T13:14:15.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:41:27.000Z\"\n  }, {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:40:26.000Z\"\n  } ]\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"id\" : 2,\n    \"deviceId\" : 1,\n    \"status\" : \"NOT_STARTED\",\n    \"logStartDate\" : \"2022-10-11T12:13:14.000Z\",\n    \"logEndDate\" : \"2022-11-12T13:14:15.000Z\",\n    \"lastUpdated\" : \"2023-06-09T17:00:52.000Z\"\n  }, {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:59:51.000Z\"\n  } ]\n}",
       "code" : 200
     } ]
   }, {
@@ -928,7 +928,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:40:26.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:59:51.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {

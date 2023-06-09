@@ -26,7 +26,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 index-test/index:
                   value: |-
@@ -43,7 +43,7 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/timelapse-latest486549215'
+              $ref: '#/components/schemas/log-write486549215'
             examples:
               auth-test/login:
                 value: |-
@@ -63,7 +63,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 auth-test/login:
                   value: |-
@@ -71,8 +71,8 @@ paths:
                       "status" : "ok",
                       "message" : "Successfully logged in",
                       "data" : {
-                        "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODg3NSwiZXhwIjoxNjg2MzMyNDc1fQ.m7Av39jyfUy_f8pWt3PHXGIeLu_XnAyXCOjGA4Vn5oywnA1kggPAXI7FHE4PJiSPyH9IK-cNpvlsfrZutaozCQ",
-                        "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODg3NSwiZXhwIjoxNjg3MTkyODc1fQ.M7vuVbD-LkHr0eLBSg8IV44JOWqYKRG78A2fBYP8yDX_dd8IkERtyInNcFB8wPqVD0y02P-ZmOOWoLZxj8W5Eg"
+                        "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMzMDAzOCwiZXhwIjoxNjg2MzMzNjM4fQ.obeggpubl_mkBo4rXfTfMQEGuU8MTOuaH_DZYTq6nmi49Zfnzj7yXlkpMz5fU1j3R285SSbpcfFl0xizWweiCA",
+                        "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMzMDAzOCwiZXhwIjoxNjg3MTk0MDM4fQ.9rbfzeLSLIRug3Fw_RV9fx9F2pWnFYeiQvyvWL4eTa3z9roPOg4lUxEbne7LoQDHytf23A07M9oitOtnT5ZGwg"
                       }
                     }
         "401":
@@ -80,7 +80,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 auth-test/login-failed:
                   value: |-
@@ -97,12 +97,12 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/timelapse-latest486549215'
+              $ref: '#/components/schemas/log-write486549215'
             examples:
               auth-test/refresh:
                 value: |-
                   {
-                    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODg3NiwiZXhwIjoxNjg3MTkyODc2fQ.fnO91BmTzEPF8c67B1aZiXYyqdGEU6f3nyPHyClM4yAz46n0K0P7BPWTRQ1I1c0LG5gppiZwpaJ33oYReFnVOg"
+                    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMzMDAzOSwiZXhwIjoxNjg3MTk0MDM5fQ.jT5WlEfWp4HpWmGHkdVIqI7cPRDLiz4iG7aILdqHJJ1Lj1BMQagNX7MIpxmFoCgugRZdWc_8Vg_NuOxA6kZ-VA"
                   }
       responses:
         "200":
@@ -110,7 +110,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 auth-test/refresh:
                   value: |-
@@ -118,8 +118,8 @@ paths:
                       "status" : "ok",
                       "message" : "Successfully refreshed token",
                       "data" : {
-                        "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODg3NiwiZXhwIjoxNjg2MzMyNDc2fQ.OXIAuaMzho7lcYIULkx6a7KEAuBe9MStlQl7w3f7dVhITV_xHJRUglhApAf4qOfrt9Hj8_ohnTcdsCppS75i_A",
-                        "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODg3NiwiZXhwIjoxNjg3MTkyODc2fQ.fnO91BmTzEPF8c67B1aZiXYyqdGEU6f3nyPHyClM4yAz46n0K0P7BPWTRQ1I1c0LG5gppiZwpaJ33oYReFnVOg"
+                        "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMzMDAzOSwiZXhwIjoxNjg2MzMzNjM5fQ.ekjoHIeDvovfnQjRbZC7-6thPiGFkZC02LidNZvkRw0xJclnOafRYqk4g6I216VtQljLj5uwDdHXEBee7GobPQ",
+                        "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMzMDAzOSwiZXhwIjoxNjg3MTk0MDM5fQ.jT5WlEfWp4HpWmGHkdVIqI7cPRDLiz4iG7aILdqHJJ1Lj1BMQagNX7MIpxmFoCgugRZdWc_8Vg_NuOxA6kZ-VA"
                       }
                     }
   /auth/signup:
@@ -131,7 +131,7 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/timelapse-latest486549215'
+              $ref: '#/components/schemas/log-write486549215'
             examples:
               auth-test/signup:
                 value: |-
@@ -145,7 +145,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 auth-test/signup:
                   value: |-
@@ -153,8 +153,8 @@ paths:
                       "status" : "ok",
                       "message" : "Successfully signed up",
                       "data" : {
-                        "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjMyODg3NSwiZXhwIjoxNjg2MzMyNDc1fQ.S5veMcTOB3RSbL7nAZ1PQ9S8JwnQpAbyplW3M4E4PreLfDg8tNRRO5mmnA5ndq9XbdfI7BRtA8_H41b0GJuq4A",
-                        "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjMyODg3NSwiZXhwIjoxNjg3MTkyODc1fQ.gdbfdXovEqzqyrvcRWgYVH4kblM5uSo1J8lrFUyPBez5l_qCd9yvSNXOBoQKu5nOo1qCcsoJkATQggA1-JG60g"
+                        "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjMzMDAzOCwiZXhwIjoxNjg2MzMzNjM4fQ.EpaweYdKzk_N9U0t_HUWA2GQgM9hIC3cznkLLpBs-s8jPoKCd85hWmvZP0GMViRxnlqdWZnLxMINXk3SAtAgPQ",
+                        "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjMzMDAzOCwiZXhwIjoxNjg3MTk0MDM4fQ.0jKEZocWSjaeTxXC2Qqq9V2NENJLl4UBYCa8YaBHXRwsVUAQvLCKLAMPKaNUsFWZZZxkGKygKvBj8jQoUW6VYg"
                       }
                     }
   /auth/verify:
@@ -168,7 +168,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 auth-test/verify-invalid:
                   value: |-
@@ -181,7 +181,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 auth-test/verify:
                   value: |-
@@ -201,7 +201,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 device-test/get-authenticated-device:
                   value: |-
@@ -209,8 +209,8 @@ paths:
                       "status" : "ok",
                       "data" : {
                         "id" : 1,
-                        "dateCreated" : "2023-06-09T16:41:16.000Z",
-                        "lastEdited" : "2023-06-09T16:41:16.000Z"
+                        "dateCreated" : "2023-06-09T17:00:40.000Z",
+                        "lastEdited" : "2023-06-09T17:00:40.000Z"
                       }
                     }
       security:
@@ -226,7 +226,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 device-test/get-invalid-device:
                   value: |-
@@ -254,7 +254,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 device-test/get-device1:
                   value: |-
@@ -262,8 +262,8 @@ paths:
                       "status" : "ok",
                       "data" : {
                         "id" : 1,
-                        "dateCreated" : "2023-06-09T16:41:16.000Z",
-                        "lastEdited" : "2023-06-09T16:41:16.000Z"
+                        "dateCreated" : "2023-06-09T17:00:40.000Z",
+                        "lastEdited" : "2023-06-09T17:00:40.000Z"
                       }
                     }
       security:
@@ -279,7 +279,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 log-with-auth-test/get-detected-per-day-logs:
                   value: |-
@@ -294,7 +294,7 @@ paths:
                           "status" : "DONE",
                           "result" : "2"
                         },
-                        "timestamp" : "2023-06-08T16:41:19.000Z"
+                        "timestamp" : "2023-06-08T17:00:42.000Z"
                       }, {
                         "deviceId" : 1,
                         "humidity" : 30.0,
@@ -304,7 +304,7 @@ paths:
                           "status" : "DONE",
                           "result" : "0"
                         },
-                        "timestamp" : "2023-06-07T16:41:19.000Z"
+                        "timestamp" : "2023-06-07T17:00:42.000Z"
                       } ]
                     }
       security:
@@ -320,7 +320,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 log-with-auth-test/get-latest-log:
                   value: |-
@@ -334,7 +334,7 @@ paths:
                         "detection" : {
                           "status" : "IN_PROGRESS"
                         },
-                        "timestamp" : "2023-06-09T16:41:19.000Z"
+                        "timestamp" : "2023-06-09T17:00:42.000Z"
                       }
                     }
       security:
@@ -350,7 +350,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 log-with-auth-test/get-latest-detected-log:
                   value: |-
@@ -365,7 +365,7 @@ paths:
                           "status" : "DONE",
                           "result" : "2"
                         },
-                        "timestamp" : "2023-06-08T16:41:19.000Z"
+                        "timestamp" : "2023-06-08T17:00:42.000Z"
                       }
                     }
       security:
@@ -381,7 +381,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 log-with-auth-test/get-recent-logs:
                   value: |-
@@ -395,7 +395,7 @@ paths:
                         "detection" : {
                           "status" : "IN_PROGRESS"
                         },
-                        "timestamp" : "2023-06-09T16:41:19.000Z"
+                        "timestamp" : "2023-06-09T17:00:42.000Z"
                       }, {
                         "deviceId" : 1,
                         "humidity" : 30.0,
@@ -405,7 +405,7 @@ paths:
                           "status" : "DONE",
                           "result" : "2"
                         },
-                        "timestamp" : "2023-06-08T16:41:19.000Z"
+                        "timestamp" : "2023-06-08T17:00:42.000Z"
                       }, {
                         "deviceId" : 1,
                         "humidity" : 30.0,
@@ -415,7 +415,7 @@ paths:
                           "status" : "DONE",
                           "result" : "0"
                         },
-                        "timestamp" : "2023-06-07T16:41:19.000Z"
+                        "timestamp" : "2023-06-07T17:00:42.000Z"
                       } ]
                     }
       security:
@@ -429,7 +429,7 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/timelapse-latest486549215'
+              $ref: '#/components/schemas/log-write486549215'
             examples:
               log-with-auth-test/post-write-log:
                 value: |-
@@ -445,7 +445,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 log-with-auth-test/post-write-log:
                   value: |-
@@ -459,7 +459,7 @@ paths:
                         "detection" : {
                           "status" : "NOT_STARTED"
                         },
-                        "timestamp" : "2023-06-09T16:41:21.000Z"
+                        "timestamp" : "2023-06-09T17:00:45.000Z"
                       }
                     }
       security:
@@ -482,7 +482,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 log-with-device-id-test/get-detected-per-day-logs:
                   value: |-
@@ -497,7 +497,7 @@ paths:
                           "status" : "DONE",
                           "result" : "2"
                         },
-                        "timestamp" : "2023-06-08T16:41:21.000Z"
+                        "timestamp" : "2023-06-08T17:00:46.000Z"
                       }, {
                         "deviceId" : 1,
                         "humidity" : 30.0,
@@ -507,7 +507,7 @@ paths:
                           "status" : "DONE",
                           "result" : "0"
                         },
-                        "timestamp" : "2023-06-07T16:41:21.000Z"
+                        "timestamp" : "2023-06-07T17:00:46.000Z"
                       } ]
                     }
       security:
@@ -530,7 +530,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 log-with-device-id-test/get-latest-log:
                   value: |-
@@ -544,7 +544,7 @@ paths:
                         "detection" : {
                           "status" : "IN_PROGRESS"
                         },
-                        "timestamp" : "2023-06-09T16:41:21.000Z"
+                        "timestamp" : "2023-06-09T17:00:46.000Z"
                       }
                     }
       security:
@@ -567,7 +567,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 log-with-device-id-test/get-latest-detected-log:
                   value: |-
@@ -582,7 +582,7 @@ paths:
                           "status" : "DONE",
                           "result" : "2"
                         },
-                        "timestamp" : "2023-06-08T16:41:21.000Z"
+                        "timestamp" : "2023-06-08T17:00:46.000Z"
                       }
                     }
       security:
@@ -605,7 +605,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 log-with-device-id-test/get-recent-logs:
                   value: |-
@@ -619,7 +619,7 @@ paths:
                         "detection" : {
                           "status" : "IN_PROGRESS"
                         },
-                        "timestamp" : "2023-06-09T16:41:21.000Z"
+                        "timestamp" : "2023-06-09T17:00:46.000Z"
                       }, {
                         "deviceId" : 1,
                         "humidity" : 30.0,
@@ -629,7 +629,7 @@ paths:
                           "status" : "DONE",
                           "result" : "2"
                         },
-                        "timestamp" : "2023-06-08T16:41:21.000Z"
+                        "timestamp" : "2023-06-08T17:00:46.000Z"
                       }, {
                         "deviceId" : 1,
                         "humidity" : 30.0,
@@ -639,7 +639,7 @@ paths:
                           "status" : "DONE",
                           "result" : "0"
                         },
-                        "timestamp" : "2023-06-07T16:41:21.000Z"
+                        "timestamp" : "2023-06-07T17:00:46.000Z"
                       } ]
                     }
       security:
@@ -660,7 +660,7 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/timelapse-latest486549215'
+              $ref: '#/components/schemas/log-write486549215'
             examples:
               log-with-device-id-test/post-write-log:
                 value: |-
@@ -676,7 +676,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 log-with-device-id-test/post-write-log:
                   value: |-
@@ -690,7 +690,7 @@ paths:
                         "detection" : {
                           "status" : "NOT_STARTED"
                         },
-                        "timestamp" : "2023-06-09T16:41:23.000Z"
+                        "timestamp" : "2023-06-09T17:00:47.000Z"
                       }
                     }
       security:
@@ -706,7 +706,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 timelapse-with-auth-test/get-all:
                   value: |-
@@ -718,7 +718,7 @@ paths:
                         "status" : "NOT_STARTED",
                         "logStartDate" : "2022-10-11T12:13:14.000Z",
                         "logEndDate" : "2022-11-12T13:14:15.000Z",
-                        "lastUpdated" : "2023-06-09T16:41:25.000Z"
+                        "lastUpdated" : "2023-06-09T17:00:50.000Z"
                       }, {
                         "id" : 1,
                         "deviceId" : 1,
@@ -726,7 +726,7 @@ paths:
                         "result" : "result.mp4",
                         "logStartDate" : "2023-05-20T00:00:00.000Z",
                         "logEndDate" : "2023-05-30T00:00:00.000Z",
-                        "lastUpdated" : "2023-06-09T16:40:24.000Z"
+                        "lastUpdated" : "2023-06-09T16:59:48.000Z"
                       } ]
                     }
       security:
@@ -742,7 +742,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 timelapse-with-auth-test/get-latest:
                   value: |-
@@ -755,7 +755,7 @@ paths:
                         "result" : "result.mp4",
                         "logStartDate" : "2023-05-20T00:00:00.000Z",
                         "logEndDate" : "2023-05-30T00:00:00.000Z",
-                        "lastUpdated" : "2023-06-09T16:40:24.000Z"
+                        "lastUpdated" : "2023-06-09T16:59:48.000Z"
                       }
                     }
       security:
@@ -769,7 +769,7 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/timelapse-latest486549215'
+              $ref: '#/components/schemas/log-write486549215'
             examples:
               timelapse-with-auth-test/post-request:
                 value: |-
@@ -784,7 +784,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 timelapse-with-auth-test/post-request:
                   value: |-
@@ -819,7 +819,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 timelapse-with-device-id-test/get-all:
                   value: |-
@@ -831,7 +831,7 @@ paths:
                         "status" : "NOT_STARTED",
                         "logStartDate" : "2022-10-11T12:13:14.000Z",
                         "logEndDate" : "2022-11-12T13:14:15.000Z",
-                        "lastUpdated" : "2023-06-09T16:41:27.000Z"
+                        "lastUpdated" : "2023-06-09T17:00:52.000Z"
                       }, {
                         "id" : 1,
                         "deviceId" : 1,
@@ -839,7 +839,7 @@ paths:
                         "result" : "result.mp4",
                         "logStartDate" : "2023-05-20T00:00:00.000Z",
                         "logEndDate" : "2023-05-30T00:00:00.000Z",
-                        "lastUpdated" : "2023-06-09T16:40:26.000Z"
+                        "lastUpdated" : "2023-06-09T16:59:51.000Z"
                       } ]
                     }
       security:
@@ -862,7 +862,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 timelapse-with-device-id-test/get-latest:
                   value: |-
@@ -875,7 +875,7 @@ paths:
                         "result" : "result.mp4",
                         "logStartDate" : "2023-05-20T00:00:00.000Z",
                         "logEndDate" : "2023-05-30T00:00:00.000Z",
-                        "lastUpdated" : "2023-06-09T16:40:26.000Z"
+                        "lastUpdated" : "2023-06-09T16:59:51.000Z"
                       }
                     }
       security:
@@ -896,7 +896,7 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/timelapse-latest486549215'
+              $ref: '#/components/schemas/log-write486549215'
             examples:
               timelapse-with-device-id-test/post-request:
                 value: |-
@@ -911,7 +911,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/timelapse-latest486549215'
+                $ref: '#/components/schemas/log-write486549215'
               examples:
                 timelapse-with-device-id-test/post-request:
                   value: |-
@@ -930,7 +930,7 @@ paths:
       - bearerAuthJWT: []
 components:
   schemas:
-    timelapse-latest486549215:
+    log-write486549215:
       type: object
   securitySchemes:
     bearerAuthJWT:
