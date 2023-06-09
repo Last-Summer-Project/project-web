@@ -48,7 +48,7 @@ public class WebSecurityConfig {
 
         http.authorizeRequests(authorize -> {
             // Api Index
-            authorize.antMatchers("/", "/").permitAll();
+            authorize.antMatchers("/", "").permitAll();
 
             // Authenticate
             authorize.antMatchers("/auth/**").permitAll();
