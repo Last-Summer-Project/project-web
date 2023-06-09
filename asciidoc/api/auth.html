@@ -450,7 +450,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h6 id="_curl"><code>curl</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/auth/login' -i -X POST \
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/auth/login' -i -X POST \
     -H 'Content-Type: application/json;charset=UTF-8' \
     -d '{
   "loginId" : "user",
@@ -466,7 +466,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ echo '{
   "loginId" : "user",
   "password" : "pass"
-}' | http POST 'https://smart-farm.smhrd.com/api/v1/auth/login' \
+}' | http POST 'https://smart-farm.smhrd.com/auth/login' \
     'Content-Type:application/json;charset=UTF-8'</code></pre>
 </div>
 </div>
@@ -475,7 +475,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h6 id="_http">HTTP</h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /api/v1/auth/login HTTP/1.1
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /auth/login HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 47
 Host: smart-farm.smhrd.com
@@ -531,8 +531,8 @@ Content-Length: 569
   "status" : "ok",
   "message" : "Successfully logged in",
   "data" : {
-    "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjEwNzE5NCwiZXhwIjoxNjg2MTEwNzk0fQ.uA7c9D08wg3TWjtKLQGrnzUoTbyx_oY3d3XwwmDH7Bdyg1Vu8VfnhXbY8ymTyxVHPXVot2cIhsgu93eExN3-wg",
-    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjEwNzE5NCwiZXhwIjoxNjg2OTcxMTk0fQ.0Z-QR55b01fLz4QXbhVdURy5ZNMvJxrID1nspsUNQLxoZQPcT8P3FDRz6vHMfMLCnsYwiL_pqqJ5hXXzSQ8aMw"
+    "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MSwiZXhwIjoxNjg2MzMyMTUxfQ.h50qtl1iE6VIt2y12PIRQW4Tv6C5_OLPoOzEPzR-NeMsy5sz68FeUSA0rdHe7C4npldjlJ2sleCOGFYjAO7QUQ",
+    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MSwiZXhwIjoxNjg3MTkyNTUxfQ.rCtVDvMe--zLmI-s_84roUzob14JQHbuVhbk0s6g1Z3I4qB7mKPaXDlTOOfGIY0ILF6xegffv1J-HivL7y_Eeg"
   }
 }</code></pre>
 </div>
@@ -625,7 +625,7 @@ Content-Length: 56
 <h6 id="_curl_2"><code>curl</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/auth/signup' -i -X POST \
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/auth/signup' -i -X POST \
     -H 'Content-Type: application/json;charset=UTF-8' \
     -d '{
   "loginId" : "user",
@@ -641,7 +641,7 @@ Content-Length: 56
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ echo '{
   "loginId" : "user",
   "password" : "pass"
-}' | http POST 'https://smart-farm.smhrd.com/api/v1/auth/signup' \
+}' | http POST 'https://smart-farm.smhrd.com/auth/signup' \
     'Content-Type:application/json;charset=UTF-8'</code></pre>
 </div>
 </div>
@@ -650,7 +650,7 @@ Content-Length: 56
 <h6 id="_http_2">HTTP</h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /api/v1/auth/signup HTTP/1.1
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /auth/signup HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 47
 Host: smart-farm.smhrd.com
@@ -704,8 +704,8 @@ Content-Length: 569
   "status" : "ok",
   "message" : "Successfully signed up",
   "data" : {
-    "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjEwNzE5NCwiZXhwIjoxNjg2MTEwNzk0fQ.Hpl7BFlu738NUNfWQY7fVYCl5lKCdgnbUiX-lsbC3VVL03DXYfhO8xXHB-D01AOKqo25-A7MT1sZedl7vjBzdQ",
-    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjEwNzE5NCwiZXhwIjoxNjg2OTcxMTk0fQ.YkhYNitRICsqtTjNT5RKv-8Oy16o1iV4ZiB9yo-W_GpzrRVgZCS7HHugswUNvpnLKrVvncMShW7_5YgWCpHxAQ"
+    "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjMyODU1MSwiZXhwIjoxNjg2MzMyMTUxfQ.pNOCpY7Y0MxQokLK3M9Hzqfrqi37lpkNAlQCBnPtr8qXXi6Ud1Bgtj6-dd4WWsD1j2N2mhZ11IsRgOJAsAWAiQ",
+    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjMyODU1MSwiZXhwIjoxNjg3MTkyNTUxfQ.cFl0-EeWJo42wAJ_irtTbpE2ThQlx5D3FGnyip1dvrvj7XItAUWjf6dmgYh_xpG5OHgxzbvSZL1XpK9OYi1ooQ"
   }
 }</code></pre>
 </div>
@@ -756,10 +756,10 @@ Content-Length: 569
 <h6 id="_curl_3"><code>curl</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/auth/refresh' -i -X POST \
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/auth/refresh' -i -X POST \
     -H 'Content-Type: application/json;charset=UTF-8' \
     -d '{
-  "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjEwNzE5NCwiZXhwIjoxNjg2OTcxMTk0fQ.0Z-QR55b01fLz4QXbhVdURy5ZNMvJxrID1nspsUNQLxoZQPcT8P3FDRz6vHMfMLCnsYwiL_pqqJ5hXXzSQ8aMw"
+  "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MiwiZXhwIjoxNjg3MTkyNTUyfQ.skGexWydgc0ByTWzj_IF2JFAK_S25KKTPM9i3IGQcKssBR5nOGdpToKOfWH0vKeh9Yo_XYJ_yh17W5KtPkp0pQ"
 }'</code></pre>
 </div>
 </div>
@@ -769,8 +769,8 @@ Content-Length: 569
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-bash" data-lang="bash">$ echo '{
-  "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjEwNzE5NCwiZXhwIjoxNjg2OTcxMTk0fQ.0Z-QR55b01fLz4QXbhVdURy5ZNMvJxrID1nspsUNQLxoZQPcT8P3FDRz6vHMfMLCnsYwiL_pqqJ5hXXzSQ8aMw"
-}' | http POST 'https://smart-farm.smhrd.com/api/v1/auth/refresh' \
+  "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MiwiZXhwIjoxNjg3MTkyNTUyfQ.skGexWydgc0ByTWzj_IF2JFAK_S25KKTPM9i3IGQcKssBR5nOGdpToKOfWH0vKeh9Yo_XYJ_yh17W5KtPkp0pQ"
+}' | http POST 'https://smart-farm.smhrd.com/auth/refresh' \
     'Content-Type:application/json;charset=UTF-8'</code></pre>
 </div>
 </div>
@@ -779,13 +779,13 @@ Content-Length: 569
 <h6 id="_http_3">HTTP</h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /api/v1/auth/refresh HTTP/1.1
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /auth/refresh HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 246
 Host: smart-farm.smhrd.com
 
 {
-  "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjEwNzE5NCwiZXhwIjoxNjg2OTcxMTk0fQ.0Z-QR55b01fLz4QXbhVdURy5ZNMvJxrID1nspsUNQLxoZQPcT8P3FDRz6vHMfMLCnsYwiL_pqqJ5hXXzSQ8aMw"
+  "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MiwiZXhwIjoxNjg3MTkyNTUyfQ.skGexWydgc0ByTWzj_IF2JFAK_S25KKTPM9i3IGQcKssBR5nOGdpToKOfWH0vKeh9Yo_XYJ_yh17W5KtPkp0pQ"
 }</code></pre>
 </div>
 </div>
@@ -827,8 +827,8 @@ Content-Length: 575
   "status" : "ok",
   "message" : "Successfully refreshed token",
   "data" : {
-    "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjEwNzE5NCwiZXhwIjoxNjg2MTEwNzk0fQ.uA7c9D08wg3TWjtKLQGrnzUoTbyx_oY3d3XwwmDH7Bdyg1Vu8VfnhXbY8ymTyxVHPXVot2cIhsgu93eExN3-wg",
-    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjEwNzE5NCwiZXhwIjoxNjg2OTcxMTk0fQ.0Z-QR55b01fLz4QXbhVdURy5ZNMvJxrID1nspsUNQLxoZQPcT8P3FDRz6vHMfMLCnsYwiL_pqqJ5hXXzSQ8aMw"
+    "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MiwiZXhwIjoxNjg2MzMyMTUyfQ.S0SNh9_Ebng2Dg53Qf8DPqCoQOYqltKAgH5jB3xXWIX7NHt3dTLucS_b9YVqB8_4ciYivWRQlPD8URXXAewGfQ",
+    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MiwiZXhwIjoxNjg3MTkyNTUyfQ.skGexWydgc0ByTWzj_IF2JFAK_S25KKTPM9i3IGQcKssBR5nOGdpToKOfWH0vKeh9Yo_XYJ_yh17W5KtPkp0pQ"
   }
 }</code></pre>
 </div>
@@ -879,9 +879,9 @@ Content-Length: 575
 <h6 id="_curl_4"><code>curl</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/auth/verify' -i -X GET \
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/auth/verify' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjEwNzE5NCwiZXhwIjoxNjg2MTEwNzk0fQ.uA7c9D08wg3TWjtKLQGrnzUoTbyx_oY3d3XwwmDH7Bdyg1Vu8VfnhXbY8ymTyxVHPXVot2cIhsgu93eExN3-wg'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MiwiZXhwIjoxNjg2MzMyMTUyfQ.S0SNh9_Ebng2Dg53Qf8DPqCoQOYqltKAgH5jB3xXWIX7NHt3dTLucS_b9YVqB8_4ciYivWRQlPD8URXXAewGfQ'</code></pre>
 </div>
 </div>
 </div>
@@ -889,9 +889,9 @@ Content-Length: 575
 <h6 id="_httpie_4"><code>httpie</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/auth/verify' \
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/auth/verify' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjEwNzE5NCwiZXhwIjoxNjg2MTEwNzk0fQ.uA7c9D08wg3TWjtKLQGrnzUoTbyx_oY3d3XwwmDH7Bdyg1Vu8VfnhXbY8ymTyxVHPXVot2cIhsgu93eExN3-wg'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MiwiZXhwIjoxNjg2MzMyMTUyfQ.S0SNh9_Ebng2Dg53Qf8DPqCoQOYqltKAgH5jB3xXWIX7NHt3dTLucS_b9YVqB8_4ciYivWRQlPD8URXXAewGfQ'</code></pre>
 </div>
 </div>
 </div>
@@ -899,9 +899,9 @@ Content-Length: 575
 <h6 id="_http_4">HTTP</h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /api/v1/auth/verify HTTP/1.1
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /auth/verify HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjEwNzE5NCwiZXhwIjoxNjg2MTEwNzk0fQ.uA7c9D08wg3TWjtKLQGrnzUoTbyx_oY3d3XwwmDH7Bdyg1Vu8VfnhXbY8ymTyxVHPXVot2cIhsgu93eExN3-wg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MiwiZXhwIjoxNjg2MzMyMTUyfQ.S0SNh9_Ebng2Dg53Qf8DPqCoQOYqltKAgH5jB3xXWIX7NHt3dTLucS_b9YVqB8_4ciYivWRQlPD8URXXAewGfQ
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -1013,7 +1013,7 @@ Content-Length: 53
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2023-06-07 03:05:32 UTC
+Last updated 2023-06-09 16:34:15 UTC
 </div>
 </div>
 </body>

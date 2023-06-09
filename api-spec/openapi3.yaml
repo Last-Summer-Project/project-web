@@ -1,0 +1,939 @@
+openapi: 3.0.1
+info:
+  title: API
+  description: REST API Documentation
+  version: 0.0.1-SNAPSHOT
+servers:
+- url: https://lsp.won-jung.kim/api/v1
+tags:
+- name: default
+  description: Index
+- name: auth
+  description: Auth (JWT)
+- name: device
+  description: Device
+- name: log
+  description: Device Log
+- name: timelapse
+  description: Timelapse
+paths:
+  /:
+    get:
+      operationId: index-test/index
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                index-test/index:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "message" : "안녕, 세계!"
+                    }
+  /auth/login:
+    post:
+      tags:
+      - auth
+      operationId: auth-test/login
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/timelapse-request486549215'
+            examples:
+              auth-test/login:
+                value: |-
+                  {
+                    "loginId" : "user",
+                    "password" : "pass"
+                  }
+              auth-test/login-failed:
+                value: |-
+                  {
+                    "loginId" : "user1",
+                    "password" : "pass2"
+                  }
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                auth-test/login:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "message" : "Successfully logged in",
+                      "data" : {
+                        "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MSwiZXhwIjoxNjg2MzMyMTUxfQ.h50qtl1iE6VIt2y12PIRQW4Tv6C5_OLPoOzEPzR-NeMsy5sz68FeUSA0rdHe7C4npldjlJ2sleCOGFYjAO7QUQ",
+                        "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MSwiZXhwIjoxNjg3MTkyNTUxfQ.rCtVDvMe--zLmI-s_84roUzob14JQHbuVhbk0s6g1Z3I4qB7mKPaXDlTOOfGIY0ILF6xegffv1J-HivL7y_Eeg"
+                      }
+                    }
+        "401":
+          description: "401"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                auth-test/login-failed:
+                  value: |-
+                    {
+                      "status" : "fail",
+                      "message" : "Failed to login"
+                    }
+  /auth/refresh:
+    post:
+      tags:
+      - auth
+      operationId: auth-test/refresh
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/timelapse-request486549215'
+            examples:
+              auth-test/refresh:
+                value: |-
+                  {
+                    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MiwiZXhwIjoxNjg3MTkyNTUyfQ.skGexWydgc0ByTWzj_IF2JFAK_S25KKTPM9i3IGQcKssBR5nOGdpToKOfWH0vKeh9Yo_XYJ_yh17W5KtPkp0pQ"
+                  }
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                auth-test/refresh:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "message" : "Successfully refreshed token",
+                      "data" : {
+                        "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MiwiZXhwIjoxNjg2MzMyMTUyfQ.S0SNh9_Ebng2Dg53Qf8DPqCoQOYqltKAgH5jB3xXWIX7NHt3dTLucS_b9YVqB8_4ciYivWRQlPD8URXXAewGfQ",
+                        "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MiwiZXhwIjoxNjg3MTkyNTUyfQ.skGexWydgc0ByTWzj_IF2JFAK_S25KKTPM9i3IGQcKssBR5nOGdpToKOfWH0vKeh9Yo_XYJ_yh17W5KtPkp0pQ"
+                      }
+                    }
+  /auth/signup:
+    post:
+      tags:
+      - auth
+      operationId: auth-test/signup
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/timelapse-request486549215'
+            examples:
+              auth-test/signup:
+                value: |-
+                  {
+                    "loginId" : "user",
+                    "password" : "pass"
+                  }
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                auth-test/signup:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "message" : "Successfully signed up",
+                      "data" : {
+                        "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjMyODU1MSwiZXhwIjoxNjg2MzMyMTUxfQ.pNOCpY7Y0MxQokLK3M9Hzqfrqi37lpkNAlQCBnPtr8qXXi6Ud1Bgtj6-dd4WWsD1j2N2mhZ11IsRgOJAsAWAiQ",
+                        "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjMyODU1MSwiZXhwIjoxNjg3MTkyNTUxfQ.cFl0-EeWJo42wAJ_irtTbpE2ThQlx5D3FGnyip1dvrvj7XItAUWjf6dmgYh_xpG5OHgxzbvSZL1XpK9OYi1ooQ"
+                      }
+                    }
+  /auth/verify:
+    get:
+      tags:
+      - auth
+      operationId: auth-test/verify
+      responses:
+        "401":
+          description: "401"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                auth-test/verify-invalid:
+                  value: |-
+                    {
+                      "status" : "fail",
+                      "message" : "Unauthorized"
+                    }
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                auth-test/verify:
+                  value: |-
+                    {
+                      "status" : "ok"
+                    }
+      security:
+      - bearerAuthJWT: []
+  /device/get:
+    get:
+      tags:
+      - device
+      operationId: device-test/get-authenticated-device
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                device-test/get-authenticated-device:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : {
+                        "id" : 1,
+                        "dateCreated" : "2023-06-09T16:35:53.000Z",
+                        "lastEdited" : "2023-06-09T16:35:53.000Z"
+                      }
+                    }
+      security:
+      - bearerAuthJWT: []
+  /device/get/-1:
+    get:
+      tags:
+      - device
+      operationId: device-test/get-invalid-device
+      responses:
+        "404":
+          description: "404"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                device-test/get-invalid-device:
+                  value: |-
+                    {
+                      "status" : "error",
+                      "message" : "No device found"
+                    }
+      security:
+      - bearerAuthJWT: []
+  /device/get/{deviceId}:
+    get:
+      tags:
+      - device
+      operationId: device-test/get-device1
+      parameters:
+      - name: deviceId
+        in: path
+        description: ""
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                device-test/get-device1:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : {
+                        "id" : 1,
+                        "dateCreated" : "2023-06-09T16:35:53.000Z",
+                        "lastEdited" : "2023-06-09T16:35:53.000Z"
+                      }
+                    }
+      security:
+      - bearerAuthJWT: []
+  /log/detected-per-day:
+    get:
+      tags:
+      - log
+      operationId: log-with-auth-test/get-detected-per-day-logs
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                log-with-auth-test/get-detected-per-day-logs:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : [ {
+                        "deviceId" : 1,
+                        "humidity" : 30.0,
+                        "temperature" : 20.09,
+                        "imageUrl" : "/static/image/2.jpg",
+                        "detection" : {
+                          "status" : "DONE",
+                          "result" : "2"
+                        },
+                        "timestamp" : "2023-06-08T16:35:55.000Z"
+                      }, {
+                        "deviceId" : 1,
+                        "humidity" : 30.0,
+                        "temperature" : 20.09,
+                        "imageUrl" : "/static/image/1.jpg",
+                        "detection" : {
+                          "status" : "DONE",
+                          "result" : "0"
+                        },
+                        "timestamp" : "2023-06-07T16:35:55.000Z"
+                      } ]
+                    }
+      security:
+      - bearerAuthJWT: []
+  /log/latest:
+    get:
+      tags:
+      - log
+      operationId: log-with-auth-test/get-latest-log
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                log-with-auth-test/get-latest-log:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : {
+                        "deviceId" : 1,
+                        "humidity" : 35.55,
+                        "temperature" : 21.01,
+                        "imageUrl" : "/static/image/3.jpg",
+                        "detection" : {
+                          "status" : "IN_PROGRESS"
+                        },
+                        "timestamp" : "2023-06-09T16:35:55.000Z"
+                      }
+                    }
+      security:
+      - bearerAuthJWT: []
+  /log/latest-detected:
+    get:
+      tags:
+      - log
+      operationId: log-with-auth-test/get-latest-detected-log
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                log-with-auth-test/get-latest-detected-log:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : {
+                        "deviceId" : 1,
+                        "humidity" : 30.0,
+                        "temperature" : 20.09,
+                        "imageUrl" : "/static/image/2.jpg",
+                        "detection" : {
+                          "status" : "DONE",
+                          "result" : "2"
+                        },
+                        "timestamp" : "2023-06-08T16:35:55.000Z"
+                      }
+                    }
+      security:
+      - bearerAuthJWT: []
+  /log/recent:
+    get:
+      tags:
+      - log
+      operationId: log-with-auth-test/get-recent-logs
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                log-with-auth-test/get-recent-logs:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : [ {
+                        "deviceId" : 1,
+                        "humidity" : 35.55,
+                        "temperature" : 21.01,
+                        "imageUrl" : "/static/image/3.jpg",
+                        "detection" : {
+                          "status" : "IN_PROGRESS"
+                        },
+                        "timestamp" : "2023-06-09T16:35:55.000Z"
+                      }, {
+                        "deviceId" : 1,
+                        "humidity" : 30.0,
+                        "temperature" : 20.09,
+                        "imageUrl" : "/static/image/2.jpg",
+                        "detection" : {
+                          "status" : "DONE",
+                          "result" : "2"
+                        },
+                        "timestamp" : "2023-06-08T16:35:55.000Z"
+                      }, {
+                        "deviceId" : 1,
+                        "humidity" : 30.0,
+                        "temperature" : 20.09,
+                        "imageUrl" : "/static/image/1.jpg",
+                        "detection" : {
+                          "status" : "DONE",
+                          "result" : "0"
+                        },
+                        "timestamp" : "2023-06-07T16:35:55.000Z"
+                      } ]
+                    }
+      security:
+      - bearerAuthJWT: []
+  /log/write:
+    post:
+      tags:
+      - log
+      operationId: log-with-auth-test/post-write-log
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/timelapse-request486549215'
+            examples:
+              log-with-auth-test/post-write-log:
+                value: |-
+                  {
+                    "deviceId" : 1,
+                    "temperature" : 12.34,
+                    "relativeHumidity" : 19.87,
+                    "imageBase64" : "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q=="
+                  }
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                log-with-auth-test/post-write-log:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : {
+                        "deviceId" : 1,
+                        "humidity" : 19.87,
+                        "temperature" : 12.34,
+                        "imageUrl" : null,
+                        "detection" : {
+                          "status" : "NOT_STARTED"
+                        },
+                        "timestamp" : "2023-06-09T16:35:57.000Z"
+                      }
+                    }
+      security:
+      - bearerAuthJWT: []
+  /log/{deviceId}/detected-per-day:
+    get:
+      tags:
+      - log
+      operationId: log-with-device-id-test/get-detected-per-day-logs
+      parameters:
+      - name: deviceId
+        in: path
+        description: ""
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                log-with-device-id-test/get-detected-per-day-logs:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : [ {
+                        "deviceId" : 1,
+                        "humidity" : 30.0,
+                        "temperature" : 20.09,
+                        "imageUrl" : "/static/image/2.jpg",
+                        "detection" : {
+                          "status" : "DONE",
+                          "result" : "2"
+                        },
+                        "timestamp" : "2023-06-08T16:35:58.000Z"
+                      }, {
+                        "deviceId" : 1,
+                        "humidity" : 30.0,
+                        "temperature" : 20.09,
+                        "imageUrl" : "/static/image/1.jpg",
+                        "detection" : {
+                          "status" : "DONE",
+                          "result" : "0"
+                        },
+                        "timestamp" : "2023-06-07T16:35:58.000Z"
+                      } ]
+                    }
+      security:
+      - bearerAuthJWT: []
+  /log/{deviceId}/latest:
+    get:
+      tags:
+      - log
+      operationId: log-with-device-id-test/get-latest-log
+      parameters:
+      - name: deviceId
+        in: path
+        description: ""
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                log-with-device-id-test/get-latest-log:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : {
+                        "deviceId" : 1,
+                        "humidity" : 35.55,
+                        "temperature" : 21.01,
+                        "imageUrl" : "/static/image/3.jpg",
+                        "detection" : {
+                          "status" : "IN_PROGRESS"
+                        },
+                        "timestamp" : "2023-06-09T16:35:58.000Z"
+                      }
+                    }
+      security:
+      - bearerAuthJWT: []
+  /log/{deviceId}/latest-detected:
+    get:
+      tags:
+      - log
+      operationId: log-with-device-id-test/get-latest-detected-log
+      parameters:
+      - name: deviceId
+        in: path
+        description: ""
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                log-with-device-id-test/get-latest-detected-log:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : {
+                        "deviceId" : 1,
+                        "humidity" : 30.0,
+                        "temperature" : 20.09,
+                        "imageUrl" : "/static/image/2.jpg",
+                        "detection" : {
+                          "status" : "DONE",
+                          "result" : "2"
+                        },
+                        "timestamp" : "2023-06-08T16:35:58.000Z"
+                      }
+                    }
+      security:
+      - bearerAuthJWT: []
+  /log/{deviceId}/recent:
+    get:
+      tags:
+      - log
+      operationId: log-with-device-id-test/get-recent-logs
+      parameters:
+      - name: deviceId
+        in: path
+        description: ""
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                log-with-device-id-test/get-recent-logs:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : [ {
+                        "deviceId" : 1,
+                        "humidity" : 35.55,
+                        "temperature" : 21.01,
+                        "imageUrl" : "/static/image/3.jpg",
+                        "detection" : {
+                          "status" : "IN_PROGRESS"
+                        },
+                        "timestamp" : "2023-06-09T16:35:58.000Z"
+                      }, {
+                        "deviceId" : 1,
+                        "humidity" : 30.0,
+                        "temperature" : 20.09,
+                        "imageUrl" : "/static/image/2.jpg",
+                        "detection" : {
+                          "status" : "DONE",
+                          "result" : "2"
+                        },
+                        "timestamp" : "2023-06-08T16:35:58.000Z"
+                      }, {
+                        "deviceId" : 1,
+                        "humidity" : 30.0,
+                        "temperature" : 20.09,
+                        "imageUrl" : "/static/image/1.jpg",
+                        "detection" : {
+                          "status" : "DONE",
+                          "result" : "0"
+                        },
+                        "timestamp" : "2023-06-07T16:35:58.000Z"
+                      } ]
+                    }
+      security:
+      - bearerAuthJWT: []
+  /log/{deviceId}/write:
+    post:
+      tags:
+      - log
+      operationId: log-with-device-id-test/post-write-log
+      parameters:
+      - name: deviceId
+        in: path
+        description: ""
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/timelapse-request486549215'
+            examples:
+              log-with-device-id-test/post-write-log:
+                value: |-
+                  {
+                    "deviceId" : 1,
+                    "temperature" : 12.34,
+                    "relativeHumidity" : 19.87,
+                    "imageBase64" : "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q=="
+                  }
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                log-with-device-id-test/post-write-log:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : {
+                        "deviceId" : 1,
+                        "humidity" : 19.87,
+                        "temperature" : 12.34,
+                        "imageUrl" : null,
+                        "detection" : {
+                          "status" : "NOT_STARTED"
+                        },
+                        "timestamp" : "2023-06-09T16:35:59.000Z"
+                      }
+                    }
+      security:
+      - bearerAuthJWT: []
+  /timelapse/all:
+    get:
+      tags:
+      - timelapse
+      operationId: timelapse-with-auth-test/get-all
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                timelapse-with-auth-test/get-all:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : [ {
+                        "id" : 2,
+                        "deviceId" : 1,
+                        "status" : "NOT_STARTED",
+                        "logStartDate" : "2022-10-11T12:13:14.000Z",
+                        "logEndDate" : "2022-11-12T13:14:15.000Z",
+                        "lastUpdated" : "2023-06-09T16:36:02.000Z"
+                      }, {
+                        "id" : 1,
+                        "deviceId" : 1,
+                        "status" : "DONE",
+                        "result" : "result.mp4",
+                        "logStartDate" : "2023-05-20T00:00:00.000Z",
+                        "logEndDate" : "2023-05-30T00:00:00.000Z",
+                        "lastUpdated" : "2023-06-09T16:35:00.000Z"
+                      } ]
+                    }
+      security:
+      - bearerAuthJWT: []
+  /timelapse/latest:
+    get:
+      tags:
+      - timelapse
+      operationId: timelapse-with-auth-test/get-latest
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                timelapse-with-auth-test/get-latest:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : {
+                        "id" : 1,
+                        "deviceId" : 1,
+                        "status" : "DONE",
+                        "result" : "result.mp4",
+                        "logStartDate" : "2023-05-20T00:00:00.000Z",
+                        "logEndDate" : "2023-05-30T00:00:00.000Z",
+                        "lastUpdated" : "2023-06-09T16:35:00.000Z"
+                      }
+                    }
+      security:
+      - bearerAuthJWT: []
+  /timelapse/request:
+    post:
+      tags:
+      - timelapse
+      operationId: timelapse-with-auth-test/post-request
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/timelapse-request486549215'
+            examples:
+              timelapse-with-auth-test/post-request:
+                value: |-
+                  {
+                    "deviceId" : 1,
+                    "startDate" : "2022-10-11T12:13:14.000Z",
+                    "endDate" : "2022-11-12T13:14:15.000Z"
+                  }
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                timelapse-with-auth-test/post-request:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : {
+                        "id" : 2,
+                        "deviceId" : 1,
+                        "status" : "NOT_STARTED",
+                        "logStartDate" : "2022-10-11T12:13:14.000Z",
+                        "logEndDate" : "2022-11-12T13:14:15.000Z",
+                        "lastUpdated" : null
+                      }
+                    }
+      security:
+      - bearerAuthJWT: []
+  /timelapse/{deviceId}/all:
+    get:
+      tags:
+      - timelapse
+      operationId: timelapse-with-device-id-test/get-all
+      parameters:
+      - name: deviceId
+        in: path
+        description: ""
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                timelapse-with-device-id-test/get-all:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : [ {
+                        "id" : 2,
+                        "deviceId" : 1,
+                        "status" : "NOT_STARTED",
+                        "logStartDate" : "2022-10-11T12:13:14.000Z",
+                        "logEndDate" : "2022-11-12T13:14:15.000Z",
+                        "lastUpdated" : "2023-06-09T16:36:04.000Z"
+                      }, {
+                        "id" : 1,
+                        "deviceId" : 1,
+                        "status" : "DONE",
+                        "result" : "result.mp4",
+                        "logStartDate" : "2023-05-20T00:00:00.000Z",
+                        "logEndDate" : "2023-05-30T00:00:00.000Z",
+                        "lastUpdated" : "2023-06-09T16:35:03.000Z"
+                      } ]
+                    }
+      security:
+      - bearerAuthJWT: []
+  /timelapse/{deviceId}/latest:
+    get:
+      tags:
+      - timelapse
+      operationId: timelapse-with-device-id-test/get-latest
+      parameters:
+      - name: deviceId
+        in: path
+        description: ""
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                timelapse-with-device-id-test/get-latest:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : {
+                        "id" : 1,
+                        "deviceId" : 1,
+                        "status" : "DONE",
+                        "result" : "result.mp4",
+                        "logStartDate" : "2023-05-20T00:00:00.000Z",
+                        "logEndDate" : "2023-05-30T00:00:00.000Z",
+                        "lastUpdated" : "2023-06-09T16:35:03.000Z"
+                      }
+                    }
+      security:
+      - bearerAuthJWT: []
+  /timelapse/{deviceId}/request:
+    post:
+      tags:
+      - timelapse
+      operationId: timelapse-with-device-id-test/post-request
+      parameters:
+      - name: deviceId
+        in: path
+        description: ""
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/timelapse-request486549215'
+            examples:
+              timelapse-with-device-id-test/post-request:
+                value: |-
+                  {
+                    "deviceId" : 1,
+                    "startDate" : "2022-10-11T12:13:14.000Z",
+                    "endDate" : "2022-11-12T13:14:15.000Z"
+                  }
+      responses:
+        "200":
+          description: "200"
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/timelapse-request486549215'
+              examples:
+                timelapse-with-device-id-test/post-request:
+                  value: |-
+                    {
+                      "status" : "ok",
+                      "data" : {
+                        "id" : 2,
+                        "deviceId" : 1,
+                        "status" : "NOT_STARTED",
+                        "logStartDate" : "2022-10-11T12:13:14.000Z",
+                        "logEndDate" : "2022-11-12T13:14:15.000Z",
+                        "lastUpdated" : null
+                      }
+                    }
+      security:
+      - bearerAuthJWT: []
+components:
+  schemas:
+    timelapse-request486549215:
+      type: object
+  securitySchemes:
+    bearerAuthJWT:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

@@ -1,0 +1,990 @@
+{
+  "info" : {
+    "name" : "API",
+    "version" : "0.0.1-SNAPSHOT",
+    "schema" : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item" : [ {
+    "id" : "index-test/index",
+    "name" : "/",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "index-test/index",
+      "name" : "index-test/index",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"안녕, 세계!\"\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "auth-test/login",
+    "name" : "/auth/login",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/auth/login"
+      },
+      "method" : "POST",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{\n  \"loginId\" : \"user\",\n  \"password\" : \"pass\"\n}",
+        "urlencoded" : [ ]
+      }
+    },
+    "response" : [ {
+      "id" : "auth-test/login",
+      "name" : "auth-test/login",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/auth/login"
+        },
+        "method" : "POST",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json;charset=UTF-8",
+          "disabled" : false
+        } ],
+        "body" : {
+          "mode" : "raw",
+          "raw" : "{\n  \"loginId\" : \"user\",\n  \"password\" : \"pass\"\n}",
+          "urlencoded" : [ ]
+        }
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"Successfully logged in\",\n  \"data\" : {\n    \"access\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MSwiZXhwIjoxNjg2MzMyMTUxfQ.h50qtl1iE6VIt2y12PIRQW4Tv6C5_OLPoOzEPzR-NeMsy5sz68FeUSA0rdHe7C4npldjlJ2sleCOGFYjAO7QUQ\",\n    \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MSwiZXhwIjoxNjg3MTkyNTUxfQ.rCtVDvMe--zLmI-s_84roUzob14JQHbuVhbk0s6g1Z3I4qB7mKPaXDlTOOfGIY0ILF6xegffv1J-HivL7y_Eeg\"\n  }\n}",
+      "code" : 200
+    }, {
+      "id" : "auth-test/login-failed",
+      "name" : "auth-test/login-failed",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/auth/login"
+        },
+        "method" : "POST",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json;charset=UTF-8",
+          "disabled" : false
+        } ],
+        "body" : {
+          "mode" : "raw",
+          "raw" : "{\n  \"loginId\" : \"user1\",\n  \"password\" : \"pass2\"\n}",
+          "urlencoded" : [ ]
+        }
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"fail\",\n  \"message\" : \"Failed to login\"\n}",
+      "code" : 401
+    } ]
+  }, {
+    "id" : "auth-test/refresh",
+    "name" : "/auth/refresh",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/auth/refresh"
+      },
+      "method" : "POST",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{\n  \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MiwiZXhwIjoxNjg3MTkyNTUyfQ.skGexWydgc0ByTWzj_IF2JFAK_S25KKTPM9i3IGQcKssBR5nOGdpToKOfWH0vKeh9Yo_XYJ_yh17W5KtPkp0pQ\"\n}",
+        "urlencoded" : [ ]
+      }
+    },
+    "response" : [ {
+      "id" : "auth-test/refresh",
+      "name" : "auth-test/refresh",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/auth/refresh"
+        },
+        "method" : "POST",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json;charset=UTF-8",
+          "disabled" : false
+        } ],
+        "body" : {
+          "mode" : "raw",
+          "raw" : "{\n  \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MiwiZXhwIjoxNjg3MTkyNTUyfQ.skGexWydgc0ByTWzj_IF2JFAK_S25KKTPM9i3IGQcKssBR5nOGdpToKOfWH0vKeh9Yo_XYJ_yh17W5KtPkp0pQ\"\n}",
+          "urlencoded" : [ ]
+        }
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"Successfully refreshed token\",\n  \"data\" : {\n    \"access\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MiwiZXhwIjoxNjg2MzMyMTUyfQ.S0SNh9_Ebng2Dg53Qf8DPqCoQOYqltKAgH5jB3xXWIX7NHt3dTLucS_b9YVqB8_4ciYivWRQlPD8URXXAewGfQ\",\n    \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjMyODU1MiwiZXhwIjoxNjg3MTkyNTUyfQ.skGexWydgc0ByTWzj_IF2JFAK_S25KKTPM9i3IGQcKssBR5nOGdpToKOfWH0vKeh9Yo_XYJ_yh17W5KtPkp0pQ\"\n  }\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "auth-test/signup",
+    "name" : "/auth/signup",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/auth/signup"
+      },
+      "method" : "POST",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{\n  \"loginId\" : \"user\",\n  \"password\" : \"pass\"\n}",
+        "urlencoded" : [ ]
+      }
+    },
+    "response" : [ {
+      "id" : "auth-test/signup",
+      "name" : "auth-test/signup",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/auth/signup"
+        },
+        "method" : "POST",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json;charset=UTF-8",
+          "disabled" : false
+        } ],
+        "body" : {
+          "mode" : "raw",
+          "raw" : "{\n  \"loginId\" : \"user\",\n  \"password\" : \"pass\"\n}",
+          "urlencoded" : [ ]
+        }
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"Successfully signed up\",\n  \"data\" : {\n    \"access\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjMyODU1MSwiZXhwIjoxNjg2MzMyMTUxfQ.pNOCpY7Y0MxQokLK3M9Hzqfrqi37lpkNAlQCBnPtr8qXXi6Ud1Bgtj6-dd4WWsD1j2N2mhZ11IsRgOJAsAWAiQ\",\n    \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjMyODU1MSwiZXhwIjoxNjg3MTkyNTUxfQ.cFl0-EeWJo42wAJ_irtTbpE2ThQlx5D3FGnyip1dvrvj7XItAUWjf6dmgYh_xpG5OHgxzbvSZL1XpK9OYi1ooQ\"\n  }\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "auth-test/verify-invalid",
+    "name" : "/auth/verify",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/auth/verify"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "auth-test/verify-invalid",
+      "name" : "auth-test/verify-invalid",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/auth/verify"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"fail\",\n  \"message\" : \"Unauthorized\"\n}",
+      "code" : 401
+    }, {
+      "id" : "auth-test/verify",
+      "name" : "auth-test/verify",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/auth/verify"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\"\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "device-test/get-authenticated-device",
+    "name" : "/device/get",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/device/get"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "device-test/get-authenticated-device",
+      "name" : "device-test/get-authenticated-device",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/device/get"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"dateCreated\" : \"2023-06-09T16:35:53.000Z\",\n    \"lastEdited\" : \"2023-06-09T16:35:53.000Z\"\n  }\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "device-test/get-invalid-device",
+    "name" : "/device/get/-1",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/device/get/-1"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "device-test/get-invalid-device",
+      "name" : "device-test/get-invalid-device",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/device/get/-1"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"error\",\n  \"message\" : \"No device found\"\n}",
+      "code" : 404
+    } ]
+  }, {
+    "id" : "device-test/get-device1",
+    "name" : "/device/get/{deviceId}",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/device/get/:deviceId"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "device-test/get-device1",
+      "name" : "device-test/get-device1",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/device/get/:deviceId"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"dateCreated\" : \"2023-06-09T16:35:53.000Z\",\n    \"lastEdited\" : \"2023-06-09T16:35:53.000Z\"\n  }\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "log-with-auth-test/get-detected-per-day-logs",
+    "name" : "/log/detected-per-day",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/log/detected-per-day"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "log-with-auth-test/get-detected-per-day-logs",
+      "name" : "log-with-auth-test/get-detected-per-day-logs",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/log/detected-per-day"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T16:35:55.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-07T16:35:55.000Z\"\n  } ]\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "log-with-auth-test/get-latest-log",
+    "name" : "/log/latest",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/log/latest"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "log-with-auth-test/get-latest-log",
+      "name" : "log-with-auth-test/get-latest-log",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/log/latest"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-09T16:35:55.000Z\"\n  }\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "log-with-auth-test/get-latest-detected-log",
+    "name" : "/log/latest-detected",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/log/latest-detected"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "log-with-auth-test/get-latest-detected-log",
+      "name" : "log-with-auth-test/get-latest-detected-log",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/log/latest-detected"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T16:35:55.000Z\"\n  }\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "log-with-auth-test/get-recent-logs",
+    "name" : "/log/recent",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/log/recent"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "log-with-auth-test/get-recent-logs",
+      "name" : "log-with-auth-test/get-recent-logs",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/log/recent"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-09T16:35:55.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T16:35:55.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-07T16:35:55.000Z\"\n  } ]\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "log-with-auth-test/post-write-log",
+    "name" : "/log/write",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/log/write"
+      },
+      "method" : "POST",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{\n  \"deviceId\" : 1,\n  \"temperature\" : 12.34,\n  \"relativeHumidity\" : 19.87,\n  \"imageBase64\" : \"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q==\"\n}",
+        "urlencoded" : [ ]
+      }
+    },
+    "response" : [ {
+      "id" : "log-with-auth-test/post-write-log",
+      "name" : "log-with-auth-test/post-write-log",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/log/write"
+        },
+        "method" : "POST",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json;charset=UTF-8",
+          "disabled" : false
+        } ],
+        "body" : {
+          "mode" : "raw",
+          "raw" : "{\n  \"deviceId\" : 1,\n  \"temperature\" : 12.34,\n  \"relativeHumidity\" : 19.87,\n  \"imageBase64\" : \"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q==\"\n}",
+          "urlencoded" : [ ]
+        }
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 19.87,\n    \"temperature\" : 12.34,\n    \"imageUrl\" : null,\n    \"detection\" : {\n      \"status\" : \"NOT_STARTED\"\n    },\n    \"timestamp\" : \"2023-06-09T16:35:57.000Z\"\n  }\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "log-with-device-id-test/get-detected-per-day-logs",
+    "name" : "/log/{deviceId}/detected-per-day",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/log/:deviceId/detected-per-day"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "log-with-device-id-test/get-detected-per-day-logs",
+      "name" : "log-with-device-id-test/get-detected-per-day-logs",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/log/:deviceId/detected-per-day"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T16:35:58.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-07T16:35:58.000Z\"\n  } ]\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "log-with-device-id-test/get-latest-log",
+    "name" : "/log/{deviceId}/latest",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/log/:deviceId/latest"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "log-with-device-id-test/get-latest-log",
+      "name" : "log-with-device-id-test/get-latest-log",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/log/:deviceId/latest"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-09T16:35:58.000Z\"\n  }\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "log-with-device-id-test/get-latest-detected-log",
+    "name" : "/log/{deviceId}/latest-detected",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/log/:deviceId/latest-detected"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "log-with-device-id-test/get-latest-detected-log",
+      "name" : "log-with-device-id-test/get-latest-detected-log",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/log/:deviceId/latest-detected"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T16:35:58.000Z\"\n  }\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "log-with-device-id-test/get-recent-logs",
+    "name" : "/log/{deviceId}/recent",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/log/:deviceId/recent"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "log-with-device-id-test/get-recent-logs",
+      "name" : "log-with-device-id-test/get-recent-logs",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/log/:deviceId/recent"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-09T16:35:58.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-08T16:35:58.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-07T16:35:58.000Z\"\n  } ]\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "log-with-device-id-test/post-write-log",
+    "name" : "/log/{deviceId}/write",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/log/:deviceId/write"
+      },
+      "method" : "POST",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{\n  \"deviceId\" : 1,\n  \"temperature\" : 12.34,\n  \"relativeHumidity\" : 19.87,\n  \"imageBase64\" : \"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q==\"\n}",
+        "urlencoded" : [ ]
+      }
+    },
+    "response" : [ {
+      "id" : "log-with-device-id-test/post-write-log",
+      "name" : "log-with-device-id-test/post-write-log",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/log/:deviceId/write"
+        },
+        "method" : "POST",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json;charset=UTF-8",
+          "disabled" : false
+        } ],
+        "body" : {
+          "mode" : "raw",
+          "raw" : "{\n  \"deviceId\" : 1,\n  \"temperature\" : 12.34,\n  \"relativeHumidity\" : 19.87,\n  \"imageBase64\" : \"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/KKKKAP/2Q==\"\n}",
+          "urlencoded" : [ ]
+        }
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 19.87,\n    \"temperature\" : 12.34,\n    \"imageUrl\" : null,\n    \"detection\" : {\n      \"status\" : \"NOT_STARTED\"\n    },\n    \"timestamp\" : \"2023-06-09T16:35:59.000Z\"\n  }\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "timelapse-with-auth-test/get-all",
+    "name" : "/timelapse/all",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/timelapse/all"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "timelapse-with-auth-test/get-all",
+      "name" : "timelapse-with-auth-test/get-all",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/timelapse/all"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"id\" : 2,\n    \"deviceId\" : 1,\n    \"status\" : \"NOT_STARTED\",\n    \"logStartDate\" : \"2022-10-11T12:13:14.000Z\",\n    \"logEndDate\" : \"2022-11-12T13:14:15.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:36:02.000Z\"\n  }, {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:35:00.000Z\"\n  } ]\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "timelapse-with-auth-test/get-latest",
+    "name" : "/timelapse/latest",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/timelapse/latest"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "timelapse-with-auth-test/get-latest",
+      "name" : "timelapse-with-auth-test/get-latest",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/timelapse/latest"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:35:00.000Z\"\n  }\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "timelapse-with-auth-test/post-request",
+    "name" : "/timelapse/request",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/timelapse/request"
+      },
+      "method" : "POST",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{\n  \"deviceId\" : 1,\n  \"startDate\" : \"2022-10-11T12:13:14.000Z\",\n  \"endDate\" : \"2022-11-12T13:14:15.000Z\"\n}",
+        "urlencoded" : [ ]
+      }
+    },
+    "response" : [ {
+      "id" : "timelapse-with-auth-test/post-request",
+      "name" : "timelapse-with-auth-test/post-request",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/timelapse/request"
+        },
+        "method" : "POST",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json;charset=UTF-8",
+          "disabled" : false
+        } ],
+        "body" : {
+          "mode" : "raw",
+          "raw" : "{\n  \"deviceId\" : 1,\n  \"startDate\" : \"2022-10-11T12:13:14.000Z\",\n  \"endDate\" : \"2022-11-12T13:14:15.000Z\"\n}",
+          "urlencoded" : [ ]
+        }
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 2,\n    \"deviceId\" : 1,\n    \"status\" : \"NOT_STARTED\",\n    \"logStartDate\" : \"2022-10-11T12:13:14.000Z\",\n    \"logEndDate\" : \"2022-11-12T13:14:15.000Z\",\n    \"lastUpdated\" : null\n  }\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "timelapse-with-device-id-test/get-all",
+    "name" : "/timelapse/{deviceId}/all",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/timelapse/:deviceId/all"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "timelapse-with-device-id-test/get-all",
+      "name" : "timelapse-with-device-id-test/get-all",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/timelapse/:deviceId/all"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"id\" : 2,\n    \"deviceId\" : 1,\n    \"status\" : \"NOT_STARTED\",\n    \"logStartDate\" : \"2022-10-11T12:13:14.000Z\",\n    \"logEndDate\" : \"2022-11-12T13:14:15.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:36:04.000Z\"\n  }, {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:35:03.000Z\"\n  } ]\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "timelapse-with-device-id-test/get-latest",
+    "name" : "/timelapse/{deviceId}/latest",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/timelapse/:deviceId/latest"
+      },
+      "method" : "GET"
+    },
+    "response" : [ {
+      "id" : "timelapse-with-device-id-test/get-latest",
+      "name" : "timelapse-with-device-id-test/get-latest",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/timelapse/:deviceId/latest"
+        },
+        "method" : "GET"
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-09T16:35:03.000Z\"\n  }\n}",
+      "code" : 200
+    } ]
+  }, {
+    "id" : "timelapse-with-device-id-test/post-request",
+    "name" : "/timelapse/{deviceId}/request",
+    "variable" : [ ],
+    "event" : [ ],
+    "request" : {
+      "url" : {
+        "protocol" : "https",
+        "host" : "lsp.won-jung.kim",
+        "path" : "/timelapse/:deviceId/request"
+      },
+      "method" : "POST",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{\n  \"deviceId\" : 1,\n  \"startDate\" : \"2022-10-11T12:13:14.000Z\",\n  \"endDate\" : \"2022-11-12T13:14:15.000Z\"\n}",
+        "urlencoded" : [ ]
+      }
+    },
+    "response" : [ {
+      "id" : "timelapse-with-device-id-test/post-request",
+      "name" : "timelapse-with-device-id-test/post-request",
+      "originalRequest" : {
+        "url" : {
+          "protocol" : "https",
+          "host" : "lsp.won-jung.kim",
+          "path" : "/timelapse/:deviceId/request"
+        },
+        "method" : "POST",
+        "header" : [ {
+          "key" : "Content-Type",
+          "value" : "application/json;charset=UTF-8",
+          "disabled" : false
+        } ],
+        "body" : {
+          "mode" : "raw",
+          "raw" : "{\n  \"deviceId\" : 1,\n  \"startDate\" : \"2022-10-11T12:13:14.000Z\",\n  \"endDate\" : \"2022-11-12T13:14:15.000Z\"\n}",
+          "urlencoded" : [ ]
+        }
+      },
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json;charset=UTF-8",
+        "disabled" : false
+      } ],
+      "cookie" : [ ],
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 2,\n    \"deviceId\" : 1,\n    \"status\" : \"NOT_STARTED\",\n    \"logStartDate\" : \"2022-10-11T12:13:14.000Z\",\n    \"logEndDate\" : \"2022-11-12T13:14:15.000Z\",\n    \"lastUpdated\" : null\n  }\n}",
+      "code" : 200
+    } ]
+  } ],
+  "event" : [ ],
+  "variable" : [ ]
+}

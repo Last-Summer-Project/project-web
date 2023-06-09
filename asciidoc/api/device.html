@@ -450,9 +450,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h6 id="_curl"><code>curl</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/device/get' -i -X GET \
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/device/get' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg2MTA3MTk3LCJleHAiOjE2ODYxMTA3OTd9.d3eZUMpCxxxh-CeEM9AZk21NC5LGo4etx-y7-IUzxGjE1-JBwqwVmiM4YEZbxFw9Jo_6rho-sjr88RvAI9_q2g'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg2MzI4NTU0LCJleHAiOjE2ODYzMzIxNTR9.jS8HTNEkHOIyRsoMdiWa-WOSO4UpmQAw3YB76Q-3vopSSSr21bAA4YbqsQ31w0XavdQ7VvggU1VI1ygUbAQ3bA'</code></pre>
 </div>
 </div>
 </div>
@@ -460,9 +460,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h6 id="_httpie"><code>httpie</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/device/get' \
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/device/get' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg2MTA3MTk3LCJleHAiOjE2ODYxMTA3OTd9.d3eZUMpCxxxh-CeEM9AZk21NC5LGo4etx-y7-IUzxGjE1-JBwqwVmiM4YEZbxFw9Jo_6rho-sjr88RvAI9_q2g'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg2MzI4NTU0LCJleHAiOjE2ODYzMzIxNTR9.jS8HTNEkHOIyRsoMdiWa-WOSO4UpmQAw3YB76Q-3vopSSSr21bAA4YbqsQ31w0XavdQ7VvggU1VI1ygUbAQ3bA'</code></pre>
 </div>
 </div>
 </div>
@@ -470,9 +470,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h6 id="_http">HTTP</h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /api/v1/device/get HTTP/1.1
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /device/get HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg2MTA3MTk3LCJleHAiOjE2ODYxMTA3OTd9.d3eZUMpCxxxh-CeEM9AZk21NC5LGo4etx-y7-IUzxGjE1-JBwqwVmiM4YEZbxFw9Jo_6rho-sjr88RvAI9_q2g
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg2MzI4NTU0LCJleHAiOjE2ODYzMzIxNTR9.jS8HTNEkHOIyRsoMdiWa-WOSO4UpmQAw3YB76Q-3vopSSSr21bAA4YbqsQ31w0XavdQ7VvggU1VI1ygUbAQ3bA
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -490,8 +490,8 @@ Content-Length: 147
   "status" : "ok",
   "data" : {
     "id" : 1,
-    "dateCreated" : "2023-06-07T03:06:35.000Z",
-    "lastEdited" : "2023-06-07T03:06:35.000Z"
+    "dateCreated" : "2023-06-09T16:35:53.000Z",
+    "lastEdited" : "2023-06-09T16:35:53.000Z"
   }
 }</code></pre>
 </div>
@@ -542,9 +542,9 @@ Content-Length: 147
 <h6 id="_curl_2"><code>curl</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/api/v1/device/get/1' -i -X GET \
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ curl 'https://smart-farm.smhrd.com/device/get/1' -i -X GET \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg2MTA3MTk2LCJleHAiOjE2ODYxMTA3OTZ9.3OJ2vkM4FVCUJIqZMi4UMUpqOF9pfyvPDO5j3NJfHFMnVWYWVFqD9FFmg5cNBi7X3cds7_Kkrym5TklyjPDrpg'</code></pre>
+    -H 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg2MzI4NTU0LCJleHAiOjE2ODYzMzIxNTR9.jS8HTNEkHOIyRsoMdiWa-WOSO4UpmQAw3YB76Q-3vopSSSr21bAA4YbqsQ31w0XavdQ7VvggU1VI1ygUbAQ3bA'</code></pre>
 </div>
 </div>
 </div>
@@ -552,9 +552,9 @@ Content-Length: 147
 <h6 id="_httpie_2"><code>httpie</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/api/v1/device/get/1' \
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ http GET 'https://smart-farm.smhrd.com/device/get/1' \
     'Content-Type:application/json;charset=UTF-8' \
-    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg2MTA3MTk2LCJleHAiOjE2ODYxMTA3OTZ9.3OJ2vkM4FVCUJIqZMi4UMUpqOF9pfyvPDO5j3NJfHFMnVWYWVFqD9FFmg5cNBi7X3cds7_Kkrym5TklyjPDrpg'</code></pre>
+    'Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg2MzI4NTU0LCJleHAiOjE2ODYzMzIxNTR9.jS8HTNEkHOIyRsoMdiWa-WOSO4UpmQAw3YB76Q-3vopSSSr21bAA4YbqsQ31w0XavdQ7VvggU1VI1ygUbAQ3bA'</code></pre>
 </div>
 </div>
 </div>
@@ -562,9 +562,9 @@ Content-Length: 147
 <h6 id="_http_2">HTTP</h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /api/v1/device/get/1 HTTP/1.1
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /device/get/1 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg2MTA3MTk2LCJleHAiOjE2ODYxMTA3OTZ9.3OJ2vkM4FVCUJIqZMi4UMUpqOF9pfyvPDO5j3NJfHFMnVWYWVFqD9FFmg5cNBi7X3cds7_Kkrym5TklyjPDrpg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InRlc3RfdXNlciIsImRldmljZV9pZCI6MSwiaWF0IjoxNjg2MzI4NTU0LCJleHAiOjE2ODYzMzIxNTR9.jS8HTNEkHOIyRsoMdiWa-WOSO4UpmQAw3YB76Q-3vopSSSr21bAA4YbqsQ31w0XavdQ7VvggU1VI1ygUbAQ3bA
 Host: smart-farm.smhrd.com</code></pre>
 </div>
 </div>
@@ -572,7 +572,7 @@ Host: smart-farm.smhrd.com</code></pre>
 <div class="sect5">
 <h6 id="_path_parameters">Path Parameters</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. /api/v1/device/get/{deviceId}</caption>
+<caption class="title">Table 1. /device/get/{deviceId}</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -606,8 +606,8 @@ Content-Length: 147
   "status" : "ok",
   "data" : {
     "id" : 1,
-    "dateCreated" : "2023-06-07T03:06:35.000Z",
-    "lastEdited" : "2023-06-07T03:06:35.000Z"
+    "dateCreated" : "2023-06-09T16:35:53.000Z",
+    "lastEdited" : "2023-06-09T16:35:53.000Z"
   }
 }</code></pre>
 </div>
@@ -697,7 +697,7 @@ Content-Length: 57
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2023-06-07 03:05:32 UTC
+Last updated 2023-06-09 16:34:15 UTC
 </div>
 </div>
 </body>
