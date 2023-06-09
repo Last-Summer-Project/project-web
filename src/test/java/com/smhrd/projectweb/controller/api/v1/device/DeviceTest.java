@@ -71,7 +71,7 @@ class DeviceTest extends AuthTestSupport {
     @Test
     void getInvalidDevice() throws Exception {
         this.mockMvc.perform(
-                        get("/api/v1/device/get/5")
+                        get("/api/v1/device/get/-1")
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))
