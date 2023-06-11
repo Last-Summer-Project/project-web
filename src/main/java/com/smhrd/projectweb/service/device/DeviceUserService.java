@@ -10,6 +10,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -22,11 +23,13 @@ public class DeviceUserService {
     private final JwtProvider jwtProvider;
     private final AuthenticationManager authenticationManager;
 
+    @Transactional(readOnly = true)
     public DeviceAuthResponse login(String loginId, String password) throws AuthenticationException {
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginId, password));
         return jwtProvider.createToken(loginId, deviceMapper.selectByLoginId(loginId).getId());
     }
 
+    @Transactional
     public DeviceAuthResponse signup(Device device) {
         Device d = deviceMapper.selectByLoginId(device.getLoginId());
         if (d == null) {
@@ -53,6 +56,7 @@ public class DeviceUserService {
         return jwtProvider.getLoginId(token);
     }
 
+    @Transactional(readOnly = true)
     public DeviceAuthResponse refresh(String loginId) {
         return jwtProvider.createToken(loginId, deviceMapper.selectByLoginId(loginId).getId());
     }

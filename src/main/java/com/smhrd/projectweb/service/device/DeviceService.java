@@ -6,6 +6,7 @@ import com.smhrd.projectweb.mapper.DeviceMapper;
 import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -21,6 +22,7 @@ public class DeviceService {
         return deviceUserService.getTokenDeviceId(req);
     }
 
+    @Transactional(readOnly = true)
     public ResultWrapper<DeviceResponse> get(HttpServletRequest req) {
         return this.get(getDeviceId(req));
     }
@@ -29,6 +31,7 @@ public class DeviceService {
         return this.update(getDeviceId(req), requestDevice);
     }
 
+    @Transactional(readOnly = true)
     public ResultWrapper<DeviceResponse> get(Long id) {
         Device device = deviceMapper.selectByPrimaryKey(id);
         if (device == null) {

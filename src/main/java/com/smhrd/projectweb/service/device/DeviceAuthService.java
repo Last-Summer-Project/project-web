@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -24,7 +25,6 @@ public class DeviceAuthService {
 
     @Value("${service.debug.allowSignup}")
     private Boolean isSignupAllowed;
-
 
     public ResultWrapper<DeviceAuthResponse> signup(AuthRequest authRequest) {
         try {

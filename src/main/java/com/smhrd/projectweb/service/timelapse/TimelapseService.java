@@ -9,6 +9,7 @@ import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Objects;
@@ -21,6 +22,7 @@ public class TimelapseService {
     private static final String TIMELAPSE_NOT_FOUND = "Timelapse not found";
     private final TimelapseMapper timelapseMapper;
 
+    @Transactional(readOnly = true)
     public ResultWrapper<TimelapseResponse> getLatest(Long deviceId) {
         Timelapse timelapse = timelapseMapper.selectLatestByDeviceId(deviceId);
         if (timelapse == null || timelapse.getId() == 0) {
@@ -30,6 +32,7 @@ public class TimelapseService {
         return ResultWrapper.ok(TimelapseResponse.fromTimelapse(timelapse));
     }
 
+    @Transactional
     public ResultWrapper<TimelapseResponse> postRequest(Long deviceId, TimelapseRequest request) {
         if (!Objects.equals(request.getDeviceId(), deviceId)) {
             return ResultWrapper.fail("Invalid request");
@@ -50,6 +53,7 @@ public class TimelapseService {
         return ResultWrapper.ok(TimelapseResponse.fromTimelapse(tl));
     }
 
+    @Transactional(readOnly = true)
     public ResultWrapper<List<TimelapseResponse>> getAll(Long deviceId) {
         List<Timelapse> tll = timelapseMapper.selectByDeviceId(deviceId);
         if (tll == null || tll.isEmpty()) {

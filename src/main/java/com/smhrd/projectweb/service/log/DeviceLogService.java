@@ -11,6 +11,7 @@ import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.UUID;
@@ -25,6 +26,7 @@ public class DeviceLogService {
     private final DetectMapper detectMapper;
     private final ImageService imageService;
 
+    @Transactional(readOnly = true)
     public ResultWrapper<LogResponse> getLatestByDeviceId(Long id) {
         DeviceLog dl = deviceLogMapper.selectLatestByDeviceId(id);
         if (dl == null) {
@@ -33,6 +35,7 @@ public class DeviceLogService {
         return ResultWrapper.ok(LogResponse.fromDeviceLog(dl));
     }
 
+    @Transactional(readOnly = true)
     public ResultWrapper<LogResponse> getLatestDetectedByDeviceId(Long id) {
         DeviceLog dl = deviceLogMapper.selectLatestDetectedByDeviceId(id);
         if (dl == null) {
@@ -41,6 +44,7 @@ public class DeviceLogService {
         return ResultWrapper.ok(LogResponse.fromDeviceLog(dl));
     }
 
+    @Transactional(readOnly = true)
     public ResultWrapper<List<LogResponse>> getDetectedByDeviceIdPerDay(Long id) {
         List<DeviceLog> dll = deviceLogMapper.selectDetectedByDeviceIdPerDay(id);
         if (dll == null || dll.isEmpty()) {
@@ -52,6 +56,7 @@ public class DeviceLogService {
         return ResultWrapper.ok(llr);
     }
 
+    @Transactional(readOnly = true)
     public ResultWrapper<List<LogResponse>> getRecentByDeviceId(Long id) {
         List<DeviceLog> dll = deviceLogMapper.selectByDeviceId(id);
         if (dll == null || dll.isEmpty()) {
@@ -63,6 +68,7 @@ public class DeviceLogService {
         return ResultWrapper.ok(llr);
     }
 
+    @Transactional
     public ResultWrapper<LogResponse> writeLog(Long deviceId, LogWriteRequest request) {
         if (!deviceId.equals(request.getDeviceId())) return ResultWrapper.fail("Invalid request");
 
