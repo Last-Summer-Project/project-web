@@ -6,8 +6,10 @@ import com.smhrd.projectweb.entity.Detect;
 import com.smhrd.projectweb.entity.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 @Data
+@RequiredArgsConstructor
 @AllArgsConstructor
 public class DetectResponse {
     @JsonFormat(shape = JsonFormat.Shape.STRING)

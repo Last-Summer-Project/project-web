@@ -28,7 +28,7 @@ public class DetectService {
     public ResultWrapper<DetectResponse> request(DetectRequest detectRequest) {
         ResponseEntity<DetectResponse> response = webClient
                 .post()
-                .uri("/detect")
+                .uri("/predict")
                 .accept(MediaType.APPLICATION_JSON)
                 .body(Mono.just(detectRequest), DetectRequest.class)
                 .retrieve()
