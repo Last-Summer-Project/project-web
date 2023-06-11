@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.controller.api.v1.device;
+package com.smhrd.projectweb.controller.device;
 
 
 import com.smhrd.projectweb.restdocs.support.AuthTestSupport;

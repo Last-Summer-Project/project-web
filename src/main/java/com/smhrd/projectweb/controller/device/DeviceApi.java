@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.controller.api.v1.device;
+package com.smhrd.projectweb.controller.device;
 
 import com.smhrd.projectweb.payload.response.api.v1.device.DeviceResponse;
 import com.smhrd.projectweb.entity.Device;

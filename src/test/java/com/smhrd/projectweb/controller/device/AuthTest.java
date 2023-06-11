@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.controller.api.v1.device;
+package com.smhrd.projectweb.controller.device;
 
 import com.smhrd.projectweb.payload.request.api.v1.auth.AuthRequest;
 import com.smhrd.projectweb.payload.request.api.v1.auth.RefreshRequest;

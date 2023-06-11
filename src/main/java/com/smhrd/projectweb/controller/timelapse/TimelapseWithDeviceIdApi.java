@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.controller.api.v1.timelapse;
+package com.smhrd.projectweb.controller.timelapse;
 
 import com.smhrd.projectweb.payload.request.api.v1.timelapse.TimelapseRequest;
 import com.smhrd.projectweb.payload.response.api.v1.timelapse.TimelapseResponse;

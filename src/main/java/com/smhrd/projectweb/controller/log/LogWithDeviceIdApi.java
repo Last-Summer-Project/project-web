@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.controller.api.v1.log;
+package com.smhrd.projectweb.controller.log;
 
 import com.smhrd.projectweb.payload.request.api.v1.log.LogWriteRequest;
 import com.smhrd.projectweb.payload.response.api.v1.log.LogResponse;

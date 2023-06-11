@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.controller.api.v1;
+package com.smhrd.projectweb.controller;
 
 import com.smhrd.projectweb.shared.ResultWrapper;
 import org.springframework.web.bind.annotation.GetMapping;

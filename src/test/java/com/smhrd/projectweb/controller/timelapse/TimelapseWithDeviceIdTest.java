@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.controller.api.v1.timelapse;
+package com.smhrd.projectweb.controller.timelapse;
 
 
 import com.smhrd.projectweb.payload.request.api.v1.timelapse.TimelapseRequest;
@@ -10,6 +10,7 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.restdocs.payload.JsonFieldType;
+import org.springframework.restdocs.request.PathParametersSnippet;
 
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
@@ -17,20 +18,26 @@ import java.time.ZoneOffset;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.get;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.post;
 import static org.springframework.restdocs.payload.PayloadDocumentation.*;
+import static org.springframework.restdocs.request.RequestDocumentation.parameterWithName;
+import static org.springframework.restdocs.request.RequestDocumentation.pathParameters;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.authentication;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
-@WebMvcTest(TimelapseWithAuthApi.class)
+@WebMvcTest(TimelapseWithDeviceIdApi.class)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class TimelapseWithAuthTest extends AuthTestSupport {
+class TimelapseWithDeviceIdTest extends AuthTestSupport {
+
+    PathParametersSnippet deviceIdPathParameterSnippet = pathParameters(
+            parameterWithName("deviceId").description("Device Id to use")
+    );
 
     @Test
     @Order(1)
     void getLatest() throws Exception {
         this.mockMvc.perform(
-                        get("/timelapse/latest")
+                        get("/timelapse/{deviceId}/latest", 1)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))
@@ -42,13 +49,14 @@ class TimelapseWithAuthTest extends AuthTestSupport {
                 .andExpect(jsonPath("data.logStartDate").value("2023-05-20T00:00:00.000Z"))
                 .andExpect(jsonPath("data.logEndDate").value("2023-05-30T00:00:00.000Z"))
                 .andDo(restDocs.document(
+                        deviceIdPathParameterSnippet,
                         authorizationHeaderSnippet,
                         responseFields(
                                 fieldWithPath("status").description("Status of response"),
                                 fieldWithPath("data.id").description("Id of timelapse request"),
                                 fieldWithPath("data.deviceId").description("Device Id of timelapse request"),
                                 fieldWithPath("data.status").description("Status of timelapse request. Can be `NOT_STARTED`, `IN_PROGRESS`, or `DONE`."),
-                                fieldWithPath("data.result").optional().type(JsonFieldType.STRING).description("Result of timelapse. Can be optional if `status` is not `DONE`"),
+                                fieldWithPath("data.result").optional().type(JsonFieldType.STRING).description("Result of timelaspe"),
                                 fieldWithPath("data.logStartDate").description("UTC time of log start date"),
                                 fieldWithPath("data.logEndDate").description("UTC time of log end date"),
                                 fieldWithPath("data.lastUpdated").description("UTC time of last updated")
@@ -66,7 +74,7 @@ class TimelapseWithAuthTest extends AuthTestSupport {
         ));
 
         this.mockMvc.perform(
-                        post("/timelapse/request")
+                        post("/timelapse/{deviceId}/request", 1)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .content(objectMapper.writeValueAsString(timelapseRequest))
@@ -78,6 +86,7 @@ class TimelapseWithAuthTest extends AuthTestSupport {
                 .andExpect(jsonPath("data.logStartDate").value("2022-10-11T12:13:14.000Z"))
                 .andExpect(jsonPath("data.logEndDate").value("2022-11-12T13:14:15.000Z"))
                 .andDo(restDocs.document(
+                        deviceIdPathParameterSnippet,
                         authorizationHeaderSnippet,
                         requestFields(
                                 fieldWithPath("deviceId").description("Device Id of timelapse request"),
@@ -100,7 +109,7 @@ class TimelapseWithAuthTest extends AuthTestSupport {
     @Order(3)
     void getAll() throws Exception {
         this.mockMvc.perform(
-                        get("/timelapse/all")
+                        get("/timelapse/{deviceId}/all", 1)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .header("Authorization", String.format("Bearer %s", getJwt()))
                                 .with(authentication(authentication)))
@@ -112,13 +121,14 @@ class TimelapseWithAuthTest extends AuthTestSupport {
                 .andExpect(jsonPath("data[1].logStartDate").value("2023-05-20T00:00:00.000Z"))
                 .andExpect(jsonPath("data[1].logEndDate").value("2023-05-30T00:00:00.000Z"))
                 .andDo(restDocs.document(
+                        deviceIdPathParameterSnippet,
                         authorizationHeaderSnippet,
                         responseFields(
                                 fieldWithPath("status").description("Status of response"),
                                 fieldWithPath("data[].id").description("Id of timelapse request"),
                                 fieldWithPath("data[].deviceId").description("Device Id of timelapse request"),
                                 fieldWithPath("data[].status").description("Status of timelapse request. Can be `NOT_STARTED`, `IN_PROGRESS`, or `DONE`."),
-                                fieldWithPath("data[].result").optional().type(JsonFieldType.STRING).description("Result of timelapse. Can be optional if `status` is not `DONE`"),
+                                fieldWithPath("data[].result").optional().type(JsonFieldType.STRING).description("Result of timelaspe"),
                                 fieldWithPath("data[].logStartDate").description("UTC time of log start date"),
                                 fieldWithPath("data[].logEndDate").description("UTC time of log end date"),
                                 fieldWithPath("data[].lastUpdated").description("UTC time of last updated")
