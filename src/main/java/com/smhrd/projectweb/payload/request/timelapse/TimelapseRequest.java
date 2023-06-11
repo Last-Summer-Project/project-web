@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.payload.request.api.v1.timelapse;
+package com.smhrd.projectweb.payload.request.timelapse;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;

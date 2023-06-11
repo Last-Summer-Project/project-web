@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.payload.response.api.v1;
+package com.smhrd.projectweb.payload.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

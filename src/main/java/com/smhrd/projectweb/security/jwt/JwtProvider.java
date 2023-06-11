@@ -1,6 +1,6 @@
 package com.smhrd.projectweb.security.jwt;
 
-import com.smhrd.projectweb.payload.response.api.v1.device.DeviceAuthResponse;
+import com.smhrd.projectweb.payload.response.device.DeviceAuthResponse;
 import com.smhrd.projectweb.security.service.UserDetailsServiceImpl;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;

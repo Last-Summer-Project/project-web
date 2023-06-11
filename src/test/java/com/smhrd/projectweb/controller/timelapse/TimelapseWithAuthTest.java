@@ -1,7 +1,7 @@
 package com.smhrd.projectweb.controller.timelapse;
 
 
-import com.smhrd.projectweb.payload.request.api.v1.timelapse.TimelapseRequest;
+import com.smhrd.projectweb.payload.request.timelapse.TimelapseRequest;
 import com.smhrd.projectweb.restdocs.support.AuthTestSupport;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;

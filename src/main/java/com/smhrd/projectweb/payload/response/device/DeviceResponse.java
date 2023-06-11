@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.payload.response.api.v1.device;
+package com.smhrd.projectweb.payload.response.device;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.smhrd.projectweb.entity.Device;

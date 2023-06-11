@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.payload.request.api.v1.auth;
+package com.smhrd.projectweb.payload.request.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

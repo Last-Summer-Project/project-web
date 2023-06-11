@@ -1,7 +1,7 @@
 package com.smhrd.projectweb.controller.timelapse;
 
-import com.smhrd.projectweb.payload.request.api.v1.timelapse.TimelapseRequest;
-import com.smhrd.projectweb.payload.response.api.v1.timelapse.TimelapseResponse;
+import com.smhrd.projectweb.payload.request.timelapse.TimelapseRequest;
+import com.smhrd.projectweb.payload.response.timelapse.TimelapseResponse;
 import com.smhrd.projectweb.service.timelapse.TimelapseAuthService;
 import com.smhrd.projectweb.shared.ResultWrapper;
 import lombok.RequiredArgsConstructor;

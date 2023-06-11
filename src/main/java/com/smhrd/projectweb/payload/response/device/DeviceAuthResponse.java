@@ -1,4 +1,4 @@
-package com.smhrd.projectweb.payload.response.api.v1.device;
+package com.smhrd.projectweb.payload.response.device;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;

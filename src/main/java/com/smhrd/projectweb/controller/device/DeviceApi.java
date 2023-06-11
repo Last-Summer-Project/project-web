@@ -1,6 +1,6 @@
 package com.smhrd.projectweb.controller.device;
 
-import com.smhrd.projectweb.payload.response.api.v1.device.DeviceResponse;
+import com.smhrd.projectweb.payload.response.device.DeviceResponse;
 import com.smhrd.projectweb.entity.Device;
 import com.smhrd.projectweb.service.device.DeviceService;
 import com.smhrd.projectweb.shared.ResultWrapper;
