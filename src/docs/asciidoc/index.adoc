@@ -59,3 +59,6 @@ include::api/timelapse/auth.adoc[]
 
 // Timelapse - Device id
 include::api/timelapse/device-id.adoc[]
+
+// Detect
+include::api/detect.adoc[]

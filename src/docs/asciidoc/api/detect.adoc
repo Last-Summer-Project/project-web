@@ -1,0 +1,27 @@
+=== Predict detect result
+==== Post to request
+
+===== HTTP request
+====== `curl`
+include::{snippets}/detect-test/post-detect-request/curl-request.adoc[]
+
+====== `httpie`
+include::{snippets}/detect-test/post-detect-request/httpie-request.adoc[]
+
+====== HTTP
+include::{snippets}/detect-test/post-detect-request/http-request.adoc[]
+
+====== Request headers
+include::{snippets}/detect-test/post-detect-request/request-headers.adoc[]
+
+====== Path parameters
+include::{snippets}/detect-test/post-detect-request/path-parameters.adoc[]
+
+====== Request fields
+include::{snippets}/detect-test/post-detect-request/request-fields.adoc[]
+
+
+===== HTTP response
+
+include::{snippets}/detect-test/post-detect-request/http-response.adoc[]
+include::{snippets}/detect-test/post-detect-request/response-fields.adoc[]
