@@ -4,7 +4,7 @@ info:
   description: REST API Documentation
   version: 0.0.1-SNAPSHOT
 servers:
-- url: https://10.100.200.1/api/v1
+- url: http://10.100.200.1/api/v1
 tags:
 - name: default
   description: Index
@@ -26,7 +26,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 index-test/index:
                   value: |-
@@ -43,7 +43,7 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/log-detected-per-day486549215'
+              $ref: '#/components/schemas/auth-refresh486549215'
             examples:
               auth-test/login:
                 value: |-
@@ -63,7 +63,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 auth-test/login:
                   value: |-
@@ -71,8 +71,8 @@ paths:
                       "status" : "ok",
                       "message" : "Successfully logged in",
                       "data" : {
-                        "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjUwMjgyNCwiZXhwIjoxNjg2NTA2NDI0fQ.xirBIdwA2DsMmICRbS6KYp6KCPmVBmp_fMsiroRx-zH4EWA3T2ARDByGs8yWaiC52durO6ElSCLeOW8JM0igXQ",
-                        "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjUwMjgyNCwiZXhwIjoxNjg3MzY2ODI0fQ.KNmekHV53CreGpw4eVBREOu5hD5hl7mhHtVLG3oGYE-y-2BJudAh6MxXF2V8mTZygn9AgKGjvnaG_QxlxT8R1w"
+                        "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4Njc5MzA1MCwiZXhwIjoxNjg2Nzk2NjUwfQ.jfrNA4ugwM9TE0qawC1d_Yrt555NmgGVB_xhcicD4IV-H6MSZQ7Z7DZISbK6XQFfHCzsKknNQisgFaB4WX8rQg",
+                        "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4Njc5MzA1MCwiZXhwIjoxNjg3NjU3MDUwfQ.17POtCocbEunA4cGQ-Fy6IDnJAyl0IbhI9hWbUiKeZosGXJWHHFpYWtJCZESC1UtVi7R79Fu15Bfxt7qyyYHwA"
                       }
                     }
         "401":
@@ -80,7 +80,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 auth-test/login-failed:
                   value: |-
@@ -97,12 +97,12 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/log-detected-per-day486549215'
+              $ref: '#/components/schemas/auth-refresh486549215'
             examples:
               auth-test/refresh:
                 value: |-
                   {
-                    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjUwMjgyNSwiZXhwIjoxNjg3MzY2ODI1fQ.lUpUVJkKOk4SZnwp8H0kepg02OdsiDAD5BRbIbzm5uMVlUEnpntMN1ehvHt6AfU3NPxc8DrQyBipcvmRSvNnyA"
+                    "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4Njc5MzA1MCwiZXhwIjoxNjg3NjU3MDUwfQ.17POtCocbEunA4cGQ-Fy6IDnJAyl0IbhI9hWbUiKeZosGXJWHHFpYWtJCZESC1UtVi7R79Fu15Bfxt7qyyYHwA"
                   }
       responses:
         "200":
@@ -110,7 +110,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 auth-test/refresh:
                   value: |-
@@ -118,8 +118,8 @@ paths:
                       "status" : "ok",
                       "message" : "Successfully refreshed token",
                       "data" : {
-                        "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjUwMjgyNSwiZXhwIjoxNjg2NTA2NDI1fQ.f-7ko5S5DR8O12xpSImRa6Y0bbZ6gbPSf3Dnr3ayl380TlyugH3H-fOFSjA9UYr5AUnLsjSPqiCbpSSzsaOvGA",
-                        "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjUwMjgyNSwiZXhwIjoxNjg3MzY2ODI1fQ.lUpUVJkKOk4SZnwp8H0kepg02OdsiDAD5BRbIbzm5uMVlUEnpntMN1ehvHt6AfU3NPxc8DrQyBipcvmRSvNnyA"
+                        "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4Njc5MzA1MCwiZXhwIjoxNjg2Nzk2NjUwfQ.jfrNA4ugwM9TE0qawC1d_Yrt555NmgGVB_xhcicD4IV-H6MSZQ7Z7DZISbK6XQFfHCzsKknNQisgFaB4WX8rQg",
+                        "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4Njc5MzA1MCwiZXhwIjoxNjg3NjU3MDUwfQ.17POtCocbEunA4cGQ-Fy6IDnJAyl0IbhI9hWbUiKeZosGXJWHHFpYWtJCZESC1UtVi7R79Fu15Bfxt7qyyYHwA"
                       }
                     }
   /auth/signup:
@@ -131,7 +131,7 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/log-detected-per-day486549215'
+              $ref: '#/components/schemas/auth-refresh486549215'
             examples:
               auth-test/signup:
                 value: |-
@@ -145,7 +145,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 auth-test/signup:
                   value: |-
@@ -153,8 +153,8 @@ paths:
                       "status" : "ok",
                       "message" : "Successfully signed up",
                       "data" : {
-                        "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjUwMjgyNCwiZXhwIjoxNjg2NTA2NDI0fQ.EJUYzCgqEoc13mZ2ANHKwGMUuh1U4i8wCPm7s8kqsNme6B6RbFazBZdCvSDZ0TSrMNXLJYVxiZJIKzJEZV2V-Q",
-                        "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjUwMjgyNCwiZXhwIjoxNjg3MzY2ODI0fQ.bgGMO69GYst_MlTRneqM3HB4D7tDrOCxl1sZcEljADNl8f4jocCnPE_2nyVx7ey570o-S1Xr66RC2V0fNtGAVA"
+                        "access" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4Njc5MzA0OSwiZXhwIjoxNjg2Nzk2NjQ5fQ.kXnnZ6TV5GrCA8iCkObHHyCG1sKBukJqqYi_Hm-TfI4p3Lvot6ZUj89qs3MoS_3TaU6rhmpgUhoMcSFhTT411Q",
+                        "refresh" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4Njc5MzA0OSwiZXhwIjoxNjg3NjU3MDQ5fQ.A2Bjw7fqc2Gp2mUVmCr5N7kfIhCu541_JRlB2jckE55uNnUNZ2ujUEWPdwFsifIkyyWadSiK_-wqxCHu4H2QCg"
                       }
                     }
   /auth/verify:
@@ -168,7 +168,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 auth-test/verify-invalid:
                   value: |-
@@ -181,7 +181,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 auth-test/verify:
                   value: |-
@@ -199,7 +199,7 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/log-detected-per-day486549215'
+              $ref: '#/components/schemas/auth-refresh486549215'
             examples:
               detect-test/post-detect-request:
                 value: |-
@@ -212,7 +212,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 detect-test/post-detect-request:
                   value: |-
@@ -236,7 +236,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 device-test/get-authenticated-device:
                   value: |-
@@ -244,8 +244,8 @@ paths:
                       "status" : "ok",
                       "data" : {
                         "id" : 1,
-                        "dateCreated" : "2023-06-11T17:00:26.000Z",
-                        "lastEdited" : "2023-06-11T17:00:26.000Z"
+                        "dateCreated" : "2023-06-15T01:37:31.000Z",
+                        "lastEdited" : "2023-06-15T01:37:31.000Z"
                       }
                     }
       security:
@@ -261,7 +261,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 device-test/get-invalid-device:
                   value: |-
@@ -289,7 +289,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 device-test/get-device1:
                   value: |-
@@ -297,8 +297,8 @@ paths:
                       "status" : "ok",
                       "data" : {
                         "id" : 1,
-                        "dateCreated" : "2023-06-11T17:00:26.000Z",
-                        "lastEdited" : "2023-06-11T17:00:26.000Z"
+                        "dateCreated" : "2023-06-15T01:37:31.000Z",
+                        "lastEdited" : "2023-06-15T01:37:31.000Z"
                       }
                     }
       security:
@@ -314,7 +314,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 log-with-auth-test/get-detected-per-day-logs:
                   value: |-
@@ -329,7 +329,7 @@ paths:
                           "status" : "DONE",
                           "result" : "2"
                         },
-                        "timestamp" : "2023-06-10T17:00:28.000Z"
+                        "timestamp" : "2023-06-14T01:37:33.000Z"
                       }, {
                         "deviceId" : 1,
                         "humidity" : 30.0,
@@ -339,7 +339,7 @@ paths:
                           "status" : "DONE",
                           "result" : "0"
                         },
-                        "timestamp" : "2023-06-09T17:00:28.000Z"
+                        "timestamp" : "2023-06-13T01:37:33.000Z"
                       } ]
                     }
       security:
@@ -355,7 +355,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 log-with-auth-test/get-latest-log:
                   value: |-
@@ -369,7 +369,7 @@ paths:
                         "detection" : {
                           "status" : "IN_PROGRESS"
                         },
-                        "timestamp" : "2023-06-11T17:00:28.000Z"
+                        "timestamp" : "2023-06-15T01:37:33.000Z"
                       }
                     }
       security:
@@ -385,7 +385,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 log-with-auth-test/get-latest-detected-log:
                   value: |-
@@ -400,7 +400,7 @@ paths:
                           "status" : "DONE",
                           "result" : "2"
                         },
-                        "timestamp" : "2023-06-10T17:00:28.000Z"
+                        "timestamp" : "2023-06-14T01:37:33.000Z"
                       }
                     }
       security:
@@ -416,7 +416,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 log-with-auth-test/get-recent-logs:
                   value: |-
@@ -430,7 +430,7 @@ paths:
                         "detection" : {
                           "status" : "IN_PROGRESS"
                         },
-                        "timestamp" : "2023-06-11T17:00:28.000Z"
+                        "timestamp" : "2023-06-15T01:37:33.000Z"
                       }, {
                         "deviceId" : 1,
                         "humidity" : 30.0,
@@ -440,7 +440,7 @@ paths:
                           "status" : "DONE",
                           "result" : "2"
                         },
-                        "timestamp" : "2023-06-10T17:00:28.000Z"
+                        "timestamp" : "2023-06-14T01:37:33.000Z"
                       }, {
                         "deviceId" : 1,
                         "humidity" : 30.0,
@@ -450,7 +450,7 @@ paths:
                           "status" : "DONE",
                           "result" : "0"
                         },
-                        "timestamp" : "2023-06-09T17:00:28.000Z"
+                        "timestamp" : "2023-06-13T01:37:33.000Z"
                       } ]
                     }
       security:
@@ -464,7 +464,7 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/log-detected-per-day486549215'
+              $ref: '#/components/schemas/auth-refresh486549215'
             examples:
               log-with-auth-test/post-write-log:
                 value: |-
@@ -480,7 +480,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 log-with-auth-test/post-write-log:
                   value: |-
@@ -494,7 +494,7 @@ paths:
                         "detection" : {
                           "status" : "NOT_STARTED"
                         },
-                        "timestamp" : "2023-06-11T17:00:30.000Z"
+                        "timestamp" : "2023-06-15T01:37:35.000Z"
                       }
                     }
       security:
@@ -517,7 +517,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 log-with-device-id-test/get-detected-per-day-logs:
                   value: |-
@@ -532,7 +532,7 @@ paths:
                           "status" : "DONE",
                           "result" : "2"
                         },
-                        "timestamp" : "2023-06-10T17:00:31.000Z"
+                        "timestamp" : "2023-06-14T01:37:35.000Z"
                       }, {
                         "deviceId" : 1,
                         "humidity" : 30.0,
@@ -542,7 +542,7 @@ paths:
                           "status" : "DONE",
                           "result" : "0"
                         },
-                        "timestamp" : "2023-06-09T17:00:31.000Z"
+                        "timestamp" : "2023-06-13T01:37:35.000Z"
                       } ]
                     }
       security:
@@ -565,7 +565,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 log-with-device-id-test/get-latest-log:
                   value: |-
@@ -579,7 +579,7 @@ paths:
                         "detection" : {
                           "status" : "IN_PROGRESS"
                         },
-                        "timestamp" : "2023-06-11T17:00:31.000Z"
+                        "timestamp" : "2023-06-15T01:37:35.000Z"
                       }
                     }
       security:
@@ -602,7 +602,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 log-with-device-id-test/get-latest-detected-log:
                   value: |-
@@ -617,7 +617,7 @@ paths:
                           "status" : "DONE",
                           "result" : "2"
                         },
-                        "timestamp" : "2023-06-10T17:00:31.000Z"
+                        "timestamp" : "2023-06-14T01:37:35.000Z"
                       }
                     }
       security:
@@ -640,7 +640,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 log-with-device-id-test/get-recent-logs:
                   value: |-
@@ -654,7 +654,7 @@ paths:
                         "detection" : {
                           "status" : "IN_PROGRESS"
                         },
-                        "timestamp" : "2023-06-11T17:00:31.000Z"
+                        "timestamp" : "2023-06-15T01:37:35.000Z"
                       }, {
                         "deviceId" : 1,
                         "humidity" : 30.0,
@@ -664,7 +664,7 @@ paths:
                           "status" : "DONE",
                           "result" : "2"
                         },
-                        "timestamp" : "2023-06-10T17:00:31.000Z"
+                        "timestamp" : "2023-06-14T01:37:35.000Z"
                       }, {
                         "deviceId" : 1,
                         "humidity" : 30.0,
@@ -674,7 +674,7 @@ paths:
                           "status" : "DONE",
                           "result" : "0"
                         },
-                        "timestamp" : "2023-06-09T17:00:31.000Z"
+                        "timestamp" : "2023-06-13T01:37:35.000Z"
                       } ]
                     }
       security:
@@ -695,7 +695,7 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/log-detected-per-day486549215'
+              $ref: '#/components/schemas/auth-refresh486549215'
             examples:
               log-with-device-id-test/post-write-log:
                 value: |-
@@ -711,7 +711,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 log-with-device-id-test/post-write-log:
                   value: |-
@@ -725,7 +725,7 @@ paths:
                         "detection" : {
                           "status" : "NOT_STARTED"
                         },
-                        "timestamp" : "2023-06-11T17:00:33.000Z"
+                        "timestamp" : "2023-06-15T01:37:37.000Z"
                       }
                     }
       security:
@@ -741,7 +741,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 timelapse-with-auth-test/get-all:
                   value: |-
@@ -753,7 +753,7 @@ paths:
                         "status" : "NOT_STARTED",
                         "logStartDate" : "2022-10-11T12:13:14.000Z",
                         "logEndDate" : "2022-11-12T13:14:15.000Z",
-                        "lastUpdated" : "2023-06-11T17:00:35.000Z"
+                        "lastUpdated" : "2023-06-15T01:37:39.000Z"
                       }, {
                         "id" : 1,
                         "deviceId" : 1,
@@ -761,7 +761,7 @@ paths:
                         "result" : "result.mp4",
                         "logStartDate" : "2023-05-20T00:00:00.000Z",
                         "logEndDate" : "2023-05-30T00:00:00.000Z",
-                        "lastUpdated" : "2023-06-11T16:59:33.000Z"
+                        "lastUpdated" : "2023-06-15T01:36:38.000Z"
                       } ]
                     }
       security:
@@ -777,7 +777,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 timelapse-with-auth-test/get-latest:
                   value: |-
@@ -790,7 +790,7 @@ paths:
                         "result" : "result.mp4",
                         "logStartDate" : "2023-05-20T00:00:00.000Z",
                         "logEndDate" : "2023-05-30T00:00:00.000Z",
-                        "lastUpdated" : "2023-06-11T16:59:33.000Z"
+                        "lastUpdated" : "2023-06-15T01:36:38.000Z"
                       }
                     }
       security:
@@ -804,7 +804,7 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/log-detected-per-day486549215'
+              $ref: '#/components/schemas/auth-refresh486549215'
             examples:
               timelapse-with-auth-test/post-request:
                 value: |-
@@ -819,7 +819,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 timelapse-with-auth-test/post-request:
                   value: |-
@@ -854,7 +854,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 timelapse-with-device-id-test/get-all:
                   value: |-
@@ -866,7 +866,7 @@ paths:
                         "status" : "NOT_STARTED",
                         "logStartDate" : "2022-10-11T12:13:14.000Z",
                         "logEndDate" : "2022-11-12T13:14:15.000Z",
-                        "lastUpdated" : "2023-06-11T17:00:37.000Z"
+                        "lastUpdated" : "2023-06-15T01:37:41.000Z"
                       }, {
                         "id" : 1,
                         "deviceId" : 1,
@@ -874,7 +874,7 @@ paths:
                         "result" : "result.mp4",
                         "logStartDate" : "2023-05-20T00:00:00.000Z",
                         "logEndDate" : "2023-05-30T00:00:00.000Z",
-                        "lastUpdated" : "2023-06-11T16:59:36.000Z"
+                        "lastUpdated" : "2023-06-15T01:36:40.000Z"
                       } ]
                     }
       security:
@@ -897,7 +897,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 timelapse-with-device-id-test/get-latest:
                   value: |-
@@ -910,7 +910,7 @@ paths:
                         "result" : "result.mp4",
                         "logStartDate" : "2023-05-20T00:00:00.000Z",
                         "logEndDate" : "2023-05-30T00:00:00.000Z",
-                        "lastUpdated" : "2023-06-11T16:59:36.000Z"
+                        "lastUpdated" : "2023-06-15T01:36:40.000Z"
                       }
                     }
       security:
@@ -931,7 +931,7 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/log-detected-per-day486549215'
+              $ref: '#/components/schemas/auth-refresh486549215'
             examples:
               timelapse-with-device-id-test/post-request:
                 value: |-
@@ -946,7 +946,7 @@ paths:
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/log-detected-per-day486549215'
+                $ref: '#/components/schemas/auth-refresh486549215'
               examples:
                 timelapse-with-device-id-test/post-request:
                   value: |-
@@ -965,7 +965,7 @@ paths:
       - bearerAuthJWT: []
 components:
   schemas:
-    log-detected-per-day486549215:
+    auth-refresh486549215:
       type: object
   securitySchemes:
     bearerAuthJWT:

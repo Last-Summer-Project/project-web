@@ -11,7 +11,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/"
       },
@@ -22,7 +22,7 @@
       "name" : "index-test/index",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/"
         },
@@ -44,7 +44,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/auth/login"
       },
@@ -65,7 +65,7 @@
       "name" : "auth-test/login",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/auth/login"
         },
@@ -87,14 +87,14 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"Successfully logged in\",\n  \"data\" : {\n    \"access\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjUwMjgyNCwiZXhwIjoxNjg2NTA2NDI0fQ.xirBIdwA2DsMmICRbS6KYp6KCPmVBmp_fMsiroRx-zH4EWA3T2ARDByGs8yWaiC52durO6ElSCLeOW8JM0igXQ\",\n    \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjUwMjgyNCwiZXhwIjoxNjg3MzY2ODI0fQ.KNmekHV53CreGpw4eVBREOu5hD5hl7mhHtVLG3oGYE-y-2BJudAh6MxXF2V8mTZygn9AgKGjvnaG_QxlxT8R1w\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"Successfully logged in\",\n  \"data\" : {\n    \"access\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4Njc5MzA1MCwiZXhwIjoxNjg2Nzk2NjUwfQ.jfrNA4ugwM9TE0qawC1d_Yrt555NmgGVB_xhcicD4IV-H6MSZQ7Z7DZISbK6XQFfHCzsKknNQisgFaB4WX8rQg\",\n    \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4Njc5MzA1MCwiZXhwIjoxNjg3NjU3MDUwfQ.17POtCocbEunA4cGQ-Fy6IDnJAyl0IbhI9hWbUiKeZosGXJWHHFpYWtJCZESC1UtVi7R79Fu15Bfxt7qyyYHwA\"\n  }\n}",
       "code" : 200
     }, {
       "id" : "auth-test/login-failed",
       "name" : "auth-test/login-failed",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/auth/login"
         },
@@ -126,7 +126,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/auth/refresh"
       },
@@ -138,7 +138,7 @@
       } ],
       "body" : {
         "mode" : "raw",
-        "raw" : "{\n  \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjUwMjgyNSwiZXhwIjoxNjg3MzY2ODI1fQ.lUpUVJkKOk4SZnwp8H0kepg02OdsiDAD5BRbIbzm5uMVlUEnpntMN1ehvHt6AfU3NPxc8DrQyBipcvmRSvNnyA\"\n}",
+        "raw" : "{\n  \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4Njc5MzA1MCwiZXhwIjoxNjg3NjU3MDUwfQ.17POtCocbEunA4cGQ-Fy6IDnJAyl0IbhI9hWbUiKeZosGXJWHHFpYWtJCZESC1UtVi7R79Fu15Bfxt7qyyYHwA\"\n}",
         "urlencoded" : [ ]
       }
     },
@@ -147,7 +147,7 @@
       "name" : "auth-test/refresh",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/auth/refresh"
         },
@@ -159,7 +159,7 @@
         } ],
         "body" : {
           "mode" : "raw",
-          "raw" : "{\n  \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjUwMjgyNSwiZXhwIjoxNjg3MzY2ODI1fQ.lUpUVJkKOk4SZnwp8H0kepg02OdsiDAD5BRbIbzm5uMVlUEnpntMN1ehvHt6AfU3NPxc8DrQyBipcvmRSvNnyA\"\n}",
+          "raw" : "{\n  \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4Njc5MzA1MCwiZXhwIjoxNjg3NjU3MDUwfQ.17POtCocbEunA4cGQ-Fy6IDnJAyl0IbhI9hWbUiKeZosGXJWHHFpYWtJCZESC1UtVi7R79Fu15Bfxt7qyyYHwA\"\n}",
           "urlencoded" : [ ]
         }
       },
@@ -169,7 +169,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"Successfully refreshed token\",\n  \"data\" : {\n    \"access\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjUwMjgyNSwiZXhwIjoxNjg2NTA2NDI1fQ.f-7ko5S5DR8O12xpSImRa6Y0bbZ6gbPSf3Dnr3ayl380TlyugH3H-fOFSjA9UYr5AUnLsjSPqiCbpSSzsaOvGA\",\n    \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4NjUwMjgyNSwiZXhwIjoxNjg3MzY2ODI1fQ.lUpUVJkKOk4SZnwp8H0kepg02OdsiDAD5BRbIbzm5uMVlUEnpntMN1ehvHt6AfU3NPxc8DrQyBipcvmRSvNnyA\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"Successfully refreshed token\",\n  \"data\" : {\n    \"access\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4Njc5MzA1MCwiZXhwIjoxNjg2Nzk2NjUwfQ.jfrNA4ugwM9TE0qawC1d_Yrt555NmgGVB_xhcicD4IV-H6MSZQ7Z7DZISbK6XQFfHCzsKknNQisgFaB4WX8rQg\",\n    \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjIsImlhdCI6MTY4Njc5MzA1MCwiZXhwIjoxNjg3NjU3MDUwfQ.17POtCocbEunA4cGQ-Fy6IDnJAyl0IbhI9hWbUiKeZosGXJWHHFpYWtJCZESC1UtVi7R79Fu15Bfxt7qyyYHwA\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -179,7 +179,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/auth/signup"
       },
@@ -200,7 +200,7 @@
       "name" : "auth-test/signup",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/auth/signup"
         },
@@ -222,7 +222,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"Successfully signed up\",\n  \"data\" : {\n    \"access\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjUwMjgyNCwiZXhwIjoxNjg2NTA2NDI0fQ.EJUYzCgqEoc13mZ2ANHKwGMUuh1U4i8wCPm7s8kqsNme6B6RbFazBZdCvSDZ0TSrMNXLJYVxiZJIKzJEZV2V-Q\",\n    \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4NjUwMjgyNCwiZXhwIjoxNjg3MzY2ODI0fQ.bgGMO69GYst_MlTRneqM3HB4D7tDrOCxl1sZcEljADNl8f4jocCnPE_2nyVx7ey570o-S1Xr66RC2V0fNtGAVA\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"message\" : \"Successfully signed up\",\n  \"data\" : {\n    \"access\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4Njc5MzA0OSwiZXhwIjoxNjg2Nzk2NjQ5fQ.kXnnZ6TV5GrCA8iCkObHHyCG1sKBukJqqYi_Hm-TfI4p3Lvot6ZUj89qs3MoS_3TaU6rhmpgUhoMcSFhTT411Q\",\n    \"refresh\" : \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzb21lLXNlcnZpY2UiLCJsb2dpbl9pZCI6InVzZXIiLCJkZXZpY2VfaWQiOjEsImlhdCI6MTY4Njc5MzA0OSwiZXhwIjoxNjg3NjU3MDQ5fQ.A2Bjw7fqc2Gp2mUVmCr5N7kfIhCu541_JRlB2jckE55uNnUNZ2ujUEWPdwFsifIkyyWadSiK_-wqxCHu4H2QCg\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -232,7 +232,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/auth/verify"
       },
@@ -243,7 +243,7 @@
       "name" : "auth-test/verify-invalid",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/auth/verify"
         },
@@ -262,7 +262,7 @@
       "name" : "auth-test/verify",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/auth/verify"
         },
@@ -284,7 +284,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/detect/request"
       },
@@ -305,7 +305,7 @@
       "name" : "detect-test/post-detect-request",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/detect/request"
         },
@@ -337,7 +337,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/device/get"
       },
@@ -348,7 +348,7 @@
       "name" : "device-test/get-authenticated-device",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/device/get"
         },
@@ -360,7 +360,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"dateCreated\" : \"2023-06-11T17:00:26.000Z\",\n    \"lastEdited\" : \"2023-06-11T17:00:26.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"dateCreated\" : \"2023-06-15T01:37:31.000Z\",\n    \"lastEdited\" : \"2023-06-15T01:37:31.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -370,7 +370,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/device/get/-1"
       },
@@ -381,7 +381,7 @@
       "name" : "device-test/get-invalid-device",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/device/get/-1"
         },
@@ -403,7 +403,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/device/get/:deviceId"
       },
@@ -414,7 +414,7 @@
       "name" : "device-test/get-device1",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/device/get/:deviceId"
         },
@@ -426,7 +426,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"dateCreated\" : \"2023-06-11T17:00:26.000Z\",\n    \"lastEdited\" : \"2023-06-11T17:00:26.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"dateCreated\" : \"2023-06-15T01:37:31.000Z\",\n    \"lastEdited\" : \"2023-06-15T01:37:31.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -436,7 +436,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/log/detected-per-day"
       },
@@ -447,7 +447,7 @@
       "name" : "log-with-auth-test/get-detected-per-day-logs",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/log/detected-per-day"
         },
@@ -459,7 +459,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-10T17:00:28.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-09T17:00:28.000Z\"\n  } ]\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-14T01:37:33.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-13T01:37:33.000Z\"\n  } ]\n}",
       "code" : 200
     } ]
   }, {
@@ -469,7 +469,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/log/latest"
       },
@@ -480,7 +480,7 @@
       "name" : "log-with-auth-test/get-latest-log",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/log/latest"
         },
@@ -492,7 +492,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-11T17:00:28.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-15T01:37:33.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -502,7 +502,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/log/latest-detected"
       },
@@ -513,7 +513,7 @@
       "name" : "log-with-auth-test/get-latest-detected-log",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/log/latest-detected"
         },
@@ -525,7 +525,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-10T17:00:28.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-14T01:37:33.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -535,7 +535,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/log/recent"
       },
@@ -546,7 +546,7 @@
       "name" : "log-with-auth-test/get-recent-logs",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/log/recent"
         },
@@ -558,7 +558,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-11T17:00:28.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-10T17:00:28.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-09T17:00:28.000Z\"\n  } ]\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-15T01:37:33.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-14T01:37:33.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-13T01:37:33.000Z\"\n  } ]\n}",
       "code" : 200
     } ]
   }, {
@@ -568,7 +568,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/log/write"
       },
@@ -589,7 +589,7 @@
       "name" : "log-with-auth-test/post-write-log",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/log/write"
         },
@@ -611,7 +611,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 19.87,\n    \"temperature\" : 12.34,\n    \"imageUrl\" : null,\n    \"detection\" : {\n      \"status\" : \"NOT_STARTED\"\n    },\n    \"timestamp\" : \"2023-06-11T17:00:30.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 19.87,\n    \"temperature\" : 12.34,\n    \"imageUrl\" : null,\n    \"detection\" : {\n      \"status\" : \"NOT_STARTED\"\n    },\n    \"timestamp\" : \"2023-06-15T01:37:35.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -621,7 +621,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/log/:deviceId/detected-per-day"
       },
@@ -632,7 +632,7 @@
       "name" : "log-with-device-id-test/get-detected-per-day-logs",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/log/:deviceId/detected-per-day"
         },
@@ -644,7 +644,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-10T17:00:31.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-09T17:00:31.000Z\"\n  } ]\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-14T01:37:35.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-13T01:37:35.000Z\"\n  } ]\n}",
       "code" : 200
     } ]
   }, {
@@ -654,7 +654,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/log/:deviceId/latest"
       },
@@ -665,7 +665,7 @@
       "name" : "log-with-device-id-test/get-latest-log",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/log/:deviceId/latest"
         },
@@ -677,7 +677,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-11T17:00:31.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-15T01:37:35.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -687,7 +687,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/log/:deviceId/latest-detected"
       },
@@ -698,7 +698,7 @@
       "name" : "log-with-device-id-test/get-latest-detected-log",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/log/:deviceId/latest-detected"
         },
@@ -710,7 +710,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-10T17:00:31.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-14T01:37:35.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -720,7 +720,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/log/:deviceId/recent"
       },
@@ -731,7 +731,7 @@
       "name" : "log-with-device-id-test/get-recent-logs",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/log/:deviceId/recent"
         },
@@ -743,7 +743,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-11T17:00:31.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-10T17:00:31.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-09T17:00:31.000Z\"\n  } ]\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"deviceId\" : 1,\n    \"humidity\" : 35.55,\n    \"temperature\" : 21.01,\n    \"imageUrl\" : \"/static/image/3.jpg\",\n    \"detection\" : {\n      \"status\" : \"IN_PROGRESS\"\n    },\n    \"timestamp\" : \"2023-06-15T01:37:35.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/2.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"2\"\n    },\n    \"timestamp\" : \"2023-06-14T01:37:35.000Z\"\n  }, {\n    \"deviceId\" : 1,\n    \"humidity\" : 30.0,\n    \"temperature\" : 20.09,\n    \"imageUrl\" : \"/static/image/1.jpg\",\n    \"detection\" : {\n      \"status\" : \"DONE\",\n      \"result\" : \"0\"\n    },\n    \"timestamp\" : \"2023-06-13T01:37:35.000Z\"\n  } ]\n}",
       "code" : 200
     } ]
   }, {
@@ -753,7 +753,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/log/:deviceId/write"
       },
@@ -774,7 +774,7 @@
       "name" : "log-with-device-id-test/post-write-log",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/log/:deviceId/write"
         },
@@ -796,7 +796,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 19.87,\n    \"temperature\" : 12.34,\n    \"imageUrl\" : null,\n    \"detection\" : {\n      \"status\" : \"NOT_STARTED\"\n    },\n    \"timestamp\" : \"2023-06-11T17:00:33.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"deviceId\" : 1,\n    \"humidity\" : 19.87,\n    \"temperature\" : 12.34,\n    \"imageUrl\" : null,\n    \"detection\" : {\n      \"status\" : \"NOT_STARTED\"\n    },\n    \"timestamp\" : \"2023-06-15T01:37:37.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -806,7 +806,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/timelapse/all"
       },
@@ -817,7 +817,7 @@
       "name" : "timelapse-with-auth-test/get-all",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/timelapse/all"
         },
@@ -829,7 +829,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"id\" : 2,\n    \"deviceId\" : 1,\n    \"status\" : \"NOT_STARTED\",\n    \"logStartDate\" : \"2022-10-11T12:13:14.000Z\",\n    \"logEndDate\" : \"2022-11-12T13:14:15.000Z\",\n    \"lastUpdated\" : \"2023-06-11T17:00:35.000Z\"\n  }, {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-11T16:59:33.000Z\"\n  } ]\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"id\" : 2,\n    \"deviceId\" : 1,\n    \"status\" : \"NOT_STARTED\",\n    \"logStartDate\" : \"2022-10-11T12:13:14.000Z\",\n    \"logEndDate\" : \"2022-11-12T13:14:15.000Z\",\n    \"lastUpdated\" : \"2023-06-15T01:37:39.000Z\"\n  }, {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-15T01:36:38.000Z\"\n  } ]\n}",
       "code" : 200
     } ]
   }, {
@@ -839,7 +839,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/timelapse/latest"
       },
@@ -850,7 +850,7 @@
       "name" : "timelapse-with-auth-test/get-latest",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/timelapse/latest"
         },
@@ -862,7 +862,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-11T16:59:33.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-15T01:36:38.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -872,7 +872,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/timelapse/request"
       },
@@ -893,7 +893,7 @@
       "name" : "timelapse-with-auth-test/post-request",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/timelapse/request"
         },
@@ -925,7 +925,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/timelapse/:deviceId/all"
       },
@@ -936,7 +936,7 @@
       "name" : "timelapse-with-device-id-test/get-all",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/timelapse/:deviceId/all"
         },
@@ -948,7 +948,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"id\" : 2,\n    \"deviceId\" : 1,\n    \"status\" : \"NOT_STARTED\",\n    \"logStartDate\" : \"2022-10-11T12:13:14.000Z\",\n    \"logEndDate\" : \"2022-11-12T13:14:15.000Z\",\n    \"lastUpdated\" : \"2023-06-11T17:00:37.000Z\"\n  }, {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-11T16:59:36.000Z\"\n  } ]\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : [ {\n    \"id\" : 2,\n    \"deviceId\" : 1,\n    \"status\" : \"NOT_STARTED\",\n    \"logStartDate\" : \"2022-10-11T12:13:14.000Z\",\n    \"logEndDate\" : \"2022-11-12T13:14:15.000Z\",\n    \"lastUpdated\" : \"2023-06-15T01:37:41.000Z\"\n  }, {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-15T01:36:40.000Z\"\n  } ]\n}",
       "code" : 200
     } ]
   }, {
@@ -958,7 +958,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/timelapse/:deviceId/latest"
       },
@@ -969,7 +969,7 @@
       "name" : "timelapse-with-device-id-test/get-latest",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/timelapse/:deviceId/latest"
         },
@@ -981,7 +981,7 @@
         "disabled" : false
       } ],
       "cookie" : [ ],
-      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-11T16:59:36.000Z\"\n  }\n}",
+      "body" : "{\n  \"status\" : \"ok\",\n  \"data\" : {\n    \"id\" : 1,\n    \"deviceId\" : 1,\n    \"status\" : \"DONE\",\n    \"result\" : \"result.mp4\",\n    \"logStartDate\" : \"2023-05-20T00:00:00.000Z\",\n    \"logEndDate\" : \"2023-05-30T00:00:00.000Z\",\n    \"lastUpdated\" : \"2023-06-15T01:36:40.000Z\"\n  }\n}",
       "code" : 200
     } ]
   }, {
@@ -991,7 +991,7 @@
     "event" : [ ],
     "request" : {
       "url" : {
-        "protocol" : "https",
+        "protocol" : "http",
         "host" : "10.100.200.1",
         "path" : "/api/v1/timelapse/:deviceId/request"
       },
@@ -1012,7 +1012,7 @@
       "name" : "timelapse-with-device-id-test/post-request",
       "originalRequest" : {
         "url" : {
-          "protocol" : "https",
+          "protocol" : "http",
           "host" : "10.100.200.1",
           "path" : "/api/v1/timelapse/:deviceId/request"
         },
