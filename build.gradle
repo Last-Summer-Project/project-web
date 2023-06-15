@@ -131,7 +131,7 @@ tasks.named("bootBuildImage") {
 }
 
 openapi3 {
-    server = 'https://10.100.200.1/api/v1'
+    server = 'http://10.100.200.1/api/v1'
     title = 'API'
     description = 'REST API Documentation'
     version = "${project.version}"
@@ -142,5 +142,5 @@ openapi3 {
 postman {
     title = 'API'
     version = "${project.version}"
-    baseUrl = 'https://10.100.200.1/api/v1'
+    baseUrl = 'http://10.100.200.1/api/v1'
 }
